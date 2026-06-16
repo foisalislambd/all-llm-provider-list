@@ -1,0 +1,533 @@
+{
+  "providers": {
+    "openai": [
+      "gpt-5.5",
+      "gpt-5.5-2026-04-23",
+      "gpt-5.5-pro",
+      "gpt-5.5-pro-2026-04-23",
+      "gpt-5.4",
+      "gpt-5.4-mini",
+      "gpt-5.4-mini-2026-03-17",
+      "gpt-5.4-nano",
+      "gpt-5.4-nano-2026-03-17",
+      "gpt-5.2",
+      "gpt-5.2-pro",
+      "gpt-5.1",
+      "gpt-5.1-codex",
+      "gpt-5.1-mini",
+      "gpt-5",
+      "gpt-5-mini",
+      "gpt-5-nano",
+      "gpt-4.1",
+      "gpt-4.1-mini",
+      "gpt-4.1-nano",
+      "gpt-4o",
+      "gpt-4o-mini",
+      "gpt-4o-audio-preview",
+      "gpt-4-turbo",
+      "gpt-4",
+      "o3",
+      "o3-mini",
+      "o4-mini",
+      "o1",
+      "o1-mini",
+      "chatgpt-4o-latest",
+      "text-embedding-3-large",
+      "text-embedding-3-small",
+      "whisper-1",
+      "tts-1",
+      "tts-1-hd",
+      "dall-e-3",
+      "gpt-image-1"
+    ],
+    "anthropic": [
+      "claude-opus-4-6",
+      "claude-opus-4-6-20260205",
+      "claude-sonnet-4-6",
+      "claude-sonnet-4-6-20260217",
+      "claude-haiku-4-5",
+      "claude-haiku-4-5-20251001",
+      "claude-opus-4-5",
+      "claude-sonnet-4-5",
+      "claude-3-7-sonnet-latest",
+      "claude-3-5-haiku-latest",
+      "claude-3-haiku-20240307"
+    ],
+    "google-ai-studio": [
+      "gemini-3.5-pro",
+      "gemini-3.5-flash",
+      "gemini-3.1-pro",
+      "gemini-3.1-flash",
+      "gemini-2.5-pro",
+      "gemini-2.5-flash",
+      "gemini-2.5-flash-lite",
+      "gemini-2.0-flash",
+      "gemini-2.0-flash-lite",
+      "gemini-embedding-2"
+    ],
+    "deepseek": [
+      "deepseek-chat",
+      "deepseek-reasoner",
+      "deepseek-v4-pro",
+      "deepseek-v4-flash"
+    ],
+    "mistral": [
+      "mistral-large-latest",
+      "mistral-medium-latest",
+      "mistral-small-latest",
+      "ministral-3b-latest",
+      "ministral-8b-latest",
+      "codestral-latest",
+      "pixtral-large-latest",
+      "mistral-embed",
+      "mistral-moderation-latest"
+    ],
+    "xai": [
+      "grok-3",
+      "grok-3-mini",
+      "grok-3-fast",
+      "grok-2",
+      "grok-2-vision",
+      "grok-beta"
+    ],
+    "cohere": [
+      "command-r-plus",
+      "command-r",
+      "command-r7b",
+      "command-a",
+      "embed-v4.0",
+      "embed-english-v3.0",
+      "embed-multilingual-v3.0",
+      "rerank-v3.5",
+      "rerank-english-v3.0"
+    ],
+    "ai21": [
+      "jamba-1.5-large",
+      "jamba-1.5-mini",
+      "jamba-instruct"
+    ],
+    "baidu-qianfan": [
+      "ernie-4.0-turbo-8k",
+      "ernie-4.0-8k",
+      "ernie-speed-128k",
+      "ernie-lite-8k",
+      "ernie-tiny-8k"
+    ],
+    "stepfun": [
+      "step-3.5-flash",
+      "step-3-mini",
+      "step-2-16k",
+      "step-1-8k"
+    ],
+    "zhipu": [
+      "glm-5",
+      "glm-4.7",
+      "glm-4.7-flash",
+      "glm-4-plus",
+      "glm-4-flash",
+      "glm-4-air",
+      "glm-4-long"
+    ],
+    "xiaomi": [
+      "mimo-v2-pro"
+    ],
+    "reka": [
+      "reka-core",
+      "reka-flash",
+      "reka-edge"
+    ],
+    "inflection": [
+      "inflection-3-pi",
+      "inflection-3-productivity"
+    ],
+    "minimax": [
+      "MiniMax-M3",
+      "MiniMax-M2.1",
+      "MiniMax-M2.1-highspeed",
+      "MiniMax-M2",
+      "MiniMax-Text-01"
+    ],
+    "dashscope": [
+      "qwen3-max",
+      "qwen-max",
+      "qwen-plus",
+      "qwen-flash",
+      "qwen-turbo",
+      "qwen2.5-72b-instruct",
+      "qwen2.5-32b-instruct",
+      "qwen2.5-7b-instruct",
+      "qwen-vl-max",
+      "qwen-vl-plus"
+    ],
+    "upstage": [
+      "solar-pro3",
+      "solar-mini",
+      "solar-1-mini-chat"
+    ],
+    "perplexity": [
+      "sonar",
+      "sonar-pro",
+      "sonar-reasoning",
+      "sonar-reasoning-pro",
+      "sonar-deep-research"
+    ],
+    "voyage": [
+      "voyage-3",
+      "voyage-3-lite",
+      "voyage-3-large",
+      "voyage-code-3",
+      "rerank-2",
+      "rerank-2-lite"
+    ],
+    "groq": [
+      "llama-3.3-70b-versatile",
+      "llama-3.3-70b-specdec",
+      "llama-3.1-8b-instant",
+      "llama-3.1-70b-versatile",
+      "llama-guard-3-8b",
+      "gemma2-9b-it",
+      "mixtral-8x7b-32768",
+      "whisper-large-v3",
+      "whisper-large-v3-turbo",
+      "distil-whisper-large-v3-en"
+    ],
+    "cerebras": [
+      "llama-3.3-70b",
+      "llama3.1-8b",
+      "llama-3.1-70b",
+      "qwen-3-32b",
+      "gpt-oss-120b"
+    ],
+    "sambanova": [
+      "Meta-Llama-3.1-405B-Instruct",
+      "Meta-Llama-3.3-70B-Instruct",
+      "Meta-Llama-3.1-70B-Instruct",
+      "Qwen2.5-72B-Instruct",
+      "DeepSeek-R1"
+    ],
+    "together": [
+      "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+      "meta-llama/Llama-3.1-405B-Instruct-Turbo",
+      "deepseek-ai/DeepSeek-R1",
+      "Qwen/Qwen2.5-72B-Instruct-Turbo",
+      "mistralai/Mixtral-8x22B-Instruct-v0.1",
+      "black-forest-labs/FLUX.1-schnell"
+    ],
+    "fireworks": [
+      "accounts/fireworks/models/llama-v3p3-70b-instruct",
+      "accounts/fireworks/models/deepseek-v3",
+      "accounts/fireworks/models/qwen2p5-72b-instruct",
+      "accounts/fireworks/models/mixtral-8x22b-instruct"
+    ],
+    "nebius": [
+      "meta-llama/Llama-3.3-70B-Instruct",
+      "deepseek-ai/DeepSeek-R1-0528",
+      "mistralai/Mistral-7B-Instruct-v0.3",
+      "Qwen/Qwen2.5-72B-Instruct"
+    ],
+    "siliconflow": [
+      "deepseek-ai/DeepSeek-R1",
+      "deepseek-ai/DeepSeek-V3",
+      "Qwen/Qwen2.5-72B-Instruct",
+      "THUDM/glm-4-9b-chat",
+      "MiniMax/MiniMax-M2"
+    ],
+    "inception": [
+      "mercury-2",
+      "mercury-edit-2"
+    ],
+    "liquid": [
+      "lfm2.5-instruct",
+      "lfm2-24b-instruct",
+      "lfm2-1.2b-instruct"
+    ],
+    "friendli": [
+      "meta-llama-3.3-70b-instruct",
+      "deepseek-r1",
+      "mixtral-8x7b-instruct-v0-1"
+    ],
+    "inceptron": [
+      "llama-3.3-70b-instruct",
+      "qwen2.5-72b-instruct"
+    ],
+    "infermatic": [
+      "rocinante-12b",
+      "midnight-miqu-70b",
+      "llama-3.3-70b-instruct"
+    ],
+    "mancer": [
+      "goliath-120b",
+      "mythomax-l2-13b",
+      "lumimaid-v0.2-70b"
+    ],
+    "morph": [
+      "morph-qwen35-397b",
+      "morph-qwen36-27b",
+      "morph-apply-v1"
+    ],
+    "aionlabs": [
+      "aion-2.0",
+      "aion-rp-llama-3.1-8b"
+    ],
+    "hyperbolic": [
+      "deepseek-ai/DeepSeek-V3",
+      "meta-llama/Llama-3.3-70B-Instruct"
+    ],
+    "lepton": [
+      "llama-3.3-70b-instruct",
+      "mistral-7b-instruct"
+    ],
+    "kluster": [
+      "Meta-Llama-3.1-405B-Instruct",
+      "Qwen2.5-72B-Instruct"
+    ],
+    "anyscale": [
+      "meta-llama/Llama-3.3-70B-Instruct",
+      "mistralai/Mixtral-8x22B-Instruct-v0.1"
+    ],
+    "replicate": [
+      "meta/meta-llama-3-70b-instruct",
+      "meta/meta-llama-3-8b-instruct",
+      "black-forest-labs/flux-schnell"
+    ],
+    "inference-net": [
+      "deepseek-ai/DeepSeek-R1",
+      "meta-llama/Llama-3.1-70B-Instruct"
+    ],
+    "arcee": [
+      "arcee-ai/trinity-large-preview",
+      "arcee-ai/caller-large"
+    ],
+    "glhf": [
+      "hf:meta-llama/Llama-3.3-70B-Instruct",
+      "hf:Qwen/Qwen2.5-72B-Instruct",
+      "hf:deepseek-ai/DeepSeek-R1"
+    ],
+    "akashml": [
+      "llama-3.3-70b-instruct",
+      "qwen2.5-72b-instruct",
+      "deepseek-r1"
+    ],
+    "atlascloud": [
+      "deepseek-v3",
+      "seedance-2.0",
+      "kling-3.0"
+    ],
+    "chutes": [
+      "moonshotai/kimi-k2.5",
+      "THUDM/glm-4-9b-chat",
+      "Qwen/Qwen2.5-72B-Instruct"
+    ],
+    "cloudflare-workers-ai": [
+      "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "@cf/meta/llama-3.1-8b-instruct",
+      "@cf/qwen/qwen2.5-coder-32b-instruct",
+      "@cf/google/gemma-4-12b-it"
+    ],
+    "digitalocean": [
+      "llama3-8b-instruct"
+    ],
+    "gmicloud": [
+      "glm-5.1-fp8",
+      "deepseek-v3.2",
+      "claude-sonnet-4"
+    ],
+    "io-net": [
+      "glm-4.5-air",
+      "gpt-oss-120b",
+      "llama-3.3-70b-instruct"
+    ],
+    "nextbit": [
+      "qwen:3.5-35b",
+      "qwen3:30b",
+      "qwen3:14b"
+    ],
+    "novita": [
+      "moonshotai/kimi-k2.5",
+      "meta-llama/llama-3.3-70b-instruct",
+      "qwen/qwen2.5-72b-instruct"
+    ],
+    "parasail": [
+      "deepseek-r1",
+      "qwen-coder-32b"
+    ],
+    "phala": [
+      "unsloth/Qwen2.5-72B-Instruct"
+    ],
+    "poolside": [
+      "laguna-xs.2",
+      "laguna-m.1"
+    ],
+    "venice": [
+      "llama-3.3-70b",
+      "qwen-2.5-72b",
+      "fluently-xl"
+    ],
+    "wafer": [
+      "Qwen3.5-397B-A17B",
+      "GLM-5.1",
+      "deepseek-v3.2"
+    ],
+    "azure-openai": [
+      "gpt-5.5",
+      "gpt-5.4",
+      "gpt-4.1",
+      "gpt-4o",
+      "o3-mini",
+      "text-embedding-3-large"
+    ],
+    "vertex-ai": [
+      "gemini-3.5-pro",
+      "gemini-3.1-pro",
+      "gemini-2.5-flash",
+      "claude-sonnet-4-6",
+      "llama-3.3-70b"
+    ],
+    "bedrock": [
+      "anthropic.claude-opus-4-6",
+      "anthropic.claude-sonnet-4-6",
+      "meta.llama3-3-70b-instruct-v1:0",
+      "amazon.titan-text-premier-v1:0",
+      "mistral.mistral-large-3-675b-instruct"
+    ],
+    "baseten": [
+      "llama-3.3-70b-instruct",
+      "deepseek-r1"
+    ],
+    "clarifai": [
+      "claude-3.5-sonnet",
+      "gpt-4o",
+      "llama-3.3-70b"
+    ],
+    "scaleway": [
+      "llama-3.3-70b-instruct",
+      "deepseek-r1"
+    ],
+    "ovhcloud": [
+      "Meta-Llama-3_1-70B-Instruct",
+      "Qwen2.5-72B-Instruct"
+    ],
+    "github-models": [
+      "gpt-4o",
+      "gpt-4o-mini",
+      "Meta-Llama-3.1-70B-Instruct",
+      "Meta-Llama-3.1-405B-Instruct",
+      "Mistral-large"
+    ],
+    "modal": [
+      "custom-deployed-vllm"
+    ],
+    "opper": [
+      "300+ routed models"
+    ],
+    "axiom": [
+      "18+ unified provider routes"
+    ],
+    "switchpoint": [
+      "switchpoint/router"
+    ],
+    "relace": [
+      "relace-apply-3",
+      "relace-search"
+    ],
+    "moonshot": [
+      "kimi-k2.7-code",
+      "kimi-k2.6",
+      "kimi-k2.5",
+      "moonshot-v1-128k",
+      "moonshot-v1-32k",
+      "moonshot-v1-8k"
+    ],
+    "openinference": [
+      "tracing-only"
+    ],
+    "wandb": [
+      "evaluation-registry"
+    ],
+    "perceptron": [
+      "custom-enterprise-routes"
+    ],
+    "portkey": [
+      "250+ routed models"
+    ],
+    "litellm": [
+      "100+ provider routes via proxy"
+    ],
+    "requesty": [
+      "multi-provider-routed"
+    ],
+    "unify": [
+      "ml-routed-models"
+    ],
+    "helicone": [
+      "100+ gateway models"
+    ],
+    "vercel-ai-gateway": [
+      "all-major-provider-models"
+    ],
+    "cloudflare-ai-gateway": [
+      "upstream-provider-models"
+    ],
+    "kong-ai-gateway": [
+      "enterprise-routed-models"
+    ],
+    "aimlapi": [
+      "gpt-4o",
+      "claude-3-5-sonnet",
+      "gemini-2.5-flash",
+      "llama-3.3-70b"
+    ],
+    "eden-ai": [
+      "openai/gpt-4o",
+      "google/gemini-2.5-flash",
+      "anthropic/claude-3-5-sonnet"
+    ],
+    "lemondata": [
+      "gpt-4o",
+      "claude-3.5-sonnet",
+      "deepseek-r1"
+    ],
+    "coze": [
+      "bot-backed-gpt-4o",
+      "bot-backed-gemini",
+      "bot-backed-claude"
+    ],
+    "nlpcloud": [
+      "finetuned-llama-3-70b",
+      "chatdolphin",
+      "bart-large-cnn"
+    ],
+    "puter": [
+      "gpt-4o-mini",
+      "claude-3.5-sonnet",
+      "gemini-2.0-flash"
+    ],
+    "ollama": [
+      "llama3.3",
+      "llama3.2",
+      "llama3.1",
+      "qwen2.5",
+      "qwen3",
+      "gemma3",
+      "mistral",
+      "deepseek-r1",
+      "phi4",
+      "codellama"
+    ],
+    "lm-studio": [
+      "any-gguf-model"
+    ],
+    "llama-cpp": [
+      "any-gguf-model"
+    ],
+    "jan": [
+      "supported-local-models"
+    ],
+    "vllm": [
+      "any-compatible-checkpoint"
+    ],
+    "localai": [
+      "any-compatible-local-model"
+    ]
+  }
+}

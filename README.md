@@ -10,7 +10,7 @@ Use this repo as a single reference when you need:
 - Environment variable names for quick setup  
 - Copy-paste integration patterns (OpenAI & Anthropic SDKs)
 
-> **Note:** Model names and API URLs change frequently. Always verify against the provider's official docs before production use. Full raw reference data lives in [`docs/data.txt`](docs/data.txt).
+> **Note:** Model names and API URLs change frequently. Always verify against the provider's official docs before production use. Machine-readable data lives in [`data/`](data/) — see the [Documentation](docs/README.md) for guides.
 
 ---
 
@@ -29,6 +29,7 @@ Use this repo as a single reference when you need:
 - [Environment Variables Cheat Sheet](#environment-variables-cheat-sheet)
 - [Integration Examples](#integration-examples)
 - [Choosing the Right Provider](#choosing-the-right-provider)
+- [Documentation](#documentation)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -489,13 +490,44 @@ curl https://openrouter.ai/api/v1/chat/completions \
 
 ---
 
+## Documentation
+
+Step-by-step guides in [`docs/`](docs/README.md):
+
+| Guide | Description |
+|-------|-------------|
+| [Getting Started](docs/getting-started.md) | Clone, first lookup, pick a provider |
+| [Python Lookup](docs/python-lookup.md) | `llm_lookup.py` — search providers & models |
+| [Sync Models](docs/sync-models.md) | Refresh live model catalogs |
+| [Integration Guide](docs/integration-guide.md) | OpenAI / Anthropic SDK setup |
+| [Data Structure](docs/data-structure.md) | `providers.json`, `models.json` format |
+| [Adding Providers](docs/adding-providers.md) | Add or update a provider |
+| [Contributing](docs/contributing.md) | PR workflow & checklist |
+
+---
+
 ## Repository Structure
 
 ```
 all-llm-provider-list/
-├── README.md          ← You are here (human-friendly guide)
-└── docs/
-    └── data.txt       ← Full reference database with extended notes
+├── README.md              ← Provider tables & quick reference
+├── llm_lookup.py          ← Python lookup script
+├── scripts/
+│   └── sync_models.py     ← Refresh model catalogs
+├── example.py             ← Usage examples
+├── data/
+│   ├── providers.json     ← 97 providers (source of truth)
+│   ├── models.json        ← Model catalogs per provider
+│   └── static_models.json ← Fallback model lists
+└── docs/                  ← Step-by-step guides
+    ├── README.md
+    ├── getting-started.md
+    ├── python-lookup.md
+    ├── sync-models.md
+    ├── integration-guide.md
+    ├── data-structure.md
+    ├── adding-providers.md
+    └── contributing.md
 ```
 
 ---
@@ -504,10 +536,7 @@ all-llm-provider-list/
 
 Found a new provider, updated endpoint, or wrong model name? PRs welcome!
 
-1. Fork the repo  
-2. Update the relevant table in `README.md` and/or `docs/data.txt`  
-3. Include a link to the provider's official documentation  
-4. Open a pull request with a short description of what changed  
+See [docs/contributing.md](docs/contributing.md) and [docs/adding-providers.md](docs/adding-providers.md) for the full workflow.
 
 ---
 
