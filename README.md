@@ -1,6 +1,6 @@
 # All LLM Providers — API Endpoints, Models & Integration Guide
 
-A curated, developer-friendly directory of **95+ global LLM providers** — official frontier APIs, inference platforms, sovereign clouds, gateways, aggregators, and local runtimes.
+A curated, developer-friendly directory of **110+ global LLM providers** — official frontier APIs, inference platforms, sovereign clouds, gateways, aggregators, and local runtimes.
 
 Use this repo as a single reference when you need:
 
@@ -163,6 +163,21 @@ print(response.choices[0].message.content)
 | 95 | Jan.ai | Local | `http://localhost:1337/v1` |
 | 96 | vLLM | Local | `http://localhost:8000/v1` |
 | 97 | LocalAI | Local | `http://localhost:8080/v1` |
+| 98 | 302.AI | Aggregator | `https://api.302.ai/v1` |
+| 99 | Atomic Chat | Local | `http://127.0.0.1:1337/v1` |
+| 100 | Azure Cognitive Services | Sovereign / Cloud | `https://<resource>.cognitiveservices.azure.com/openai/v1` |
+| 101 | Cortecs | Gateway | `https://api.cortecs.ai/v1` |
+| 102 | FrogBot | Aggregator | `https://app.frogbot.ai/api` |
+| 103 | GitLab Duo | Sovereign / Cloud | `https://gitlab.com/api/v4/ai` |
+| 104 | GitHub Copilot | Sovereign / Cloud | OAuth device flow (Copilot subscription) |
+| 105 | Ollama Cloud | IaaS | `https://ollama.com/api` |
+| 106 | OpenCode Zen | Gateway | `https://opencode.ai/zen/v1` |
+| 107 | OpenCode Go | Gateway | `https://opencode.ai/zen/go/v1` |
+| 108 | LLM Gateway | Gateway | `https://api.llmgateway.io/v1` |
+| 109 | SAP AI Core | Sovereign / Cloud | `https://api.ai.<region>.<landscape>.ml.hana.ondemand.com/v2` |
+| 110 | STACKIT AI Model Serving | Sovereign / Cloud | `https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1` |
+| 111 | Snowflake Cortex | Sovereign / Cloud | `https://<account>.snowflakecomputing.com/api/v2/cortex/v1` |
+| 112 | ZenMux | Gateway | `https://zenmux.ai/api/v1` |
 
 ---
 
@@ -189,11 +204,11 @@ print(response.choices[0].message.content)
 | Category | Count | Best for | Trade-off |
 |----------|-------|----------|-----------|
 | **Frontier APIs** | 18 | Best reasoning, agents, multimodal | Higher cost, vendor lock-in |
-| **IaaS / Inference** | 26 | Speed, open-weight models, low cost | Model catalog varies by host |
-| **Sovereign / Enterprise** | 23 | GDPR, VPC, compliance | More setup & procurement |
-| **Gateways & Routers** | 18 | One key, failover, observability | Extra hop, gateway fees |
-| **Aggregators** | 4 | Multi-vendor under one bill | Less control over routing |
-| **Local / Self-hosted** | 6 | Privacy, unlimited, offline | You manage hardware |
+| **IaaS / Inference** | 27 | Speed, open-weight models, low cost | Model catalog varies by host |
+| **Sovereign / Enterprise** | 29 | GDPR, VPC, compliance | More setup & procurement |
+| **Gateways & Routers** | 22 | One key, failover, observability | Extra hop, gateway fees |
+| **Aggregators** | 6 | Multi-vendor under one bill | Less control over routing |
+| **Local / Self-hosted** | 7 | Privacy, unlimited, offline | You manage hardware |
 
 ---
 
@@ -256,6 +271,7 @@ Hosted open-weight models on optimized hardware — great for **low latency** an
 | **Inference.net** | [inference.net](https://inference.net) | `https://api.inference.net/v1` | DeepSeek-R1, Llama 3.1 70B | Decentralized inference network |
 | **Arcee AI** | [arcee.ai](https://arcee.ai) | `https://conductor.arcee.ai/v1` | Trinity-Large, Caller-Large | Enterprise fine-tuned models |
 | **Glhf.chat** | [glhf.chat](https://glhf.chat) | `https://glhf.chat/api/openai/v1` | Any HuggingFace model (`hf:` prefix) | vLLM-backed; run any HF model |
+| **Ollama Cloud** | [ollama.com](https://ollama.com) | `https://ollama.com/api` | gpt-oss:20b-cloud, gpt-oss:120b | Remote Ollama host; OpenCode-supported |
 
 ---
 
@@ -288,6 +304,12 @@ Regional compliance, private networking, decentralized compute, and enterprise M
 | **OVHcloud AI** | [ovhcloud.com](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) | `https://oai.endpoints.kepler.ai.cloud.ovh.net/v1` | Llama 3.1 70B, Qwen 2.5 72B | EU-hosted open models |
 | **GitHub Models** | [github.com/marketplace/models](https://github.com/marketplace/models) | `https://models.inference.ai.azure.com` | GPT-4o, Llama 3.1 70B | Free tier with GitHub PAT |
 | **Modal** | [modal.com](https://modal.com) | `https://<app>.modal.run/v1` | Any (self-deployed via vLLM) | Serverless GPU; deploy your own models |
+| **Azure Cognitive Services** | [azure.microsoft.com](https://azure.microsoft.com/products/ai-services) | `https://<resource>.cognitiveservices.azure.com/openai/v1` | GPT-4o, GPT-4.1, o3-mini | Separate from Azure OpenAI; OpenCode-supported |
+| **GitLab Duo** | [about.gitlab.com](https://about.gitlab.com/gitlab-duo/) | `https://gitlab.com/api/v4/ai` | duo-chat-haiku/sonnet/opus-4-5 | OAuth or PAT; Premium/Ultimate |
+| **GitHub Copilot** | [github.com/features/copilot](https://github.com/features/copilot) | OAuth device flow | GPT-4o, Claude, o3-mini | Copilot subscription; OpenCode `/connect` |
+| **SAP AI Core** | [sap.com](https://www.sap.com/products/artificial-intelligence/ai-core.html) | `https://api.ai.<region>.ml.hana.ondemand.com/v2` | GPT-4o, Claude, Gemini, Llama | BTP service key JSON auth |
+| **STACKIT AI Model Serving** | [stackit.de](https://www.stackit.de/en/product/stackit-ai-model-serving) | `https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1` | Qwen3-VL 235B, Llama 3.3 70B | EU sovereign hosting |
+| **Snowflake Cortex** | [snowflake.com](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-llm-rest-api) | `https://<account>.snowflakecomputing.com/api/v2/cortex/v1` | Claude Sonnet/Haiku 4.x, GPT-5 | OAuth or PAT; in-perimeter inference |
 
 ---
 
@@ -314,6 +336,11 @@ One API surface for many upstream providers — ideal for **failover**, **cost o
 | **OpenInference** | [openinference.ai](https://openinference.ai) | Tracing / observability | LLM telemetry | Execution graph tracing |
 | **Weights & Biases** | [wandb.ai](https://wandb.ai) | Evaluation registry | Model benchmarking | Experiment tracking |
 | **Perceptron** | [perceptron.ai](https://perceptron.ai) | Custom gateway | Enterprise routes | Custom middleware routing |
+| **Cortecs** | [cortecs.ai](https://cortecs.ai) | `https://api.cortecs.ai/v1` | Kimi K2, GPT-5 Mini | EU GDPR-compliant LLM router |
+| **OpenCode Zen** | [opencode.ai/zen](https://opencode.ai/zen) | `https://opencode.ai/zen/v1` | GPT-5.5, Claude Sonnet 4.6, Qwen Coder | Curated models for coding agents |
+| **OpenCode Go** | [opencode.ai/docs/go](https://opencode.ai/docs/go/) | `https://opencode.ai/zen/go/v1` | Kimi K2.7, GLM-5.1, DeepSeek V4 | Low-cost open coding models |
+| **LLM Gateway** | [llmgateway.io](https://llmgateway.io) | `https://api.llmgateway.io/v1` | GPT-4o, Claude, Gemini, GLM | Unified routing; OpenCode-supported |
+| **ZenMux** | [zenmux.ai](https://zenmux.ai) | `https://zenmux.ai/api/v1` | 200+ routed models | Enterprise routing & failover |
 
 ---
 
@@ -327,6 +354,8 @@ Single API key to access models from multiple upstream vendors.
 | **Eden AI** | [edenai.co](https://edenai.co) | `https://api.edenai.co/v2` | OpenAI, Google, Anthropic routes | Multi-provider under one API |
 | **LemonData** | [lemondata.ai](https://lemondata.ai) | `https://api.lemondata.ai/v1` | GPT-4o, Claude 3.5, open models | 300+ models; $1 free credits |
 | **Coze (ByteDance)** | [coze.com](https://coze.com) | `https://api.coze.com/v1` | Via bots: GPT-4o, Gemini, Claude | Bot-builder platform with LLM backends |
+| **302.AI** | [302.ai](https://302.ai) | `https://api.302.ai/v1` | GLM-5, GPT-4o, Claude Sonnet | 100+ models; OpenCode-supported |
+| **FrogBot** | [frogbot.ai](https://frogbot.ai) | `https://app.frogbot.ai/api` | Claude, GPT-4o, Gemini | Unified AI subscription |
 
 ---
 
@@ -355,6 +384,7 @@ Run models on your own machine — **free, private, and unlimited**.
 | **Jan.ai** | [jan.ai](https://jan.ai) | `http://localhost:1337/v1` | Supported local models | 100% offline desktop app |
 | **vLLM** | [github.com/vllm-project/vllm](https://github.com/vllm-project/vllm) | `http://localhost:8000/v1` | Any compatible checkpoint | Production-grade local serving |
 | **LocalAI** | [localai.io](https://localai.io) | `http://localhost:8080/v1` | OpenAI-compatible local stack | Drop-in OpenAI API replacement |
+| **Atomic Chat** | [atomicchat.ai](https://atomicchat.ai) | `http://127.0.0.1:1337/v1` | Qwen-Coder, DeepSeek-Coder | Desktop local server; OpenCode-supported |
 
 ---
 
@@ -386,6 +416,12 @@ Copy these into your `.env` file or secrets manager:
 | Perplexity | `PERPLEXITY_API_KEY` | `https://api.perplexity.ai` |
 | Moonshot / Kimi | `MOONSHOT_API_KEY` | `https://api.moonshot.ai/v1` |
 | GitHub Models | `GITHUB_TOKEN` | `https://models.inference.ai.azure.com` |
+| OpenCode Zen / Go | `OPENCODE_API_KEY` | `https://opencode.ai/zen/v1` |
+| LLM Gateway | `LLM_GATEWAY_API_KEY` | `https://api.llmgateway.io/v1` |
+| ZenMux | `ZENMUX_API_KEY` | `https://zenmux.ai/api/v1` |
+| STACKIT | `STACKIT_API_KEY` | `https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1` |
+| Snowflake Cortex | `SNOWFLAKE_CORTEX_TOKEN` | `https://<account>.snowflakecomputing.com/api/v2/cortex/v1` |
+| 302.AI | `302AI_API_KEY` | `https://api.302.ai/v1` |
 
 ---
 
