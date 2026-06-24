@@ -42,6 +42,7 @@ AUTH_MODEL_APIS: dict[str, tuple[str, str]] = {
     "sambanova": ("SAMBANOVA_API_KEY", "https://api.sambanova.ai/v1/models"),
     "nebius": ("NEBIUS_API_KEY", "https://api.studio.nebius.ai/v1/models"),
     "openrouter": ("OPENROUTER_API_KEY", "https://openrouter.ai/api/v1/models"),
+    "sakana-fugu": ("SAKANA_API_KEY", "https://api.sakana.ai/v1/models"),
 }
 
 

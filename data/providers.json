@@ -2069,5 +2069,26 @@
     "env_variable": "ZENMUX_API_KEY",
     "openai_compatible": true,
     "notes": "OpenCode-supported; enterprise routing across 200+ models"
+  },
+  {
+    "id": 113,
+    "name": "Sakana AI (Fugu)",
+    "slug": "sakana-fugu",
+    "aliases": [
+      "sakana",
+      "sakana-ai",
+      "fugu"
+    ],
+    "category": "Gateway",
+    "website": "https://console.sakana.ai",
+    "api_base_url": "https://api.sakana.ai/v1",
+    "popular_models": [
+      "fugu",
+      "fugu-ultra",
+      "fugu-ultra-20260615"
+    ],
+    "env_variable": "SAKANA_API_KEY",
+    "openai_compatible": true,
+    "notes": "Trained multi-agent orchestrator; routes to frontier LLM pool via single OpenAI-compatible API"
   }
 ]

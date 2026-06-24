@@ -607,6 +607,11 @@
       "openai/gpt-5",
       "anthropic/claude-sonnet-4",
       "google/gemini-2.5-pro"
+    ],
+    "sakana-fugu": [
+      "fugu",
+      "fugu-ultra",
+      "fugu-ultra-20260615"
     ]
   }
 }
