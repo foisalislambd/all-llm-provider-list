@@ -612,6 +612,12 @@
       "fugu",
       "fugu-ultra",
       "fugu-ultra-20260615"
+    ],
+    "prism-api": [
+      "gpt-5.5",
+      "gpt-5.4",
+      "claude-sonnet-4",
+      "gemini-2.5-pro"
     ]
   }
 }

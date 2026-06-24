@@ -179,6 +179,7 @@ print(response.choices[0].message.content)
 | 111 | Snowflake Cortex | Sovereign / Cloud | `https://<account>.snowflakecomputing.com/api/v2/cortex/v1` |
 | 112 | ZenMux | Gateway | `https://zenmux.ai/api/v1` |
 | 113 | Sakana AI (Fugu) | Gateway | `https://api.sakana.ai/v1` |
+| 114 | Prism API | Gateway | `https://sub2api.558686.xyz/v1` |
 
 ---
 
@@ -207,7 +208,7 @@ print(response.choices[0].message.content)
 | **Frontier APIs** | 18 | Best reasoning, agents, multimodal | Higher cost, vendor lock-in |
 | **IaaS / Inference** | 27 | Speed, open-weight models, low cost | Model catalog varies by host |
 | **Sovereign / Enterprise** | 29 | GDPR, VPC, compliance | More setup & procurement |
-| **Gateways & Routers** | 23 | One key, failover, observability | Extra hop, gateway fees |
+| **Gateways & Routers** | 24 | One key, failover, observability | Extra hop, gateway fees |
 | **Aggregators** | 6 | Multi-vendor under one bill | Less control over routing |
 | **Local / Self-hosted** | 7 | Privacy, unlimited, offline | You manage hardware |
 
@@ -343,6 +344,7 @@ One API surface for many upstream providers — ideal for **failover**, **cost o
 | **LLM Gateway** | [llmgateway.io](https://llmgateway.io) | `https://api.llmgateway.io/v1` | GPT-4o, Claude, Gemini, GLM | Unified routing; OpenCode-supported |
 | **ZenMux** | [zenmux.ai](https://zenmux.ai) | `https://zenmux.ai/api/v1` | 200+ routed models | Enterprise routing & failover |
 | **Sakana AI (Fugu)** | [console.sakana.ai](https://console.sakana.ai) | `https://api.sakana.ai/v1` | Fugu, Fugu Ultra | Trained orchestrator; routes frontier LLM pool |
+| **Prism API** | [prism-api-promo](https://go165.github.io/prism-api-promo/) | `https://sub2api.558686.xyz/v1` | GPT-5.5, GPT-5.4, Claude, Gemini | Independent OpenAI-compatible gateway; crypto-friendly recharge/vouchers; overseas users |
 
 ---
 
@@ -422,6 +424,7 @@ Copy these into your `.env` file or secrets manager:
 | LLM Gateway | `LLM_GATEWAY_API_KEY` | `https://api.llmgateway.io/v1` |
 | ZenMux | `ZENMUX_API_KEY` | `https://zenmux.ai/api/v1` |
 | Sakana AI (Fugu) | `SAKANA_API_KEY` | `https://api.sakana.ai/v1` |
+| Prism API | `PRISM_API_KEY` | `https://sub2api.558686.xyz/v1` |
 | STACKIT | `STACKIT_API_KEY` | `https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1` |
 | Snowflake Cortex | `SNOWFLAKE_CORTEX_TOKEN` | `https://<account>.snowflakecomputing.com/api/v2/cortex/v1` |
 | 302.AI | `302AI_API_KEY` | `https://api.302.ai/v1` |

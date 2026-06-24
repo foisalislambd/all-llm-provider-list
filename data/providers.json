@@ -2090,5 +2090,27 @@
     "env_variable": "SAKANA_API_KEY",
     "openai_compatible": true,
     "notes": "Trained multi-agent orchestrator; routes to frontier LLM pool via single OpenAI-compatible API"
+  },
+  {
+    "id": 114,
+    "name": "Prism API",
+    "slug": "prism-api",
+    "aliases": [
+      "558686",
+      "sub2api",
+      "gpt55"
+    ],
+    "category": "Gateway",
+    "website": "https://go165.github.io/prism-api-promo/",
+    "api_base_url": "https://sub2api.558686.xyz/v1",
+    "popular_models": [
+      "gpt-5.5",
+      "gpt-5.4",
+      "claude-sonnet-4",
+      "gemini-2.5-pro"
+    ],
+    "env_variable": "PRISM_API_KEY",
+    "openai_compatible": true,
+    "notes": "Independent OpenAI-compatible gateway for overseas developers; low-cost GPT-5.5 access and crypto-friendly recharge/voucher options"
   }
 ]

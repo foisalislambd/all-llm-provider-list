@@ -9,7 +9,7 @@ Usage (Python):
     get_models("groq")                      # all supported model IDs
     lookup("groq", include_models=True)     # details + models together
     search_models("llama")                  # find model across providers
-    all_providers()                         # full list (113 providers)
+    all_providers()                         # full list (114 providers)
 
 Usage (CLI):
     python llm_lookup.py groq

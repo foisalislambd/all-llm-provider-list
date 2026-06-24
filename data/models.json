@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-24T14:43:34.895441+00:00",
-  "total_providers": 113,
-  "total_models": 1030,
+  "updated_at": "2026-06-24T14:45:22.911564+00:00",
+  "total_providers": 114,
+  "total_models": 1034,
   "providers": {
     "openai": {
       "provider_id": 1,
@@ -11,7 +11,7 @@
       "models_endpoint": "https://api.openai.com/v1/models",
       "count": 38,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "gpt-5.5",
         "gpt-5.5-2026-04-23",
@@ -61,7 +61,7 @@
       "models_endpoint": "https://api.anthropic.com/v1/models",
       "count": 11,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "claude-opus-4-6",
         "claude-opus-4-6-20260205",
@@ -84,7 +84,7 @@
       "models_endpoint": "https://generativelanguage.googleapis.com/v1/models",
       "count": 10,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "gemini-3.5-pro",
         "gemini-3.5-flash",
@@ -106,7 +106,7 @@
       "models_endpoint": "https://api.deepseek.com/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "deepseek-chat",
         "deepseek-reasoner",
@@ -122,7 +122,7 @@
       "models_endpoint": "https://api.mistral.ai/v1/models",
       "count": 9,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "mistral-large-latest",
         "mistral-medium-latest",
@@ -143,7 +143,7 @@
       "models_endpoint": "https://api.x.ai/v1/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "grok-3",
         "grok-3-mini",
@@ -161,7 +161,7 @@
       "models_endpoint": "https://api.cohere.com/v2/v1/models",
       "count": 9,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "command-r-plus",
         "command-r",
@@ -182,7 +182,7 @@
       "models_endpoint": "https://api.ai21.com/studio/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "jamba-1.5-large",
         "jamba-1.5-mini",
@@ -197,7 +197,7 @@
       "models_endpoint": "https://api.baiduqianfan.ai/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "ernie-4.0-turbo-8k",
         "ernie-4.0-8k",
@@ -214,7 +214,7 @@
       "models_endpoint": "https://api.stepfun.com/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "step-3.5-flash",
         "step-3-mini",
@@ -230,7 +230,7 @@
       "models_endpoint": "https://open.bigmodel.cn/api/paas/v4/v1/models",
       "count": 7,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "glm-5",
         "glm-4.7",
@@ -249,7 +249,7 @@
       "models_endpoint": null,
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "mimo-v2-pro"
       ]
@@ -262,7 +262,7 @@
       "models_endpoint": "https://api.reka.ai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "reka-core",
         "reka-flash",
@@ -277,7 +277,7 @@
       "models_endpoint": null,
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "inflection-3-pi",
         "inflection-3-productivity"
@@ -291,7 +291,7 @@
       "models_endpoint": "https://api.minimax.io/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "MiniMax-M3",
         "MiniMax-M2.1",
@@ -308,7 +308,7 @@
       "models_endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/models",
       "count": 10,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "qwen3-max",
         "qwen-max",
@@ -330,7 +330,7 @@
       "models_endpoint": "https://api.upstage.ai/v1/solar/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "solar-pro3",
         "solar-mini",
@@ -345,7 +345,7 @@
       "models_endpoint": "https://api.perplexity.ai/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "sonar",
         "sonar-pro",
@@ -362,7 +362,7 @@
       "models_endpoint": "https://api.voyageai.com/v1/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "voyage-3",
         "voyage-3-lite",
@@ -380,7 +380,7 @@
       "models_endpoint": "https://api.groq.com/openai/v1/models",
       "count": 10,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "llama-3.3-70b-versatile",
         "llama-3.3-70b-specdec",
@@ -402,7 +402,7 @@
       "models_endpoint": "https://api.cerebras.ai/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "llama-3.3-70b",
         "llama3.1-8b",
@@ -419,7 +419,7 @@
       "models_endpoint": "https://api.sambanova.ai/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "Meta-Llama-3.1-405B-Instruct",
         "Meta-Llama-3.3-70B-Instruct",
@@ -436,7 +436,7 @@
       "models_endpoint": "https://api.together.xyz/v1/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "meta-llama/Llama-3.3-70B-Instruct-Turbo",
         "meta-llama/Llama-3.1-405B-Instruct-Turbo",
@@ -454,7 +454,7 @@
       "models_endpoint": "https://api.fireworks.ai/inference/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "accounts/fireworks/models/llama-v3p3-70b-instruct",
         "accounts/fireworks/models/deepseek-v3",
@@ -470,7 +470,7 @@
       "models_endpoint": "https://api.deepinfra.com/v1/openai/models",
       "count": 172,
       "source": "live-public",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "BAAI/bge-base-en-v1.5",
         "BAAI/bge-en-icl",
@@ -654,7 +654,7 @@
       "models_endpoint": "https://api.studio.nebius.ai/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "meta-llama/Llama-3.3-70B-Instruct",
         "deepseek-ai/DeepSeek-R1-0528",
@@ -670,7 +670,7 @@
       "models_endpoint": "https://api.siliconflow.cn/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "deepseek-ai/DeepSeek-R1",
         "deepseek-ai/DeepSeek-V3",
@@ -687,7 +687,7 @@
       "models_endpoint": "https://api.inceptionlabs.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "mercury-2",
         "mercury-edit-2"
@@ -701,7 +701,7 @@
       "models_endpoint": null,
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "lfm2.5-instruct",
         "lfm2-24b-instruct",
@@ -716,7 +716,7 @@
       "models_endpoint": "https://api.friendli.ai/serverless/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "meta-llama-3.3-70b-instruct",
         "deepseek-r1",
@@ -731,7 +731,7 @@
       "models_endpoint": null,
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "llama-3.3-70b-instruct",
         "qwen2.5-72b-instruct"
@@ -745,7 +745,7 @@
       "models_endpoint": "https://api.totalgpt.ai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "rocinante-12b",
         "midnight-miqu-70b",
@@ -760,7 +760,7 @@
       "models_endpoint": "https://mancer.tech/oai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "goliath-120b",
         "mythomax-l2-13b",
@@ -775,7 +775,7 @@
       "models_endpoint": "https://api.morphllm.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "morph-qwen35-397b",
         "morph-qwen36-27b",
@@ -790,7 +790,7 @@
       "models_endpoint": "https://api.aionlabs.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "aion-2.0",
         "aion-rp-llama-3.1-8b"
@@ -804,7 +804,7 @@
       "models_endpoint": "https://router.huggingface.co/v1/models",
       "count": 122,
       "source": "live-public",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "CohereLabs/aya-expanse-32b",
         "CohereLabs/aya-vision-32b",
@@ -938,7 +938,7 @@
       "models_endpoint": "https://integrate.api.nvidia.com/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "meta/llama-3.3-70b-instruct",
         "deepseek-ai/deepseek-r1"
@@ -952,7 +952,7 @@
       "models_endpoint": "https://api.hyperbolic.xyz/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "deepseek-ai/DeepSeek-V3",
         "meta-llama/Llama-3.3-70B-Instruct"
@@ -966,7 +966,7 @@
       "models_endpoint": "https://api.lepton.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "llama-3.3-70b-instruct",
         "mistral-7b-instruct"
@@ -980,7 +980,7 @@
       "models_endpoint": "https://api.kluster.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "Meta-Llama-3.1-405B-Instruct",
         "Qwen2.5-72B-Instruct"
@@ -994,7 +994,7 @@
       "models_endpoint": "https://api.endpoints.anyscale.com/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "meta-llama/Llama-3.3-70B-Instruct",
         "mistralai/Mixtral-8x22B-Instruct-v0.1"
@@ -1008,7 +1008,7 @@
       "models_endpoint": "https://api.replicate.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "meta/meta-llama-3-70b-instruct",
         "meta/meta-llama-3-8b-instruct",
@@ -1023,7 +1023,7 @@
       "models_endpoint": "https://api.inference.net/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "deepseek-ai/DeepSeek-R1",
         "meta-llama/Llama-3.1-70B-Instruct"
@@ -1037,7 +1037,7 @@
       "models_endpoint": "https://conductor.arcee.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "arcee-ai/trinity-large-preview",
         "arcee-ai/caller-large"
@@ -1051,7 +1051,7 @@
       "models_endpoint": "https://glhf.chat/api/openai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "hf:meta-llama/Llama-3.3-70B-Instruct",
         "hf:Qwen/Qwen2.5-72B-Instruct",
@@ -1066,7 +1066,7 @@
       "models_endpoint": "https://api.akashml.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "llama-3.3-70b-instruct",
         "qwen2.5-72b-instruct",
@@ -1081,7 +1081,7 @@
       "models_endpoint": "https://api.atlascloud.ai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "deepseek-v3",
         "seedance-2.0",
@@ -1096,7 +1096,7 @@
       "models_endpoint": "https://llm.chutes.ai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "moonshotai/kimi-k2.5",
         "THUDM/glm-4-9b-chat",
@@ -1111,7 +1111,7 @@
       "models_endpoint": "https://api.cloudflare.com/client/v4/accounts/{id}/ai/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
         "@cf/meta/llama-3.1-8b-instruct",
@@ -1127,7 +1127,7 @@
       "models_endpoint": "https://inference.do-ai.run/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "llama3-8b-instruct"
       ]
@@ -1140,7 +1140,7 @@
       "models_endpoint": "https://api.gmi-serving.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "glm-5.1-fp8",
         "deepseek-v3.2",
@@ -1155,7 +1155,7 @@
       "models_endpoint": "https://api.intelligence.io.solutions/api/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "glm-4.5-air",
         "gpt-oss-120b",
@@ -1170,7 +1170,7 @@
       "models_endpoint": "https://api.nextbit256.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "qwen:3.5-35b",
         "qwen3:30b",
@@ -1185,7 +1185,7 @@
       "models_endpoint": "https://api.novita.ai/openai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "moonshotai/kimi-k2.5",
         "meta-llama/llama-3.3-70b-instruct",
@@ -1200,7 +1200,7 @@
       "models_endpoint": "https://api.saas.parasail.io/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "deepseek-r1",
         "qwen-coder-32b"
@@ -1214,7 +1214,7 @@
       "models_endpoint": null,
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "unsloth/Qwen2.5-72B-Instruct"
       ]
@@ -1227,7 +1227,7 @@
       "models_endpoint": "https://divers.poolsi.de/openai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "laguna-xs.2",
         "laguna-m.1"
@@ -1241,7 +1241,7 @@
       "models_endpoint": "https://api.venice.ai/api/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "llama-3.3-70b",
         "qwen-2.5-72b",
@@ -1256,7 +1256,7 @@
       "models_endpoint": "https://pass.wafer.ai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "Qwen3.5-397B-A17B",
         "GLM-5.1",
@@ -1271,7 +1271,7 @@
       "models_endpoint": "https://<resource>.openai.azure.com/openai/v1/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "gpt-5.5",
         "gpt-5.4",
@@ -1289,7 +1289,7 @@
       "models_endpoint": null,
       "count": 5,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "gemini-3.5-pro",
         "gemini-3.1-pro",
@@ -1306,7 +1306,7 @@
       "models_endpoint": "https://bedrock-runtime.<region>.amazonaws.com/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "anthropic.claude-opus-4-6",
         "anthropic.claude-sonnet-4-6",
@@ -1323,7 +1323,7 @@
       "models_endpoint": "https://model-{id}.api.baseten.co/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "llama-3.3-70b-instruct",
         "deepseek-r1"
@@ -1337,7 +1337,7 @@
       "models_endpoint": null,
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "claude-3.5-sonnet",
         "gpt-4o",
@@ -1352,7 +1352,7 @@
       "models_endpoint": "https://api.scaleway.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "llama-3.3-70b-instruct",
         "deepseek-r1"
@@ -1366,7 +1366,7 @@
       "models_endpoint": "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "Meta-Llama-3_1-70B-Instruct",
         "Qwen2.5-72B-Instruct"
@@ -1380,7 +1380,7 @@
       "models_endpoint": "https://models.inference.ai.azure.com/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "gpt-4o",
         "gpt-4o-mini",
@@ -1397,7 +1397,7 @@
       "models_endpoint": "https://<app>.modal.run/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "custom-deployed-vllm"
       ]
@@ -1410,7 +1410,7 @@
       "models_endpoint": "https://openrouter.ai/api/v1/models",
       "count": 339,
       "source": "live-public",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "ai21/jamba-large-1.7",
         "aion-labs/aion-1.0",
@@ -1761,7 +1761,7 @@
       "models_endpoint": "https://api.opper.ai/v3/compat/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "300+ routed models"
       ]
@@ -1774,7 +1774,7 @@
       "models_endpoint": "https://cloud.axiomstudio.ai/rest/v1/llm-gateway/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "18+ unified provider routes"
       ]
@@ -1787,7 +1787,7 @@
       "models_endpoint": "https://api.ppq.ai/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "switchpoint/router"
       ]
@@ -1800,7 +1800,7 @@
       "models_endpoint": "https://api.relace.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "relace-apply-3",
         "relace-search"
@@ -1814,7 +1814,7 @@
       "models_endpoint": "https://api.moonshot.ai/v1/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "kimi-k2.7-code",
         "kimi-k2.6",
@@ -1832,7 +1832,7 @@
       "models_endpoint": null,
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "tracing-only"
       ]
@@ -1845,7 +1845,7 @@
       "models_endpoint": null,
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "evaluation-registry"
       ]
@@ -1858,7 +1858,7 @@
       "models_endpoint": null,
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "custom-enterprise-routes"
       ]
@@ -1871,7 +1871,7 @@
       "models_endpoint": "https://api.portkey.ai/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "250+ routed models"
       ]
@@ -1884,7 +1884,7 @@
       "models_endpoint": "http://localhost:4000/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "100+ provider routes via proxy"
       ]
@@ -1897,7 +1897,7 @@
       "models_endpoint": "https://router.requesty.ai/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "multi-provider-routed"
       ]
@@ -1910,7 +1910,7 @@
       "models_endpoint": "https://api.unify.ai/v0/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "ml-routed-models"
       ]
@@ -1923,7 +1923,7 @@
       "models_endpoint": "https://ai-gateway.helicone.ai/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "100+ gateway models"
       ]
@@ -1936,7 +1936,7 @@
       "models_endpoint": "https://ai-gateway.vercel.sh/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "all-major-provider-models"
       ]
@@ -1949,7 +1949,7 @@
       "models_endpoint": "https://gateway.ai.cloudflare.com/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "upstream-provider-models"
       ]
@@ -1962,7 +1962,7 @@
       "models_endpoint": null,
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "enterprise-routed-models"
       ]
@@ -1975,7 +1975,7 @@
       "models_endpoint": "https://api.aimlapi.com/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "gpt-4o",
         "claude-3-5-sonnet",
@@ -1991,7 +1991,7 @@
       "models_endpoint": "https://api.edenai.co/v2/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "openai/gpt-4o",
         "google/gemini-2.5-flash",
@@ -2006,7 +2006,7 @@
       "models_endpoint": "https://api.lemondata.ai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "gpt-4o",
         "claude-3.5-sonnet",
@@ -2021,7 +2021,7 @@
       "models_endpoint": "https://api.coze.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "bot-backed-gpt-4o",
         "bot-backed-gemini",
@@ -2036,7 +2036,7 @@
       "models_endpoint": "https://api.nlpcloud.io/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "finetuned-llama-3-70b",
         "chatdolphin",
@@ -2051,7 +2051,7 @@
       "models_endpoint": "https://api.puter.com/ai/chat/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "gpt-4o-mini",
         "claude-3.5-sonnet",
@@ -2066,7 +2066,7 @@
       "models_endpoint": "http://localhost:11434/v1/models",
       "count": 10,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "llama3.3",
         "llama3.2",
@@ -2088,7 +2088,7 @@
       "models_endpoint": "http://localhost:1234/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "any-gguf-model"
       ]
@@ -2101,7 +2101,7 @@
       "models_endpoint": "http://localhost:8080/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "any-gguf-model"
       ]
@@ -2114,7 +2114,7 @@
       "models_endpoint": "http://localhost:1337/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "supported-local-models"
       ]
@@ -2127,7 +2127,7 @@
       "models_endpoint": "http://localhost:8000/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "any-compatible-checkpoint"
       ]
@@ -2140,7 +2140,7 @@
       "models_endpoint": "http://localhost:8080/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "any-compatible-local-model"
       ]
@@ -2153,7 +2153,7 @@
       "models_endpoint": "https://api.302.ai/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "glm-5",
         "gpt-4o",
@@ -2169,7 +2169,7 @@
       "models_endpoint": "http://127.0.0.1:1337/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "qwen-coder",
         "deepseek-coder"
@@ -2183,7 +2183,7 @@
       "models_endpoint": "https://<resource>.cognitiveservices.azure.com/openai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "gpt-4o",
         "gpt-4.1",
@@ -2198,7 +2198,7 @@
       "models_endpoint": "https://api.cortecs.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "kimi-k2-instruct",
         "gpt-5-mini"
@@ -2212,7 +2212,7 @@
       "models_endpoint": "https://app.frogbot.ai/api/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "claude-sonnet-4",
         "gpt-4o",
@@ -2227,7 +2227,7 @@
       "models_endpoint": "https://gitlab.com/api/v4/ai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "duo-chat-haiku-4-5",
         "duo-chat-sonnet-4-5",
@@ -2242,7 +2242,7 @@
       "models_endpoint": null,
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "gpt-4o",
         "claude-sonnet-4",
@@ -2257,7 +2257,7 @@
       "models_endpoint": "https://ollama.com/api/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "gpt-oss:20b-cloud",
         "gpt-oss:120b"
@@ -2271,7 +2271,7 @@
       "models_endpoint": "https://opencode.ai/zen/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "gpt-5.5",
         "claude-sonnet-4-6",
@@ -2288,7 +2288,7 @@
       "models_endpoint": "https://opencode.ai/zen/go/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "kimi-k2.7",
         "glm-5.1",
@@ -2305,7 +2305,7 @@
       "models_endpoint": "https://api.llmgateway.io/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "gpt-4o",
         "claude-3-5-sonnet-20241022",
@@ -2321,7 +2321,7 @@
       "models_endpoint": "https://api.ai.<region>.<landscape>.ml.hana.ondemand.com/v2/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "gpt-4o",
         "claude-sonnet-4",
@@ -2337,7 +2337,7 @@
       "models_endpoint": "https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "qwen3-vl-235b",
         "llama-3.3-70b",
@@ -2352,7 +2352,7 @@
       "models_endpoint": "https://<account>.snowflakecomputing.com/api/v2/cortex/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "claude-sonnet-4-6",
         "claude-haiku-4-5",
@@ -2367,7 +2367,7 @@
       "models_endpoint": "https://zenmux.ai/api/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "openai/gpt-5",
         "anthropic/claude-sonnet-4",
@@ -2382,11 +2382,27 @@
       "models_endpoint": "https://api.sakana.ai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-06-24T14:43:34.895441+00:00",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
       "models": [
         "fugu",
         "fugu-ultra",
         "fugu-ultra-20260615"
+      ]
+    },
+    "prism-api": {
+      "provider_id": 114,
+      "provider_name": "Prism API",
+      "category": "Gateway",
+      "api_base_url": "https://sub2api.558686.xyz/v1",
+      "models_endpoint": "https://sub2api.558686.xyz/v1/models",
+      "count": 4,
+      "source": "static",
+      "updated_at": "2026-06-24T14:45:22.911564+00:00",
+      "models": [
+        "gpt-5.5",
+        "gpt-5.4",
+        "claude-sonnet-4",
+        "gemini-2.5-pro"
       ]
     }
   }
