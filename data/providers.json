@@ -2112,5 +2112,24 @@
     "env_variable": "PRISM_API_KEY",
     "openai_compatible": true,
     "notes": "Independent OpenAI-compatible gateway for overseas developers; low-cost GPT-5.5 access and crypto-friendly recharge/voucher options"
+  },
+  {
+    "id": 115,
+    "name": "DiscountedTokens",
+    "slug": "discountedtokens",
+    "aliases": [
+      "discounted-tokens"
+    ],
+    "category": "Discount / Budget API",
+    "website": "https://discountedtokens.com",
+    "api_base_url": "https://discountedtokens.com/v1",
+    "popular_models": [
+      "GPT-5.5",
+      "GPT-5.4",
+      "GPT-5.6"
+    ],
+    "env_variable": "DISCOUNTEDTOKENS_API_KEY",
+    "openai_compatible": true,
+    "notes": "Budget resale of GPT-5.x family; OpenAI/Anthropic/Responses compatible; ~80% below retail"
   }
 ]
