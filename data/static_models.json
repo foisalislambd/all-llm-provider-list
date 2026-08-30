@@ -618,6 +618,12 @@
       "gpt-5.4",
       "claude-sonnet-4",
       "gemini-2.5-pro"
+    ],
+    "xiurouter": [
+      "gpt-5.6-sol",
+      "gpt-5.5",
+      "claude-opus-5",
+      "gpt-5.4"
     ]
   }
 }

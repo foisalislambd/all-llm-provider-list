@@ -2131,5 +2131,26 @@
     "env_variable": "DISCOUNTEDTOKENS_API_KEY",
     "openai_compatible": true,
     "notes": "Budget resale of GPT-5.x family; OpenAI/Anthropic/Responses compatible; ~80% below retail"
+  },
+  {
+    "id": 116,
+    "name": "XiuRouter",
+    "slug": "xiurouter",
+    "aliases": [
+      "xiu-router",
+      "xiuai-router"
+    ],
+    "category": "Gateway",
+    "website": "https://router.xiu.ai/",
+    "api_base_url": "https://router-api.xiu.ai/v1",
+    "popular_models": [
+      "gpt-5.6-sol",
+      "gpt-5.5",
+      "claude-opus-5",
+      "gpt-5.4"
+    ],
+    "env_variable": "XIUROUTER_API_KEY",
+    "openai_compatible": true,
+    "notes": "Usage-based gateway with OpenAI Chat Completions and Responses, Anthropic Messages, Gemini GenerateContent, scoped keys, and request-level usage and cost records"
   }
 ]
