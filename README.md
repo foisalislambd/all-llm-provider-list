@@ -10,7 +10,7 @@ Use this repo as a single reference when you need:
 - Environment variable names for quick setup  
 - Copy-paste integration patterns (OpenAI & Anthropic SDKs)
 
-> **Note:** Model names and API URLs change frequently. Always verify against the provider's official docs before production use. Machine-readable data lives in [`data/`](data/) — see the [Documentation](docs/README.md) for guides.
+> **Note:** Model names and API URLs change frequently. Always verify against the provider's official docs before production use. Machine-readable data lives in [`data/`](data/) — see the [Documentation](docs/README.md) for guides All ai Providers list.
 
 ---
 
