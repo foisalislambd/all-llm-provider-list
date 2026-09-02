@@ -624,6 +624,9 @@
       "gpt-5.5",
       "claude-opus-5",
       "gpt-5.4"
+    ],
+    "sagg": [
+      "deepseek-ai/DeepSeek-V4-Flash-0731"
     ]
   }
 }

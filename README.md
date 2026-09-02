@@ -182,6 +182,7 @@ print(response.choices[0].message.content)
 | 114 | Prism API | Gateway | `https://sub2api.558686.xyz/v1` |
 | 115 | DiscountedTokens | Discount / Budget API | `https://discountedtokens.com/v1` |
 | 116 | XiuRouter | Gateway | `https://router-api.xiu.ai/v1` |
+| 117 | SAGG | Gateway | `https://api.privatedeskai.com/v1` |
 
 ---
 
@@ -210,7 +211,7 @@ print(response.choices[0].message.content)
 | **Frontier APIs** | 18 | Best reasoning, agents, multimodal | Higher cost, vendor lock-in |
 | **IaaS / Inference** | 27 | Speed, open-weight models, low cost | Model catalog varies by host |
 | **Sovereign / Enterprise** | 29 | GDPR, VPC, compliance | More setup & procurement |
-| **Gateways & Routers** | 25 | One key, failover, observability | Extra hop, gateway fees |
+| **Gateways & Routers** | 26 | One key, failover, observability | Extra hop, gateway fees |
 | **Aggregators** | 6 | Multi-vendor under one bill | Less control over routing |
 | **Local / Self-hosted** | 7 | Privacy, unlimited, offline | You manage hardware |
 
@@ -348,6 +349,7 @@ One API surface for many upstream providers — ideal for **failover**, **cost o
 | **Sakana AI (Fugu)** | [console.sakana.ai](https://console.sakana.ai) | `https://api.sakana.ai/v1` | Fugu, Fugu Ultra | Trained orchestrator; routes frontier LLM pool |
 | **Prism API** | [prism-api-promo](https://go165.github.io/prism-api-promo/) | `https://sub2api.558686.xyz/v1` | GPT-5.5, GPT-5.4, Claude, Gemini | Independent OpenAI-compatible gateway; crypto-friendly recharge/vouchers; overseas users |
 | **XiuRouter** | [router.xiu.ai](https://router.xiu.ai/) | `https://router-api.xiu.ai/v1` | GPT-5.6 Sol, GPT-5.5, Claude Opus 5, GPT-5.4 | Usage-based gateway with OpenAI, Anthropic, and Gemini protocol support |
+| **SAGG** | [api.privatedeskai.com](https://api.privatedeskai.com) | `https://api.privatedeskai.com/v1` | deepseek-ai/DeepSeek-V4-Flash-0731 | Multi-provider failover gateway; flat-rate Super Deal tier also available |
 
 ---
 
@@ -432,6 +434,7 @@ Copy these into your `.env` file or secrets manager:
 | STACKIT | `STACKIT_API_KEY` | `https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1` |
 | Snowflake Cortex | `SNOWFLAKE_CORTEX_TOKEN` | `https://<account>.snowflakecomputing.com/api/v2/cortex/v1` |
 | 302.AI | `302AI_API_KEY` | `https://api.302.ai/v1` |
+| SAGG | `SAGG_API_KEY` | `https://api.privatedeskai.com/v1` |
 
 ---
 

@@ -27,6 +27,12 @@ PUBLIC_MODEL_APIS: dict[str, str] = {
     "openrouter": "https://openrouter.ai/api/v1/models",
     "deepinfra": "https://api.deepinfra.com/v1/openai/models",
     "huggingface": "https://router.huggingface.co/v1/models",
+    # Not /v1/models - SAGG's public model listing lives at /models (no
+    # /v1/ prefix on this specific route), so the generic
+    # _models_url_from_base() derivation from api_base_url below would
+    # guess wrong for this one entry; verified live against the real
+    # endpoint before adding.
+    "sagg": "https://api.privatedeskai.com/models",
 }
 
 # slug -> (env_var, models_url)
