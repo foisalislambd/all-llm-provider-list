@@ -2152,5 +2152,22 @@
     "env_variable": "XIUROUTER_API_KEY",
     "openai_compatible": true,
     "notes": "Usage-based gateway with OpenAI Chat Completions and Responses, Anthropic Messages, Gemini GenerateContent, scoped keys, and request-level usage and cost records"
+  },
+  {
+    "id": 117,
+    "name": "SAGG",
+    "slug": "sagg",
+    "aliases": [
+      "privatedeskai"
+    ],
+    "category": "Gateway",
+    "website": "https://api.privatedeskai.com",
+    "api_base_url": "https://api.privatedeskai.com/v1",
+    "popular_models": [
+      "deepseek-ai/DeepSeek-V4-Flash-0731"
+    ],
+    "env_variable": "SAGG_API_KEY",
+    "openai_compatible": true,
+    "notes": "Multi-provider failover gateway; a flat-rate Super Deal tier ($0.028/1M tokens, separate key) is also available"
   }
 ]
