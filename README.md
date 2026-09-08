@@ -183,6 +183,7 @@ print(response.choices[0].message.content)
 | 115 | DiscountedTokens | Discount / Budget API | `https://discountedtokens.com/v1` |
 | 116 | XiuRouter | Gateway | `https://router-api.xiu.ai/v1` |
 | 117 | SAGG | Gateway | `https://api.privatedeskai.com/v1` |
+| 118 | Bifrost | Gateway | `http://localhost:8080/v1` (self-hosted) |
 
 ---
 
@@ -332,6 +333,7 @@ One API surface for many upstream providers — ideal for **failover**, **cost o
 | **Moonshot AI** | [api.moonshot.ai](https://api.moonshot.ai/v1) | `https://api.moonshot.ai/v1` | Kimi K2.7 Code, K2.6 | First-party Kimi gateway |
 | **Portkey** | [portkey.ai](https://portkey.ai) | `https://api.portkey.ai/v1` | 250+ models | Guardrails, caching, observability |
 | **LiteLLM** | [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm) | `http://localhost:4000/v1` | 100+ providers | Open-source; self-host or cloud |
+| **Bifrost** | [github.com/maximhq/bifrost](https://github.com/maximhq/bifrost) | `http://localhost:8080/v1` | 1000+ models | Open-source Go gateway; adaptive load balancing, guardrails, virtual keys |
 | **Requesty** | [requesty.ai](https://requesty.ai) | `https://router.requesty.ai/v1` | Multi-provider routing | Auto-failover between providers |
 | **Unify.ai** | [unify.ai](https://unify.ai) | `https://api.unify.ai/v0` | ML-based routing | Picks optimal provider per query |
 | **Helicone** | [helicone.ai](https://helicone.ai) | `https://ai-gateway.helicone.ai/v1` | 100+ models | Observability-first AI gateway |
