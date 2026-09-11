@@ -291,6 +291,7 @@ Regional compliance, private networking, decentralized compute, and enterprise M
 | **AtlasCloud** | [atlascloud.ai](https://atlascloud.ai) | `https://api.atlascloud.ai/v1` | DeepSeek-V3, Seedance 2.0, Kling 3.0 | Language + image + video APIs |
 | **Chutes** | [chutes.ai](https://chutes.ai) | `https://llm.chutes.ai/v1` | Kimi, GLM, Qwen, MiniMax | Serverless custom model deploy |
 | **Cloudflare Workers AI** | [cloudflare.com](https://cloudflare.com) | `https://api.cloudflare.com/client/v4/accounts/{id}/ai/v1` | Llama 3.3, Gemma 4, Kimi K2.5, FLUX | Edge inference; neuron-second billing |
+| **Dasha Compute** | [getdasha.com/compute](https://www.getdasha.com/compute) | Open alpha | qwen3-8b, gemma3-12b, gemma3-27b | OpenAI-compatible API on a network of real Apple-silicon Macs; providers paid per job in USDC |
 | **DigitalOcean** | [digitalocean.com](https://digitalocean.com) | `https://inference.do-ai.run/v1/` | Llama 3 8B Instruct | Integrates with App Platform |
 | **GMICloud** | [gmicloud.ai](https://gmicloud.ai) | `https://api.gmi-serving.com/v1` | GLM-5.1-FP8, DeepSeek-V3.2 | Enterprise H100 GPU cloud |
 | **io.net** | [io.net](https://io.net) | `https://api.intelligence.io.solutions/api/v1` | GLM-4.5-Air, GPT-OSS 120B, Llama 3.3 | DePIN GPU clusters |
