@@ -627,6 +627,13 @@
     ],
     "sagg": [
       "deepseek-ai/DeepSeek-V4-Flash-0731"
+    ],
+    "aiwave": [
+      "deepseek-v4-pro",
+      "deepseek-v4-flash",
+      "deepseek-v3.2",
+      "kimi-k3",
+      "MiniMax-M3"
     ]
   }
 }
