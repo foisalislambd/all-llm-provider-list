@@ -1,4 +1,4 @@
-# All LLM Providers — API Endpoints, Models & Integration Guide
+# All AI and LLM Providers list — API Endpoints, Models & Integration Guide
 
 A curated, developer-friendly directory of **110+ global LLM providers** — official frontier APIs, inference platforms, sovereign clouds, gateways, aggregators, and local runtimes.
 
