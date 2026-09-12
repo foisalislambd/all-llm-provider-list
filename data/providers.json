@@ -2169,5 +2169,26 @@
     "env_variable": "SAGG_API_KEY",
     "openai_compatible": true,
     "notes": "Multi-provider failover gateway; a flat-rate Super Deal tier ($0.028/1M tokens, separate key) is also available"
+  },
+  {
+    "id": 118,
+    "name": "AIWave",
+    "slug": "aiwave",
+    "aliases": [
+      "aiwave-api"
+    ],
+    "category": "Gateway",
+    "website": "https://aiwave.live/",
+    "api_base_url": "https://aiwave.live/v1",
+    "popular_models": [
+      "deepseek-v4-pro",
+      "deepseek-v4-flash",
+      "deepseek-v3.2",
+      "kimi-k3",
+      "MiniMax-M3"
+    ],
+    "env_variable": "AIWAVE_API_KEY",
+    "openai_compatible": true,
+    "notes": "Chinese AI providers with USD billing, dated pricing, and request-level usage records"
   }
 ]
