@@ -183,6 +183,7 @@ print(response.choices[0].message.content)
 | 115 | DiscountedTokens | Discount / Budget API | `https://discountedtokens.com/v1` |
 | 116 | XiuRouter | Gateway | `https://router-api.xiu.ai/v1` |
 | 117 | SAGG | Gateway | `https://api.privatedeskai.com/v1` |
+| 118 | AIWave | Gateway | `https://aiwave.live/v1` |
 | 118 | Bifrost | Gateway | `http://localhost:8080/v1` (self-hosted) |
 
 ---
@@ -326,6 +327,7 @@ One API surface for many upstream providers — ideal for **failover**, **cost o
 
 | Provider | Website | API Base URL | What you get | Notes |
 |----------|---------|--------------|--------------|-------|
+| **AIWave** | [aiwave.live](https://aiwave.live/) | `https://aiwave.live/v1` | Chinese AI providers through one OpenAI-compatible route | USD billing, dated pricing, and request-level usage records |
 | **OpenRouter** | [openrouter.ai](https://openrouter.ai) | `https://openrouter.ai/api/v1` | 300+ models from 60+ providers | Auto fallback & provider selection |
 | **Opper** | [opper.ai](https://opper.ai) | `https://api.opper.ai/v3/compat` | 300+ routed models | EU-hosted; PII shielding |
 | **Axiom** | [axiomstudio.ai](https://axiomstudio.ai) | `https://cloud.axiomstudio.ai/rest/v1/llm-gateway/v1/` | 18+ unified providers | Kubernetes-native enterprise routing |
