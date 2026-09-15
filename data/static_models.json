@@ -662,15 +662,10 @@
       "Mistral-large"
     ],
     "modal": [
-      "custom-deployed-vllm",
       "google/gemini-2.0-flash"
     ],
-    "opper": [
-      "300+ routed models"
-    ],
-    "axiom": [
-      "18+ unified provider routes"
-    ],
+    "opper": [],
+    "axiom": [],
     "switchpoint": [
       "switchpoint/router"
     ],
@@ -696,27 +691,17 @@
     "perceptron": [
       "custom-enterprise-routes"
     ],
-    "portkey": [
-      "250+ routed models"
-    ],
-    "litellm": [
-      "100+ provider routes via proxy"
-    ],
+    "portkey": [],
+    "litellm": [],
     "requesty": [
       "multi-provider-routed"
     ],
     "unify": [
       "ml-routed-models"
     ],
-    "helicone": [
-      "100+ gateway models"
-    ],
-    "vercel-ai-gateway": [
-      "all-major-provider-models"
-    ],
-    "cloudflare-ai-gateway": [
-      "upstream-provider-models"
-    ],
+    "helicone": [],
+    "vercel-ai-gateway": [],
+    "cloudflare-ai-gateway": [],
     "kong-ai-gateway": [
       "enterprise-routed-models"
     ],
@@ -772,21 +757,11 @@
       "phi4",
       "codellama"
     ],
-    "lm-studio": [
-      "any-gguf-model"
-    ],
-    "llama-cpp": [
-      "any-gguf-model"
-    ],
-    "jan": [
-      "supported-local-models"
-    ],
-    "vllm": [
-      "any-compatible-checkpoint"
-    ],
-    "localai": [
-      "any-compatible-local-model"
-    ],
+    "lm-studio": [],
+    "llama-cpp": [],
+    "jan": [],
+    "vllm": [],
+    "localai": [],
     "302-ai": [
       "glm-5",
       "gpt-4o",
@@ -1183,19 +1158,6 @@
       "gpt-5.6-sol",
       "gpt-5.6-terra",
       "gpt-5.6-luna"
-    ],
-    "claude": [
-      "claude-fable-5-1",
-      "claude-fable-5",
-      "claude-opus-5",
-      "claude-opus-4-8",
-      "claude-opus-4-7",
-      "claude-opus-4-6",
-      "claude-opus-4-5-20251101",
-      "claude-sonnet-5",
-      "claude-sonnet-4-6",
-      "claude-sonnet-4-5-20250929",
-      "claude-haiku-4-5-20251001"
     ],
     "codex": [
       "gpt-6-astra",
@@ -2182,53 +2144,7 @@
       "claude-opus-4-5",
       "claude-haiku-4-5"
     ],
-    "glm": [
-      "glm-5.3-flash",
-      "glm-5.3",
-      "glm-5.3-high",
-      "glm-5.3-low",
-      "glm-5.3-max",
-      "glm-5.3-flash-high",
-      "glm-5.3-flash-low",
-      "glm-5.3-flash-max",
-      "glm-5.2",
-      "glm-5.2-high",
-      "glm-5.2-max",
-      "glm-5.1",
-      "glm-5",
-      "glm-5-turbo",
-      "glm-4.7-flash",
-      "glm-4.7",
-      "glm-4.6v",
-      "glm-4.6",
-      "glm-4.5v",
-      "glm-4.5",
-      "glm-4.5-air"
-    ],
     "glm-cn": [
-      "glm-5.3-flash",
-      "glm-5.3",
-      "glm-5.3-high",
-      "glm-5.3-low",
-      "glm-5.3-max",
-      "glm-5.3-flash-high",
-      "glm-5.3-flash-low",
-      "glm-5.3-flash-max",
-      "glm-5.2",
-      "glm-5.2-high",
-      "glm-5.2-max",
-      "glm-5.1",
-      "glm-5",
-      "glm-5-turbo",
-      "glm-4.7-flash",
-      "glm-4.7",
-      "glm-4.6v",
-      "glm-4.6",
-      "glm-4.5v",
-      "glm-4.5",
-      "glm-4.5-air"
-    ],
-    "glmt": [
       "glm-5.3-flash",
       "glm-5.3",
       "glm-5.3-high",
@@ -2365,12 +2281,6 @@
       "deepseek-v4-flash",
       "glm-5.2"
     ],
-    "sparkdesk": [
-      "4.0Ultra",
-      "generalv3",
-      "pro-128k",
-      "lite"
-    ],
     "agnes": [
       "agnes-2.0-flash",
       "agnes-2.5-flash",
@@ -2489,6 +2399,42 @@
     ],
     "deepai": [
       "text2img"
+    ],
+    "claude-code": [
+      "claude-fable-5-1",
+      "claude-fable-5",
+      "claude-opus-5",
+      "claude-opus-4-8",
+      "claude-opus-4-7",
+      "claude-opus-4-6",
+      "claude-opus-4-5-20251101",
+      "claude-sonnet-5",
+      "claude-sonnet-4-6",
+      "claude-sonnet-4-5-20250929",
+      "claude-haiku-4-5-20251001"
+    ],
+    "glm-coding": [
+      "glm-5.3-flash",
+      "glm-5.3",
+      "glm-5.3-high",
+      "glm-5.3-low",
+      "glm-5.3-max",
+      "glm-5.3-flash-high",
+      "glm-5.3-flash-low",
+      "glm-5.3-flash-max",
+      "glm-5.2",
+      "glm-5.2-high",
+      "glm-5.2-max",
+      "glm-5.1",
+      "glm-5",
+      "glm-5-turbo",
+      "glm-4.7-flash",
+      "glm-4.7",
+      "glm-4.6v",
+      "glm-4.6",
+      "glm-4.5v",
+      "glm-4.5",
+      "glm-4.5-air"
     ]
   }
 }

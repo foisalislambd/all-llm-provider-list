@@ -595,7 +595,7 @@
       "Open-weight LLMs"
     ],
     "env_variable": null,
-    "openai_compatible": true,
+    "openai_compatible": false,
     "notes": "Self-configured model hosting"
   },
   {
@@ -1056,7 +1056,7 @@
       "unsloth/Qwen2.5-72B-Instruct"
     ],
     "env_variable": "PHALA_API_KEY",
-    "openai_compatible": true,
+    "openai_compatible": false,
     "notes": "TEE confidential execution"
   },
   {
@@ -1190,8 +1190,7 @@
     "api_base_url": "https://model-{id}.api.baseten.co/v1",
     "popular_models": [
       "Llama 3.3",
-      "DeepSeek-R1",
-      "custom"
+      "DeepSeek-R1"
     ],
     "env_variable": "BASETEN_API_KEY",
     "openai_compatible": true,
@@ -1254,9 +1253,7 @@
     "id": 67,
     "name": "GitHub Models",
     "slug": "github-models",
-    "aliases": [
-      "github"
-    ],
+    "aliases": [],
     "category": "Sovereign / Cloud",
     "website": "https://github.com/marketplace/models",
     "api_base_url": "https://models.inference.ai.azure.com",
@@ -1279,7 +1276,7 @@
     "website": "https://modal.com",
     "api_base_url": "https://<app>.modal.run/v1",
     "popular_models": [
-      "Any (self-deployed via vLLM)"
+      "google/gemini-2.0-flash"
     ],
     "env_variable": "MODAL_TOKEN_ID",
     "openai_compatible": true,
@@ -1297,7 +1294,7 @@
     "website": "https://openrouter.ai",
     "api_base_url": "https://openrouter.ai/api/v1",
     "popular_models": [
-      "300+ models from 60+ providers"
+      "auto"
     ],
     "env_variable": "OPENROUTER_API_KEY",
     "openai_compatible": true,
@@ -1313,9 +1310,7 @@
     "category": "Gateway",
     "website": "https://opper.ai",
     "api_base_url": "https://api.opper.ai/v3/compat",
-    "popular_models": [
-      "300+ routed models"
-    ],
+    "popular_models": [],
     "env_variable": "OPPER_API_KEY",
     "openai_compatible": true,
     "notes": "EU-hosted; PII shielding"
@@ -1330,9 +1325,7 @@
     "category": "Gateway",
     "website": "https://axiomstudio.ai",
     "api_base_url": "https://cloud.axiomstudio.ai/rest/v1/llm-gateway/v1/",
-    "popular_models": [
-      "18+ unified providers"
-    ],
+    "popular_models": [],
     "env_variable": "AXIOM_API_KEY",
     "openai_compatible": true,
     "notes": "Kubernetes-native enterprise routing"
@@ -1439,7 +1432,7 @@
       "Enterprise routes"
     ],
     "env_variable": null,
-    "openai_compatible": true,
+    "openai_compatible": false,
     "notes": "Custom middleware routing"
   },
   {
@@ -1452,9 +1445,7 @@
     "category": "Gateway",
     "website": "https://portkey.ai",
     "api_base_url": "https://api.portkey.ai/v1",
-    "popular_models": [
-      "250+ models"
-    ],
+    "popular_models": [],
     "env_variable": "PORTKEY_API_KEY",
     "openai_compatible": true,
     "notes": "Guardrails, caching, observability"
@@ -1469,9 +1460,7 @@
     "category": "Gateway",
     "website": "https://github.com/BerriAI/litellm",
     "api_base_url": "http://localhost:4000/v1",
-    "popular_models": [
-      "100+ providers"
-    ],
+    "popular_models": [],
     "env_variable": "LITELLM_MASTER_KEY",
     "openai_compatible": true,
     "notes": "Open-source; self-host or cloud"
@@ -1520,9 +1509,7 @@
     "category": "Gateway",
     "website": "https://helicone.ai",
     "api_base_url": "https://ai-gateway.helicone.ai/v1",
-    "popular_models": [
-      "100+ models"
-    ],
+    "popular_models": [],
     "env_variable": "HELICONE_API_KEY",
     "openai_compatible": true,
     "notes": "Observability-first AI gateway"
@@ -1538,9 +1525,7 @@
     "category": "Gateway",
     "website": "https://vercel.com/docs/ai-gateway",
     "api_base_url": "https://ai-gateway.vercel.sh/v1",
-    "popular_models": [
-      "All major providers"
-    ],
+    "popular_models": [],
     "env_variable": "VERCEL_AI_GATEWAY_KEY",
     "openai_compatible": true,
     "notes": "Bundled with Vercel platform"
@@ -1555,9 +1540,7 @@
     "category": "Gateway",
     "website": "https://developers.cloudflare.com/ai-gateway/",
     "api_base_url": "https://gateway.ai.cloudflare.com/v1",
-    "popular_models": [
-      "Any upstream provider"
-    ],
+    "popular_models": [],
     "env_variable": "CLOUDFLARE_API_TOKEN",
     "openai_compatible": true,
     "notes": "Edge caching; sits in front of APIs"
@@ -1576,7 +1559,7 @@
       "Enterprise routing"
     ],
     "env_variable": null,
-    "openai_compatible": true,
+    "openai_compatible": false,
     "notes": "For existing Kong infrastructure"
   },
   {
@@ -1595,7 +1578,7 @@
       "claude-3-5-sonnet",
       "gemini"
     ],
-    "env_variable": "AIMLAPI_API_KEY",
+    "env_variable": "AIMLAPI_KEY",
     "openai_compatible": true,
     "notes": "300+ models; free tier available"
   },
@@ -1722,9 +1705,7 @@
     "category": "Local",
     "website": "https://lmstudio.ai",
     "api_base_url": "http://localhost:1234/v1",
-    "popular_models": [
-      "Any GGUF from HuggingFace"
-    ],
+    "popular_models": [],
     "env_variable": null,
     "openai_compatible": true,
     "notes": "Best GUI; drag-and-drop models"
@@ -1741,9 +1722,7 @@
     "category": "Local",
     "website": "https://github.com/ggml-org/llama.cpp",
     "api_base_url": "http://localhost:8080/v1",
-    "popular_models": [
-      "Any GGUF model"
-    ],
+    "popular_models": [],
     "env_variable": null,
     "openai_compatible": true,
     "notes": "Foundation for most local tools"
@@ -1758,9 +1737,7 @@
     "category": "Local",
     "website": "https://jan.ai",
     "api_base_url": "http://localhost:1337/v1",
-    "popular_models": [
-      "Supported local models"
-    ],
+    "popular_models": [],
     "env_variable": null,
     "openai_compatible": true,
     "notes": "100% offline desktop app"
@@ -1773,9 +1750,7 @@
     "category": "Local",
     "website": "https://github.com/vllm-project/vllm",
     "api_base_url": "http://localhost:8000/v1",
-    "popular_models": [
-      "Any compatible checkpoint"
-    ],
+    "popular_models": [],
     "env_variable": null,
     "openai_compatible": true,
     "notes": "Production-grade local serving"
@@ -1811,7 +1786,7 @@
       "gpt-4o",
       "claude-sonnet-4"
     ],
-    "env_variable": "302AI_API_KEY",
+    "env_variable": "AI302_API_KEY",
     "openai_compatible": true,
     "notes": "OpenCode-supported; unified OpenAI-compatible gateway for 100+ models"
   },
@@ -1909,7 +1884,7 @@
     ],
     "env_variable": "GITLAB_TOKEN",
     "openai_compatible": false,
-    "notes": "OpenCode-supported; OAuth or PAT; Premium/Ultimate; set GITLAB_INSTANCE_URL for self-hosted"
+    "notes": "OpenCode-supported; OAuth or PAT; Premium/Ultimate; set GITLAB_INSTANCE_URL for self-hosted; GitLab personal access token for the public Code Suggestions API. Configure a self-hosted base URL when not using gitlab.com."
   },
   {
     "id": 104,
@@ -1918,7 +1893,6 @@
     "aliases": [
       "copilot",
       "gh-copilot",
-      "github",
       "gh"
     ],
     "category": "Sovereign / Cloud",
@@ -1957,8 +1931,7 @@
     "name": "OpenCode Zen",
     "slug": "opencode-zen",
     "aliases": [
-      "zen",
-      "opencode"
+      "zen"
     ],
     "category": "Gateway",
     "website": "https://opencode.ai/zen",
@@ -2145,7 +2118,7 @@
     "aliases": [
       "discounted-tokens"
     ],
-    "category": "Discount / Budget API",
+    "category": "Gateway",
     "website": "https://discountedtokens.com",
     "api_base_url": "https://discountedtokens.com/v1",
     "popular_models": [
@@ -2351,7 +2324,7 @@
       "sonnet5-high"
     ],
     "env_variable": null,
-    "openai_compatible": true,
+    "openai_compatible": false,
     "notes": "Local passthrough — runs the Augment CLI (`auggie`) on this machine. Auth is handled by `auggie login`, not OmniRoute.; No API key stored by OmniRoute. Install the Auggie CLI and run `auggie login` on this machine, then OmniRoute spawns it locally for each request.; Augment (Auggie CLI) requires the `auggie` binary installed and authenticated locally (`auggie login`). OmniRoute spawns it as a subprocess and never…"
   },
   {
@@ -2366,7 +2339,7 @@
     "api_base_url": "No-auth public endpoint",
     "popular_models": [],
     "env_variable": null,
-    "openai_compatible": true,
+    "openai_compatible": false,
     "notes": "No API key stored by OmniRoute. The local ZCode app-server uses the existing builtin:zai-coding-plan login.; ZCode runs locally through its native app-server. OmniRoute never receives or stores the Z.ai credential."
   },
   {
@@ -2381,7 +2354,7 @@
     "api_base_url": "No-auth public endpoint",
     "popular_models": [],
     "env_variable": null,
-    "openai_compatible": true,
+    "openai_compatible": false,
     "notes": "No token stored by OmniRoute. The Codex CLI app-server manages its own ChatGPT sign-in (~/.codex/auth.json, auto-refreshed). Use u201cSign in with ChatGPTu201d if the CLI is not yet authenticated.; OpenAI Codex (App-Server) drives the Codex CLI's local app-server (JSON-RPC over WebSocket). The CLI self-manages its OpenAI OAuth, so OmniRoute never sees or replays your token. Requires the codex CLI reachable at the…"
   },
   {
@@ -2429,7 +2402,7 @@
     "aliases": [],
     "category": "OAuth",
     "website": "https://docs.github.com/en/copilot",
-    "api_base_url": "https://api.githubcopilot.com",
+    "api_base_url": "GitHub Enterprise host (device-flow OAuth)",
     "popular_models": [
       "claude-fable-5",
       "claude-opus-5",
@@ -2439,7 +2412,7 @@
       "claude-sonnet-4.6"
     ],
     "env_variable": null,
-    "openai_compatible": true,
+    "openai_compatible": false,
     "notes": "Enter your GHE instance URL (e.g., https://ghe.company.com) in provider settings, then authenticate via device flow."
   },
   {
@@ -2570,7 +2543,7 @@
   {
     "id": 138,
     "name": "Claude Code",
-    "slug": "claude",
+    "slug": "claude-code",
     "aliases": [
       "cc"
     ],
@@ -2593,9 +2566,7 @@
     "id": 139,
     "name": "Antigravity",
     "slug": "antigravity",
-    "aliases": [
-      "undefined"
-    ],
+    "aliases": [],
     "category": "OAuth",
     "website": "https://antigravity.google",
     "api_base_url": "OAuth (provider-specific)",
@@ -2667,9 +2638,7 @@
     "id": 143,
     "name": "Zed Hosted Models",
     "slug": "zed-hosted",
-    "aliases": [
-      "undefined"
-    ],
+    "aliases": [],
     "category": "OAuth",
     "website": "https://zed.dev",
     "api_base_url": "https://cloud.zed.dev",
@@ -2785,9 +2754,7 @@
     "id": 149,
     "name": "Devin Desktop",
     "slug": "devin-desktop",
-    "aliases": [
-      "undefined"
-    ],
+    "aliases": [],
     "category": "OAuth",
     "website": "https://devin.ai",
     "api_base_url": "https://server.codeium.com",
@@ -2808,7 +2775,7 @@
     "api_base_url": "OAuth (provider-specific)",
     "popular_models": [],
     "env_variable": null,
-    "openai_compatible": true,
+    "openai_compatible": false,
     "notes": "Requires the Devin CLI binary. Run `devin auth login` to authenticate, or provide your WINDSURF_API_KEY. Install: https://cli.devin.ai"
   },
   {
@@ -3025,9 +2992,7 @@
     "id": 161,
     "name": "Microsoft Copilot Web",
     "slug": "copilot-web",
-    "aliases": [
-      "copilot"
-    ],
+    "aliases": [],
     "category": "Web Cookie",
     "website": "https://copilot.microsoft.com",
     "api_base_url": "Web cookie / browser session",
@@ -3037,7 +3002,7 @@
       "gpt-4"
     ],
     "env_variable": null,
-    "openai_compatible": true,
+    "openai_compatible": false,
     "notes": "Paste the access_token from an authenticated copilot.microsoft.com request (DevTools → Network → Authorization), or export a HAR while logged in"
   },
   {
@@ -3057,7 +3022,7 @@
       "copilot-m365-gpt-5-5-chat"
     ],
     "env_variable": null,
-    "openai_compatible": true,
+    "openai_compatible": false,
     "notes": "Sign in at m365.cloud.microsoft/chat, then open DevTools → Network → filter 'WS' → click the Chathub WebSocket connection. Copy both the access_token query parameter AND the account-specific Chathub path segment from its request URL (wss://…/Chathub/<path>?…&access_token=…). It is NOT an Authorization: Bearer header on an XHR/Fetch request. The token is short-lived; this is an unofficial integration. Optional: sto…"
   },
   {
@@ -3206,9 +3171,7 @@
     "id": 170,
     "name": "Poe Web (Subscription)",
     "slug": "poe-web",
-    "aliases": [
-      "poe"
-    ],
+    "aliases": [],
     "category": "Web Cookie",
     "website": "https://poe.com",
     "api_base_url": "Web cookie / browser session",
@@ -3760,7 +3723,7 @@
     "website": "https://www.searchapi.io/docs/google",
     "api_base_url": "https://www.searchapi.io/api/v1/search",
     "popular_models": [],
-    "env_variable": "SEARCHAPI_SEARCH_API_KEY",
+    "env_variable": "SEARCHAPI_KEY",
     "openai_compatible": false,
     "notes": "API key from SearchAPI (query param or Bearer auth)"
   },
@@ -4068,7 +4031,7 @@
     "website": "https://github.com/router-for-me/CLIProxyAPI",
     "api_base_url": "http://localhost:8317/v1",
     "popular_models": [],
-    "env_variable": "CLIPROXYAPI_API_KEY",
+    "env_variable": "CLIPROXYAPI_KEY",
     "openai_compatible": false,
     "notes": "OpenAI-compatible multi-provider gateway or local proxy."
   },
@@ -4083,7 +4046,7 @@
     "website": "https://www.npmjs.com/package/9router",
     "api_base_url": "http://localhost:20130/v1",
     "popular_models": [],
-    "env_variable": "P9ROUTER_API_KEY",
+    "env_variable": null,
     "openai_compatible": false,
     "notes": "OpenAI-compatible multi-provider gateway or local proxy."
   },
@@ -4266,9 +4229,9 @@
     "aliases": [
       "mc"
     ],
-    "category": "Frontier",
+    "category": "Local",
     "website": "https://github.com/meta-llama/llama-stack",
-    "api_base_url": "https://llama-stack.readthedocs.io",
+    "api_base_url": "http://localhost:8321/v1",
     "popular_models": [
       "llama-4-maverick",
       "llama-4-scout",
@@ -4277,7 +4240,7 @@
       "llama-3.1-70b",
       "llama-3.1-8b"
     ],
-    "env_variable": "MUSE_CODE_API_KEY",
+    "env_variable": null,
     "openai_compatible": true,
     "notes": "Use your META_API_KEY env var as a Bearer token. Muse Code CLI uses the OpenAI Responses API wire format (POST /responses).; Muse Code is OpenAI-compatible. OmniRoute routes chat traffic through the Responses API and exposes the proprietary model catalog at /v1/muse-code/models."
   },
@@ -4314,7 +4277,7 @@
     "popular_models": [
       "GLM-5.2"
     ],
-    "env_variable": "OPENFERENCE_API_API_KEY",
+    "env_variable": "OPENFERENCE_API_KEY",
     "openai_compatible": true,
     "notes": "Free plan: 3-day trial with open-source models — no credit card required"
   },
@@ -4427,7 +4390,7 @@
       "meta-llama/Meta-Llama-3.1-8B-Instruct",
       "meta-llama/Llama-3.3-70B-Instruct"
     ],
-    "env_variable": "MONSTERAPI_API_KEY",
+    "env_variable": "MONSTERAPI_KEY",
     "openai_compatible": true,
     "notes": "One-time signup trial credits for decentralized GPU inference (no recurring free plan). No credit card required.; Get API key at monsterapi.ai"
   },
@@ -4603,7 +4566,7 @@
     "website": "https://zyloai.net",
     "api_base_url": "https://api.zyloai.net/v1",
     "popular_models": [],
-    "env_variable": "ZYLO_API_API_KEY",
+    "env_variable": "ZYLO_API_KEY",
     "openai_compatible": true,
     "notes": "Basic plan: 10 RPM, 7,200 requests/day and 200,000 tokens/day; limited to Basic text models.; Create a free Zylo API key at https://zyloai.net, then use https://api.zyloai.net/v1 as the OpenAI-compatible base URL."
   },
@@ -4629,7 +4592,7 @@
     "website": "https://anyapi.ai",
     "api_base_url": "https://api.anyapi.ai/v1",
     "popular_models": [],
-    "env_variable": "ANYAPI_API_KEY",
+    "env_variable": "ANYAPI_KEY",
     "openai_compatible": true,
     "notes": "Free plan: 100,000 ANY Tokens/day and 100 RPM for eligible Free/Basic models; no credit card required.; Create and verify an AnyAPI account, then use https://api.anyapi.ai/v1 as the OpenAI-compatible base URL."
   },
@@ -4894,19 +4857,6 @@
   },
   {
     "id": 282,
-    "name": "Naga AI",
-    "slug": "naga-ai",
-    "aliases": [],
-    "category": "Aggregator",
-    "website": "https://naga.ac",
-    "api_base_url": "https://api.naga.ac/v1",
-    "popular_models": [],
-    "env_variable": "NAGA_AI_API_KEY",
-    "openai_compatible": true,
-    "notes": "Models marked :free are publicly listed, but no numeric quota is confirmed. Naga's policy warns that free-tier prompts and outputs may be collected or used for training.; Create a Naga AI Bearer key, then use https://api.naga.ac/v1 as the OpenAI-compatible base URL. Never send sensitive data to the free tier without accepting its training policy."
-  },
-  {
-    "id": 283,
     "name": "Chat Oripe",
     "slug": "chat-oripe",
     "aliases": [],
@@ -4919,7 +4869,7 @@
     "notes": "Official metadata advertises 2M tokens/month, but the public site and documentation were blocked during audit; treat the quota and brand mapping as unconfirmed.; Use https://api.oriper.com/v1 only after confirming the provider's current documentation, terms and key issuance. No quota is guaranteed by this catalog."
   },
   {
-    "id": 284,
+    "id": 283,
     "name": "FreeInference",
     "slug": "freeinference",
     "aliases": [],
@@ -4932,7 +4882,7 @@
     "notes": "Free research access without a card; non-Harvard applicants require manual approval and no numeric quota is publicly guaranteed.; Apply for a FreeInference key, then use https://freeinference.org/v1 as the OpenAI-compatible base URL. Terms allow prompt/response logging and possible publication of anonymized research data; never send sensitive or production data."
   },
   {
-    "id": 285,
+    "id": 284,
     "name": "Free.ai",
     "slug": "free-ai",
     "aliases": [],
@@ -4945,7 +4895,7 @@
     "notes": "30,000 tokens/day cover self-hosted models after email verification. Usage beyond the pool can bill at raw cost, and premium external models are paid.; Create an sk-free- key, then use the nonstandard but OpenAI-shaped https://api.free.ai/v1/chat/ endpoint. Select a self-hosted zero-price model to stay within the free pool."
   },
   {
-    "id": 286,
+    "id": 285,
     "name": "DGrid",
     "slug": "dgrid",
     "aliases": [],
@@ -4960,7 +4910,7 @@
     "notes": "DGrid Free Models Router: 10 requests/minute and 100 requests/day. A $5 lifetime top-up unlocks up to 20 requests/minute and 1,000 requests/day.; Create a DGrid API key at https://dgrid.ai, then use https://api.dgrid.ai/v1 as the OpenAI-compatible base URL."
   },
   {
-    "id": 287,
+    "id": 286,
     "name": "Qiniu",
     "slug": "qiniu",
     "aliases": [],
@@ -4973,7 +4923,7 @@
     "notes": "Create a Qiniu AI inference API key at https://portal.qiniu.com/ai-inference/api-key, then paste it here as a Bearer token. OpenAI-compatible endpoint at https://api.qnaigc.com/v1, proxying DeepSeek, Claude, Kimi and more behind one key."
   },
   {
-    "id": 288,
+    "id": 287,
     "name": "OrcaRouter",
     "slug": "orcarouter",
     "aliases": [],
@@ -4993,7 +4943,7 @@
     "notes": "Create an API key (starts with sk-orca-) at https://www.orcarouter.ai, then paste it as a Bearer token. OpenAI-compatible endpoint at https://api.orcarouter.ai/v1."
   },
   {
-    "id": 289,
+    "id": 288,
     "name": "Api.airforce",
     "slug": "api-airforce",
     "aliases": [
@@ -5010,12 +4960,12 @@
       "moonshot/kimi-k2.6",
       "google/gemini-2.5-flash"
     ],
-    "env_variable": "API_AIRFORCE_API_KEY",
+    "env_variable": "AIRFORCE_API_KEY",
     "openai_compatible": true,
     "notes": "55 free tier models including Grok-3, Claude 3.7, Qwen3, Kimi-K2, Gemini 2.5 Flash, DeepSeek-V3; Get your API key from https://panel.api.airforce — OpenAI-compatible endpoint at https://api.airforce/v1"
   },
   {
-    "id": 290,
+    "id": 289,
     "name": "CrofAI",
     "slug": "crof",
     "aliases": [],
@@ -5035,7 +4985,7 @@
     "notes": "OpenAI-compatible multi-provider gateway or local proxy."
   },
   {
-    "id": 291,
+    "id": 290,
     "name": "BazaarLink",
     "slug": "bazaarlink",
     "aliases": [
@@ -5057,7 +5007,7 @@
     "notes": "Free tier: 4M tokens/day per account with auto:free routing — zero-cost inference, no credit card required.; Use your BazaarLink API key (starts with sk-bl-) in Authorization: Bearer <key>. OpenAI SDK works with base URL https://bazaarlink.ai/api/v1. Models use provider/model-name format.; Create a free API key at https://bazaarlink.ai — model 'auto:free' routes to zero-cost inference. All models use the provider/…"
   },
   {
-    "id": 292,
+    "id": 291,
     "name": "Synthetic",
     "slug": "synthetic",
     "aliases": [],
@@ -5077,7 +5027,7 @@
     "notes": "OpenAI-compatible multi-provider gateway or local proxy."
   },
   {
-    "id": 293,
+    "id": 292,
     "name": "Kilo Gateway",
     "slug": "kilo-gateway",
     "aliases": [
@@ -5099,7 +5049,7 @@
     "notes": "OpenAI-compatible multi-provider gateway or local proxy."
   },
   {
-    "id": 294,
+    "id": 293,
     "name": "Dahl",
     "slug": "dahl",
     "aliases": [],
@@ -5115,7 +5065,7 @@
     "notes": "Free — MiniMax M2.7, Kimi K2.6. Click 'Add Account' to auto-generate a token, or add your own API key.; Click 'Add Account' to auto-generate a token, or add a manual API key.; Auto-generate a token or paste your own API key.; Dahl auto-generates tokens via https://inference.dahl.global/tokens. No signup needed. Rate limits apply. You can also add your own API key."
   },
   {
-    "id": 295,
+    "id": 294,
     "name": "FreeTheAi",
     "slug": "freetheai",
     "aliases": [
@@ -5134,7 +5084,7 @@
     "notes": "Free OpenAI-compatible gateway — sign up via Discord for an API key.; Join the FreeTheAi Discord to get your free API key."
   },
   {
-    "id": 296,
+    "id": 295,
     "name": "g4f.space — Groq",
     "slug": "g4f-groq",
     "aliases": [
@@ -5152,7 +5102,7 @@
     "notes": "Anonymous access to Groq requires proof-of-work cake credits from g4f.dev/chat; alternatively, use a g4f.dev member API key. Limits vary.; Bake anonymous cake credits at g4f.dev/chat, or use a g4f.dev member key (create one at g4f.dev/members.html).; Remote third-party gateway: prompts and request metadata leave OmniRoute and are handled by g4f.space. Its Terms and Privacy links were unavailable when last verified…"
   },
   {
-    "id": 297,
+    "id": 296,
     "name": "g4f.space — Gemini",
     "slug": "g4f-gemini",
     "aliases": [
@@ -5170,7 +5120,7 @@
     "notes": "Anonymous access to Gemini requires proof-of-work cake credits from g4f.dev/chat; alternatively, use a g4f.dev member API key. Limits vary.; Bake anonymous cake credits at g4f.dev/chat, or use a g4f.dev member key (create one at g4f.dev/members.html).; Remote third-party gateway: prompts and request metadata leave OmniRoute and are handled by g4f.space. Its Terms and Privacy links were unavailable when last verifi…"
   },
   {
-    "id": 298,
+    "id": 297,
     "name": "g4f.space — Pollinations",
     "slug": "g4f-pollinations",
     "aliases": [
@@ -5188,7 +5138,7 @@
     "notes": "Anonymous access to Pollinations requires proof-of-work cake credits from g4f.dev/chat; alternatively, use a g4f.dev member API key. Limits vary.; Bake anonymous cake credits at g4f.dev/chat, or use a g4f.dev member key (create one at g4f.dev/members.html).; Remote third-party gateway: prompts and request metadata leave OmniRoute and are handled by g4f.space. Its Terms and Privacy links were unavailable when last…"
   },
   {
-    "id": 299,
+    "id": 298,
     "name": "g4f.space — Ollama",
     "slug": "g4f-ollama",
     "aliases": [
@@ -5205,7 +5155,7 @@
     "notes": "Anonymous access to hosted Ollama requires proof-of-work cake credits from g4f.dev/chat; alternatively, use a g4f.dev member API key. Limits vary.; Bake anonymous cake credits at g4f.dev/chat, or use a g4f.dev member key (create one at g4f.dev/members.html).; Remote third-party gateway: prompts and request metadata leave OmniRoute and are handled by g4f.space. Its Terms and Privacy links were unavailable when last…"
   },
   {
-    "id": 300,
+    "id": 299,
     "name": "g4f.space — NVIDIA",
     "slug": "g4f-nvidia",
     "aliases": [
@@ -5224,7 +5174,7 @@
     "notes": "Anonymous access to NVIDIA NIM requires proof-of-work cake credits from g4f.dev/chat; alternatively, use a g4f.dev member API key. Limits vary.; Bake anonymous cake credits at g4f.dev/chat, or use a g4f.dev member key (create one at g4f.dev/members.html).; Remote third-party gateway: prompts and request metadata leave OmniRoute and are handled by g4f.space. Its Terms and Privacy links were unavailable when last ve…"
   },
   {
-    "id": 301,
+    "id": 300,
     "name": "LLM7.io",
     "slug": "llm7",
     "aliases": [],
@@ -5242,7 +5192,7 @@
     "notes": "No signup required - 2 req/s, 20 RPM, 100 req/hr free tier; Use any non-empty key (for example 'unused'). If older built-in models return model_unavailable, use Available Models → Import from /models or Auto-Sync; verified live model: gemini-3.1-flash-lite.; Works without API key (use 'unused' as key). Get free token at token.llm7.io for higher limits."
   },
   {
-    "id": 302,
+    "id": 301,
     "name": "LlamaGate",
     "slug": "llamagate",
     "aliases": [],
@@ -5255,7 +5205,7 @@
     "notes": "OpenAI-compatible multi-provider gateway or local proxy."
   },
   {
-    "id": 303,
+    "id": 302,
     "name": "Gitlawb Opengateway (MiMo)",
     "slug": "gitlawb",
     "aliases": [
@@ -5276,7 +5226,7 @@
     "notes": "Free MiMo (xiaomi/mimo-v2.5) revoked 2026-05 — Opengateway is now a pay-as-you-go credit gateway; no recurring free model.; Get your API key from Gitlawb Opengateway dashboard."
   },
   {
-    "id": 304,
+    "id": 303,
     "name": "Gitlawb Opengateway (GMI Cloud)",
     "slug": "gitlawb-gmi",
     "aliases": [
@@ -5298,7 +5248,7 @@
     "notes": "Free Nemotron promo ended 2026-06 — the GMI Cloud route is now pay-as-you-go credit only.; Get your API key from Gitlawb Opengateway dashboard."
   },
   {
-    "id": 305,
+    "id": 304,
     "name": "NanoGPT",
     "slug": "nanogpt",
     "aliases": [],
@@ -5311,22 +5261,20 @@
     "notes": "OpenAI-compatible multi-provider gateway or local proxy."
   },
   {
-    "id": 306,
+    "id": 305,
     "name": "PiAPI",
     "slug": "piapi",
-    "aliases": [
-      "pi"
-    ],
+    "aliases": [],
     "category": "Aggregator",
     "website": "https://piapi.ai",
     "api_base_url": "https://api.piapi.ai",
     "popular_models": [],
-    "env_variable": "PIAPI_API_KEY",
+    "env_variable": "PIAPI_KEY",
     "openai_compatible": false,
     "notes": "Multi-vendor model marketplace under one API key."
   },
   {
-    "id": 307,
+    "id": 306,
     "name": "GoAPI",
     "slug": "getgoapi",
     "aliases": [
@@ -5336,12 +5284,12 @@
     "website": "https://api.getgoapi.com",
     "api_base_url": "https://api.getgoapi.com/v1",
     "popular_models": [],
-    "env_variable": "GETGOAPI_API_KEY",
+    "env_variable": "GETGOAPI_KEY",
     "openai_compatible": false,
     "notes": "Multi-vendor model marketplace under one API key."
   },
   {
-    "id": 308,
+    "id": 307,
     "name": "LaoZhang AI",
     "slug": "laozhang",
     "aliases": [
@@ -5356,7 +5304,7 @@
     "notes": "OpenAI-compatible multi-provider gateway or local proxy."
   },
   {
-    "id": 309,
+    "id": 308,
     "name": "TheB.AI",
     "slug": "thebai",
     "aliases": [],
@@ -5369,7 +5317,7 @@
     "notes": "Bearer API key for the TheB.AI OpenAI-compatible gateway."
   },
   {
-    "id": 310,
+    "id": 309,
     "name": "b.ai",
     "slug": "bai",
     "aliases": [],
@@ -5382,7 +5330,7 @@
     "notes": "Bearer API key for the b.ai OpenAI-compatible LLM gateway (distinct from TheB.AI). Create a key at https://docs.b.ai, then use https://api.b.ai/v1 as the OpenAI-compatible base URL."
   },
   {
-    "id": 311,
+    "id": 310,
     "name": "FenayAI",
     "slug": "fenayai",
     "aliases": [],
@@ -5395,7 +5343,7 @@
     "notes": "Bearer API key for the FenayAI OpenAI-compatible gateway."
   },
   {
-    "id": 312,
+    "id": 311,
     "name": "Empower",
     "slug": "empower",
     "aliases": [],
@@ -5408,7 +5356,7 @@
     "notes": "Bearer API key for the Empower OpenAI-compatible endpoint.; Empower exposes OpenAI-compatible chat on https://app.empower.dev/api/v1 with tool-calling support on empower-functions."
   },
   {
-    "id": 313,
+    "id": 312,
     "name": "Poe",
     "slug": "poe",
     "aliases": [],
@@ -5425,7 +5373,7 @@
     "notes": "Bearer API key for the Poe OpenAI-compatible API.; Poe exposes OpenAI-compatible chat and responses on https://api.poe.com/v1, with authenticated balance checks on /usage/current_balance."
   },
   {
-    "id": 314,
+    "id": 313,
     "name": "Factory",
     "slug": "factory",
     "aliases": [],
@@ -5440,7 +5388,7 @@
     "notes": "Bearer API key for the Factory OpenAI-compatible gateway.; Get your Factory API key at https://app.factory.ai/settings/api-keys, then paste it as a Bearer token. OpenAI-compatible endpoint at https://api.factory.ai/v1."
   },
   {
-    "id": 315,
+    "id": 314,
     "name": "BluesMinds",
     "slug": "bluesminds",
     "aliases": [
@@ -5462,7 +5410,7 @@
     "notes": "Free daily pi credits — supports 200+ models including GPT-4o, GPT-4.1, Claude Sonnet 4.5, Gemini 2.0 Flash, DeepSeek V4, Qwen, Kimi K2; Get your API key at https://www.bluesminds.com — OpenAI-compatible endpoint at https://api.bluesminds.com/v1 with free daily credits. VIP models (Claude Opus 4.5, Gemini 2.5 Pro) consume pi credits."
   },
   {
-    "id": 316,
+    "id": 315,
     "name": "FreeModel.dev",
     "slug": "freemodel-dev",
     "aliases": [
@@ -5482,7 +5430,7 @@
     "notes": "$300 free credits on signup — no credit card required. Access GPT-5.4 and GPT-5.5 (OpenAI's latest flagship models) through an OpenAI-compatible API.; Get $300 free API credits at https://freemodel.dev — no payment info required. OpenAI-compatible endpoint. GPT-5.4 and GPT-5.5 models available."
   },
   {
-    "id": 317,
+    "id": 316,
     "name": "FreeAIAPIKey",
     "slug": "freeaiapikey",
     "aliases": [
@@ -5499,12 +5447,12 @@
       "anthropic/claude-opus-4.6",
       "anthropic/claude-opus-4.7"
     ],
-    "env_variable": "FREEAIAPIKEY_API_KEY",
+    "env_variable": "FREEAI_API_KEY",
     "openai_compatible": true,
     "notes": "Discounted API proxy for 40+ models including GPT-5, Claude Opus 4.6, Claude Sonnet 4.6, Qwen 3.5. Get your API key at https://freeaiapikey.com/dashboard. Base URL: https://freeaiapikey.com/v1."
   },
   {
-    "id": 318,
+    "id": 317,
     "name": "OpenAdapter",
     "slug": "openadapter",
     "aliases": [
@@ -5521,7 +5469,7 @@
     "notes": "Free tier with a generous quota and no credit card — 15+ open-source models with daily quota. Get your API key at https://dashboard.openadapter.in.; Use your OpenAdapter API key in Authorization: Bearer sk-cv-<key>. Fully OpenAI-compatible. API base URL: https://api.openadapter.in/v1.; OpenAdapter exposes an OpenAI-compatible chat completions endpoint at https://api.openadapter.in/v1/chat/completions, aggregating…"
   },
   {
-    "id": 319,
+    "id": 318,
     "name": "DIT.ai",
     "slug": "dit",
     "aliases": [
@@ -5539,7 +5487,7 @@
     "notes": "Use your dit.ai API key in Authorization: Bearer <key>. Fully OpenAI-compatible — a drop-in replacement, just change the base URL to https://api.dit.ai/v1.; dit.ai (Distributed Intelligence Trade) is an OpenAI-compatible router/gateway with dynamic per-request pricing, exposing /v1/chat/completions at https://api.dit.ai/v1. OmniRoute uses the OpenAI protocol; spend/savings analytics live in the dit.ai dashboard."
   },
   {
-    "id": 320,
+    "id": 319,
     "name": "TokenRouter",
     "slug": "tokenrouter",
     "aliases": [
@@ -5558,7 +5506,7 @@
     "notes": "Free tier includes the MiniMax 3 model. Get your API key at https://tokenrouter.com.; Use your TokenRouter API key in Authorization: Bearer <key>. Fully OpenAI-compatible. API base URL: https://api.tokenrouter.com/v1.; TokenRouter exposes an OpenAI-compatible chat completions endpoint at https://api.tokenrouter.com/v1/chat/completions, plus a working /v1/models catalog. OmniRoute uses the OpenAI protocol."
   },
   {
-    "id": 321,
+    "id": 320,
     "name": "Token Kiosk",
     "slug": "token-kiosk",
     "aliases": [
@@ -5579,7 +5527,7 @@
     "notes": "Use your Token Kiosk API key in Authorization: Bearer <key>. Fully OpenAI-compatible gateway. API base URL: https://agent-router.gaib.ai/v1.; Token Kiosk is a multi-provider agent LLM routing infrastructure exposing an OpenAI-compatible endpoint at https://agent-router.gaib.ai/v1/chat/completions with auto-fallback and latency routing."
   },
   {
-    "id": 322,
+    "id": 321,
     "name": "SumoPod",
     "slug": "sumopod",
     "aliases": [],
@@ -5592,7 +5540,7 @@
     "notes": "Use your SumoPod API key (sk-...) in Authorization: Bearer <key>. Fully OpenAI-compatible. API base URL: https://ai.sumopod.com/v1.; SumoPod exposes an OpenAI-compatible chat completions endpoint at https://ai.sumopod.com/v1/chat/completions, plus a live /v1/models catalog. OmniRoute uses the OpenAI protocol and lists models via passthrough."
   },
   {
-    "id": 323,
+    "id": 322,
     "name": "X5Lab",
     "slug": "x5lab",
     "aliases": [],
@@ -5605,7 +5553,7 @@
     "notes": "Use your X5Lab API key (x5-...) in Authorization: Bearer <key>. Fully OpenAI-compatible. API base URL: https://api.x5lab.dev/v1.; X5Lab exposes an OpenAI-compatible chat completions endpoint at https://api.x5lab.dev/v1/chat/completions, plus a live /v1/models catalog. OmniRoute uses the OpenAI protocol and lists models via passthrough."
   },
   {
-    "id": 324,
+    "id": 323,
     "name": "Chenzk API",
     "slug": "chenzk",
     "aliases": [],
@@ -5618,7 +5566,7 @@
     "notes": "Create an API key at https://chenzk.top/token, then paste it here as a Bearer token. OpenAI-compatible endpoint at https://chenzk.top/v1, with a live /v1/models catalog."
   },
   {
-    "id": 325,
+    "id": 324,
     "name": "Kenari",
     "slug": "kenari",
     "aliases": [],
@@ -5631,7 +5579,7 @@
     "notes": "Use your Kenari API key (kn-...) in Authorization: Bearer <key>. Fully OpenAI-compatible. API base URL: https://kenari.id/v1.; Kenari exposes an OpenAI-compatible chat completions endpoint at https://kenari.id/v1/chat/completions, plus a live /v1/models catalog covering Claude, GPT, DeepSeek, GLM, Kimi and more. OmniRoute uses the OpenAI protocol and lists models via passthrough."
   },
   {
-    "id": 326,
+    "id": 325,
     "name": "NavyAI",
     "slug": "navy",
     "aliases": [],
@@ -5651,7 +5599,7 @@
     "notes": "Free plan is one shared 150K tokens/day pool at 20 RPM. Each model carries a token multiplier, so heavier models drain the pool faster (grok-4 at 10x is ~15K real tokens/day).; Create a free API key from the NavyAI dashboard, then paste it here as a Bearer token.; OpenAI-compatible endpoint at https://api.navy/v1 with a live /v1/models catalog that exposes per-model token_multiplier and premium flags. Upstream req…"
   },
   {
-    "id": 327,
+    "id": 326,
     "name": "AINative Studio",
     "slug": "ainative",
     "aliases": [],
@@ -5671,7 +5619,7 @@
     "notes": "Free tier ~10M tokens/month (claimed) across Qwen3, Llama 4, DeepSeek R1 and more.; Create a free API key at ainative.studio (no card), then paste it here as a Bearer token.; OpenAI-compatible endpoint at https://api.ainative.studio/api/v1 with a public /models catalog (84 models). OmniRoute lists models via passthrough."
   },
   {
-    "id": 328,
+    "id": 327,
     "name": "Routeway",
     "slug": "routeway",
     "aliases": [],
@@ -5691,7 +5639,7 @@
     "notes": "Free models (:free suffix) at ~5 RPM / 200 RPD across Llama, Nemotron, Step and Laguna.; Create a free API key at routeway.ai, then paste it here as a Bearer token.; OpenAI-compatible endpoint at https://api.routeway.ai/v1 with a public /models catalog (236 models). Cloudflare fronts the API and requires a browser-style User-Agent."
   },
   {
-    "id": 329,
+    "id": 328,
     "name": "NaraRouter",
     "slug": "nara",
     "aliases": [],
@@ -5708,10 +5656,10 @@
     ],
     "env_variable": "NARA_API_KEY",
     "openai_compatible": true,
-    "notes": "Free plan: one 7M tokens/day bucket per account (15 req/min) across the plan's 8 models; others need credit.; Create a free NaraRouter account, link your Telegram (required before /v1 answers), then paste the key here as a Bearer token.; OpenAI-compatible endpoint at https://router.bynara.id/v1. Free-tier models are pinned; others need credit."
+    "notes": "Free plan: one 7M tokens/day bucket per account (15 req/min) across the plan's 8 models; others need credit.; Create a free NaraRouter account, link your Telegram (required before /v1 answers), then paste the key here as a Bearer token.; OpenAI-compatible endpoint at https://router.bynara.id/v1. Free-tier models are pinned"
   },
   {
-    "id": 330,
+    "id": 329,
     "name": "Regolo AI",
     "slug": "regolo",
     "aliases": [],
@@ -5727,11 +5675,12 @@
     "notes": "Get your Regolo API key from regolo.ai, then paste it here as a Bearer token.; OpenAI-compatible endpoint at https://api.regolo.ai/v1 with dynamic model discovery (19 models)."
   },
   {
-    "id": 331,
+    "id": 330,
     "name": "Naga.ac",
     "slug": "naga-ac",
     "aliases": [
-      "naga"
+      "naga",
+      "naga-ai"
     ],
     "category": "Aggregator",
     "website": "https://naga.ac",
@@ -5739,10 +5688,10 @@
     "popular_models": [],
     "env_variable": "NAGA_AC_API_KEY",
     "openai_compatible": true,
-    "notes": "Free models include Nemotron 3 Ultra (free) and Llama 3.3 70B Instruct (Free). Paid models require credits. Google/GitHub/Discord signup.; Get API key at naga.ac — Google/GitHub/Discord signup available."
+    "notes": "Free models include Nemotron 3 Ultra (free) and Llama 3.3 70B Instruct (Free). Paid models require credits. Google/GitHub/Discord signup.; Get API key at naga.ac — Google/GitHub/Discord signup available.; Models marked :free are publicly listed, but no numeric quota is confirmed. Naga's policy warns that free-tier prompts and outputs may be collected or used for training.; Create a Naga AI Bearer key, then use https://api.naga.ac/v1 as the OpenAI-compatible base URL. Never send sensitive data to the free tier without accepting its training policy."
   },
   {
-    "id": 332,
+    "id": 331,
     "name": "Void AI",
     "slug": "void-ai",
     "aliases": [],
@@ -5755,7 +5704,7 @@
     "notes": "The public model catalog marks some models with a free plan requirement, but access is conditional and no numeric quota is confirmed.; Use https://api.voidai.app/v1 only after confirming authentication, account eligibility and terms. Treat this integration as experimental until the blocked documentation becomes public."
   },
   {
-    "id": 333,
+    "id": 332,
     "name": "HelixMind",
     "slug": "helixmind",
     "aliases": [],
@@ -5768,7 +5717,7 @@
     "notes": "Previously circulated 3 RPM/50 RPD and no-card claims were not confirmed during the 2026-08-02 audit; current quota and billing require account verification.; Create a helix- key and use https://helixmind.online/v1. OpenAI requests use Bearer authentication; the Anthropic-compatible messages endpoint accepts x-api-key."
   },
   {
-    "id": 334,
+    "id": 333,
     "name": "Logfare",
     "slug": "logfare",
     "aliases": [],
@@ -5781,7 +5730,7 @@
     "notes": "Free OpenAI-compatible inference — no rate limits, no card. Logfare logs every request (prompts, completions, metadata) for internal research; opt out at /consent. Read https://logfare.ai/tos and https://logfare.ai/privacy before use.; Create a free account at https://logfare.ai/register (username/password, no email verification) to get an instant API key, then paste it here as a Bearer token.; Create a free API k…"
   },
   {
-    "id": 335,
+    "id": 334,
     "name": "TabiToken",
     "slug": "tabitoken",
     "aliases": [],
@@ -5799,7 +5748,7 @@
     "notes": "Create an sk- key at https://tabitoken.com and use https://tabitoken.com. The Anthropic-compatible /v1/messages endpoint (default) takes x-api-key; /v1/chat/completions takes Bearer."
   },
   {
-    "id": 336,
+    "id": 335,
     "name": "SeekAi",
     "slug": "seekai",
     "aliases": [
@@ -5814,7 +5763,7 @@
     "notes": "Signup credit toward available models; amount and eligibility are set by SeekAi, not OmniRoute.; Create an API key at https://seekai.cc, then paste it here as a Bearer token.; Create an API key at https://seekai.cc, then paste it here as a Bearer token. OpenAI-compatible base URL: https://seekai.cc/v1."
   },
   {
-    "id": 337,
+    "id": 336,
     "name": "IBM watsonx.ai Gateway",
     "slug": "watsonx",
     "aliases": [],
@@ -5827,7 +5776,7 @@
     "notes": "Use your watsonx bearer token. Base URL can be https://<region>.ml.cloud.ibm.com/ml/gateway/v1/ or a self-managed /ml/gateway/v1 endpoint.; The watsonx model gateway exposes OpenAI-compatible /chat/completions and /models under /ml/gateway/v1."
   },
   {
-    "id": 338,
+    "id": 337,
     "name": "OCI Generative AI",
     "slug": "oci",
     "aliases": [],
@@ -5840,7 +5789,7 @@
     "notes": "Use your OCI Generative AI API key or IAM bearer token. Base URL can be https://inference.generativeai.<region>.oci.oraclecloud.com/openai/v1/.; OCI exposes OpenAI-compatible chat and responses endpoints. Project ID is optional in OmniRoute but may be required for Responses and agentic workflows."
   },
   {
-    "id": 339,
+    "id": 338,
     "name": "Vertex AI Partners",
     "slug": "vertex-partner",
     "aliases": [
@@ -5862,7 +5811,7 @@
     "notes": "Provide the same Service Account JSON used for Vertex AI partner models."
   },
   {
-    "id": 340,
+    "id": 339,
     "name": "Heroku AI",
     "slug": "heroku",
     "aliases": [],
@@ -5875,7 +5824,7 @@
     "notes": "Enterprise or regional cloud inference."
   },
   {
-    "id": 341,
+    "id": 340,
     "name": "Databricks",
     "slug": "databricks",
     "aliases": [],
@@ -5888,7 +5837,7 @@
     "notes": "Enterprise or regional cloud inference."
   },
   {
-    "id": 342,
+    "id": 341,
     "name": "DataRobot",
     "slug": "datarobot",
     "aliases": [],
@@ -5901,10 +5850,12 @@
     "notes": "Use your DataRobot API token. Optional Base URL can be the account root (for LLM Gateway) or a deployment URL under /api/v2/deployments/<id>.; The default gateway catalogs active models from /genai/llmgw/catalog/. Deployment URLs are also supported for direct OpenAI-compatible chat requests."
   },
   {
-    "id": 343,
+    "id": 342,
     "name": "GLM Coding",
-    "slug": "glm",
-    "aliases": [],
+    "slug": "glm-coding",
+    "aliases": [
+      "glmt"
+    ],
     "category": "Frontier",
     "website": "https://z.ai/subscribe",
     "api_base_url": "https://api.z.ai/api/coding/paas/v4",
@@ -5918,10 +5869,10 @@
     ],
     "env_variable": "GLM_API_KEY",
     "openai_compatible": true,
-    "notes": "First-party model lab API."
+    "notes": "First-party model lab API.; Preset GLM profile with higher token budget, thinking enabled, and longer timeout."
   },
   {
-    "id": 344,
+    "id": 343,
     "name": "GLM Coding (China)",
     "slug": "glm-cn",
     "aliases": [
@@ -5943,27 +5894,7 @@
     "notes": "First-party model lab API."
   },
   {
-    "id": 345,
-    "name": "GLM Thinking",
-    "slug": "glmt",
-    "aliases": [],
-    "category": "Frontier",
-    "website": "https://open.bigmodel.cn",
-    "api_base_url": "https://api.z.ai/api/coding/paas/v4",
-    "popular_models": [
-      "glm-5.3-flash",
-      "glm-5.3",
-      "glm-5.3-high",
-      "glm-5.3-low",
-      "glm-5.3-max",
-      "glm-5.3-flash-high"
-    ],
-    "env_variable": "GLMT_API_KEY",
-    "openai_compatible": true,
-    "notes": "Preset GLM profile with higher token budget, thinking enabled, and longer timeout."
-  },
-  {
-    "id": 346,
+    "id": 344,
     "name": "Alibaba Token Plan",
     "slug": "bailian-coding-plan",
     "aliases": [
@@ -5985,7 +5916,7 @@
     "notes": "Use an Alibaba Token Plan key and select its Singapore or Beijing region."
   },
   {
-    "id": 347,
+    "id": 345,
     "name": "Qwen Cloud",
     "slug": "qwen-cloud",
     "aliases": [
@@ -6007,7 +5938,7 @@
     "notes": "Use a Qwen Cloud API key and select its Global or Beijing region."
   },
   {
-    "id": 348,
+    "id": 346,
     "name": "Qwen Cloud Token Plan",
     "slug": "qwen-cloud-token-plan",
     "aliases": [
@@ -6029,7 +5960,7 @@
     "notes": "Use a Qwen Cloud Token Plan key and select its Singapore or Beijing region."
   },
   {
-    "id": 349,
+    "id": 347,
     "name": "Kimi Code API Key",
     "slug": "kimi-coding-apikey",
     "aliases": [
@@ -6039,12 +5970,12 @@
     "website": "https://www.kimi.com/code",
     "api_base_url": "https://api.kimi.com/coding/v1",
     "popular_models": [],
-    "env_variable": "KIMI_CODING_APIKEY_API_KEY",
+    "env_variable": "KIMI_CODING_API_KEY",
     "openai_compatible": true,
     "notes": "First-party model lab API."
   },
   {
-    "id": 350,
+    "id": 348,
     "name": "Minimax (China)",
     "slug": "minimax-cn",
     "aliases": [],
@@ -6063,7 +5994,7 @@
     "notes": "First-party model lab API."
   },
   {
-    "id": 351,
+    "id": 349,
     "name": "Alibaba (China)",
     "slug": "alibaba-cn",
     "aliases": [
@@ -6078,7 +6009,7 @@
     "notes": "First-party model lab API."
   },
   {
-    "id": 352,
+    "id": 350,
     "name": "LongCat AI",
     "slug": "longcat",
     "aliases": [
@@ -6095,20 +6026,7 @@
     "notes": "Free: one-time 10M-token grant after account signup + KYC verification (LongCat-2.0). One-time only — not a recurring daily/monthly allowance."
   },
   {
-    "id": 353,
-    "name": "Volcengine",
-    "slug": "volcengine",
-    "aliases": [],
-    "category": "Frontier",
-    "website": "https://www.volcengine.com",
-    "api_base_url": "https://ark.cn-beijing.volces.com/api/v3",
-    "popular_models": [],
-    "env_variable": "VOLCENGINE_API_KEY",
-    "openai_compatible": true,
-    "notes": "First-party model lab API."
-  },
-  {
-    "id": 354,
+    "id": 351,
     "name": "Volcengine Ark Agent Plan",
     "slug": "volcengine-agent-plan",
     "aliases": [
@@ -6130,7 +6048,7 @@
     "notes": "Connect your Volcano Engine account or use an Ark Agent Plan subscription API key."
   },
   {
-    "id": 355,
+    "id": 352,
     "name": "Volcengine Ark Coding Plan",
     "slug": "volcengine-coding-plan",
     "aliases": [
@@ -6152,7 +6070,7 @@
     "notes": "Connect your Volcano Engine account or use an Ark Coding Plan subscription API key."
   },
   {
-    "id": 356,
+    "id": 353,
     "name": "GigaChat (Sber)",
     "slug": "gigachat",
     "aliases": [],
@@ -6165,7 +6083,7 @@
     "notes": "First-party model lab API."
   },
   {
-    "id": 357,
+    "id": 354,
     "name": "Xiaomi MiMo Token Plan",
     "slug": "xiaomi-mimo-token-plan",
     "aliases": [
@@ -6183,7 +6101,7 @@
     "notes": "First-party model lab API."
   },
   {
-    "id": 358,
+    "id": 355,
     "name": "Tencent Hunyuan",
     "slug": "tencent",
     "aliases": [],
@@ -6203,10 +6121,12 @@
     "notes": "Free Hunyuan Lite models. WeChat ecosystem.; Get API key at console.cloud.tencent.com"
   },
   {
-    "id": 359,
+    "id": 356,
     "name": "iFlytek Spark",
     "slug": "iflytek",
-    "aliases": [],
+    "aliases": [
+      "sparkdesk"
+    ],
     "category": "Frontier",
     "website": "https://xinghuo.xfyun.cn",
     "api_base_url": "https://spark-api-open.xf-yun.com/v1",
@@ -6223,7 +6143,7 @@
     "notes": "Spark Lite is free (2 QPS rate-limited), but iFlytek ToS §2.4(3) prohibits programmatic extraction and requires Chinese real-name auth — use with caution.; Get API key at console.xfyun.cn"
   },
   {
-    "id": 360,
+    "id": 357,
     "name": "Baichuan",
     "slug": "baichuan",
     "aliases": [],
@@ -6242,7 +6162,7 @@
     "notes": "Free Baichuan models. Popular Chinese LLM startup.; Get API key at platform.baichuan-ai.com"
   },
   {
-    "id": 361,
+    "id": 358,
     "name": "Yi (01.AI)",
     "slug": "yi",
     "aliases": [],
@@ -6257,7 +6177,7 @@
     "notes": "No free API tier (2026) — Yi-Light retired; platform.01.ai is pay-as-you-go (Yi-Lightning paid). Open weights are download-only.; Get API key at platform.lingyiwanwu.com"
   },
   {
-    "id": 362,
+    "id": 359,
     "name": "360 AI",
     "slug": "360ai",
     "aliases": [],
@@ -6265,15 +6185,17 @@
     "website": "https://ai.360.cn",
     "api_base_url": "https://api.360.cn/v1",
     "popular_models": [],
-    "env_variable": "P360AI_API_KEY",
+    "env_variable": "AI360_API_KEY",
     "openai_compatible": false,
     "notes": "Free 360 AI Brain models. Major Chinese security company.; Get API key at ai.360.cn"
   },
   {
-    "id": 363,
+    "id": 360,
     "name": "Doubao",
     "slug": "doubao",
-    "aliases": [],
+    "aliases": [
+      "volcengine"
+    ],
     "category": "Frontier",
     "website": "https://doubao.com",
     "api_base_url": "https://ark.cn-beijing.volces.com/api/v3",
@@ -6290,7 +6212,7 @@
     "notes": "Free Doubao models. ByteDance's chatbot.; Get API key at console.volcengine.com"
   },
   {
-    "id": 364,
+    "id": 361,
     "name": "SenseNova",
     "slug": "sensenova",
     "aliases": [],
@@ -6307,25 +6229,7 @@
     "notes": "Free SenseTime models. Computer vision leader.; Get API key at platform.sensenova.cn; SenseNova registration appears to require a Chinese (+86) phone number for SMS verification — no international sign-up path is documented, so users outside mainland China may be unable to obtain an API key."
   },
   {
-    "id": 365,
-    "name": "SparkDesk",
-    "slug": "sparkdesk",
-    "aliases": [],
-    "category": "Frontier",
-    "website": "https://xinghuo.xfyun.cn",
-    "api_base_url": "https://spark-api-open.xf-yun.com/v1",
-    "popular_models": [
-      "4.0Ultra",
-      "generalv3",
-      "pro-128k",
-      "lite"
-    ],
-    "env_variable": "SPARKDESK_API_KEY",
-    "openai_compatible": true,
-    "notes": "Spark Lite free (alias for iflytek), but ToS restricts to personal/non-commercial use and prohibits relaying access to third parties — use with caution.; Get API key at console.xfyun.cn"
-  },
-  {
-    "id": 366,
+    "id": 362,
     "name": "Huancheng Public API",
     "slug": "hcnsec",
     "aliases": [],
@@ -6338,7 +6242,7 @@
     "notes": "Xinjiang Huancheng Cybersecurity public LLM API platform: free credits with daily check-ins.; Get API key at api.hcnsec.cn"
   },
   {
-    "id": 367,
+    "id": 363,
     "name": "Agnes AI",
     "slug": "agnes",
     "aliases": [],
@@ -6355,7 +6259,7 @@
     "notes": "Permanently free API - no credit card required.; Get API key at agnes-ai.com"
   },
   {
-    "id": 368,
+    "id": 364,
     "name": "SEA-LION",
     "slug": "sealion",
     "aliases": [],
@@ -6374,7 +6278,7 @@
     "notes": "Permanently free at 10 RPM — AI Singapore's Southeast-Asian models (Llama/Qwen/Gemma SEA-LION).; Sign in at sea-lion.ai with Google (no card, no region wall), create an API key, then paste it here."
   },
   {
-    "id": 369,
+    "id": 365,
     "name": "Naver CLOVA Studio",
     "slug": "clova-studio",
     "aliases": [
@@ -6393,7 +6297,7 @@
     "notes": "OmniRoute routes chat traffic to the native Chat Completions v3 API (/v3/chat-completions/{model}), not the OpenAI-compatibility shim. All three v3 models are served: HCX-007 (reasoning, text only), HCX-005 (vision — accepts both public image URLs and inline base64 images), and HCX-DASH-002 (lightweight, text only). Requests stream upstream and are accumulated into a JSON body when the client asks for a non-stream…"
   },
   {
-    "id": 370,
+    "id": 366,
     "name": "InternLM (Intern-S1)",
     "slug": "internlm",
     "aliases": [],
@@ -6412,7 +6316,7 @@
     "notes": "Free monthly quota ~1M input / 3M output tokens (~10 RPM)"
   },
   {
-    "id": 371,
+    "id": 367,
     "name": "Ant Ling / Ring (inclusionAI)",
     "slug": "ant-ling",
     "aliases": [
@@ -6431,7 +6335,7 @@
     "notes": "500,000 free tokens per day per account (resets 02:00 UTC+8, no rollover); Register and create an API key at the Ant Ling API console (https://chat.ant-ling.com/open), then paste it here. OmniRoute routes chat traffic to https://api.ant-ling.com/v1/chat/completions; the provider is OpenAI-compatible and also exposes an Anthropic-compatible surface."
   },
   {
-    "id": 372,
+    "id": 368,
     "name": "Sarvam AI",
     "slug": "sarvam",
     "aliases": [],
@@ -6447,7 +6351,7 @@
     "notes": "₹1,000 in free signup credits — never expire; Sarvam AI is OpenAI-compatible on /v1. OmniRoute probes /v1/models and routes chat traffic to /v1/chat/completions. Models are tuned for Indic languages."
   },
   {
-    "id": 373,
+    "id": 369,
     "name": "PLaMo",
     "slug": "plamo",
     "aliases": [],
@@ -6462,7 +6366,7 @@
     "notes": "PLaMo is OpenAI-compatible at https://api.platform.preferredai.jp/v1. Built by Preferred Networks and optimized for Japanese. Docs are primarily in Japanese."
   },
   {
-    "id": 374,
+    "id": 370,
     "name": "Typhoon",
     "slug": "typhoon",
     "aliases": [],
@@ -6477,7 +6381,7 @@
     "notes": "Free API key with a 5 req/s and 200 req/m rate limit.; Typhoon is OpenAI-compatible on /v1. Built by SCB 10X (Thailand); typhoon-v2.5-30b-a3b-instruct is a thai-first, multilingual model."
   },
   {
-    "id": 375,
+    "id": 371,
     "name": "Runway",
     "slug": "runwayml",
     "aliases": [
@@ -6492,7 +6396,7 @@
     "notes": "Use your Runway API key in Authorization: Bearer <key>. OmniRoute targets the current Runway API at https://api.dev.runwayml.com/v1 and sends the required X-Runway-Version header automatically.; Runway video generation is task-based. OmniRoute submits text-to-video or image-to-video jobs, polls /v1/tasks/{id}, and normalizes the finished video outputs back into the OpenAI-like /v1/videos/generations response."
   },
   {
-    "id": 376,
+    "id": 372,
     "name": "KIE.AI",
     "slug": "kie",
     "aliases": [],
@@ -6512,13 +6416,13 @@
     "notes": "Image or video generation API."
   },
   {
-    "id": 377,
+    "id": 373,
     "name": "Pollinations AI",
     "slug": "pollinations",
     "aliases": [
       "pol"
     ],
-    "category": "Specialized",
+    "category": "IaaS",
     "website": "https://pollinations.ai",
     "api_base_url": "https://gen.pollinations.ai/v1",
     "popular_models": [
@@ -6534,7 +6438,7 @@
     "notes": "Free keyless tier: openai, openai-fast, openai-large, qwen-coder, mistral, deepseek, grok, gemini-flash-lite-3.1, perplexity-fast, perplexity-reasoning. Premium models (claude, gemini, midijourney) require a Pollinations API key from enter.pollinations.ai.; Anonymous/keyless access to the documented free models is best-effort. Local v3.8.50 verification (2026-07-31) returned 401 via OmniRoute and Cloudflare 1010 o…"
   },
   {
-    "id": 378,
+    "id": 374,
     "name": "Haiper",
     "slug": "haiper",
     "aliases": [
@@ -6552,7 +6456,7 @@
     "notes": "Get API key at haiper.ai/haiper-api"
   },
   {
-    "id": 379,
+    "id": 375,
     "name": "Leonardo AI",
     "slug": "leonardo",
     "aliases": [
@@ -6570,7 +6474,7 @@
     "notes": "Get API key at leonardo.ai/developer"
   },
   {
-    "id": 380,
+    "id": 376,
     "name": "Ideogram",
     "slug": "ideogram",
     "aliases": [
@@ -6588,7 +6492,7 @@
     "notes": "Get API key at ideogram.ai/docs/api"
   },
   {
-    "id": 381,
+    "id": 377,
     "name": "Magnific",
     "slug": "magnific",
     "aliases": [
@@ -6610,7 +6514,7 @@
     "notes": "One-time ~€5 API credit for new accounts; pay-per-use afterward.; Get an API key at magnific.com/user/api-keys (header x-magnific-api-key). Legacy Freepik developer keys still work."
   },
   {
-    "id": 382,
+    "id": 378,
     "name": "Suno",
     "slug": "suno",
     "aliases": [],
@@ -6628,7 +6532,7 @@
     "notes": "Paste session cookie from suno.ai (Clerk auth)"
   },
   {
-    "id": 383,
+    "id": 379,
     "name": "Udio",
     "slug": "udio",
     "aliases": [],
@@ -6643,7 +6547,7 @@
     "notes": "Paste session cookie from udio.com (Supabase auth)"
   },
   {
-    "id": 384,
+    "id": 380,
     "name": "v0 (Vercel)",
     "slug": "v0-vercel",
     "aliases": [
@@ -6658,20 +6562,7 @@
     "notes": "Specialized API. See official docs for setup."
   },
   {
-    "id": 385,
-    "name": "GitLab Duo PAT",
-    "slug": "gitlab",
-    "aliases": [],
-    "category": "Specialized",
-    "website": "https://docs.gitlab.com/user/duo_agent_platform/code_suggestions",
-    "api_base_url": "https://gitlab.com/api/v4/ai",
-    "popular_models": [],
-    "env_variable": "GITLAB_API_KEY",
-    "openai_compatible": false,
-    "notes": "GitLab personal access token for the public Code Suggestions API. Configure a self-hosted base URL when not using gitlab.com."
-  },
-  {
-    "id": 386,
+    "id": 381,
     "name": "Jina AI (Foundation API)",
     "slug": "jina-ai",
     "aliases": [
@@ -6686,7 +6577,7 @@
     "notes": "10M free tokens on signup (non-commercial), no credit card required; Bearer API key for api.jina.ai — embeddings, rerank, classify, segment, and search. Dashboard keys take precedence over JINA_AI_API_KEY. This is not the Reader / r.jina.ai card and does not fetch URLs."
   },
   {
-    "id": 387,
+    "id": 382,
     "name": "Fal.ai",
     "slug": "fal-ai",
     "aliases": [
@@ -6701,7 +6592,7 @@
     "notes": "Image or video generation API."
   },
   {
-    "id": 388,
+    "id": 383,
     "name": "Stability AI",
     "slug": "stability-ai",
     "aliases": [
@@ -6716,7 +6607,7 @@
     "notes": "Image or video generation API."
   },
   {
-    "id": 389,
+    "id": 384,
     "name": "Black Forest Labs",
     "slug": "black-forest-labs",
     "aliases": [
@@ -6731,7 +6622,7 @@
     "notes": "Image or video generation API."
   },
   {
-    "id": 390,
+    "id": 385,
     "name": "Recraft",
     "slug": "recraft",
     "aliases": [],
@@ -6744,7 +6635,7 @@
     "notes": "Image or video generation API."
   },
   {
-    "id": 391,
+    "id": 386,
     "name": "Topaz",
     "slug": "topaz",
     "aliases": [],
@@ -6757,7 +6648,7 @@
     "notes": "Image or video generation API."
   },
   {
-    "id": 392,
+    "id": 387,
     "name": "Segmind",
     "slug": "segmind",
     "aliases": [],
@@ -6770,7 +6661,7 @@
     "notes": "Free trial credits on signup, no credit card required (per Segmind's public docs).; Use your Segmind API key in the x-api-key header. OmniRoute targets https://api.segmind.com/v1/<model> and returns the generated image/video bytes directly.; Segmind exposes 200+ hosted image and video models (Flux, SDXL, SD3, Kandinsky, Wan, Hunyuan, LTX, Kling, ...) under a single POST /v1/<model> REST call per model. OmniRoute s…"
   },
   {
-    "id": 393,
+    "id": 388,
     "name": "Dify",
     "slug": "dify",
     "aliases": [],
@@ -6785,7 +6676,7 @@
     "notes": "Free open-source AI app builder + RAG platform.; Get API key from your Dify instance."
   },
   {
-    "id": 394,
+    "id": 389,
     "name": "Nomic",
     "slug": "nomic",
     "aliases": [],
@@ -6798,7 +6689,7 @@
     "notes": "Free Nomic Embed API. Open-source embeddings, no credit card required.; Get API key at atlas.nomic.ai"
   },
   {
-    "id": 395,
+    "id": 390,
     "name": "Mixedbread AI",
     "slug": "mixedbread",
     "aliases": [
@@ -6813,7 +6704,7 @@
     "notes": "Free-tier API key via signup, no credit card required.; Bearer API key for the Mixedbread embeddings API."
   },
   {
-    "id": 396,
+    "id": 391,
     "name": "Jina Reader (r.jina.ai)",
     "slug": "jina-reader",
     "aliases": [
@@ -6828,7 +6719,7 @@
     "notes": "Bearer API key for r.jina.ai URL-to-markdown (/v1/web/fetch only). Does not serve /v1/embeddings or /v1/rerank. The same Jina token as Foundation API works; OmniRoute reuses a jina-ai dashboard key or JINA_AI_API_KEY when this card is empty.; Reader / r.jina.ai only — not embeddings or rerank. Free tier: 1M fetches/month."
   },
   {
-    "id": 397,
+    "id": 392,
     "name": "TinyFish Fetch",
     "slug": "tinyfish",
     "aliases": [
@@ -6843,7 +6734,7 @@
     "notes": "X-API-Key from agent.tinyfish.ai/api-keys; Fetch does not use TinyFish credits. Submit up to 10 URLs per request (OmniRoute fetches one URL per call)."
   },
   {
-    "id": 398,
+    "id": 393,
     "name": "DeepAI",
     "slug": "deepai",
     "aliases": [],
@@ -6858,17 +6749,17 @@
     "notes": "Use your DeepAI API key. Get one at deepai.org — requires a Pro subscription ($9.99/mo).; DeepAI uses per-endpoint REST calls (e.g. /api/text2img) instead of OpenAI chat/completions. OmniRoute adapts OpenAI image generation requests to DeepAI's /api/{slug} endpoints."
   },
   {
-    "id": 399,
+    "id": 394,
     "name": "Cursor API",
     "slug": "cursor-api",
     "aliases": [
       "cua"
     ],
-    "category": "Specialized",
+    "category": "Gateway",
     "website": "https://cursor.com/dashboard/api",
     "api_base_url": "https://api.cursor.com/v1",
     "popular_models": [],
-    "env_variable": "CURSOR_API_API_KEY",
+    "env_variable": "CURSOR_API_KEY",
     "openai_compatible": true,
     "notes": "Paste a Cursor user API key (crsr_...) from cursor.com/dashboard/api. OmniRoute exchanges it for a session token on demand; no IDE or cursor-agent install is needed. Usage bills to the Cursor plan that owns the key.; Same agent protocol and model catalog as the Cursor IDE provider. The Cursor CLI can also be pointed at /api/cursor-cli on this instance and authenticated with an OmniRoute API key."
   },
@@ -6891,7 +6782,7 @@
     "env_variable": "OMNIROUTE_API_KEY",
     "openai_compatible": true,
     "notes": "Open-source MIT AI gateway (352 providers, 1200+ models). Self-hosted OpenAI-compatible endpoint; quota-aware auto-fallback.",
-    "id": 400
+    "id": 395
   },
   {
     "name": "Bifrost",
@@ -6902,13 +6793,11 @@
     "category": "Gateway",
     "website": "https://github.com/maximhq/bifrost",
     "api_base_url": "http://localhost:8080/v1",
-    "popular_models": [
-      "1000+ models"
-    ],
+    "popular_models": [],
     "env_variable": null,
     "openai_compatible": true,
     "notes": "Open-source Go gateway; adaptive load balancing, guardrails, virtual keys.",
-    "id": 401
+    "id": 396
   },
   {
     "name": "Dasha Compute",
@@ -6926,8 +6815,8 @@
       "gemma3-27b"
     ],
     "env_variable": null,
-    "openai_compatible": true,
+    "openai_compatible": false,
     "notes": "OpenAI-compatible API on a network of Apple-silicon Macs; providers paid per job in USDC.",
-    "id": 402
+    "id": 397
   }
 ]

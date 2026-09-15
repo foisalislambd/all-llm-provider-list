@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-15T15:05:27.159499+00:00",
-  "total_providers": 402,
-  "total_models": 2768,
+  "updated_at": "2026-09-15T15:18:42.491177+00:00",
+  "total_providers": 397,
+  "total_models": 2729,
   "providers": {
     "openai": {
       "provider_id": 1,
@@ -11,7 +11,7 @@
       "models_endpoint": "https://api.openai.com/v1/models",
       "count": 45,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-5.5",
         "gpt-5.5-2026-04-23",
@@ -68,7 +68,7 @@
       "models_endpoint": "https://api.anthropic.com/v1/models",
       "count": 22,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-opus-4-6",
         "claude-opus-4-6-20260205",
@@ -102,7 +102,7 @@
       "models_endpoint": "https://generativelanguage.googleapis.com/v1/models",
       "count": 15,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gemini-3.5-pro",
         "gemini-3.5-flash",
@@ -129,7 +129,7 @@
       "models_endpoint": "https://api.deepseek.com/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "deepseek-chat",
         "deepseek-reasoner",
@@ -145,7 +145,7 @@
       "models_endpoint": "https://api.mistral.ai/v1/models",
       "count": 11,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "mistral-large-latest",
         "mistral-medium-latest",
@@ -168,7 +168,7 @@
       "models_endpoint": "https://api.x.ai/v1/models",
       "count": 12,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "grok-3",
         "grok-3-mini",
@@ -192,7 +192,7 @@
       "models_endpoint": "https://api.cohere.com/v2/v1/models",
       "count": 15,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "command-r-plus",
         "command-r",
@@ -219,7 +219,7 @@
       "models_endpoint": "https://api.ai21.com/studio/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "jamba-1.5-large",
         "jamba-1.5-mini",
@@ -234,7 +234,7 @@
       "models_endpoint": "https://api.baiduqianfan.ai/v1/models",
       "count": 16,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "ernie-4.0-turbo-8k",
         "ernie-4.0-8k",
@@ -262,7 +262,7 @@
       "models_endpoint": "https://api.stepfun.com/v1/models",
       "count": 8,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "step-3.5-flash",
         "step-3-mini",
@@ -282,7 +282,7 @@
       "models_endpoint": "https://open.bigmodel.cn/api/paas/v4/v1/models",
       "count": 12,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "glm-5",
         "glm-4.7",
@@ -306,7 +306,7 @@
       "models_endpoint": "https://api.xiaomimimo.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "mimo-v2-pro",
         "mimo-v2.5-pro",
@@ -321,7 +321,7 @@
       "models_endpoint": "https://api.reka.ai/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "reka-core",
         "reka-flash",
@@ -338,7 +338,7 @@
       "models_endpoint": null,
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "inflection-3-pi",
         "inflection-3-productivity"
@@ -352,7 +352,7 @@
       "models_endpoint": "https://api.minimax.io/v1/models",
       "count": 9,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "MiniMax-M3",
         "MiniMax-M2.1",
@@ -373,7 +373,7 @@
       "models_endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/models",
       "count": 24,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "qwen3-max",
         "qwen-max",
@@ -409,7 +409,7 @@
       "models_endpoint": "https://api.upstage.ai/v1/solar/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "solar-pro3",
         "solar-mini",
@@ -424,7 +424,7 @@
       "models_endpoint": "https://api.perplexity.ai/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "sonar",
         "sonar-pro",
@@ -441,7 +441,7 @@
       "models_endpoint": "https://api.voyageai.com/v1/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "voyage-3",
         "voyage-3-lite",
@@ -459,7 +459,7 @@
       "models_endpoint": "https://api.groq.com/openai/v1/models",
       "count": 19,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "llama-3.3-70b-versatile",
         "llama-3.3-70b-specdec",
@@ -490,7 +490,7 @@
       "models_endpoint": "https://api.cerebras.ai/v1/models",
       "count": 7,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "llama-3.3-70b",
         "llama3.1-8b",
@@ -509,7 +509,7 @@
       "models_endpoint": "https://api.sambanova.ai/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "Meta-Llama-3.1-405B-Instruct",
         "Meta-Llama-3.3-70B-Instruct",
@@ -526,7 +526,7 @@
       "models_endpoint": "https://api.together.xyz/v1/models",
       "count": 11,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "meta-llama/Llama-3.3-70B-Instruct-Turbo",
         "meta-llama/Llama-3.1-405B-Instruct-Turbo",
@@ -549,7 +549,7 @@
       "models_endpoint": "https://api.fireworks.ai/inference/v1/models",
       "count": 14,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "accounts/fireworks/models/llama-v3p3-70b-instruct",
         "accounts/fireworks/models/deepseek-v3",
@@ -575,7 +575,7 @@
       "models_endpoint": "https://api.deepinfra.com/v1/openai/models",
       "count": 194,
       "source": "live-public",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "Audio8/Audio8-TTS-Preview-0.6b",
         "BAAI/bge-base-en-v1.5",
@@ -781,7 +781,7 @@
       "models_endpoint": "https://api.studio.nebius.ai/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "meta-llama/Llama-3.3-70B-Instruct",
         "deepseek-ai/DeepSeek-R1-0528",
@@ -797,7 +797,7 @@
       "models_endpoint": "https://api.siliconflow.cn/v1/models",
       "count": 71,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "deepseek-ai/DeepSeek-R1",
         "deepseek-ai/DeepSeek-V3",
@@ -880,7 +880,7 @@
       "models_endpoint": "https://api.inceptionlabs.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "mercury-2",
         "mercury-edit-2"
@@ -894,7 +894,7 @@
       "models_endpoint": "https://inference.liquid.ai/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "lfm2.5-instruct",
         "lfm2-24b-instruct",
@@ -910,7 +910,7 @@
       "models_endpoint": "https://api.friendli.ai/serverless/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "meta-llama-3.3-70b-instruct",
         "deepseek-r1",
@@ -925,7 +925,7 @@
       "models_endpoint": null,
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "llama-3.3-70b-instruct",
         "qwen2.5-72b-instruct"
@@ -939,7 +939,7 @@
       "models_endpoint": "https://api.totalgpt.ai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "rocinante-12b",
         "midnight-miqu-70b",
@@ -954,7 +954,7 @@
       "models_endpoint": "https://mancer.tech/oai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "goliath-120b",
         "mythomax-l2-13b",
@@ -969,7 +969,7 @@
       "models_endpoint": "https://api.morphllm.com/v1/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "morph-qwen35-397b",
         "morph-qwen36-27b",
@@ -987,7 +987,7 @@
       "models_endpoint": "https://api.aionlabs.ai/v1/models",
       "count": 7,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "aion-2.0",
         "aion-rp-llama-3.1-8b",
@@ -1006,7 +1006,7 @@
       "models_endpoint": "https://router.huggingface.co/v1/models",
       "count": 140,
       "source": "live-public",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "CohereLabs/aya-expanse-32b",
         "CohereLabs/aya-vision-32b",
@@ -1158,7 +1158,7 @@
       "models_endpoint": "https://integrate.api.nvidia.com/v1/models",
       "count": 12,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "moonshotai/kimi-k3",
         "deepseek-ai/deepseek-v4-pro-0813",
@@ -1182,7 +1182,7 @@
       "models_endpoint": "https://api.hyperbolic.xyz/v1/models",
       "count": 8,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "deepseek-ai/DeepSeek-V3",
         "meta-llama/Llama-3.3-70B-Instruct",
@@ -1202,7 +1202,7 @@
       "models_endpoint": "https://api.lepton.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "llama-3.3-70b-instruct",
         "mistral-7b-instruct"
@@ -1216,7 +1216,7 @@
       "models_endpoint": "https://api.kluster.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "Meta-Llama-3.1-405B-Instruct",
         "Qwen2.5-72B-Instruct"
@@ -1230,7 +1230,7 @@
       "models_endpoint": "https://api.endpoints.anyscale.com/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "meta-llama/Llama-3.3-70B-Instruct",
         "mistralai/Mixtral-8x22B-Instruct-v0.1"
@@ -1244,7 +1244,7 @@
       "models_endpoint": "https://api.replicate.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "meta/meta-llama-3-70b-instruct",
         "meta/meta-llama-3-8b-instruct",
@@ -1259,7 +1259,7 @@
       "models_endpoint": "https://api.inference.net/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "deepseek-ai/DeepSeek-R1",
         "meta-llama/Llama-3.1-70B-Instruct"
@@ -1273,7 +1273,7 @@
       "models_endpoint": "https://conductor.arcee.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "arcee-ai/trinity-large-preview",
         "arcee-ai/caller-large"
@@ -1287,7 +1287,7 @@
       "models_endpoint": "https://glhf.chat/api/openai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "hf:meta-llama/Llama-3.3-70B-Instruct",
         "hf:Qwen/Qwen2.5-72B-Instruct",
@@ -1302,7 +1302,7 @@
       "models_endpoint": "https://api.akashml.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "llama-3.3-70b-instruct",
         "qwen2.5-72b-instruct",
@@ -1317,7 +1317,7 @@
       "models_endpoint": "https://api.atlascloud.ai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "deepseek-v3",
         "seedance-2.0",
@@ -1332,7 +1332,7 @@
       "models_endpoint": "https://llm.chutes.ai/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "moonshotai/kimi-k2.5",
         "THUDM/glm-4-9b-chat",
@@ -1348,7 +1348,7 @@
       "models_endpoint": "https://api.cloudflare.com/client/v4/accounts/{id}/ai/v1/models",
       "count": 11,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
         "@cf/meta/llama-3.1-8b-instruct",
@@ -1371,7 +1371,7 @@
       "models_endpoint": "https://inference.do-ai.run/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "llama3-8b-instruct"
       ]
@@ -1384,7 +1384,7 @@
       "models_endpoint": "https://api.gmi-serving.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "glm-5.1-fp8",
         "deepseek-v3.2",
@@ -1399,7 +1399,7 @@
       "models_endpoint": "https://api.intelligence.io.solutions/api/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "glm-4.5-air",
         "gpt-oss-120b",
@@ -1414,7 +1414,7 @@
       "models_endpoint": "https://api.nextbit256.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "qwen:3.5-35b",
         "qwen3:30b",
@@ -1429,7 +1429,7 @@
       "models_endpoint": "https://api.novita.ai/openai/v1/models",
       "count": 22,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "moonshotai/kimi-k2.5",
         "meta-llama/llama-3.3-70b-instruct",
@@ -1463,7 +1463,7 @@
       "models_endpoint": "https://api.saas.parasail.io/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "deepseek-r1",
         "qwen-coder-32b"
@@ -1477,7 +1477,7 @@
       "models_endpoint": null,
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "unsloth/Qwen2.5-72B-Instruct"
       ]
@@ -1490,7 +1490,7 @@
       "models_endpoint": "https://divers.poolsi.de/openai/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "laguna-xs.2",
         "laguna-m.1",
@@ -1506,7 +1506,7 @@
       "models_endpoint": "https://api.venice.ai/api/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "llama-3.3-70b",
         "qwen-2.5-72b",
@@ -1521,7 +1521,7 @@
       "models_endpoint": "https://pass.wafer.ai/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "Qwen3.5-397B-A17B",
         "GLM-5.1",
@@ -1538,7 +1538,7 @@
       "models_endpoint": "https://<resource>.openai.azure.com/openai/v1/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-5.5",
         "gpt-5.4",
@@ -1556,7 +1556,7 @@
       "models_endpoint": "https://us-central1-aiplatform.googleapis.com/v1/projects/models",
       "count": 24,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gemini-3.5-pro",
         "gemini-3.1-pro",
@@ -1592,7 +1592,7 @@
       "models_endpoint": "https://bedrock-runtime.<region>.amazonaws.com/v1/models",
       "count": 10,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "anthropic.claude-opus-4-6",
         "anthropic.claude-sonnet-4-6",
@@ -1614,7 +1614,7 @@
       "models_endpoint": "https://model-{id}.api.baseten.co/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "llama-3.3-70b-instruct",
         "deepseek-r1"
@@ -1628,7 +1628,7 @@
       "models_endpoint": null,
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-3.5-sonnet",
         "gpt-4o",
@@ -1643,7 +1643,7 @@
       "models_endpoint": "https://api.scaleway.ai/v1/models",
       "count": 8,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "llama-3.3-70b-instruct",
         "deepseek-r1",
@@ -1663,7 +1663,7 @@
       "models_endpoint": "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "Meta-Llama-3_1-70B-Instruct",
         "Qwen2.5-72B-Instruct"
@@ -1677,7 +1677,7 @@
       "models_endpoint": "https://models.inference.ai.azure.com/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-4o",
         "gpt-4o-mini",
@@ -1692,11 +1692,10 @@
       "category": "Sovereign / Cloud",
       "api_base_url": "https://<app>.modal.run/v1",
       "models_endpoint": "https://<app>.modal.run/v1/models",
-      "count": 2,
+      "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
-        "custom-deployed-vllm",
         "google/gemini-2.0-flash"
       ]
     },
@@ -1708,7 +1707,7 @@
       "models_endpoint": "https://openrouter.ai/api/v1/models",
       "count": 446,
       "source": "live-public",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "aion-labs/aion-2.0",
         "aion-labs/aion-3.0",
@@ -2164,12 +2163,10 @@
       "category": "Gateway",
       "api_base_url": "https://api.opper.ai/v3/compat",
       "models_endpoint": "https://api.opper.ai/v3/compat/v1/models",
-      "count": 1,
-      "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": [
-        "300+ routed models"
-      ]
+      "count": 0,
+      "source": "unavailable",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
+      "models": []
     },
     "axiom": {
       "provider_id": 71,
@@ -2177,12 +2174,10 @@
       "category": "Gateway",
       "api_base_url": "https://cloud.axiomstudio.ai/rest/v1/llm-gateway/v1/",
       "models_endpoint": "https://cloud.axiomstudio.ai/rest/v1/llm-gateway/v1/models",
-      "count": 1,
-      "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": [
-        "18+ unified provider routes"
-      ]
+      "count": 0,
+      "source": "unavailable",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
+      "models": []
     },
     "switchpoint": {
       "provider_id": 72,
@@ -2192,7 +2187,7 @@
       "models_endpoint": "https://api.ppq.ai/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "switchpoint/router"
       ]
@@ -2205,7 +2200,7 @@
       "models_endpoint": "https://api.relace.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "relace-apply-3",
         "relace-search"
@@ -2219,7 +2214,7 @@
       "models_endpoint": "https://api.moonshot.ai/v1/models",
       "count": 7,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "kimi-k2.7-code",
         "kimi-k2.6",
@@ -2238,7 +2233,7 @@
       "models_endpoint": null,
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "tracing-only"
       ]
@@ -2251,7 +2246,7 @@
       "models_endpoint": "https://api.inference.wandb.ai/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "evaluation-registry"
       ]
@@ -2264,7 +2259,7 @@
       "models_endpoint": null,
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "custom-enterprise-routes"
       ]
@@ -2275,12 +2270,10 @@
       "category": "Gateway",
       "api_base_url": "https://api.portkey.ai/v1",
       "models_endpoint": "https://api.portkey.ai/v1/models",
-      "count": 1,
-      "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": [
-        "250+ routed models"
-      ]
+      "count": 0,
+      "source": "unavailable",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
+      "models": []
     },
     "litellm": {
       "provider_id": 79,
@@ -2288,12 +2281,10 @@
       "category": "Gateway",
       "api_base_url": "http://localhost:4000/v1",
       "models_endpoint": "http://localhost:4000/v1/models",
-      "count": 1,
-      "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": [
-        "100+ provider routes via proxy"
-      ]
+      "count": 0,
+      "source": "unavailable",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
+      "models": []
     },
     "requesty": {
       "provider_id": 80,
@@ -2303,7 +2294,7 @@
       "models_endpoint": "https://router.requesty.ai/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "multi-provider-routed"
       ]
@@ -2316,7 +2307,7 @@
       "models_endpoint": "https://api.unify.ai/v0/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "ml-routed-models"
       ]
@@ -2327,12 +2318,10 @@
       "category": "Gateway",
       "api_base_url": "https://ai-gateway.helicone.ai/v1",
       "models_endpoint": "https://ai-gateway.helicone.ai/v1/models",
-      "count": 1,
-      "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": [
-        "100+ gateway models"
-      ]
+      "count": 0,
+      "source": "unavailable",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
+      "models": []
     },
     "vercel-ai-gateway": {
       "provider_id": 83,
@@ -2340,12 +2329,10 @@
       "category": "Gateway",
       "api_base_url": "https://ai-gateway.vercel.sh/v1",
       "models_endpoint": "https://ai-gateway.vercel.sh/v1/models",
-      "count": 1,
-      "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": [
-        "all-major-provider-models"
-      ]
+      "count": 0,
+      "source": "unavailable",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
+      "models": []
     },
     "cloudflare-ai-gateway": {
       "provider_id": 84,
@@ -2353,12 +2340,10 @@
       "category": "Gateway",
       "api_base_url": "https://gateway.ai.cloudflare.com/v1",
       "models_endpoint": "https://gateway.ai.cloudflare.com/v1/models",
-      "count": 1,
-      "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": [
-        "upstream-provider-models"
-      ]
+      "count": 0,
+      "source": "unavailable",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
+      "models": []
     },
     "kong-ai-gateway": {
       "provider_id": 85,
@@ -2368,7 +2353,7 @@
       "models_endpoint": null,
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "enterprise-routed-models"
       ]
@@ -2381,7 +2366,7 @@
       "models_endpoint": "https://api.aimlapi.com/v1/models",
       "count": 9,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-4o",
         "claude-3-5-sonnet",
@@ -2402,7 +2387,7 @@
       "models_endpoint": "https://api.edenai.co/v2/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "openai/gpt-4o",
         "google/gemini-2.5-flash",
@@ -2417,7 +2402,7 @@
       "models_endpoint": "https://api.lemondata.ai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-4o",
         "claude-3.5-sonnet",
@@ -2432,7 +2417,7 @@
       "models_endpoint": "https://api.coze.com/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "bot-backed-gpt-4o",
         "bot-backed-gemini",
@@ -2448,7 +2433,7 @@
       "models_endpoint": "https://api.nlpcloud.io/v1/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "finetuned-llama-3-70b",
         "chatdolphin",
@@ -2466,7 +2451,7 @@
       "models_endpoint": "https://api.puter.com/ai/chat/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-4o-mini",
         "claude-3.5-sonnet",
@@ -2481,7 +2466,7 @@
       "models_endpoint": "http://localhost:11434/v1/models",
       "count": 10,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "llama3.3",
         "llama3.2",
@@ -2501,12 +2486,10 @@
       "category": "Local",
       "api_base_url": "http://localhost:1234/v1",
       "models_endpoint": "http://localhost:1234/v1/models",
-      "count": 1,
-      "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": [
-        "any-gguf-model"
-      ]
+      "count": 0,
+      "source": "unavailable",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
+      "models": []
     },
     "llama-cpp": {
       "provider_id": 94,
@@ -2514,12 +2497,10 @@
       "category": "Local",
       "api_base_url": "http://localhost:8080/v1",
       "models_endpoint": "http://localhost:8080/v1/models",
-      "count": 1,
-      "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": [
-        "any-gguf-model"
-      ]
+      "count": 0,
+      "source": "unavailable",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
+      "models": []
     },
     "jan": {
       "provider_id": 95,
@@ -2527,12 +2508,10 @@
       "category": "Local",
       "api_base_url": "http://localhost:1337/v1",
       "models_endpoint": "http://localhost:1337/v1/models",
-      "count": 1,
-      "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": [
-        "supported-local-models"
-      ]
+      "count": 0,
+      "source": "unavailable",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
+      "models": []
     },
     "vllm": {
       "provider_id": 96,
@@ -2540,12 +2519,10 @@
       "category": "Local",
       "api_base_url": "http://localhost:8000/v1",
       "models_endpoint": "http://localhost:8000/v1/models",
-      "count": 1,
-      "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": [
-        "any-compatible-checkpoint"
-      ]
+      "count": 0,
+      "source": "unavailable",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
+      "models": []
     },
     "localai": {
       "provider_id": 97,
@@ -2553,12 +2530,10 @@
       "category": "Local",
       "api_base_url": "http://localhost:8080/v1",
       "models_endpoint": "http://localhost:8080/v1/models",
-      "count": 1,
-      "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": [
-        "any-compatible-local-model"
-      ]
+      "count": 0,
+      "source": "unavailable",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
+      "models": []
     },
     "302-ai": {
       "provider_id": 98,
@@ -2568,7 +2543,7 @@
       "models_endpoint": "https://api.302.ai/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "glm-5",
         "gpt-4o",
@@ -2584,7 +2559,7 @@
       "models_endpoint": "http://127.0.0.1:1337/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "qwen-coder",
         "deepseek-coder"
@@ -2598,7 +2573,7 @@
       "models_endpoint": "https://<resource>.cognitiveservices.azure.com/openai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-4o",
         "gpt-4.1",
@@ -2613,7 +2588,7 @@
       "models_endpoint": "https://api.cortecs.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "kimi-k2-instruct",
         "gpt-5-mini"
@@ -2627,7 +2602,7 @@
       "models_endpoint": "https://app.frogbot.ai/api/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-sonnet-4",
         "gpt-4o",
@@ -2642,7 +2617,7 @@
       "models_endpoint": "https://gitlab.com/api/v4/ai/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "duo-chat-haiku-4-5",
         "duo-chat-sonnet-4-5",
@@ -2659,7 +2634,7 @@
       "models_endpoint": "https://api.githubcopilot.com/v1/models",
       "count": 37,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-4o",
         "claude-sonnet-4",
@@ -2708,7 +2683,7 @@
       "models_endpoint": "https://ollama.com/api/v1/models",
       "count": 13,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-oss:20b-cloud",
         "gpt-oss:120b",
@@ -2733,7 +2708,7 @@
       "models_endpoint": "https://opencode.ai/zen/v1/models",
       "count": 41,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-5.5",
         "claude-sonnet-4-6",
@@ -2786,7 +2761,7 @@
       "models_endpoint": "https://opencode.ai/zen/go/v1/models",
       "count": 53,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "kimi-k2.7",
         "glm-5.1",
@@ -2851,7 +2826,7 @@
       "models_endpoint": "https://api.llmgateway.io/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-4o",
         "claude-3-5-sonnet-20241022",
@@ -2867,7 +2842,7 @@
       "models_endpoint": "https://api.ai.<region>.<landscape>.ml.hana.ondemand.com/v2/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-4o",
         "claude-sonnet-4",
@@ -2883,7 +2858,7 @@
       "models_endpoint": "https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "qwen3-vl-235b",
         "llama-3.3-70b",
@@ -2898,7 +2873,7 @@
       "models_endpoint": "https://<account>.snowflakecomputing.com/api/v2/cortex/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-sonnet-4-6",
         "claude-haiku-4-5",
@@ -2913,7 +2888,7 @@
       "models_endpoint": "https://zenmux.ai/api/v1/models",
       "count": 11,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "openai/gpt-5",
         "anthropic/claude-sonnet-4",
@@ -2936,7 +2911,7 @@
       "models_endpoint": "https://api.sakana.ai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "fugu",
         "fugu-ultra",
@@ -2951,7 +2926,7 @@
       "models_endpoint": "https://sub2api.558686.xyz/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-5.5",
         "gpt-5.4",
@@ -2962,12 +2937,12 @@
     "discountedtokens": {
       "provider_id": 115,
       "provider_name": "DiscountedTokens",
-      "category": "Discount / Budget API",
+      "category": "Gateway",
       "api_base_url": "https://discountedtokens.com/v1",
       "models_endpoint": "https://discountedtokens.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "GPT-5.5",
         "GPT-5.4",
@@ -2982,7 +2957,7 @@
       "models_endpoint": "https://router-api.xiu.ai/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-5.6-sol",
         "gpt-5.5",
@@ -2998,7 +2973,7 @@
       "models_endpoint": "https://api.privatedeskai.com/v1/models",
       "count": 1,
       "source": "live-public",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "deepseek-ai/DeepSeek-V4-Flash-0731"
       ]
@@ -3011,7 +2986,7 @@
       "models_endpoint": "https://aiwave.live/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "deepseek-v4-pro",
         "deepseek-v4-flash",
@@ -3028,7 +3003,7 @@
       "models_endpoint": null,
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "opencode": {
@@ -3039,7 +3014,7 @@
       "models_endpoint": "https://opencode.ai/zen/v1/models",
       "count": 10,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "big-pickle",
         "muse-spark-1.2",
@@ -3061,7 +3036,7 @@
       "models_endpoint": "https://duck.ai/duckchat/v1/chat/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-5.4-mini",
         "gpt-5.6-luna",
@@ -3079,7 +3054,7 @@
       "models_endpoint": "https://playground.ai.cloudflare.com/v1/models",
       "count": 20,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "zai-org/glm-5.2",
         "moonshotai/kimi-k2.7-code",
@@ -3111,7 +3086,7 @@
       "models_endpoint": "https://amelia.chipotle.com/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "pepper-1"
       ]
@@ -3124,7 +3099,7 @@
       "models_endpoint": "https://veoaifree.com/wp-admin/admin-ajax.php/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "veo",
         "seedance"
@@ -3138,7 +3113,7 @@
       "models_endpoint": null,
       "count": 28,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "sonnet4.6",
         "fable-5",
@@ -3178,7 +3153,7 @@
       "models_endpoint": null,
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "codex-app-server": {
@@ -3189,7 +3164,7 @@
       "models_endpoint": null,
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "uncloseai": {
@@ -3200,7 +3175,7 @@
       "models_endpoint": "https://hermes.ai.unturf.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "adamo1139/Hermes-3-Llama-3.1-8B-FP8-Dynamic",
         "qwen3.6:27b",
@@ -3215,7 +3190,7 @@
       "models_endpoint": "https://oai.aihorde.net/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "aphrodite/TheDrummer/Cydonia-24B-v4.3",
         "aphrodite/TheDrummer/Skyfall-31B-v4.2",
@@ -3226,11 +3201,11 @@
       "provider_id": 130,
       "provider_name": "GitHub Enterprise Copilot",
       "category": "OAuth",
-      "api_base_url": "https://api.githubcopilot.com",
-      "models_endpoint": "https://api.githubcopilot.com/v1/models",
+      "api_base_url": "GitHub Enterprise host (device-flow OAuth)",
+      "models_endpoint": null,
       "count": 26,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-fable-5",
         "claude-opus-5",
@@ -3268,7 +3243,7 @@
       "models_endpoint": null,
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "grok-4.5"
       ]
@@ -3281,7 +3256,7 @@
       "models_endpoint": "https://api.openference.com/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "GLM-5.2"
       ]
@@ -3294,7 +3269,7 @@
       "models_endpoint": "https://cli-chat-proxy.grok.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "grok-4.6",
         "grok-4.5",
@@ -3309,7 +3284,7 @@
       "models_endpoint": "https://api.qoder.com/v1/models",
       "count": 9,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "qwen3.8-max-preview",
         "qwen3.7-max",
@@ -3330,7 +3305,7 @@
       "models_endpoint": null,
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "kiro": {
@@ -3341,7 +3316,7 @@
       "models_endpoint": "https://codewhisperer.us-east-1.amazonaws.com/generateAssistantResponse/v1/models",
       "count": 11,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-sonnet-5",
         "claude-sonnet-4.5",
@@ -3364,10 +3339,10 @@
       "models_endpoint": null,
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
-    "claude": {
+    "claude-code": {
       "provider_id": 138,
       "provider_name": "Claude Code",
       "category": "OAuth",
@@ -3375,7 +3350,7 @@
       "models_endpoint": "https://api.anthropic.com/v1/models",
       "count": 11,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-fable-5-1",
         "claude-fable-5",
@@ -3398,7 +3373,7 @@
       "models_endpoint": null,
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "codex": {
@@ -3409,7 +3384,7 @@
       "models_endpoint": "https://chatgpt.com/backend-api/codex/v1/models",
       "count": 33,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-6-astra",
         "gpt-6-astra-ultra",
@@ -3454,7 +3429,7 @@
       "models_endpoint": "https://api2.cursor.sh/v1/models",
       "count": 26,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "auto",
         "auto-cost",
@@ -3492,7 +3467,7 @@
       "models_endpoint": null,
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "zed-hosted": {
@@ -3503,7 +3478,7 @@
       "models_endpoint": "https://cloud.zed.dev/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "trae": {
@@ -3514,7 +3489,7 @@
       "models_endpoint": "https://core-normal.trae.ai/api/remote/v1/models",
       "count": 9,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "auto",
         "work",
@@ -3535,7 +3510,7 @@
       "models_endpoint": null,
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "kilocode": {
@@ -3546,7 +3521,7 @@
       "models_endpoint": "https://api.kilo.ai/api/openrouter/v1/models",
       "count": 15,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "openrouter/free",
         "openai/gpt-5.6-sol",
@@ -3573,7 +3548,7 @@
       "models_endpoint": "https://api.cline.bot/api/v1/models",
       "count": 13,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "z-ai/glm-5.2",
         "x-ai/grok-4.5",
@@ -3598,7 +3573,7 @@
       "models_endpoint": "https://api.cline.bot/api/v1/models",
       "count": 11,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "cline-pass/glm-5.2",
         "cline-pass/minimax-m3",
@@ -3621,7 +3596,7 @@
       "models_endpoint": "https://server.codeium.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "devin-cli": {
@@ -3632,7 +3607,7 @@
       "models_endpoint": null,
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "codebuddy-cn": {
@@ -3643,7 +3618,7 @@
       "models_endpoint": "https://copilot.tencent.com/v2/v1/models",
       "count": 15,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "glm-5.2",
         "glm-5.1",
@@ -3670,7 +3645,7 @@
       "models_endpoint": "https://chatgpt.com/v1/models",
       "count": 8,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-5-6",
         "gpt-5-6-thinking",
@@ -3690,7 +3665,7 @@
       "models_endpoint": "https://chatgpt.com/v1/models",
       "count": 7,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "luna",
         "think",
@@ -3709,7 +3684,7 @@
       "models_endpoint": "https://grok.com/rest/app-chat/conversations/new/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "fast",
         "expert",
@@ -3725,7 +3700,7 @@
       "models_endpoint": "https://gemini.google.com/app/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gemini-3.1-pro",
         "gemini-3.7-flash",
@@ -3740,7 +3715,7 @@
       "models_endpoint": "https://www.perplexity.ai/rest/sse/perplexity_ask/v1/models",
       "count": 11,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "pplx-auto",
         "pplx-sonar",
@@ -3763,7 +3738,7 @@
       "models_endpoint": "https://app.blackbox.ai/api/chat/v1/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-4-turbo",
         "gpt-4",
@@ -3781,7 +3756,7 @@
       "models_endpoint": "https://www.meta.ai/api/graphql/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "muse-spark",
         "muse-spark-thinking",
@@ -3796,7 +3771,7 @@
       "models_endpoint": "https://claude.ai/api/organizations/v1/models",
       "count": 9,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-fable-5-1",
         "claude-fable-5",
@@ -3817,7 +3792,7 @@
       "models_endpoint": "https://chat.deepseek.com/api/v0/chat/completion/v1/models",
       "count": 14,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "deepseek-v4-pro",
         "deepseek-v4-pro-think",
@@ -3843,7 +3818,7 @@
       "models_endpoint": null,
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "copilot-pro",
         "gpt-4-turbo",
@@ -3858,7 +3833,7 @@
       "models_endpoint": null,
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "copilot-m365",
         "copilot-m365-claude-opus",
@@ -3874,7 +3849,7 @@
       "models_endpoint": "https://t3.chat/api/chat/v1/models",
       "count": 23,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-opus-4",
         "claude-sonnet-4",
@@ -3909,7 +3884,7 @@
       "models_endpoint": "https://chatapi.innerai.com/chat/v1/models",
       "count": 19,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-4o",
         "gpt-4.1",
@@ -3940,7 +3915,7 @@
       "models_endpoint": "https://agent.adapta.one/api/chat/stream/v1/models",
       "count": 7,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "adapta-one",
         "adapta-gpt",
@@ -3959,7 +3934,7 @@
       "models_endpoint": "https://arena.ai/nextjs-api/stream/create-evaluation/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "yuanbao-web": {
@@ -3970,7 +3945,7 @@
       "models_endpoint": "https://yuanbao.tencent.com/api/chat/v1/models",
       "count": 8,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "deepseek-v3",
         "deepseek-r1",
@@ -3990,7 +3965,7 @@
       "models_endpoint": "https://aistudio.tencent.ai/api/chat/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "hy3-g",
         "hunyuan-default",
@@ -4005,7 +3980,7 @@
       "models_endpoint": "https://huggingface.co/chat/conversation/v1/models",
       "count": 24,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
         "CohereLabs/c4ai-command-r7b-12-2024",
@@ -4041,7 +4016,7 @@
       "models_endpoint": null,
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "venice-web": {
@@ -4052,7 +4027,7 @@
       "models_endpoint": null,
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "v0-vercel-web": {
@@ -4063,7 +4038,7 @@
       "models_endpoint": null,
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "kimi-web": {
@@ -4074,7 +4049,7 @@
       "models_endpoint": "https://www.kimi.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "k3",
         "k2d6"
@@ -4088,7 +4063,7 @@
       "models_endpoint": "https://www.dola.com/chat/completion/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "dola-speed",
         "dola-pro"
@@ -4102,7 +4077,7 @@
       "models_endpoint": "https://business.gemini.google/home/v1/models",
       "count": 12,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gemini-3-pro",
         "gemini-3-ultra",
@@ -4126,7 +4101,7 @@
       "models_endpoint": "https://zenmux.ai/api/anthropic/v1/models",
       "count": 11,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "deepseek/deepseek-chat",
         "deepseek/deepseek-reasoner",
@@ -4149,7 +4124,7 @@
       "models_endpoint": "https://gov.freegpt.win/api/openai/oneapi/v1/models",
       "count": 22,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-fable-5",
         "claude-opus-5",
@@ -4183,7 +4158,7 @@
       "models_endpoint": "https://chat.z.ai/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "glm-5.3-flash",
         "glm-5.3",
@@ -4198,7 +4173,7 @@
       "models_endpoint": "https://data.prompt.ql.app/promptql/playground-v2-hge/v1/graphql/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "notion-web": {
@@ -4209,7 +4184,7 @@
       "models_endpoint": "https://app.notion.com/api/v3/runInferenceTranscript/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "adobe-firefly": {
@@ -4220,7 +4195,7 @@
       "models_endpoint": null,
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "hyperagent": {
@@ -4231,7 +4206,7 @@
       "models_endpoint": "https://hyperagent.com/api/threads/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "conol-web": {
@@ -4242,7 +4217,7 @@
       "models_endpoint": "https://conol.ai/api/sessions/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "maxai": {
@@ -4253,7 +4228,7 @@
       "models_endpoint": "https://api.maxai.me/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "uc": {
@@ -4264,7 +4239,7 @@
       "models_endpoint": "https://internal-6.pubyar.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "mlx-gemma": {
@@ -4275,7 +4250,7 @@
       "models_endpoint": "http://localhost:${MLX_GEMMA_PORT}/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "mlx-community/gemma-4-26B-A4B-it-qat-q4_0-mlx-aligned"
       ]
@@ -4288,7 +4263,7 @@
       "models_endpoint": "http://localhost:${MLX_QWEN_PORT}/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw"
       ]
@@ -4301,7 +4276,7 @@
       "models_endpoint": "http://localhost:13305/api/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "llamafile": {
@@ -4312,7 +4287,7 @@
       "models_endpoint": "http://127.0.0.1:8080/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "triton": {
@@ -4323,7 +4298,7 @@
       "models_endpoint": "http://localhost:8000/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "docker-model-runner": {
@@ -4334,7 +4309,7 @@
       "models_endpoint": "http://localhost:12434/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "xinference": {
@@ -4345,7 +4320,7 @@
       "models_endpoint": "http://localhost:9997/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "oobabooga": {
@@ -4356,7 +4331,7 @@
       "models_endpoint": "http://localhost:5000/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "sdwebui": {
@@ -4367,7 +4342,7 @@
       "models_endpoint": "http://localhost:7860/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "comfyui": {
@@ -4378,7 +4353,7 @@
       "models_endpoint": "http://localhost:8188/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "perplexity-search": {
@@ -4389,7 +4364,7 @@
       "models_endpoint": "https://api.perplexity.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "serper-search": {
@@ -4400,7 +4375,7 @@
       "models_endpoint": "https://google.serper.dev/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "brave-search": {
@@ -4411,7 +4386,7 @@
       "models_endpoint": "https://api.search.brave.com/res/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "exa-search": {
@@ -4422,7 +4397,7 @@
       "models_endpoint": "https://api.exa.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "tavily-search": {
@@ -4433,7 +4408,7 @@
       "models_endpoint": "https://api.tavily.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "anysearch-search": {
@@ -4444,7 +4419,7 @@
       "models_endpoint": "https://api.anysearch.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "firecrawl": {
@@ -4455,7 +4430,7 @@
       "models_endpoint": "https://api.firecrawl.dev/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "google-pse-search": {
@@ -4466,7 +4441,7 @@
       "models_endpoint": "https://www.googleapis.com/customsearch/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "nimble-search": {
@@ -4477,7 +4452,7 @@
       "models_endpoint": "https://api.webit.live/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "linkup-search": {
@@ -4488,7 +4463,7 @@
       "models_endpoint": "https://api.linkup.so/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "searchapi-search": {
@@ -4499,7 +4474,7 @@
       "models_endpoint": "https://www.searchapi.io/api/v1/search/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "youcom-search": {
@@ -4510,7 +4485,7 @@
       "models_endpoint": "https://api.ydc-index.io/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "searxng-search": {
@@ -4521,7 +4496,7 @@
       "models_endpoint": "http://localhost:8080/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "x-search": {
@@ -4532,7 +4507,7 @@
       "models_endpoint": "https://api.x.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "xquik-search": {
@@ -4543,18 +4518,18 @@
       "models_endpoint": "https://api.xquik.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "ollama-search": {
       "provider_id": 211,
       "provider_name": "Ollama Search",
       "category": "Search",
-      "api_base_url": "See official docs",
-      "models_endpoint": null,
+      "api_base_url": "https://ollama.com/api",
+      "models_endpoint": "https://ollama.com/api/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "context7": {
@@ -4565,7 +4540,7 @@
       "models_endpoint": "https://context7.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "deepgram": {
@@ -4576,7 +4551,7 @@
       "models_endpoint": "https://api.deepgram.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "assemblyai": {
@@ -4587,7 +4562,7 @@
       "models_endpoint": "https://api.assemblyai.com/v2/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "soniox": {
@@ -4598,7 +4573,7 @@
       "models_endpoint": "https://api.soniox.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "elevenlabs": {
@@ -4609,7 +4584,7 @@
       "models_endpoint": "https://api.elevenlabs.io/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "cartesia": {
@@ -4620,7 +4595,7 @@
       "models_endpoint": "https://api.cartesia.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "fishaudio": {
@@ -4631,7 +4606,7 @@
       "models_endpoint": "https://api.fish.audio/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "playht": {
@@ -4642,7 +4617,7 @@
       "models_endpoint": "https://api.play.ht/api/v2/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "inworld": {
@@ -4653,7 +4628,7 @@
       "models_endpoint": "https://api.inworld.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "aws-polly": {
@@ -4664,7 +4639,7 @@
       "models_endpoint": "https://polly.us-east-1.amazonaws.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "gladia": {
@@ -4675,7 +4650,7 @@
       "models_endpoint": "https://api.gladia.io/v2/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "rev-ai": {
@@ -4686,7 +4661,7 @@
       "models_endpoint": "https://api.rev.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "speechmatics": {
@@ -4697,7 +4672,7 @@
       "models_endpoint": "https://asr.api.speechmatics.com/v2/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "jules": {
@@ -4708,7 +4683,7 @@
       "models_endpoint": "https://jules.google/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "devin": {
@@ -4719,7 +4694,7 @@
       "models_endpoint": "https://api.devin.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "codex-cloud": {
@@ -4730,7 +4705,7 @@
       "models_endpoint": "https://chatgpt.com/backend-api/codex/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "cliproxyapi": {
@@ -4741,7 +4716,7 @@
       "models_endpoint": "http://localhost:8317/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "9router": {
@@ -4752,7 +4727,7 @@
       "models_endpoint": "http://localhost:20130/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "pioneer": {
@@ -4763,7 +4738,7 @@
       "models_endpoint": "https://api.pioneer.ai/v1/models",
       "count": 10,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "Qwen/Qwen3-32B",
         "Qwen/Qwen3.6-27B",
@@ -4785,7 +4760,7 @@
       "models_endpoint": "https://api.uncensored.com/api/v1/models",
       "count": 82,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-opus-5",
         "claude-opus-5-fast",
@@ -4879,7 +4854,7 @@
       "models_endpoint": "https://api.blackbox.ai/v1/models",
       "count": 11,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-fable-5",
         "claude-opus-4.8",
@@ -4902,7 +4877,7 @@
       "models_endpoint": "https://api.perplexity.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "openai/gpt-5.6-sol",
         "perplexity/kimi-k3"
@@ -4916,7 +4891,7 @@
       "models_endpoint": "https://api.llama.com/compat/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "galadriel": {
@@ -4927,7 +4902,7 @@
       "models_endpoint": "https://api.galadriel.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "codestral": {
@@ -4938,7 +4913,7 @@
       "models_endpoint": "https://codestral.mistral.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "maritalk": {
@@ -4949,7 +4924,7 @@
       "models_endpoint": "https://chat.maritaca.ai/api/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "nous-research": {
@@ -4960,7 +4935,7 @@
       "models_endpoint": "https://inference-api.nousresearch.com/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "Hermes-4-405B",
         "Hermes-4-70B"
@@ -4974,7 +4949,7 @@
       "models_endpoint": "https://api.writer.com/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "palmyra-x5",
         "palmyra-x4"
@@ -4983,12 +4958,12 @@
     "muse-code": {
       "provider_id": 240,
       "provider_name": "Muse Code (Meta)",
-      "category": "Frontier",
-      "api_base_url": "https://llama-stack.readthedocs.io",
-      "models_endpoint": "https://llama-stack.readthedocs.io/v1/models",
+      "category": "Local",
+      "api_base_url": "http://localhost:8321/v1",
+      "models_endpoint": "http://localhost:8321/v1/models",
       "count": 8,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "llama-4-maverick",
         "llama-4-scout",
@@ -5008,7 +4983,7 @@
       "models_endpoint": "https://api.openvecta.com/v1/models",
       "count": 9,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "glm-4.7-flash",
         "claude-sonnet-4.6",
@@ -5029,7 +5004,7 @@
       "models_endpoint": "https://api.openference.com/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "GLM-5.2"
       ]
@@ -5042,7 +5017,7 @@
       "models_endpoint": "https://ai.nube.sh/api/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "lambda-ai": {
@@ -5053,7 +5028,7 @@
       "models_endpoint": "https://api.lambda.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "nscale": {
@@ -5064,7 +5039,7 @@
       "models_endpoint": "https://inference.api.nscale.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "publicai": {
@@ -5075,7 +5050,7 @@
       "models_endpoint": "https://api.publicai.co/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "featherless-ai": {
@@ -5086,7 +5061,7 @@
       "models_endpoint": "https://api.featherless.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "predibase": {
@@ -5097,7 +5072,7 @@
       "models_endpoint": "https://serving.app.predibase.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "bytez": {
@@ -5108,7 +5083,7 @@
       "models_endpoint": "https://api.bytez.com/models/v2/openai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "monsterapi": {
@@ -5119,7 +5094,7 @@
       "models_endpoint": "https://api.monsterapi.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "meta-llama/Meta-Llama-3.1-8B-Instruct",
         "meta-llama/Llama-3.3-70B-Instruct"
@@ -5133,7 +5108,7 @@
       "models_endpoint": "https://api-inference.modelscope.cn/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "byteplus": {
@@ -5144,7 +5119,7 @@
       "models_endpoint": "https://ark.ap-southeast.bytepluses.com/api/v3/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "seed-2.0",
         "kimi-k2-thinking",
@@ -5160,7 +5135,7 @@
       "models_endpoint": "https://api.1min.ai/api/chat-with-ai/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-4o-mini"
       ]
@@ -5173,7 +5148,7 @@
       "models_endpoint": "https://api.cheaperinference.com/v1/models",
       "count": 39,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "aion-labs.aion-2-0",
         "claude-fable-5",
@@ -5224,7 +5199,7 @@
       "models_endpoint": "https://www.codebuff.com/api/v1/models",
       "count": 9,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "deepseek/deepseek-v4-flash",
         "deepseek/deepseek-v4-pro",
@@ -5245,7 +5220,7 @@
       "models_endpoint": "https://hyper.charm.land/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "hyper/auto"
       ]
@@ -5258,7 +5233,7 @@
       "models_endpoint": "https://agentrouter.org/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-opus-4-8",
         "claude-opus-5",
@@ -5273,7 +5248,7 @@
       "models_endpoint": "https://api.unorouter.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "command-code": {
@@ -5284,7 +5259,7 @@
       "models_endpoint": "https://api.commandcode.ai/v1/models",
       "count": 18,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-opus-4-7",
         "claude-opus-4-6",
@@ -5314,7 +5289,7 @@
       "models_endpoint": "https://api.zyloai.net/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "fastrouter": {
@@ -5325,7 +5300,7 @@
       "models_endpoint": "https://api.fastrouter.ai/api/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "anyapi": {
@@ -5336,7 +5311,7 @@
       "models_endpoint": "https://api.anyapi.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "electronhub": {
@@ -5347,7 +5322,7 @@
       "models_endpoint": "https://api.electronhub.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "llm-kiwi": {
@@ -5358,7 +5333,7 @@
       "models_endpoint": "https://api.llm.kiwi/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "auto",
         "hrLLM"
@@ -5372,7 +5347,7 @@
       "models_endpoint": "https://api.literouter.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "greenpt": {
@@ -5383,7 +5358,7 @@
       "models_endpoint": "https://api.greenpt.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "eurouter": {
@@ -5394,7 +5369,7 @@
       "models_endpoint": "https://api.eurouter.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "mnn-ai": {
@@ -5405,7 +5380,7 @@
       "models_endpoint": "https://api.mnnai.ru/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "meganova-ai": {
@@ -5416,7 +5391,7 @@
       "models_endpoint": "https://api.meganova.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "mixlayer": {
@@ -5427,7 +5402,7 @@
       "models_endpoint": "https://models.mixlayer.ai/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "qwen/qwen3.5-4b-free"
       ]
@@ -5440,7 +5415,7 @@
       "models_endpoint": "https://speka.me/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "tokenreply": {
@@ -5451,7 +5426,7 @@
       "models_endpoint": "https://api.tokenreply.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "yolo-auto": {
@@ -5462,7 +5437,7 @@
       "models_endpoint": "https://yolo-auto.com/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "qwen3.6-35b-a3b"
       ]
@@ -5475,7 +5450,7 @@
       "models_endpoint": "https://www.dxnt.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "cloudcode-one": {
@@ -5486,7 +5461,7 @@
       "models_endpoint": "https://api.cloudcode.one/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "glm-4.7-flash",
         "glm-4.6v-flash"
@@ -5500,7 +5475,7 @@
       "models_endpoint": "https://api.ofox.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "zerolimitai": {
@@ -5511,7 +5486,7 @@
       "models_endpoint": "https://www.zerolimitai.com/api/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "chatanywhere": {
@@ -5522,7 +5497,7 @@
       "models_endpoint": "https://api.chatanywhere.org/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "helyxai": {
@@ -5533,7 +5508,7 @@
       "models_endpoint": "https://helyxai.space/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "auriko": {
@@ -5544,7 +5519,7 @@
       "models_endpoint": "https://api.auriko.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "poixe-ai": {
@@ -5555,86 +5530,75 @@
       "models_endpoint": "https://api.poixe.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": []
-    },
-    "naga-ai": {
-      "provider_id": 282,
-      "provider_name": "Naga AI",
-      "category": "Aggregator",
-      "api_base_url": "https://api.naga.ac/v1",
-      "models_endpoint": "https://api.naga.ac/v1/models",
-      "count": 0,
-      "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "chat-oripe": {
-      "provider_id": 283,
+      "provider_id": 282,
       "provider_name": "Chat Oripe",
       "category": "Gateway",
       "api_base_url": "https://api.oriper.com/v1",
       "models_endpoint": "https://api.oriper.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "freeinference": {
-      "provider_id": 284,
+      "provider_id": 283,
       "provider_name": "FreeInference",
       "category": "Gateway",
       "api_base_url": "https://freeinference.org/v1",
       "models_endpoint": "https://freeinference.org/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "free-ai": {
-      "provider_id": 285,
+      "provider_id": 284,
       "provider_name": "Free.ai",
       "category": "Gateway",
       "api_base_url": "https://api.free.ai/v1/chat",
       "models_endpoint": "https://api.free.ai/v1/chat/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "dgrid": {
-      "provider_id": 286,
+      "provider_id": 285,
       "provider_name": "DGrid",
       "category": "Gateway",
       "api_base_url": "https://api.dgrid.ai/v1",
       "models_endpoint": "https://api.dgrid.ai/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "dgridai/free"
       ]
     },
     "qiniu": {
-      "provider_id": 287,
+      "provider_id": 286,
       "provider_name": "Qiniu",
       "category": "Gateway",
       "api_base_url": "https://api.qnaigc.com/v1",
       "models_endpoint": "https://api.qnaigc.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "orcarouter": {
-      "provider_id": 288,
+      "provider_id": 287,
       "provider_name": "OrcaRouter",
       "category": "Gateway",
       "api_base_url": "https://api.orcarouter.ai/v1",
       "models_endpoint": "https://api.orcarouter.ai/v1/models",
       "count": 8,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "orcarouter/auto",
         "openai/gpt-5.5",
@@ -5647,14 +5611,14 @@
       ]
     },
     "api-airforce": {
-      "provider_id": 289,
+      "provider_id": 288,
       "provider_name": "Api.airforce",
       "category": "Gateway",
       "api_base_url": "https://api.airforce/v1",
       "models_endpoint": "https://api.airforce/v1/models",
       "count": 7,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "x-ai/grok-3",
         "x-ai/grok-2-1212",
@@ -5666,14 +5630,14 @@
       ]
     },
     "crof": {
-      "provider_id": 290,
+      "provider_id": 289,
       "provider_name": "CrofAI",
       "category": "Gateway",
       "api_base_url": "https://crof.ai/v1",
       "models_endpoint": "https://crof.ai/v1/models",
       "count": 15,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "deepseek-v4-pro",
         "deepseek-v4-flash",
@@ -5693,14 +5657,14 @@
       ]
     },
     "bazaarlink": {
-      "provider_id": 291,
+      "provider_id": 290,
       "provider_name": "BazaarLink",
       "category": "Gateway",
       "api_base_url": "https://bazaarlink.ai/api/v1",
       "models_endpoint": "https://bazaarlink.ai/api/v1/models",
       "count": 33,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "auto:free",
         "claude-opus-4.7",
@@ -5738,14 +5702,14 @@
       ]
     },
     "synthetic": {
-      "provider_id": 292,
+      "provider_id": 291,
       "provider_name": "Synthetic",
       "category": "Gateway",
       "api_base_url": "https://api.synthetic.new/openai/v1",
       "models_endpoint": "https://api.synthetic.new/openai/v1/models",
       "count": 7,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "hf:openai/gpt-oss-120b",
         "hf:zai-org/GLM-5.2",
@@ -5757,14 +5721,14 @@
       ]
     },
     "kilo-gateway": {
-      "provider_id": 293,
+      "provider_id": 292,
       "provider_name": "Kilo Gateway",
       "category": "Gateway",
       "api_base_url": "https://api.kilo.ai/api/gateway",
       "models_endpoint": "https://api.kilo.ai/api/gateway/v1/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "kilo-auto/frontier",
         "kilo-auto/balanced",
@@ -5775,28 +5739,28 @@
       ]
     },
     "dahl": {
-      "provider_id": 294,
+      "provider_id": 293,
       "provider_name": "Dahl",
       "category": "Gateway",
       "api_base_url": "https://inference.dahl.global/v1",
       "models_endpoint": "https://inference.dahl.global/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "MiniMaxAI/MiniMax-M2.7",
         "moonshotai/Kimi-K2.6"
       ]
     },
     "freetheai": {
-      "provider_id": 295,
+      "provider_id": 294,
       "provider_name": "FreeTheAi",
       "category": "Gateway",
       "api_base_url": "https://api.freetheai.xyz/v1",
       "models_endpoint": "https://api.freetheai.xyz/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-4o-mini",
         "llama-3.3-70b-instruct",
@@ -5804,69 +5768,69 @@
       ]
     },
     "g4f-groq": {
-      "provider_id": 296,
+      "provider_id": 295,
       "provider_name": "g4f.space — Groq",
       "category": "Gateway",
       "api_base_url": "https://g4f.space/api/groq/v1",
       "models_endpoint": "https://g4f.space/api/groq/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "llama-3.3-70b-versatile",
         "llama-3.1-8b-instant"
       ]
     },
     "g4f-gemini": {
-      "provider_id": 297,
+      "provider_id": 296,
       "provider_name": "g4f.space — Gemini",
       "category": "Gateway",
       "api_base_url": "https://g4f.space/api/gemini/v1",
       "models_endpoint": "https://g4f.space/api/gemini/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "models/gemini-2.5-flash",
         "models/gemini-2.5-pro"
       ]
     },
     "g4f-pollinations": {
-      "provider_id": 298,
+      "provider_id": 297,
       "provider_name": "g4f.space — Pollinations",
       "category": "Gateway",
       "api_base_url": "https://g4f.space/api/pollinations/v1",
       "models_endpoint": "https://g4f.space/api/pollinations/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "openai",
         "openai-fast"
       ]
     },
     "g4f-ollama": {
-      "provider_id": 299,
+      "provider_id": 298,
       "provider_name": "g4f.space — Ollama",
       "category": "Gateway",
       "api_base_url": "https://g4f.space/api/ollama/v1",
       "models_endpoint": "https://g4f.space/api/ollama/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gemma3:4b"
       ]
     },
     "g4f-nvidia": {
-      "provider_id": 300,
+      "provider_id": 299,
       "provider_name": "g4f.space — NVIDIA",
       "category": "Gateway",
       "api_base_url": "https://g4f.space/api/nvidia/v1",
       "models_endpoint": "https://g4f.space/api/nvidia/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "nvidia/nemotron-3-nano-30b-a3b",
         "z-ai/glm-5.2",
@@ -5874,14 +5838,14 @@
       ]
     },
     "llm7": {
-      "provider_id": 301,
+      "provider_id": 300,
       "provider_name": "LLM7.io",
       "category": "Gateway",
       "api_base_url": "https://api.llm7.io/v1",
       "models_endpoint": "https://api.llm7.io/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-4o-mini-2024-07-18",
         "gpt-4.1-nano-2025-04-14",
@@ -5890,25 +5854,25 @@
       ]
     },
     "llamagate": {
-      "provider_id": 302,
+      "provider_id": 301,
       "provider_name": "LlamaGate",
       "category": "Gateway",
       "api_base_url": "https://llamagate.ai/v1",
       "models_endpoint": "https://llamagate.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "gitlawb": {
-      "provider_id": 303,
+      "provider_id": 302,
       "provider_name": "Gitlawb Opengateway (MiMo)",
       "category": "Gateway",
       "api_base_url": "https://opengateway.gitlawb.com/v1/xiaomi-mimo",
       "models_endpoint": "https://opengateway.gitlawb.com/v1/xiaomi-mimo/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "mimo-v2.5-pro",
         "mimo-v2.5",
@@ -5918,14 +5882,14 @@
       ]
     },
     "gitlawb-gmi": {
-      "provider_id": 304,
+      "provider_id": 303,
       "provider_name": "Gitlawb Opengateway (GMI Cloud)",
       "category": "Gateway",
       "api_base_url": "https://opengateway.gitlawb.com/v1/gmi-cloud",
       "models_endpoint": "https://opengateway.gitlawb.com/v1/gmi-cloud/models",
       "count": 40,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "XiaomiMiMo/MiMo-V2.5-Pro",
         "XiaomiMiMo/MiMo-V2.5",
@@ -5970,102 +5934,102 @@
       ]
     },
     "nanogpt": {
-      "provider_id": 305,
+      "provider_id": 304,
       "provider_name": "NanoGPT",
       "category": "Gateway",
       "api_base_url": "https://nano-gpt.com/api/v1",
       "models_endpoint": "https://nano-gpt.com/api/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "piapi": {
-      "provider_id": 306,
+      "provider_id": 305,
       "provider_name": "PiAPI",
       "category": "Aggregator",
       "api_base_url": "https://api.piapi.ai",
       "models_endpoint": "https://api.piapi.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "getgoapi": {
-      "provider_id": 307,
+      "provider_id": 306,
       "provider_name": "GoAPI",
       "category": "Aggregator",
       "api_base_url": "https://api.getgoapi.com/v1",
       "models_endpoint": "https://api.getgoapi.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "laozhang": {
-      "provider_id": 308,
+      "provider_id": 307,
       "provider_name": "LaoZhang AI",
       "category": "Gateway",
       "api_base_url": "https://api.laozhang.ai/v1",
       "models_endpoint": "https://api.laozhang.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "thebai": {
-      "provider_id": 309,
+      "provider_id": 308,
       "provider_name": "TheB.AI",
       "category": "Aggregator",
       "api_base_url": "https://api.theb.ai/v1",
       "models_endpoint": "https://api.theb.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "bai": {
-      "provider_id": 310,
+      "provider_id": 309,
       "provider_name": "b.ai",
       "category": "Gateway",
       "api_base_url": "https://api.b.ai/v1",
       "models_endpoint": "https://api.b.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "fenayai": {
-      "provider_id": 311,
+      "provider_id": 310,
       "provider_name": "FenayAI",
       "category": "Gateway",
       "api_base_url": "https://api.fenayai.com/v1",
       "models_endpoint": "https://api.fenayai.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "empower": {
-      "provider_id": 312,
+      "provider_id": 311,
       "provider_name": "Empower",
       "category": "Gateway",
       "api_base_url": "https://api.empower.dev/v1",
       "models_endpoint": "https://api.empower.dev/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "poe": {
-      "provider_id": 313,
+      "provider_id": 312,
       "provider_name": "Poe",
       "category": "Aggregator",
       "api_base_url": "https://api.poe.com",
       "models_endpoint": "https://api.poe.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-5.2",
         "claude-opus-4.8",
@@ -6073,27 +6037,27 @@
       ]
     },
     "factory": {
-      "provider_id": 314,
+      "provider_id": 313,
       "provider_name": "Factory",
       "category": "Gateway",
       "api_base_url": "https://api.factory.ai/v1",
       "models_endpoint": "https://api.factory.ai/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "auto"
       ]
     },
     "bluesminds": {
-      "provider_id": 315,
+      "provider_id": 314,
       "provider_name": "BluesMinds",
       "category": "Gateway",
       "api_base_url": "https://api.bluesminds.com/v1",
       "models_endpoint": "https://api.bluesminds.com/v1/models",
       "count": 22,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-4o",
         "gpt-4o-mini",
@@ -6120,14 +6084,14 @@
       ]
     },
     "freemodel-dev": {
-      "provider_id": 316,
+      "provider_id": 315,
       "provider_name": "FreeModel.dev",
       "category": "Gateway",
       "api_base_url": "https://api.freemodel.dev/v1",
       "models_endpoint": "https://api.freemodel.dev/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-5.5",
         "gpt-5.4",
@@ -6136,14 +6100,14 @@
       ]
     },
     "freeaiapikey": {
-      "provider_id": 317,
+      "provider_id": 316,
       "provider_name": "FreeAIAPIKey",
       "category": "Gateway",
       "api_base_url": "https://api.freeaiapikey.com/v1",
       "models_endpoint": "https://api.freeaiapikey.com/v1/models",
       "count": 10,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "openai/gpt-4o",
         "openai/gpt-5.4",
@@ -6158,41 +6122,41 @@
       ]
     },
     "openadapter": {
-      "provider_id": 318,
+      "provider_id": 317,
       "provider_name": "OpenAdapter",
       "category": "Gateway",
       "api_base_url": "https://api.openadapter.in/v1",
       "models_endpoint": "https://api.openadapter.in/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "glm-4.7"
       ]
     },
     "dit": {
-      "provider_id": 319,
+      "provider_id": 318,
       "provider_name": "DIT.ai",
       "category": "Gateway",
       "api_base_url": "https://api.dit.ai/v1",
       "models_endpoint": "https://api.dit.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gpt-5.4",
         "claude-sonnet-4-6"
       ]
     },
     "tokenrouter": {
-      "provider_id": 320,
+      "provider_id": 319,
       "provider_name": "TokenRouter",
       "category": "Gateway",
       "api_base_url": "https://api.tokenrouter.com/v1",
       "models_endpoint": "https://api.tokenrouter.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "minimax-3",
         "deepseek-v4-pro",
@@ -6200,14 +6164,14 @@
       ]
     },
     "token-kiosk": {
-      "provider_id": 321,
+      "provider_id": 320,
       "provider_name": "Token Kiosk",
       "category": "Gateway",
       "api_base_url": "https://agent-router.gaib.ai/v1",
       "models_endpoint": "https://agent-router.gaib.ai/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-3-5-sonnet",
         "deepseek-v3",
@@ -6217,58 +6181,58 @@
       ]
     },
     "sumopod": {
-      "provider_id": 322,
+      "provider_id": 321,
       "provider_name": "SumoPod",
       "category": "Gateway",
       "api_base_url": "https://ai.sumopod.com/v1",
       "models_endpoint": "https://ai.sumopod.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "x5lab": {
-      "provider_id": 323,
+      "provider_id": 322,
       "provider_name": "X5Lab",
       "category": "Gateway",
       "api_base_url": "https://api.x5lab.dev/v1",
       "models_endpoint": "https://api.x5lab.dev/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "chenzk": {
-      "provider_id": 324,
+      "provider_id": 323,
       "provider_name": "Chenzk API",
       "category": "Gateway",
       "api_base_url": "https://chenzk.top/v1",
       "models_endpoint": "https://chenzk.top/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "kenari": {
-      "provider_id": 325,
+      "provider_id": 324,
       "provider_name": "Kenari",
       "category": "Gateway",
       "api_base_url": "https://kenari.id/v1",
       "models_endpoint": "https://kenari.id/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "navy": {
-      "provider_id": 326,
+      "provider_id": 325,
       "provider_name": "NavyAI",
       "category": "Gateway",
       "api_base_url": "https://api.navy/v1",
       "models_endpoint": "https://api.navy/v1/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "llama-3.3-70b-instruct",
         "gemma-4-31b-it",
@@ -6279,14 +6243,14 @@
       ]
     },
     "ainative": {
-      "provider_id": 327,
+      "provider_id": 326,
       "provider_name": "AINative Studio",
       "category": "Gateway",
       "api_base_url": "https://api.ainative.studio/api/v1",
       "models_endpoint": "https://api.ainative.studio/api/v1/models",
       "count": 9,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "qwen3-235b-cerebras",
         "qwen3-32b",
@@ -6300,14 +6264,14 @@
       ]
     },
     "routeway": {
-      "provider_id": 328,
+      "provider_id": 327,
       "provider_name": "Routeway",
       "category": "Gateway",
       "api_base_url": "https://api.routeway.ai/v1",
       "models_endpoint": "https://api.routeway.ai/v1/models",
       "count": 8,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "llama-3.3-70b-instruct:free",
         "nemotron-3-nano-30b-a3b:free",
@@ -6320,14 +6284,14 @@
       ]
     },
     "nara": {
-      "provider_id": 329,
+      "provider_id": 328,
       "provider_name": "NaraRouter",
       "category": "Gateway",
       "api_base_url": "https://router.bynara.id/v1",
       "models_endpoint": "https://router.bynara.id/v1/models",
       "count": 8,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "agnes-2.0-flash",
         "agnes-2.5-flash",
@@ -6340,72 +6304,72 @@
       ]
     },
     "regolo": {
-      "provider_id": 330,
+      "provider_id": 329,
       "provider_name": "Regolo AI",
       "category": "Gateway",
       "api_base_url": "https://api.regolo.ai",
       "models_endpoint": "https://api.regolo.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "regolo-chat",
         "regolo-fast"
       ]
     },
     "naga-ac": {
-      "provider_id": 331,
+      "provider_id": 330,
       "provider_name": "Naga.ac",
       "category": "Aggregator",
       "api_base_url": "https://api.naga.ac/v1",
       "models_endpoint": "https://api.naga.ac/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "void-ai": {
-      "provider_id": 332,
+      "provider_id": 331,
       "provider_name": "Void AI",
       "category": "Gateway",
       "api_base_url": "https://api.voidai.app/v1",
       "models_endpoint": "https://api.voidai.app/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "helixmind": {
-      "provider_id": 333,
+      "provider_id": 332,
       "provider_name": "HelixMind",
       "category": "Gateway",
       "api_base_url": "https://helixmind.online/v1",
       "models_endpoint": "https://helixmind.online/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "logfare": {
-      "provider_id": 334,
+      "provider_id": 333,
       "provider_name": "Logfare",
       "category": "Gateway",
       "api_base_url": "https://logfare.ai/v1",
       "models_endpoint": "https://logfare.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "tabitoken": {
-      "provider_id": 335,
+      "provider_id": 334,
       "provider_name": "TabiToken",
       "category": "Gateway",
       "api_base_url": "https://tabitoken.com/v1",
       "models_endpoint": "https://tabitoken.com/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-opus-5",
         "claude-opus-5-thinking",
@@ -6414,47 +6378,47 @@
       ]
     },
     "seekai": {
-      "provider_id": 336,
+      "provider_id": 335,
       "provider_name": "SeekAi",
       "category": "Gateway",
       "api_base_url": "https://seekai.cc/v1",
       "models_endpoint": "https://seekai.cc/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "watsonx": {
-      "provider_id": 337,
+      "provider_id": 336,
       "provider_name": "IBM watsonx.ai Gateway",
       "category": "Sovereign / Cloud",
       "api_base_url": "https://us-south.ml.cloud.ibm.com/ml/v1",
       "models_endpoint": "https://us-south.ml.cloud.ibm.com/ml/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "oci": {
-      "provider_id": 338,
+      "provider_id": 337,
       "provider_name": "OCI Generative AI",
       "category": "Sovereign / Cloud",
       "api_base_url": "https://inference.generativeai.us-chicago-1.oci.oraclecloud.com",
       "models_endpoint": "https://inference.generativeai.us-chicago-1.oci.oraclecloud.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "vertex-partner": {
-      "provider_id": 339,
+      "provider_id": 338,
       "provider_name": "Vertex AI Partners",
       "category": "Sovereign / Cloud",
       "api_base_url": "https://us-central1-aiplatform.googleapis.com/v1/projects",
       "models_endpoint": "https://us-central1-aiplatform.googleapis.com/v1/projects/models",
       "count": 17,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "DeepSeek-V4-Flash",
         "DeepSeek-V4-Pro",
@@ -6476,47 +6440,47 @@
       ]
     },
     "heroku": {
-      "provider_id": 340,
+      "provider_id": 339,
       "provider_name": "Heroku AI",
       "category": "Sovereign / Cloud",
       "api_base_url": "https://us.inference.heroku.com/v1",
       "models_endpoint": "https://us.inference.heroku.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "databricks": {
-      "provider_id": 341,
+      "provider_id": 340,
       "provider_name": "Databricks",
       "category": "Sovereign / Cloud",
       "api_base_url": "https://adb-0000000000000000.0.azuredatabricks.net/serving-endpoints",
       "models_endpoint": "https://adb-0000000000000000.0.azuredatabricks.net/serving-endpoints/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "datarobot": {
-      "provider_id": 342,
+      "provider_id": 341,
       "provider_name": "DataRobot",
       "category": "Sovereign / Cloud",
       "api_base_url": "https://app.datarobot.com/api/v2",
       "models_endpoint": "https://app.datarobot.com/api/v2/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
-    "glm": {
-      "provider_id": 343,
+    "glm-coding": {
+      "provider_id": 342,
       "provider_name": "GLM Coding",
       "category": "Frontier",
       "api_base_url": "https://api.z.ai/api/coding/paas/v4",
       "models_endpoint": "https://api.z.ai/api/coding/paas/v4/v1/models",
       "count": 21,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "glm-5.3-flash",
         "glm-5.3",
@@ -6542,47 +6506,14 @@
       ]
     },
     "glm-cn": {
-      "provider_id": 344,
+      "provider_id": 343,
       "provider_name": "GLM Coding (China)",
       "category": "Frontier",
       "api_base_url": "https://open.bigmodel.cn/api/coding/paas/v4",
       "models_endpoint": "https://open.bigmodel.cn/api/coding/paas/v4/v1/models",
       "count": 21,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": [
-        "glm-5.3-flash",
-        "glm-5.3",
-        "glm-5.3-high",
-        "glm-5.3-low",
-        "glm-5.3-max",
-        "glm-5.3-flash-high",
-        "glm-5.3-flash-low",
-        "glm-5.3-flash-max",
-        "glm-5.2",
-        "glm-5.2-high",
-        "glm-5.2-max",
-        "glm-5.1",
-        "glm-5",
-        "glm-5-turbo",
-        "glm-4.7-flash",
-        "glm-4.7",
-        "glm-4.6v",
-        "glm-4.6",
-        "glm-4.5v",
-        "glm-4.5",
-        "glm-4.5-air"
-      ]
-    },
-    "glmt": {
-      "provider_id": 345,
-      "provider_name": "GLM Thinking",
-      "category": "Frontier",
-      "api_base_url": "https://api.z.ai/api/coding/paas/v4",
-      "models_endpoint": "https://api.z.ai/api/coding/paas/v4/v1/models",
-      "count": 21,
-      "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "glm-5.3-flash",
         "glm-5.3",
@@ -6608,14 +6539,14 @@
       ]
     },
     "bailian-coding-plan": {
-      "provider_id": 346,
+      "provider_id": 344,
       "provider_name": "Alibaba Token Plan",
       "category": "Frontier",
       "api_base_url": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic/v1",
       "models_endpoint": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic/v1/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "qwen3.8-max-preview",
         "qwen3.7-max",
@@ -6626,14 +6557,14 @@
       ]
     },
     "qwen-cloud": {
-      "provider_id": 347,
+      "provider_id": 345,
       "provider_name": "Qwen Cloud",
       "category": "Frontier",
       "api_base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
       "models_endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/models",
       "count": 14,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "qwen3.8-max",
         "qwen3.7-max-2026-06-08",
@@ -6652,14 +6583,14 @@
       ]
     },
     "qwen-cloud-token-plan": {
-      "provider_id": 348,
+      "provider_id": 346,
       "provider_name": "Qwen Cloud Token Plan",
       "category": "Frontier",
       "api_base_url": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1",
       "models_endpoint": "https://token-plan.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1/models",
       "count": 7,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "qwen3.8-max",
         "qwen3.7-max",
@@ -6671,25 +6602,25 @@
       ]
     },
     "kimi-coding-apikey": {
-      "provider_id": 349,
+      "provider_id": 347,
       "provider_name": "Kimi Code API Key",
       "category": "Frontier",
       "api_base_url": "https://api.kimi.com/coding/v1",
       "models_endpoint": "https://api.kimi.com/coding/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "minimax-cn": {
-      "provider_id": 350,
+      "provider_id": 348,
       "provider_name": "Minimax (China)",
       "category": "Frontier",
       "api_base_url": "https://api.minimaxi.com/v1",
       "models_endpoint": "https://api.minimaxi.com/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "MiniMax-M3",
         "MiniMax-M2.7",
@@ -6699,49 +6630,38 @@
       ]
     },
     "alibaba-cn": {
-      "provider_id": 351,
+      "provider_id": 349,
       "provider_name": "Alibaba (China)",
       "category": "Frontier",
       "api_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
       "models_endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "longcat": {
-      "provider_id": 352,
+      "provider_id": 350,
       "provider_name": "LongCat AI",
       "category": "Frontier",
       "api_base_url": "https://api.longcat.chat/openai/v1",
       "models_endpoint": "https://api.longcat.chat/openai/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "LongCat-2.0"
       ]
     },
-    "volcengine": {
-      "provider_id": 353,
-      "provider_name": "Volcengine",
-      "category": "Frontier",
-      "api_base_url": "https://ark.cn-beijing.volces.com/api/v3",
-      "models_endpoint": "https://ark.cn-beijing.volces.com/api/v3/v1/models",
-      "count": 0,
-      "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": []
-    },
     "volcengine-agent-plan": {
-      "provider_id": 354,
+      "provider_id": 351,
       "provider_name": "Volcengine Ark Agent Plan",
       "category": "Frontier",
       "api_base_url": "https://ark.cn-beijing.volces.com/api/plan/v3",
       "models_endpoint": "https://ark.cn-beijing.volces.com/api/plan/v3/v1/models",
       "count": 12,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "doubao-seed-evolving",
         "doubao-seed-2-1-turbo-260628",
@@ -6758,14 +6678,14 @@
       ]
     },
     "volcengine-coding-plan": {
-      "provider_id": 355,
+      "provider_id": 352,
       "provider_name": "Volcengine Ark Coding Plan",
       "category": "Frontier",
       "api_base_url": "https://ark.cn-beijing.volces.com/api/coding/v3",
       "models_endpoint": "https://ark.cn-beijing.volces.com/api/coding/v3/v1/models",
       "count": 9,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "doubao-seed-2-1-turbo",
         "doubao-seed-2.0-lite",
@@ -6779,39 +6699,39 @@
       ]
     },
     "gigachat": {
-      "provider_id": 356,
+      "provider_id": 353,
       "provider_name": "GigaChat (Sber)",
       "category": "Frontier",
       "api_base_url": "https://gigachat.devices.sberbank.ru/api/v1",
       "models_endpoint": "https://gigachat.devices.sberbank.ru/api/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "xiaomi-mimo-token-plan": {
-      "provider_id": 357,
+      "provider_id": 354,
       "provider_name": "Xiaomi MiMo Token Plan",
       "category": "Frontier",
       "api_base_url": "https://token-plan-sgp.xiaomimimo.com/v1",
       "models_endpoint": "https://token-plan-sgp.xiaomimimo.com/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "mimo-v2.5-pro",
         "mimo-v2.5"
       ]
     },
     "tencent": {
-      "provider_id": 358,
+      "provider_id": 355,
       "provider_name": "Tencent Hunyuan",
       "category": "Frontier",
       "api_base_url": "https://api.hunyuan.cloud.tencent.com/v1",
       "models_endpoint": "https://api.hunyuan.cloud.tencent.com/v1/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "hunyuan-turbos-latest",
         "hunyuan-t1-latest",
@@ -6822,14 +6742,14 @@
       ]
     },
     "iflytek": {
-      "provider_id": 359,
+      "provider_id": 356,
       "provider_name": "iFlytek Spark",
       "category": "Frontier",
       "api_base_url": "https://spark-api-open.xf-yun.com/v1",
       "models_endpoint": "https://spark-api-open.xf-yun.com/v1/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "4.0Ultra",
         "generalv3.5",
@@ -6840,14 +6760,14 @@
       ]
     },
     "baichuan": {
-      "provider_id": 360,
+      "provider_id": 357,
       "provider_name": "Baichuan",
       "category": "Frontier",
       "api_base_url": "https://api.baichuan-ai.com/v1",
       "models_endpoint": "https://api.baichuan-ai.com/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "Baichuan4-Turbo",
         "Baichuan4-Air",
@@ -6857,38 +6777,38 @@
       ]
     },
     "yi": {
-      "provider_id": 361,
+      "provider_id": 358,
       "provider_name": "Yi (01.AI)",
       "category": "Frontier",
       "api_base_url": "https://api.lingyiwanwu.com/v1",
       "models_endpoint": "https://api.lingyiwanwu.com/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "yi-large"
       ]
     },
     "360ai": {
-      "provider_id": 362,
+      "provider_id": 359,
       "provider_name": "360 AI",
       "category": "Frontier",
       "api_base_url": "https://api.360.cn/v1",
       "models_endpoint": "https://api.360.cn/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "doubao": {
-      "provider_id": 363,
+      "provider_id": 360,
       "provider_name": "Doubao",
       "category": "Frontier",
       "api_base_url": "https://ark.cn-beijing.volces.com/api/v3",
       "models_endpoint": "https://ark.cn-beijing.volces.com/api/v3/v1/models",
       "count": 9,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "doubao-seed-2-0-pro-260215",
         "doubao-seed-2-0-lite-260215",
@@ -6902,56 +6822,40 @@
       ]
     },
     "sensenova": {
-      "provider_id": 364,
+      "provider_id": 361,
       "provider_name": "SenseNova",
       "category": "Frontier",
       "api_base_url": "https://token.sensenova.cn/v1",
       "models_endpoint": "https://token.sensenova.cn/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "sensenova-6.7-flash-lite",
         "deepseek-v4-flash",
         "glm-5.2"
       ]
     },
-    "sparkdesk": {
-      "provider_id": 365,
-      "provider_name": "SparkDesk",
-      "category": "Frontier",
-      "api_base_url": "https://spark-api-open.xf-yun.com/v1",
-      "models_endpoint": "https://spark-api-open.xf-yun.com/v1/models",
-      "count": 4,
-      "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": [
-        "4.0Ultra",
-        "generalv3",
-        "pro-128k",
-        "lite"
-      ]
-    },
     "hcnsec": {
-      "provider_id": 366,
+      "provider_id": 362,
       "provider_name": "Huancheng Public API",
       "category": "Frontier",
       "api_base_url": "https://api.hcnsec.cn/v1",
       "models_endpoint": "https://api.hcnsec.cn/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "agnes": {
-      "provider_id": 367,
+      "provider_id": 363,
       "provider_name": "Agnes AI",
       "category": "Image / Video",
       "api_base_url": "https://apihub.agnes-ai.com/v1",
       "models_endpoint": "https://apihub.agnes-ai.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "agnes-2.0-flash",
         "agnes-2.5-flash",
@@ -6959,14 +6863,14 @@
       ]
     },
     "sealion": {
-      "provider_id": 368,
+      "provider_id": 364,
       "provider_name": "SEA-LION",
       "category": "Frontier",
       "api_base_url": "https://api.sea-lion.ai/v1",
       "models_endpoint": "https://api.sea-lion.ai/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "aisingapore/Llama-SEA-LION-v3.5-70B-R",
         "aisingapore/Llama-SEA-LION-v3-70B-IT",
@@ -6976,14 +6880,14 @@
       ]
     },
     "clova-studio": {
-      "provider_id": 369,
+      "provider_id": 365,
       "provider_name": "Naver CLOVA Studio",
       "category": "Frontier",
       "api_base_url": "https://clovastudio.stream.ntruss.com/v3/chat-completions",
       "models_endpoint": "https://clovastudio.stream.ntruss.com/v3/chat-completions/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "HCX-007",
         "HCX-005",
@@ -6991,14 +6895,14 @@
       ]
     },
     "internlm": {
-      "provider_id": 370,
+      "provider_id": 366,
       "provider_name": "InternLM (Intern-S1)",
       "category": "Frontier",
       "api_base_url": "https://chat.intern-ai.org.cn/api/v1",
       "models_endpoint": "https://chat.intern-ai.org.cn/api/v1/models",
       "count": 5,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "intern-s1-pro",
         "intern-s1",
@@ -7008,14 +6912,14 @@
       ]
     },
     "ant-ling": {
-      "provider_id": 371,
+      "provider_id": 367,
       "provider_name": "Ant Ling / Ring (inclusionAI)",
       "category": "Frontier",
       "api_base_url": "https://api.ant-ling.com/v1",
       "models_endpoint": "https://api.ant-ling.com/v1/models",
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "Ling-2.6-1T",
         "Ring-2.6-1T",
@@ -7023,65 +6927,65 @@
       ]
     },
     "sarvam": {
-      "provider_id": 372,
+      "provider_id": 368,
       "provider_name": "Sarvam AI",
       "category": "Frontier",
       "api_base_url": "https://api.sarvam.ai/v1",
       "models_endpoint": "https://api.sarvam.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "sarvam-105b",
         "sarvam-30b"
       ]
     },
     "plamo": {
-      "provider_id": 373,
+      "provider_id": 369,
       "provider_name": "PLaMo",
       "category": "Frontier",
       "api_base_url": "https://api.platform.preferredai.jp/v1",
       "models_endpoint": "https://api.platform.preferredai.jp/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "plamo-3.0-prime"
       ]
     },
     "typhoon": {
-      "provider_id": 374,
+      "provider_id": 370,
       "provider_name": "Typhoon",
       "category": "Frontier",
       "api_base_url": "https://api.opentyphoon.ai/v1",
       "models_endpoint": "https://api.opentyphoon.ai/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "typhoon-v2.5-30b-a3b-instruct"
       ]
     },
     "runwayml": {
-      "provider_id": 375,
+      "provider_id": 371,
       "provider_name": "Runway",
       "category": "Image / Video",
       "api_base_url": "https://api.dev.runwayml.com/v1",
       "models_endpoint": "https://api.dev.runwayml.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "kie": {
-      "provider_id": 376,
+      "provider_id": 372,
       "provider_name": "KIE.AI",
       "category": "Image / Video",
       "api_base_url": "https://api.kie.ai/v1",
       "models_endpoint": "https://api.kie.ai/v1/models",
       "count": 10,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "claude-fable-5",
         "claude-opus-5",
@@ -7096,14 +7000,14 @@
       ]
     },
     "pollinations": {
-      "provider_id": 377,
+      "provider_id": 373,
       "provider_name": "Pollinations AI",
-      "category": "Specialized",
+      "category": "IaaS",
       "api_base_url": "https://gen.pollinations.ai/v1",
       "models_endpoint": "https://gen.pollinations.ai/v1/models",
       "count": 31,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "openai",
         "openai-fast",
@@ -7139,56 +7043,56 @@
       ]
     },
     "haiper": {
-      "provider_id": 378,
+      "provider_id": 374,
       "provider_name": "Haiper",
       "category": "Image / Video",
       "api_base_url": "https://api.haiper.ai/v1",
       "models_endpoint": "https://api.haiper.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "gen2",
         "gen2-image"
       ]
     },
     "leonardo": {
-      "provider_id": 379,
+      "provider_id": 375,
       "provider_name": "Leonardo AI",
       "category": "Image / Video",
       "api_base_url": "https://cloud.leonardo.ai/api/rest/v1",
       "models_endpoint": "https://cloud.leonardo.ai/api/rest/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "phoenix",
         "sdxl"
       ]
     },
     "ideogram": {
-      "provider_id": 380,
+      "provider_id": 376,
       "provider_name": "Ideogram",
       "category": "Image / Video",
       "api_base_url": "https://api.ideogram.ai",
       "models_endpoint": "https://api.ideogram.ai/v1/models",
       "count": 2,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "V_3",
         "V_2A"
       ]
     },
     "magnific": {
-      "provider_id": 381,
+      "provider_id": 377,
       "provider_name": "Magnific",
       "category": "Image / Video",
       "api_base_url": "https://api.magnific.com/v1/ai/mystic",
       "models_endpoint": "https://api.magnific.com/v1/ai/mystic/models",
       "count": 6,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "realism",
         "fluid",
@@ -7199,14 +7103,14 @@
       ]
     },
     "suno": {
-      "provider_id": 382,
+      "provider_id": 378,
       "provider_name": "Suno",
       "category": "Image / Video",
       "api_base_url": "https://studio-api.suno.ai/api/generate/v2",
       "models_endpoint": "https://studio-api.suno.ai/api/generate/v2/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "chirp-fenix",
         "chirp-crow",
@@ -7215,207 +7119,196 @@
       ]
     },
     "udio": {
-      "provider_id": 383,
+      "provider_id": 379,
       "provider_name": "Udio",
       "category": "Image / Video",
       "api_base_url": "https://www.udio.com/api/generate-proxy",
       "models_endpoint": "https://www.udio.com/api/generate-proxy/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "udio-default"
       ]
     },
     "v0-vercel": {
-      "provider_id": 384,
+      "provider_id": 380,
       "provider_name": "v0 (Vercel)",
       "category": "Specialized",
       "api_base_url": "https://api.v0.dev/v1",
       "models_endpoint": "https://api.v0.dev/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": []
-    },
-    "gitlab": {
-      "provider_id": 385,
-      "provider_name": "GitLab Duo PAT",
-      "category": "Specialized",
-      "api_base_url": "https://gitlab.com/api/v4/ai",
-      "models_endpoint": "https://gitlab.com/api/v4/ai/v1/models",
-      "count": 0,
-      "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "jina-ai": {
-      "provider_id": 386,
+      "provider_id": 381,
       "provider_name": "Jina AI (Foundation API)",
       "category": "Embeddings",
       "api_base_url": "https://api.jina.ai/v1",
       "models_endpoint": "https://api.jina.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "fal-ai": {
-      "provider_id": 387,
+      "provider_id": 382,
       "provider_name": "Fal.ai",
       "category": "Image / Video",
       "api_base_url": "https://fal.run",
       "models_endpoint": "https://fal.run/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "stability-ai": {
-      "provider_id": 388,
+      "provider_id": 383,
       "provider_name": "Stability AI",
       "category": "Image / Video",
       "api_base_url": "https://api.stability.ai",
       "models_endpoint": "https://api.stability.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "black-forest-labs": {
-      "provider_id": 389,
+      "provider_id": 384,
       "provider_name": "Black Forest Labs",
       "category": "Image / Video",
       "api_base_url": "https://api.bfl.ai",
       "models_endpoint": "https://api.bfl.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "recraft": {
-      "provider_id": 390,
+      "provider_id": 385,
       "provider_name": "Recraft",
       "category": "Image / Video",
       "api_base_url": "https://external.api.recraft.ai/v1",
       "models_endpoint": "https://external.api.recraft.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "topaz": {
-      "provider_id": 391,
+      "provider_id": 386,
       "provider_name": "Topaz",
       "category": "Image / Video",
       "api_base_url": "https://api.topazlabs.com",
       "models_endpoint": "https://api.topazlabs.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "segmind": {
-      "provider_id": 392,
+      "provider_id": 387,
       "provider_name": "Segmind",
       "category": "Image / Video",
       "api_base_url": "https://api.segmind.com/v1",
       "models_endpoint": "https://api.segmind.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "dify": {
-      "provider_id": 393,
+      "provider_id": 388,
       "provider_name": "Dify",
       "category": "Specialized",
       "api_base_url": "https://api.dify.ai",
       "models_endpoint": "https://api.dify.ai/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "auto"
       ]
     },
     "nomic": {
-      "provider_id": 394,
+      "provider_id": 389,
       "provider_name": "Nomic",
       "category": "Embeddings",
       "api_base_url": "https://api-atlas.nomic.ai/v1",
       "models_endpoint": "https://api-atlas.nomic.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "mixedbread": {
-      "provider_id": 395,
+      "provider_id": 390,
       "provider_name": "Mixedbread AI",
       "category": "Embeddings",
       "api_base_url": "https://api.mixedbread.com/v1",
       "models_endpoint": "https://api.mixedbread.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "jina-reader": {
-      "provider_id": 396,
+      "provider_id": 391,
       "provider_name": "Jina Reader (r.jina.ai)",
       "category": "Search",
       "api_base_url": "https://r.jina.ai",
       "models_endpoint": "https://r.jina.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "tinyfish": {
-      "provider_id": 397,
+      "provider_id": 392,
       "provider_name": "TinyFish Fetch",
       "category": "Search",
       "api_base_url": "https://api.tinyfish.ai",
       "models_endpoint": "https://api.tinyfish.ai/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "deepai": {
-      "provider_id": 398,
+      "provider_id": 393,
       "provider_name": "DeepAI",
       "category": "Image / Video",
       "api_base_url": "https://api.deepai.org",
       "models_endpoint": "https://api.deepai.org/v1/models",
       "count": 1,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "text2img"
       ]
     },
     "cursor-api": {
-      "provider_id": 399,
+      "provider_id": 394,
       "provider_name": "Cursor API",
-      "category": "Specialized",
+      "category": "Gateway",
       "api_base_url": "https://api.cursor.com/v1",
       "models_endpoint": "https://api.cursor.com/v1/models",
       "count": 0,
       "source": "unavailable",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": []
     },
     "omniroute": {
-      "provider_id": 400,
+      "provider_id": 395,
       "provider_name": "OmniRoute",
       "category": "Gateway",
       "api_base_url": "http://localhost:3000/v1",
       "models_endpoint": "http://localhost:3000/v1/models",
       "count": 4,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "kimi-k2.7-code",
         "claude-sonnet-4",
@@ -7424,27 +7317,25 @@
       ]
     },
     "bifrost": {
-      "provider_id": 401,
+      "provider_id": 396,
       "provider_name": "Bifrost",
       "category": "Gateway",
       "api_base_url": "http://localhost:8080/v1",
       "models_endpoint": "http://localhost:8080/v1/models",
-      "count": 1,
-      "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
-      "models": [
-        "1000+ models"
-      ]
+      "count": 0,
+      "source": "unavailable",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
+      "models": []
     },
     "dasha-compute": {
-      "provider_id": 402,
+      "provider_id": 397,
       "provider_name": "Dasha Compute",
       "category": "Sovereign / Cloud",
       "api_base_url": "Open alpha",
       "models_endpoint": null,
       "count": 3,
       "source": "static",
-      "updated_at": "2026-09-15T15:05:27.159499+00:00",
+      "updated_at": "2026-09-15T15:18:42.491177+00:00",
       "models": [
         "qwen3-8b",
         "gemma3-12b",

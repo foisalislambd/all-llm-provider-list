@@ -11,6 +11,7 @@ providers (plus models, endpoints, and notes) into:
 
 Usage:
     python scripts/import_omniroute.py --omniroute /tmp/omniroute
+    python scripts/import_omniroute.py --fix
 """
 
 from __future__ import annotations
@@ -315,6 +316,8 @@ def _parse_value(src: str, i: int):
             break
         i += 1
     raw = src[start:i].strip()
+    if raw in {"undefined", "null", "void 0"}:
+        return None, i
     if re.fullmatch(r"-?\d+(\.\d+)?", raw or ""):
         return float(raw) if "." in raw else int(raw), i
     return raw, i
@@ -664,7 +667,29 @@ def is_real_url(url: str | None) -> bool:
     return url.strip().lower() not in PLACEHOLDER_URLS and url.strip().lower().startswith("http")
 
 
+ENV_OVERRIDES = {
+    "9router": None,
+    "360ai": "AI360_API_KEY",
+    "openference-api": "OPENFERENCE_API_KEY",
+    "zylo-api": "ZYLO_API_KEY",
+    "cursor-api": "CURSOR_API_KEY",
+    "kimi-coding-apikey": "KIMI_CODING_API_KEY",
+    "aimlapi": "AIMLAPI_KEY",
+    "302-ai": "AI302_API_KEY",
+    "searchapi-search": "SEARCHAPI_KEY",
+    "cliproxyapi": "CLIPROXYAPI_KEY",
+    "monsterapi": "MONSTERAPI_KEY",
+    "anyapi": "ANYAPI_KEY",
+    "api-airforce": "AIRFORCE_API_KEY",
+    "piapi": "PIAPI_KEY",
+    "getgoapi": "GETGOAPI_KEY",
+    "freeaiapikey": "FREEAI_API_KEY",
+}
+
+
 def env_for_slug(slug: str, auth_type: str, existing: str | None = None) -> str | None:
+    if slug in ENV_OVERRIDES:
+        return ENV_OVERRIDES[slug]
     if existing:
         return existing
     if auth_type in {"no-auth", "web-cookie", "local", "oauth"}:
@@ -673,8 +698,25 @@ def env_for_slug(slug: str, auth_type: str, existing: str | None = None) -> str 
     if not ident:
         return None
     if ident[0].isdigit():
-        ident = "P" + ident
+        ident = "AI" + ident
+    ident = ident.replace("APIKEY", "API_KEY")
+    ident = re.sub(r"_+", "_", ident).strip("_")
+    if ident.endswith("_API_KEY"):
+        return ident
+    if ident.endswith("API"):
+        return f"{ident}_KEY"
     return f"{ident}_API_KEY"
+
+
+def is_ugly_env(env: str | None) -> bool:
+    if not env:
+        return False
+    return bool(
+        re.search(r"API_API_KEY", env)
+        or re.search(r"APIKEY_API_KEY", env)
+        or re.match(r"^P\d", env)
+        or env[0].isdigit()
+    )
 
 
 FALLBACK_NOTES = {
@@ -845,15 +887,18 @@ def merge(existing: list[dict], catalog: list[dict], registry: dict[str, dict]) 
                 if not target.get("env_variable") and entry.get("_auth_type") == "api-key":
                     target["env_variable"] = env_for_slug(slug, "api-key")
             aliases = list(target.get("aliases") or [])
-            for extra in (pid, entry.get("alias")):
+            taken = {s.lower() for s in by_slug}
+            for extra in (entry.get("alias"),):
                 if (
                     isinstance(extra, str)
                     and extra
+                    and extra.lower() not in {"undefined", "null"}
                     and extra.lower() not in {a.lower() for a in aliases}
                     and extra != slug
+                    and extra.lower() not in taken
                 ):
                     aliases.append(extra)
-            target["aliases"] = aliases
+            target["aliases"] = [a for a in aliases if a and str(a).lower() not in {"undefined", "null"}]
             if models:
                 static[slug] = models
                 stats["models_merged"] += 1
@@ -889,8 +934,14 @@ def merge(existing: list[dict], catalog: list[dict], registry: dict[str, dict]) 
             api_base = "See official docs"
 
         aliases = []
-        if entry.get("alias") and entry["alias"] != slug:
-            aliases.append(str(entry["alias"]))
+        extra = entry.get("alias")
+        if (
+            isinstance(extra, str)
+            and extra
+            and extra != slug
+            and extra.lower() not in {"undefined", "null"}
+        ):
+            aliases.append(extra)
 
         new = {
             "id": next_id,
@@ -931,123 +982,206 @@ def merge(existing: list[dict], catalog: list[dict], registry: dict[str, dict]) 
 
 
 # ---------------------------------------------------------------------------
+# Data cleanup (collisions, env names, leftover TS values)
+# ---------------------------------------------------------------------------
+
+SLUG_RENAMES = {
+    "claude": "claude-code",
+    "glm": "glm-coding",
+}
+
+# Fold duplicate listings of the same product into one row.
+MERGE_SLUGS = {
+    "gitlab": "gitlab-duo",
+    "glmt": "glm-coding",
+    "sparkdesk": "iflytek",
+    "volcengine": "doubao",
+    "naga-ai": "naga-ac",
+}
+
+CATEGORY_FIXES = {
+    "discountedtokens": "Gateway",
+    "cursor-api": "Gateway",
+    "pollinations": "IaaS",
+    "muse-code": "Local",
+}
+
+URL_FIXES = {
+    "muse-code": "http://localhost:8321/v1",
+    "ghe-copilot": "GitHub Enterprise host (device-flow OAuth)",
+}
+
+# Aliases that collide with another provider's slug or a more common meaning.
+REMOVE_ALIASES = {
+    "github-copilot": {"github"},
+    "github-models": {"github"},
+    "copilot-web": {"copilot"},
+    "opencode-zen": {"opencode"},
+    "piapi": {"pi"},
+    "poe-web": {"poe"},
+    "claude-code": {"claude"},
+}
+
+NO_KEY_CATEGORIES = {"Local", "Web Cookie", "No-auth"}
+
+
+_PLACEHOLDER_MODEL = re.compile(
+    r"(?i)^(any|all|supported)[- ]"
+    r"|major-provider"
+    r"|upstream-provider"
+    r"|gguf-model"
+    r"|compatible-checkpoint"
+    r"|custom-deployed"
+    r"|supported-local"
+)
+
+
+def _real_models(models: list | None) -> list[str]:
+    out: list[str] = []
+    for item in models or []:
+        text = str(item).strip()
+        if not text:
+            continue
+        low = text.lower()
+        if "+" in text and any(word in low for word in ("model", "provider", "routed")):
+            continue
+        if low in {"custom", "n/a", "various"}:
+            continue
+        if _PLACEHOLDER_MODEL.search(text):
+            continue
+        if text not in out:
+            out.append(text)
+    return out
+
+
+def _clean_notes(note: str | None) -> str:
+    if not note:
+        return ""
+    parts = [p.strip() for p in re.split(r";\s*", str(note)) if p.strip()]
+    seen: set[str] = set()
+    out: list[str] = []
+    for part in parts:
+        key = part.lower()
+        if key not in seen:
+            seen.add(key)
+            out.append(part)
+    return "; ".join(out)
+
+
+def _merge_provider(dst: dict, src: dict, static: dict[str, list[str]]) -> None:
+    dst["aliases"] = dedupe(
+        list(dst.get("aliases") or []) + list(src.get("aliases") or []) + [src["slug"]]
+    )
+    dst["popular_models"] = dedupe(
+        list(dst.get("popular_models") or []) + list(src.get("popular_models") or [])
+    )[:8]
+    src_notes = (src.get("notes") or "").strip()
+    dst_notes = (dst.get("notes") or "").strip()
+    if src_notes and src_notes not in dst_notes and len(src_notes) > len(dst_notes):
+        dst["notes"] = src_notes if not dst_notes else f"{dst_notes}; {src_notes}"
+    if src["slug"] in static:
+        static[dst["slug"]] = dedupe(list(static.get(dst["slug"], [])) + list(static.pop(src["slug"])))
+
+
+def cleanup_providers(providers: list[dict], static: dict[str, list[str]] | None = None) -> list[dict]:
+    static = static if static is not None else {}
+    by_slug = {p["slug"]: p for p in providers}
+
+    for old, new in SLUG_RENAMES.items():
+        if old in by_slug and new not in by_slug:
+            row = by_slug.pop(old)
+            row["slug"] = new
+            by_slug[new] = row
+            if old in static:
+                static[new] = dedupe(list(static.get(new, [])) + list(static.pop(old)))
+
+    for src_slug, dst_slug in MERGE_SLUGS.items():
+        if src_slug in by_slug and dst_slug in by_slug and src_slug != dst_slug:
+            _merge_provider(by_slug[dst_slug], by_slug.pop(src_slug), static)
+
+    taken_slugs = {p["slug"].lower() for p in by_slug.values()}
+    for row in by_slug.values():
+        slug = row["slug"]
+        if slug in CATEGORY_FIXES:
+            row["category"] = CATEGORY_FIXES[slug]
+        if slug in URL_FIXES:
+            row["api_base_url"] = URL_FIXES[slug]
+        if slug in ENV_OVERRIDES:
+            row["env_variable"] = ENV_OVERRIDES[slug]
+        elif is_ugly_env(row.get("env_variable")):
+            row["env_variable"] = env_for_slug(slug, "api-key")
+        if row["category"] in NO_KEY_CATEGORIES and slug not in ENV_OVERRIDES:
+            row["env_variable"] = None
+
+        aliases = []
+        banned = {a.lower() for a in REMOVE_ALIASES.get(slug, set())} | {"undefined", "null", "none"}
+        for alias in row.get("aliases") or []:
+            if not alias or not isinstance(alias, str):
+                continue
+            a = alias.strip()
+            if not a or a.lower() in banned or a.lower() == slug:
+                continue
+            if a.lower() in taken_slugs:
+                continue
+            if a.lower() not in {x.lower() for x in aliases}:
+                aliases.append(a)
+        row["aliases"] = aliases
+
+        popular = _real_models(row.get("popular_models"))
+        if slug in static:
+            static[slug] = _real_models(static[slug])
+        if not popular and slug in static:
+            popular = list(static[slug][:6])
+        row["popular_models"] = popular
+
+        row["notes"] = _clean_notes(row.get("notes")) or FALLBACK_NOTES.get(row["category"], "")
+
+        url = row.get("api_base_url") or ""
+        if row.get("openai_compatible") and not is_real_url(url):
+            row["openai_compatible"] = False
+
+    # One owner per alias; prefer an exact slug match, otherwise the oldest id.
+    alias_owners: dict[str, list[dict]] = defaultdict(list)
+    for row in by_slug.values():
+        for alias in row.get("aliases") or []:
+            alias_owners[alias.lower()].append(row)
+    for alias, rows in alias_owners.items():
+        if len(rows) < 2:
+            continue
+        keep = next((r for r in rows if r["slug"].lower() == alias), min(rows, key=lambda r: r["id"]))
+        for row in rows:
+            if row is keep:
+                continue
+            row["aliases"] = [a for a in row["aliases"] if a.lower() != alias]
+
+    cleaned = sorted(by_slug.values(), key=lambda p: p["id"])
+    for i, row in enumerate(cleaned, 1):
+        row["id"] = i
+    return cleaned
+
+
+# ---------------------------------------------------------------------------
 # README
 # ---------------------------------------------------------------------------
 
 CATEGORY_SECTIONS = [
-    (
-        "Frontier",
-        "Official Frontier Model Developers",
-        "Companies that train and ship their own foundation models.",
-        ["Provider", "Website", "API Base URL", "Popular Models", "Notes"],
-        "models",
-    ),
-    (
-        "IaaS",
-        "High-Performance Inference Platforms (IaaS)",
-        "Hosted open-weight models on optimized hardware — great for **low latency** and **low cost per token**.",
-        ["Provider", "Website", "API Base URL", "Popular Models", "Notes"],
-        "models",
-    ),
-    (
-        "Sovereign / Cloud",
-        "Decentralized, Sovereign & Enterprise Clouds",
-        "Regional compliance, private networking, decentralized compute, and enterprise MLOps.",
-        ["Provider", "Website", "API Base URL", "Popular Models", "Notes"],
-        "models",
-    ),
-    (
-        "Gateway",
-        "Multi-Provider Gateways & Routers",
-        "One API surface for many upstream providers — ideal for **failover**, **cost optimization**, and **reducing credential sprawl**.",
-        ["Provider", "Website", "API Base URL", "What you get", "Notes"],
-        "models",
-    ),
-    (
-        "Aggregator",
-        "Aggregators & API Marketplaces",
-        "Single API key to access models from multiple upstream vendors.",
-        ["Provider", "Website", "API Base URL", "Popular Models", "Notes"],
-        "models",
-    ),
-    (
-        "Discount / Budget API",
-        "Discount & Budget APIs",
-        "Lower-cost resale or discounted access to frontier model families.",
-        ["Provider", "Website", "API Base URL", "Popular Models", "Notes"],
-        "models",
-    ),
-    (
-        "OAuth",
-        "OAuth & IDE Subscriptions",
-        "Sign-in with an existing IDE or CLI subscription (Claude Code, Codex, Cursor, Copilot, …). No separate API key in many cases.",
-        ["Provider", "Website", "API Base URL", "Popular Models", "Notes"],
-        "models",
-    ),
-    (
-        "Web Cookie",
-        "Web Cookie / Browser Sessions",
-        "Unofficial adapters that reuse a signed-in web-app session. Treat these as personal-use integrations; they can break when the upstream UI changes.",
-        ["Provider", "Website", "API Base URL", "Popular Models", "Notes"],
-        "models",
-    ),
-    (
-        "No-auth",
-        "No-auth & Public Endpoints",
-        "Public or anonymous endpoints that require no API key (rate limits usually apply).",
-        ["Provider", "Website", "API Base URL", "Popular Models", "Notes"],
-        "models",
-    ),
-    (
-        "Search",
-        "Search APIs",
-        "Web search, fetch, and crawl APIs used alongside LLM apps.",
-        ["Provider", "Website", "API Base URL", "Specialty", "Notes"],
-        "models",
-    ),
-    (
-        "Audio",
-        "Audio (TTS / STT)",
-        "Speech-to-text and text-to-speech APIs.",
-        ["Provider", "Website", "API Base URL", "Specialty", "Notes"],
-        "models",
-    ),
-    (
-        "Image / Video",
-        "Image & Video APIs",
-        "Image generation, video generation, and related media APIs.",
-        ["Provider", "Website", "API Base URL", "Popular Models", "Notes"],
-        "models",
-    ),
-    (
-        "Cloud Agent",
-        "Cloud Coding Agents",
-        "Long-running hosted coding agents (task-based, not a classic chat completions API).",
-        ["Provider", "Website", "API Base URL", "Notes"],
-        "notes-only",
-    ),
-    (
-        "Embeddings",
-        "Embeddings & Rerankers",
-        "Providers focused on retrieval embeddings and reranking.",
-        ["Provider", "Website", "API Base URL", "Specialty", "Notes"],
-        "models",
-    ),
-    (
-        "Specialized",
-        "Other Specialized APIs",
-        "Providers focused on a specific task rather than general chat.",
-        ["Provider", "Website", "API Base URL", "Specialty", "Notes"],
-        "models",
-    ),
-    (
-        "Local",
-        "Local & Self-Hosted Runtimes",
-        "Run models on your own machine — **free, private, and unlimited**.",
-        ["Provider", "Website", "API Base URL", "Popular Models", "Notes"],
-        "models",
-    ),
+    ("Frontier", "Frontier labs", "Companies that train their own foundation models."),
+    ("IaaS", "Inference platforms", "Hosted open-weight models — usually cheaper and faster."),
+    ("Sovereign / Cloud", "Cloud and enterprise", "Azure, Bedrock, Vertex, and regional clouds."),
+    ("Gateway", "Gateways and routers", "One key, many upstream providers."),
+    ("Aggregator", "Aggregators", "Multi-vendor catalogs under one bill."),
+    ("OAuth", "OAuth and IDE", "Claude Code, Codex, Cursor, Copilot, and similar subscriptions."),
+    ("No-auth", "Public endpoints", "Endpoints that work without an API key (rate limits apply)."),
+    ("Search", "Search APIs", "Web search, fetch, and crawl."),
+    ("Audio", "Audio", "Speech-to-text and text-to-speech."),
+    ("Image / Video", "Image and video", "Image and video generation APIs."),
+    ("Cloud Agent", "Cloud agents", "Hosted coding agents (task-based, not a chat API)."),
+    ("Embeddings", "Embeddings", "Retrieval embeddings and rerankers."),
+    ("Specialized", "Specialized", "Task-specific APIs that do not fit the groups above."),
+    ("Local", "Local and self-hosted", "Run models on your own machine."),
 ]
+README_SKIP_CATEGORIES = {"Web Cookie"}
+
 
 
 def md_cell(text: str | None, code: bool = False) -> str:
@@ -1068,142 +1202,69 @@ def website_link(name: str, url: str) -> str:
 def popular_cell(models: list) -> str:
     if not models:
         return "—"
-    shown = [str(m) for m in models[:4]]
-    return ", ".join(shown)
+    return ", ".join(str(m) for m in models[:3])
 
 
-def render_index_table(providers: list[dict]) -> str:
+def render_category_table(providers: list[dict]) -> str:
     lines = [
-        "| # | Provider | Category | API Base URL |",
-        "|---|----------|----------|--------------|",
+        "| Provider | API Base URL | Models | Env |",
+        "|----------|--------------|--------|-----|",
     ]
     for p in providers:
         url = p.get("api_base_url") or ""
         url_cell = f"`{url}`" if is_real_url(url) else md_cell(url)
+        env = f"`{p['env_variable']}`" if p.get("env_variable") else "—"
         lines.append(
-            f"| {p['id']} | {md_cell(p['name'])} | {md_cell(p['category'])} | {url_cell} |"
+            f"| {website_link(p['name'], p.get('website', ''))} | {url_cell} | {md_cell(popular_cell(p.get('popular_models') or []))} | {env} |"
         )
-    return "\n".join(lines)
-
-
-def render_category_table(providers: list[dict], kind: str) -> str:
-    if kind == "notes-only":
-        lines = [
-            "| Provider | Website | API Base URL | Notes |",
-            "|----------|---------|--------------|-------|",
-        ]
-        for p in providers:
-            url = p.get("api_base_url") or ""
-            url_cell = f"`{url}`" if is_real_url(url) else md_cell(url)
-            lines.append(
-                f"| **{md_cell(p['name'])}** | {website_link(p['name'], p.get('website', ''))} | {url_cell} | {md_cell(p.get('notes') or '—')} |"
-            )
-        return "\n".join(lines)
-
-    lines = [
-        "| Provider | Website | API Base URL | Popular Models | Notes |",
-        "|----------|---------|--------------|----------------|-------|",
-    ]
-    for p in providers:
-        url = p.get("api_base_url") or ""
-        url_cell = f"`{url}`" if is_real_url(url) else md_cell(url)
-        site = p.get("website") or ""
-        site_cell = f"[{md_cell(site.replace('https://', '').replace('http://', '').split('/')[0] or p['name'])}]({site})" if site.startswith("http") else md_cell(site or "—")
-        lines.append(
-            f"| **{md_cell(p['name'])}** | {site_cell} | {url_cell} | {md_cell(popular_cell(p.get('popular_models') or []))} | {md_cell(p.get('notes') or '—')} |"
-        )
-    return "\n".join(lines)
-
-
-def env_table(providers: list[dict]) -> str:
-    rows = []
-    for p in providers:
-        env = p.get("env_variable")
-        if not env:
-            continue
-        url = p.get("api_base_url") or ""
-        url_cell = f"`{url}`" if is_real_url(url) else md_cell(url)
-        rows.append(f"| {md_cell(p['name'])} | `{env}` | {url_cell} |")
-    lines = [
-        "| Provider | Env Variable | API Base URL |",
-        "|----------|--------------|--------------|",
-        *rows,
-    ]
     return "\n".join(lines)
 
 
 def generate_readme(providers: list[dict], model_count: int) -> str:
     counts: dict[str, int] = defaultdict(int)
-    for p in providers:
-        counts[p["category"]] += 1
-    total = len(providers)
     by_cat: dict[str, list[dict]] = defaultdict(list)
     for p in providers:
+        counts[p["category"]] += 1
         by_cat[p["category"]].append(p)
+    total = len(providers)
+    cookie_n = counts.get("Web Cookie", 0)
 
-    toc = [
-        "- [Quick Start](#quick-start)",
-        "- [Complete Provider Index](#complete-provider-index)",
-        "- [How Providers Are Organized](#how-providers-are-organized)",
-    ]
-    for key, title, *_rest in CATEGORY_SECTIONS:
-        if by_cat.get(key):
-            toc.append(f"- [{title}](#{slugify_name(title)})")
-    toc.extend(
-        [
-            "- [Environment Variables Cheat Sheet](#environment-variables-cheat-sheet)",
-            "- [Integration Examples](#integration-examples)",
-            "- [Choosing the Right Provider](#choosing-the-right-provider)",
-            "- [Documentation](#documentation)",
-            "- [Contributing](#contributing)",
-            "- [License](#license)",
-        ]
-    )
-
-    org_rows = []
-    for key, title, *_ in CATEGORY_SECTIONS:
+    cat_rows = ["| Category | Count |", "|----------|-------|"]
+    for key, title, _blurb in CATEGORY_SECTIONS:
         n = counts.get(key, 0)
         if n:
-            org_rows.append(f"| **{title.split('(')[0].strip()}** | {n} |")
-    org_rows.append(f"| **Total** | **{total}** |")
+            cat_rows.append(f"| [{title}](#{slugify_name(title)}) | {n} |")
+    if cookie_n:
+        cat_rows.append(f"| Web cookie adapters (in data only) | {cookie_n} |")
+    cat_rows.append(f"| **Total** | **{total}** |")
 
     sections = []
-    for key, title, blurb, _headers, kind in CATEGORY_SECTIONS:
+    for key, title, blurb in CATEGORY_SECTIONS:
         items = by_cat.get(key) or []
-        if not items:
+        if not items or key in README_SKIP_CATEGORIES:
             continue
-        sections.append(f"## {title}\n\n{blurb}\n\n{render_category_table(items, kind)}\n")
+        sections.append(f"## {title}\n\n{blurb}\n\n{render_category_table(items)}\n")
+
+    cookie_note = ""
+    if cookie_n:
+        cookie_note = (
+            f"\nUnofficial **web-cookie / browser-session** adapters ({cookie_n}) stay in "
+            f"`data/providers.json` so they do not clutter this page. List them with "
+            f"`python llm_lookup.py --category \"Web Cookie\"`.\n"
+        )
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    models_bit = f"{model_count:,} model IDs · " if model_count else ""
 
-    return f"""# All AI and LLM Providers list — API Endpoints, Models & Integration Guide
+    return f"""# All LLM providers
 
-A curated, developer-friendly directory of **{total} global LLM providers** — official frontier APIs, inference platforms, sovereign clouds, gateways, aggregators, local runtimes, OAuth/IDE subscriptions, search, audio, and media APIs.
+**{total} providers** · {models_bit}API URLs, env vars, and model names in one place.
 
-Catalog aligned with [OmniRoute](https://github.com/diegosouzapw/OmniRoute) (351+ registered providers) plus extra listings maintained in this repo. Use this as a single reference when you need:
+Includes the [OmniRoute](https://github.com/diegosouzapw/OmniRoute) catalog plus extra listings. Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated {now}.
 
-- Official website & documentation links
-- Standard API base URLs
-- Popular model families per provider
-- Environment variable names for quick setup
-- Copy-paste integration patterns (OpenAI & Anthropic SDKs)
+## Quick start
 
-> **Note:** Model names and API URLs change frequently. Always verify against the provider's official docs before production use. Machine-readable data lives in [`data/`](data/) — see the [Documentation](docs/README.md). Last catalog merge: {now}.
-
----
-
-## Table of Contents
-
-{chr(10).join(toc)}
-
----
-
-## Quick Start
-
-Most providers expose an **OpenAI-compatible** REST API. Switching providers usually means changing only two things:
-
-1. `base_url` — the API endpoint
-2. `api_key` — your provider credential
+Most APIs are OpenAI-compatible. You only change `base_url` and `api_key`:
 
 ```python
 import os
@@ -1213,232 +1274,53 @@ client = OpenAI(
     base_url="https://api.groq.com/openai/v1",
     api_key=os.environ["GROQ_API_KEY"],
 )
-
-response = client.chat.completions.create(
+print(client.chat.completions.create(
     model="llama-3.3-70b-versatile",
     messages=[{{"role": "user", "content": "Hello!"}}],
-)
-print(response.choices[0].message.content)
+).choices[0].message.content)
 ```
 
-**Want one API key for many models?** Start with a gateway like [OpenRouter](https://openrouter.ai), [Portkey](https://portkey.ai), [OmniRoute](https://github.com/diegosouzapw/OmniRoute), or [Opper](https://opper.ai).
-
-Look up any provider from this repo:
+Look up any provider from this repo (no extra packages):
 
 ```bash
 python llm_lookup.py groq
+python llm_lookup.py groq --models
 python llm_lookup.py --category Gateway
 python llm_lookup.py --search-model kimi
 ```
 
----
+One key for many models: [OpenRouter](https://openrouter.ai), [OmniRoute](https://github.com/diegosouzapw/OmniRoute), [Portkey](https://portkey.ai).
 
-## Complete Provider Index
+## Categories
 
-{render_index_table(providers)}
-
----
-
-## How Providers Are Organized
-
-```
-┌─────────────────────────────────────────┐
-│     Your App (OpenAI / Anthropic SDK)   │
-└────────────────────┬────────────────────┘
-                     │
-┌────────────────────▼────────────────────┐
-│ Gateways (OpenRouter, OmniRoute, Portkey)│  ← optional routing layer
-└─────────┬───────────┬───────────┬───────┘
-          │           │           │
-   ┌──────▼───┐ ┌─────▼─────┐ ┌──▼──────────┐
-   │ Frontier │ │ IaaS /    │ │ Sovereign / │
-   │ APIs     │ │ Inference │ │ Private     │
-   │ OpenAI,  │ │ Groq, HF  │ │ Azure, AWS  │
-   │ Claude,  │ │ Together  │ │ Vertex, EU  │
-   │ Gemini   │ │ Fireworks │ │ clouds      │
-   └──────────┘ └───────────┘ └─────────────┘
-```
-
-| Category | Count |
-|----------|-------|
-{chr(10).join(org_rows)}
-
----
-
+{chr(10).join(cat_rows)}
+{cookie_note}
 {chr(10).join(sections)}
-## Environment Variables Cheat Sheet
+## Pick a provider
 
-Copy these into your `.env` file or secrets manager. Providers without a key (local, no-auth, many OAuth/cookie flows) are omitted.
+| Goal | Start here |
+|------|------------|
+| Best reasoning | OpenAI, Anthropic, Gemini |
+| Low cost / open models | Groq, DeepInfra, Together, SiliconFlow |
+| One API, many models | OpenRouter, OmniRoute, Portkey |
+| EU / GDPR | Mistral, Nebius, Scaleway, OVHcloud |
+| Code agents | Claude Code, Codex, Cursor, Moonshot Kimi |
+| Offline | Ollama, LM Studio, vLLM |
 
-{env_table(providers)}
-
----
-
-## Integration Examples
-
-### OpenAI SDK → Any OpenAI-Compatible Provider (Python)
-
-```python
-import os
-from openai import OpenAI
-
-client = OpenAI(
-    base_url="https://api.tokenfactory.nebius.com/v1/",
-    api_key=os.environ["NEBIUS_API_KEY"],
-)
-
-stream = client.chat.completions.create(
-    model="deepseek-ai/DeepSeek-R1-0528",
-    messages=[{{"role": "user", "content": "Explain quantum computing in one paragraph."}}],
-    temperature=0.1,
-    stream=True,
-)
-
-for chunk in stream:
-    if chunk.choices[0].delta.content:
-        print(chunk.choices[0].delta.content, end="", flush=True)
-```
-
-### Anthropic SDK → Compatible Gateway (Node.js)
-
-```javascript
-import Anthropic from "@anthropic-ai/sdk";
-
-const anthropic = new Anthropic({{
-  baseURL: "https://pass.wafer.ai",
-  apiKey: process.env.WAFER_API_KEY,
-}});
-
-const message = await anthropic.messages.create({{
-  model: "Qwen3.5-397B-A17B",
-  max_tokens: 4096,
-  messages: [{{ role: "user", content: "Write a hello world in Rust." }}],
-}});
-
-console.log(message.content[0].text);
-```
-
-### Alibaba Qwen via OpenAI SDK (Python)
-
-```python
-import os
-from openai import OpenAI
-
-client = OpenAI(
-    api_key=os.environ["DASHSCOPE_API_KEY"],
-    base_url="https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
-)
-
-response = client.chat.completions.create(
-    model="qwen3-max",
-    messages=[{{"role": "user", "content": "Hello from Qwen!"}}],
-)
-print(response.choices[0].message.content)
-```
-
-### OpenRouter — One Key, Many Models
-
-```bash
-curl https://openrouter.ai/api/v1/chat/completions \\
-  -H "Authorization: Bearer $OPENROUTER_API_KEY" \\
-  -H "Content-Type: application/json" \\
-  -d '{{
-    "model": "anthropic/claude-sonnet-4",
-    "messages": [{{"role": "user", "content": "Hello!"}}]
-  }}'
-```
-
----
-
-## Choosing the Right Provider
-
-| Your goal | Start here |
-|-----------|------------|
-| Best overall reasoning & tools | OpenAI, Anthropic, Google Gemini |
-| Lowest cost / open models | DeepInfra, Together, SiliconFlow, Groq |
-| EU data residency | Mistral, Nebius, NextBit, Scaleway, OVHcloud, Opper |
-| One API for everything | OpenRouter, OmniRoute, Portkey, Opper, AIMLAPI |
-| Code generation | Poolside, Morph, Moonshot Kimi, Claude Code / Codex |
-| Privacy / no logging | Venice, Relace (ZDR), Phala (TEE), Local (Ollama) |
-| Enterprise & compliance | Azure OpenAI, Google Vertex AI, Amazon Bedrock |
-| Free tier / prototyping | Groq, Gemini, GitHub Models, HuggingFace, OpenRouter, Pollinations |
-| Chinese models | DeepSeek, Qwen (DashScope), Zhipu, MiniMax, StepFun |
-| Search-grounded answers | Perplexity Sonar, Exa, Tavily, Brave |
-| Self-hosted / offline | Ollama, LM Studio, vLLM, LocalAI |
-| IDE subscription reuse | Claude Code, Codex, Cursor, GitHub Copilot, Kimi Code |
-
-### Production tips
-
-1. **Use a gateway for HA** — Route across 2–3 providers so rate limits or outages don't take down your app.
-2. **Pin model versions** — Providers silently update models. Pin explicit model IDs and monitor output quality.
-3. **Enable context caching** — Gemini, DeepSeek, and Anthropic support caching that can cut costs significantly on repeated prompts.
-4. **Respect data sovereignty** — Route PII and regulated data only through EU or private VPC endpoints.
-5. **Treat cookie/OAuth unofficial adapters carefully** — Web-cookie providers can break when the upstream UI changes; prefer official APIs in production.
-
----
-
-## Documentation
-
-Step-by-step guides in [`docs/`](docs/README.md):
-
-| Guide | Description |
-|-------|-------------|
-| [Getting Started](docs/getting-started.md) | Clone, first lookup, pick a provider |
-| [Python Lookup](docs/python-lookup.md) | `llm_lookup.py` — search providers & models |
-| [Sync Models](docs/sync-models.md) | Refresh live model catalogs |
-| [Integration Guide](docs/integration-guide.md) | OpenAI / Anthropic SDK setup |
-| [Data Structure](docs/data-structure.md) | `providers.json`, `models.json` format |
-| [Adding Providers](docs/adding-providers.md) | Add or update a provider |
-| [Contributing](docs/contributing.md) | PR workflow & checklist |
-
----
-
-## Repository Structure
-
-```
-all-llm-provider-list/
-├── README.md              ← Provider tables & quick reference
-├── llm_lookup.py          ← Python lookup script
-├── scripts/
-│   ├── sync_models.py     ← Refresh model catalogs
-│   ├── import_omniroute.py← Merge OmniRoute catalog
-│   └── example.py         ← Usage examples
-├── data/
-│   ├── providers.json     ← {total} providers (source of truth)
-│   ├── models.json        ← Model catalogs per provider
-│   └── static_models.json ← Fallback model lists
-└── docs/                  ← Step-by-step guides
-```
-
----
+Env var names are in the tables above and in `python llm_lookup.py <slug>`.
 
 ## Contributing
 
-Found a new provider, updated endpoint, or wrong model name? PRs welcome!
-
-See [docs/contributing.md](docs/contributing.md) and [docs/adding-providers.md](docs/adding-providers.md) for the full workflow.
-
-To refresh from [OmniRoute](https://github.com/diegosouzapw/OmniRoute):
+PRs welcome for new endpoints or corrected model IDs. See [docs/contributing.md](docs/contributing.md).
 
 ```bash
-git clone --depth 1 https://github.com/diegosouzapw/OmniRoute.git /tmp/omniroute
-python scripts/import_omniroute.py --omniroute /tmp/omniroute
+python llm_lookup.py <slug> --models
 python scripts/sync_models.py
 ```
 
----
-
-## Disclaimer
-
-This list is maintained for **educational and integration reference** purposes. We are not affiliated with any listed provider. API endpoints, pricing, and model availability can change without notice. Always refer to official provider documentation for production deployments.
-
-Web-cookie and some OAuth adapters are unofficial; using them may violate a provider's terms of service. Prefer official APIs whenever they exist.
-
----
-
 ## License
 
-MIT — use freely, attribute when you share.
+MIT. Not affiliated with any listed provider.
 """
 
 
@@ -1465,10 +1347,41 @@ def save_static(existing: dict[str, list[str]], incoming: dict[str, list[str]]) 
     return added
 
 
+def write_catalog(providers: list[dict], static: dict[str, list[str]] | None = None) -> None:
+    static = dict(static or load_static())
+    providers = cleanup_providers(providers, static)
+    PROVIDERS_FILE.write_text(
+        json.dumps(providers, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    STATIC_FILE.write_text(
+        json.dumps({"providers": static}, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    model_count = 0
+    for row in providers:
+        ids = static.get(row["slug"]) or row.get("popular_models") or []
+        model_count += len(ids)
+    README_FILE.write_text(generate_readme(providers, model_count), encoding="utf-8")
+    print(f"Wrote {len(providers)} providers → {PROVIDERS_FILE}")
+    print(f"Wrote {README_FILE}")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Import OmniRoute providers into this repo.")
     parser.add_argument("--omniroute", default="/tmp/omniroute", help="Path to OmniRoute checkout")
+    parser.add_argument(
+        "--fix",
+        action="store_true",
+        help="Clean existing catalog + regenerate README (no OmniRoute clone needed)",
+    )
     args = parser.parse_args()
+
+    if args.fix:
+        providers = json.loads(PROVIDERS_FILE.read_text(encoding="utf-8"))
+        write_catalog(providers, load_static())
+        return 0
+
     omni = Path(args.omniroute)
     if not omni.exists():
         raise SystemExit(f"OmniRoute path not found: {omni}")
@@ -1490,20 +1403,10 @@ def main() -> int:
         f"Merge: kept={stats['kept']} added={stats['added']} "
         f"urls_filled={stats['updated_urls']} model_catalogs={stats['models_merged']}"
     )
-    print(f"Total providers now: {len(providers)}")
-
-    PROVIDERS_FILE.write_text(
-        json.dumps(providers, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
-    )
-
     prev_static = load_static()
-    changed = save_static(prev_static, static_in)
-    print(f"static_models.json slugs updated: {changed}")
-
-    model_count = sum(len(v) for v in {**prev_static, **static_in}.values())
-    README_FILE.write_text(generate_readme(providers, model_count), encoding="utf-8")
-    print(f"Wrote {README_FILE}")
+    for slug, models in static_in.items():
+        prev_static[slug] = dedupe(list(prev_static.get(slug, [])) + list(models))
+    write_catalog(providers, prev_static)
     return 0
 
 
