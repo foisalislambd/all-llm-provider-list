@@ -38,20 +38,12 @@ Categories: `Frontier`, `IaaS`, `Sovereign / Cloud`, `Gateway`, `Aggregator`, `O
 Then add model IDs under that slug in `data/static_models.json`, regenerate the README, and refresh catalogs:
 
 ```bash
-python scripts/import_omniroute.py --fix
+python scripts/generate_readme.py
 python scripts/sync_models.py
 python llm_lookup.py new-provider --models
 ```
 
-`--fix` cleans alias collisions and rebuilds `README.md` from JSON. Do not edit README tables by hand.
-
-## Refresh from OmniRoute
-
-```bash
-git clone --depth 1 https://github.com/diegosouzapw/OmniRoute.git /tmp/omniroute
-python scripts/import_omniroute.py --omniroute /tmp/omniroute
-python scripts/sync_models.py
-```
+Do not edit README tables by hand.
 
 ## PR checklist
 

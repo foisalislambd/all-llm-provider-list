@@ -2325,7 +2325,7 @@
     ],
     "env_variable": null,
     "openai_compatible": false,
-    "notes": "Local passthrough — runs the Augment CLI (`auggie`) on this machine. Auth is handled by `auggie login`, not OmniRoute.; No API key stored by OmniRoute. Install the Auggie CLI and run `auggie login` on this machine, then OmniRoute spawns it locally for each request.; Augment (Auggie CLI) requires the `auggie` binary installed and authenticated locally (`auggie login`). OmniRoute spawns it as a subprocess and never…"
+    "notes": "Local passthrough — runs the Augment CLI (`auggie`) on this machine.; Augment (Auggie CLI) requires the `auggie` binary installed and authenticated locally (`auggie login`)."
   },
   {
     "id": 126,
@@ -2340,7 +2340,7 @@
     "popular_models": [],
     "env_variable": null,
     "openai_compatible": false,
-    "notes": "No API key stored by OmniRoute. The local ZCode app-server uses the existing builtin:zai-coding-plan login.; ZCode runs locally through its native app-server. OmniRoute never receives or stores the Z.ai credential."
+    "notes": "The local ZCode app-server uses the existing builtin:zai-coding-plan login.; ZCode runs locally through its native app-server."
   },
   {
     "id": 127,
@@ -2355,7 +2355,7 @@
     "popular_models": [],
     "env_variable": null,
     "openai_compatible": false,
-    "notes": "No token stored by OmniRoute. The Codex CLI app-server manages its own ChatGPT sign-in (~/.codex/auth.json, auto-refreshed). Use u201cSign in with ChatGPTu201d if the CLI is not yet authenticated.; OpenAI Codex (App-Server) drives the Codex CLI's local app-server (JSON-RPC over WebSocket). The CLI self-manages its OpenAI OAuth, so OmniRoute never sees or replays your token. Requires the codex CLI reachable at the…"
+    "notes": "The Codex CLI app-server manages its own ChatGPT sign-in (~/.codex/auth.json, auto-refreshed). Use u201cSign in with ChatGPTu201d if the CLI is not yet authenticated.; OpenAI Codex (App-Server) drives the Codex CLI's local app-server (JSON-RPC over WebSocket). Requires the codex CLI reachable at the…"
   },
   {
     "id": 128,
@@ -2645,7 +2645,7 @@
     "popular_models": [],
     "env_variable": null,
     "openai_compatible": true,
-    "notes": "Sign in with your Zed account (native-app sign-in). OmniRoute generates a one-time RSA keypair and opens zed.dev to authorize it — on a remote/headless install, copy the resulting 127.0.0.1 callback URL from your browser's address bar and paste it back here. Distinct from the 'Zed IDE' credential-import entry above: this proxies chat completions through Zed's own hosted model aggregator (cloud.zed.dev), fronting A…"
+    "notes": "Sign in with your Zed account (native-app sign-in). Distinct from the 'Zed IDE' credential-import entry above: this proxies chat completions through Zed's own hosted model aggregator (cloud.zed.dev), fronting A…"
   },
   {
     "id": 144,
@@ -2682,7 +2682,7 @@
     "popular_models": [],
     "env_variable": null,
     "openai_compatible": false,
-    "notes": "Sign in with the same Kimi account used by Kimi Code CLI. OmniRoute uses the CLI OAuth flow and Kimi Coding Plan endpoints."
+    "notes": "Sign in with the same Kimi account used by Kimi Code CLI."
   },
   {
     "id": 146,
@@ -2840,7 +2840,7 @@
     ],
     "env_variable": null,
     "openai_compatible": true,
-    "notes": "Paste the full ChatGPT Cookie header. OmniRoute verifies it in an isolated headless browser profile."
+    "notes": "Paste the full ChatGPT Cookie header."
   },
   {
     "id": 154,
@@ -3104,7 +3104,7 @@
     "popular_models": [],
     "env_variable": null,
     "openai_compatible": true,
-    "notes": "Free model comparison platform (formerly LMArena) at arena.ai — Direct-chat catalog of chat models (GPT, Claude, Gemini, Llama, …). No subscription required.; Paste the full Cookie header from arena.ai (DevTools → Network → request → Cookie). Include arena-auth-prod-v1.0/.1… and cf_clearance/__cf_bm when present. OmniRoute uses Chrome TLS impersonation; if Arena still 403s, set providerSpecificData.recaptchaV3Toke…"
+    "notes": "Free model comparison platform (formerly LMArena) at arena.ai — Direct-chat catalog of chat models (GPT, Claude, Gemini, Llama, …). No subscription required.; Paste the full Cookie header from arena.ai (DevTools → Network → request → Cookie). Include arena-auth-prod-v1.0/.1… and cf_clearance/__cf_bm when present.; if Arena still 403s, set providerSpecificData.recaptchaV3Toke…"
   },
   {
     "id": 167,
@@ -3325,7 +3325,7 @@
     ],
     "env_variable": null,
     "openai_compatible": true,
-    "notes": "Consumer web session for the four models currently visible in chat.z.ai. Distinct from the API-key zai/glm providers.; Copy the \"token\" value from chat.z.ai → DevTools → Application → Local Storage. Do not copy cookies; OmniRoute handles the per-request CAPTCHA through its browser transport."
+    "notes": "Consumer web session for the four models currently visible in chat.z.ai. Distinct from the API-key zai/glm providers.; Copy the \"token\" value from chat.z.ai → DevTools → Application → Local Storage. Do not copy cookies"
   },
   {
     "id": 179,
@@ -3415,7 +3415,7 @@
     "popular_models": [],
     "env_variable": null,
     "openai_compatible": true,
-    "notes": "Sign in once (email code or browser) to mint a MaxAI access token. OmniRoute signs each request, routes it through residential egress, and refreshes the token browserlessly, so a connection stays valid for about a year without re-login."
+    "notes": "Sign in once (email code or browser) to mint a MaxAI access token."
   },
   {
     "id": 185,
@@ -3430,7 +3430,7 @@
     "popular_models": [],
     "env_variable": null,
     "openai_compatible": true,
-    "notes": "Sign in once with an email code to bootstrap a UC (uncensored.com) subscription session. OmniRoute mints a fresh short-lived token per request browserlessly, so the connection renews on its own; you only re-run the email login about once a month when the subscription session rolls over."
+    "notes": "Sign in once with an email code to bootstrap a UC (uncensored.com) subscription session.; you only re-run the email login about once a month when the subscription session rolls over."
   },
   {
     "id": 186,
@@ -4092,7 +4092,7 @@
     ],
     "env_variable": "UC_DIRECT_API_KEY",
     "openai_compatible": true,
-    "notes": "Use your uncensored.com Developer API key (uai_sk_live_...). OmniRoute sends it as the X-api-key header to the OpenAI-compatible https://api.uncensored.com/api/v1 endpoint. The key never expires. This is the metered/credits surface; the un-metered subscription chat is the separate 'uc' provider.; UC Direct is OpenAI-compatible on /api/v1. OmniRoute probes /api/v1/models (public) and routes chat traffic to /api/v1/…"
+    "notes": "Use your uncensored.com Developer API key (uai_sk_live_...). The key never expires. This is the metered/credits surface; the un-metered subscription chat is the separate 'uc' provider.; UC Direct is OpenAI-compatible on /api/v1."
   },
   {
     "id": 232,
@@ -4132,7 +4132,7 @@
     ],
     "env_variable": "PERPLEXITY_AGENT_API_KEY",
     "openai_compatible": true,
-    "notes": "Use your Perplexity API key. OmniRoute routes Agent API model IDs through Perplexity's Responses-compatible endpoint.; Use Agent API model IDs with the pplx-agent/ prefix, for example pplx-agent/openai/gpt-5.6-sol or pplx-agent/anthropic/claude-opus-4-5."
+    "notes": "Use your Perplexity API key.; Use Agent API model IDs with the pplx-agent/ prefix, for example pplx-agent/openai/gpt-5.6-sol or pplx-agent/anthropic/claude-opus-4-5."
   },
   {
     "id": 234,
@@ -4204,7 +4204,7 @@
     ],
     "env_variable": "NOUS_RESEARCH_API_KEY",
     "openai_compatible": true,
-    "notes": "Free tier: 50 RPM, 500,000 TPM — no credit card; Use your Nous Portal API key. OmniRoute targets the official OpenAI-compatible inference endpoint at https://inference-api.nousresearch.com/v1.; Nous exposes an OpenAI-compatible /v1 surface with a large remote /models catalog. The /chat/completions endpoint requires a valid API key for programmatic inference."
+    "notes": "Free tier: 50 RPM, 500,000 TPM — no credit card; Use your Nous Portal API key.; Nous exposes an OpenAI-compatible /v1 surface with a large remote /models catalog. The /chat/completions endpoint requires a valid API key for programmatic inference."
   },
   {
     "id": 239,
@@ -4242,7 +4242,7 @@
     ],
     "env_variable": null,
     "openai_compatible": true,
-    "notes": "Use your META_API_KEY env var as a Bearer token. Muse Code CLI uses the OpenAI Responses API wire format (POST /responses).; Muse Code is OpenAI-compatible. OmniRoute routes chat traffic through the Responses API and exposes the proprietary model catalog at /v1/muse-code/models."
+    "notes": "Use your META_API_KEY env var as a Bearer token. Muse Code CLI uses the OpenAI Responses API wire format (POST /responses).; Muse Code is OpenAI-compatible."
   },
   {
     "id": 241,
@@ -4444,7 +4444,7 @@
     ],
     "env_variable": "ONEMINAI_API_KEY",
     "openai_compatible": true,
-    "notes": "Create an API key at https://docs.1min.ai/docs/api/create-api-key, then paste it here.; 1min.ai uses a proprietary chat API (single prompt string + SSE) instead of OpenAI chat/completions. OmniRoute flattens OpenAI messages into a labeled prompt and translates the SSE stream."
+    "notes": "Create an API key at https://docs.1min.ai/docs/api/create-api-key, then paste it here.; 1min.ai uses a proprietary chat API (single prompt string + SSE) instead of OpenAI chat/completions."
   },
   {
     "id": 254,
@@ -4466,7 +4466,7 @@
     ],
     "env_variable": "CHEAPERINFERENCE_API_KEY",
     "openai_compatible": true,
-    "notes": "Create an API key at https://cheaperinference.com/?utm_source=omniroute (needs the `inference` scope), then paste the ir_live_… token here."
+    "notes": "Create an API key at https://cheaperinference.com/ (needs the `inference` scope), then paste the ir_live_… token here."
   },
   {
     "id": 255,
@@ -5099,7 +5099,7 @@
     ],
     "env_variable": "G4F_GROQ_API_KEY",
     "openai_compatible": true,
-    "notes": "Anonymous access to Groq requires proof-of-work cake credits from g4f.dev/chat; alternatively, use a g4f.dev member API key. Limits vary.; Bake anonymous cake credits at g4f.dev/chat, or use a g4f.dev member key (create one at g4f.dev/members.html).; Remote third-party gateway: prompts and request metadata leave OmniRoute and are handled by g4f.space. Its Terms and Privacy links were unavailable when last verified…"
+    "notes": "Anonymous access to Groq requires proof-of-work cake credits from g4f.dev/chat; alternatively, use a g4f.dev member API key. Limits vary.; Bake anonymous cake credits at g4f.dev/chat, or use a g4f.dev member key (create one at g4f.dev/members.html).; Its Terms and Privacy links were unavailable when last verified…"
   },
   {
     "id": 296,
@@ -5117,7 +5117,7 @@
     ],
     "env_variable": "G4F_GEMINI_API_KEY",
     "openai_compatible": true,
-    "notes": "Anonymous access to Gemini requires proof-of-work cake credits from g4f.dev/chat; alternatively, use a g4f.dev member API key. Limits vary.; Bake anonymous cake credits at g4f.dev/chat, or use a g4f.dev member key (create one at g4f.dev/members.html).; Remote third-party gateway: prompts and request metadata leave OmniRoute and are handled by g4f.space. Its Terms and Privacy links were unavailable when last verifi…"
+    "notes": "Anonymous access to Gemini requires proof-of-work cake credits from g4f.dev/chat; alternatively, use a g4f.dev member API key. Limits vary.; Bake anonymous cake credits at g4f.dev/chat, or use a g4f.dev member key (create one at g4f.dev/members.html).; Its Terms and Privacy links were unavailable when last verifi…"
   },
   {
     "id": 297,
@@ -5135,7 +5135,7 @@
     ],
     "env_variable": "G4F_POLLINATIONS_API_KEY",
     "openai_compatible": true,
-    "notes": "Anonymous access to Pollinations requires proof-of-work cake credits from g4f.dev/chat; alternatively, use a g4f.dev member API key. Limits vary.; Bake anonymous cake credits at g4f.dev/chat, or use a g4f.dev member key (create one at g4f.dev/members.html).; Remote third-party gateway: prompts and request metadata leave OmniRoute and are handled by g4f.space. Its Terms and Privacy links were unavailable when last…"
+    "notes": "Anonymous access to Pollinations requires proof-of-work cake credits from g4f.dev/chat; alternatively, use a g4f.dev member API key. Limits vary.; Bake anonymous cake credits at g4f.dev/chat, or use a g4f.dev member key (create one at g4f.dev/members.html).; Its Terms and Privacy links were unavailable when last…"
   },
   {
     "id": 298,
@@ -5152,7 +5152,7 @@
     ],
     "env_variable": "G4F_OLLAMA_API_KEY",
     "openai_compatible": true,
-    "notes": "Anonymous access to hosted Ollama requires proof-of-work cake credits from g4f.dev/chat; alternatively, use a g4f.dev member API key. Limits vary.; Bake anonymous cake credits at g4f.dev/chat, or use a g4f.dev member key (create one at g4f.dev/members.html).; Remote third-party gateway: prompts and request metadata leave OmniRoute and are handled by g4f.space. Its Terms and Privacy links were unavailable when last…"
+    "notes": "Anonymous access to hosted Ollama requires proof-of-work cake credits from g4f.dev/chat; alternatively, use a g4f.dev member API key. Limits vary.; Bake anonymous cake credits at g4f.dev/chat, or use a g4f.dev member key (create one at g4f.dev/members.html).; Its Terms and Privacy links were unavailable when last…"
   },
   {
     "id": 299,
@@ -5171,7 +5171,7 @@
     ],
     "env_variable": "G4F_NVIDIA_API_KEY",
     "openai_compatible": true,
-    "notes": "Anonymous access to NVIDIA NIM requires proof-of-work cake credits from g4f.dev/chat; alternatively, use a g4f.dev member API key. Limits vary.; Bake anonymous cake credits at g4f.dev/chat, or use a g4f.dev member key (create one at g4f.dev/members.html).; Remote third-party gateway: prompts and request metadata leave OmniRoute and are handled by g4f.space. Its Terms and Privacy links were unavailable when last ve…"
+    "notes": "Anonymous access to NVIDIA NIM requires proof-of-work cake credits from g4f.dev/chat; alternatively, use a g4f.dev member API key. Limits vary.; Bake anonymous cake credits at g4f.dev/chat, or use a g4f.dev member key (create one at g4f.dev/members.html).; Its Terms and Privacy links were unavailable when last ve…"
   },
   {
     "id": 300,
@@ -5484,7 +5484,7 @@
     ],
     "env_variable": "DIT_API_KEY",
     "openai_compatible": true,
-    "notes": "Use your dit.ai API key in Authorization: Bearer <key>. Fully OpenAI-compatible — a drop-in replacement, just change the base URL to https://api.dit.ai/v1.; dit.ai (Distributed Intelligence Trade) is an OpenAI-compatible router/gateway with dynamic per-request pricing, exposing /v1/chat/completions at https://api.dit.ai/v1. OmniRoute uses the OpenAI protocol; spend/savings analytics live in the dit.ai dashboard."
+    "notes": "Use your dit.ai API key in Authorization: Bearer <key>. Fully OpenAI-compatible — a drop-in replacement, just change the base URL to https://api.dit.ai/v1.; dit.ai (Distributed Intelligence Trade) is an OpenAI-compatible router/gateway with dynamic per-request pricing, exposing /v1/chat/completions at https://api.dit.ai/v1.; spend/savings analytics live in the dit.ai dashboard."
   },
   {
     "id": 319,
@@ -5503,7 +5503,7 @@
     ],
     "env_variable": "TOKENROUTER_API_KEY",
     "openai_compatible": true,
-    "notes": "Free tier includes the MiniMax 3 model. Get your API key at https://tokenrouter.com.; Use your TokenRouter API key in Authorization: Bearer <key>. Fully OpenAI-compatible. API base URL: https://api.tokenrouter.com/v1.; TokenRouter exposes an OpenAI-compatible chat completions endpoint at https://api.tokenrouter.com/v1/chat/completions, plus a working /v1/models catalog. OmniRoute uses the OpenAI protocol."
+    "notes": "Free tier includes the MiniMax 3 model. Get your API key at https://tokenrouter.com.; Use your TokenRouter API key in Authorization: Bearer <key>. Fully OpenAI-compatible. API base URL: https://api.tokenrouter.com/v1.; TokenRouter exposes an OpenAI-compatible chat completions endpoint at https://api.tokenrouter.com/v1/chat/completions, plus a working /v1/models catalog."
   },
   {
     "id": 320,
@@ -5537,7 +5537,7 @@
     "popular_models": [],
     "env_variable": "SUMOPOD_API_KEY",
     "openai_compatible": true,
-    "notes": "Use your SumoPod API key (sk-...) in Authorization: Bearer <key>. Fully OpenAI-compatible. API base URL: https://ai.sumopod.com/v1.; SumoPod exposes an OpenAI-compatible chat completions endpoint at https://ai.sumopod.com/v1/chat/completions, plus a live /v1/models catalog. OmniRoute uses the OpenAI protocol and lists models via passthrough."
+    "notes": "Use your SumoPod API key (sk-...) in Authorization: Bearer <key>. Fully OpenAI-compatible. API base URL: https://ai.sumopod.com/v1.; SumoPod exposes an OpenAI-compatible chat completions endpoint at https://ai.sumopod.com/v1/chat/completions, plus a live /v1/models catalog."
   },
   {
     "id": 322,
@@ -5550,7 +5550,7 @@
     "popular_models": [],
     "env_variable": "X5LAB_API_KEY",
     "openai_compatible": true,
-    "notes": "Use your X5Lab API key (x5-...) in Authorization: Bearer <key>. Fully OpenAI-compatible. API base URL: https://api.x5lab.dev/v1.; X5Lab exposes an OpenAI-compatible chat completions endpoint at https://api.x5lab.dev/v1/chat/completions, plus a live /v1/models catalog. OmniRoute uses the OpenAI protocol and lists models via passthrough."
+    "notes": "Use your X5Lab API key (x5-...) in Authorization: Bearer <key>. Fully OpenAI-compatible. API base URL: https://api.x5lab.dev/v1.; X5Lab exposes an OpenAI-compatible chat completions endpoint at https://api.x5lab.dev/v1/chat/completions, plus a live /v1/models catalog."
   },
   {
     "id": 323,
@@ -5576,7 +5576,7 @@
     "popular_models": [],
     "env_variable": "KENARI_API_KEY",
     "openai_compatible": true,
-    "notes": "Use your Kenari API key (kn-...) in Authorization: Bearer <key>. Fully OpenAI-compatible. API base URL: https://kenari.id/v1.; Kenari exposes an OpenAI-compatible chat completions endpoint at https://kenari.id/v1/chat/completions, plus a live /v1/models catalog covering Claude, GPT, DeepSeek, GLM, Kimi and more. OmniRoute uses the OpenAI protocol and lists models via passthrough."
+    "notes": "Use your Kenari API key (kn-...) in Authorization: Bearer <key>. Fully OpenAI-compatible. API base URL: https://kenari.id/v1.; Kenari exposes an OpenAI-compatible chat completions endpoint at https://kenari.id/v1/chat/completions, plus a live /v1/models catalog covering Claude, GPT, DeepSeek, GLM, Kimi and more."
   },
   {
     "id": 325,
@@ -5616,7 +5616,7 @@
     ],
     "env_variable": "AINATIVE_API_KEY",
     "openai_compatible": true,
-    "notes": "Free tier ~10M tokens/month (claimed) across Qwen3, Llama 4, DeepSeek R1 and more.; Create a free API key at ainative.studio (no card), then paste it here as a Bearer token.; OpenAI-compatible endpoint at https://api.ainative.studio/api/v1 with a public /models catalog (84 models). OmniRoute lists models via passthrough."
+    "notes": "Free tier ~10M tokens/month (claimed) across Qwen3, Llama 4, DeepSeek R1 and more.; Create a free API key at ainative.studio (no card), then paste it here as a Bearer token.; OpenAI-compatible endpoint at https://api.ainative.studio/api/v1 with a public /models catalog (84 models)."
   },
   {
     "id": 327,
@@ -5760,7 +5760,7 @@
     "popular_models": [],
     "env_variable": "SEEKAI_API_KEY",
     "openai_compatible": true,
-    "notes": "Signup credit toward available models; amount and eligibility are set by SeekAi, not OmniRoute.; Create an API key at https://seekai.cc, then paste it here as a Bearer token.; Create an API key at https://seekai.cc, then paste it here as a Bearer token. OpenAI-compatible base URL: https://seekai.cc/v1."
+    "notes": "Signup credit toward available models; Create an API key at https://seekai.cc, then paste it here as a Bearer token.; Create an API key at https://seekai.cc, then paste it here as a Bearer token. OpenAI-compatible base URL: https://seekai.cc/v1."
   },
   {
     "id": 336,
@@ -5786,7 +5786,7 @@
     "popular_models": [],
     "env_variable": "OCI_API_KEY",
     "openai_compatible": false,
-    "notes": "Use your OCI Generative AI API key or IAM bearer token. Base URL can be https://inference.generativeai.<region>.oci.oraclecloud.com/openai/v1/.; OCI exposes OpenAI-compatible chat and responses endpoints. Project ID is optional in OmniRoute but may be required for Responses and agentic workflows."
+    "notes": "Use your OCI Generative AI API key or IAM bearer token. Base URL can be https://inference.generativeai.<region>.oci.oraclecloud.com/openai/v1/.; OCI exposes OpenAI-compatible chat and responses endpoints."
   },
   {
     "id": 338,
@@ -6294,7 +6294,7 @@
     ],
     "env_variable": "CLOVA_STUDIO_API_KEY",
     "openai_compatible": false,
-    "notes": "OmniRoute routes chat traffic to the native Chat Completions v3 API (/v3/chat-completions/{model}), not the OpenAI-compatibility shim. All three v3 models are served: HCX-007 (reasoning, text only), HCX-005 (vision — accepts both public image URLs and inline base64 images), and HCX-DASH-002 (lightweight, text only). Requests stream upstream and are accumulated into a JSON body when the client asks for a non-stream…"
+    "notes": "All three v3 models are served: HCX-007 (reasoning, text only), HCX-005 (vision — accepts both public image URLs and inline base64 images), and HCX-DASH-002 (lightweight, text only). Requests stream upstream and are accumulated into a JSON body when the client asks for a non-stream…"
   },
   {
     "id": 366,
@@ -6332,7 +6332,7 @@
     ],
     "env_variable": "ANT_LING_API_KEY",
     "openai_compatible": true,
-    "notes": "500,000 free tokens per day per account (resets 02:00 UTC+8, no rollover); Register and create an API key at the Ant Ling API console (https://chat.ant-ling.com/open), then paste it here. OmniRoute routes chat traffic to https://api.ant-ling.com/v1/chat/completions; the provider is OpenAI-compatible and also exposes an Anthropic-compatible surface."
+    "notes": "500,000 free tokens per day per account (resets 02:00 UTC+8, no rollover); Register and create an API key at the Ant Ling API console (https://chat.ant-ling.com/open), then paste it here.; the provider is OpenAI-compatible and also exposes an Anthropic-compatible surface."
   },
   {
     "id": 368,
@@ -6348,7 +6348,7 @@
     ],
     "env_variable": "SARVAM_API_KEY",
     "openai_compatible": true,
-    "notes": "₹1,000 in free signup credits — never expire; Sarvam AI is OpenAI-compatible on /v1. OmniRoute probes /v1/models and routes chat traffic to /v1/chat/completions. Models are tuned for Indic languages."
+    "notes": "₹1,000 in free signup credits — never expire; Sarvam AI is OpenAI-compatible on /v1. Models are tuned for Indic languages."
   },
   {
     "id": 369,
@@ -6393,7 +6393,7 @@
     "popular_models": [],
     "env_variable": "RUNWAYML_API_KEY",
     "openai_compatible": false,
-    "notes": "Use your Runway API key in Authorization: Bearer <key>. OmniRoute targets the current Runway API at https://api.dev.runwayml.com/v1 and sends the required X-Runway-Version header automatically.; Runway video generation is task-based. OmniRoute submits text-to-video or image-to-video jobs, polls /v1/tasks/{id}, and normalizes the finished video outputs back into the OpenAI-like /v1/videos/generations response."
+    "notes": "Use your Runway API key in Authorization: Bearer <key>.; Runway video generation is task-based."
   },
   {
     "id": 372,
@@ -6435,7 +6435,7 @@
     ],
     "env_variable": "POLLINATIONS_API_KEY",
     "openai_compatible": true,
-    "notes": "Free keyless tier: openai, openai-fast, openai-large, qwen-coder, mistral, deepseek, grok, gemini-flash-lite-3.1, perplexity-fast, perplexity-reasoning. Premium models (claude, gemini, midijourney) require a Pollinations API key from enter.pollinations.ai.; Anonymous/keyless access to the documented free models is best-effort. Local v3.8.50 verification (2026-07-31) returned 401 via OmniRoute and Cloudflare 1010 o…"
+    "notes": "Free keyless tier: openai, openai-fast, openai-large, qwen-coder, mistral, deepseek, grok, gemini-flash-lite-3.1, perplexity-fast, perplexity-reasoning. Premium models (claude, gemini, midijourney) require a Pollinations API key from enter.pollinations.ai.; Anonymous/keyless access to the documented free models is best-effort."
   },
   {
     "id": 374,
@@ -6658,7 +6658,7 @@
     "popular_models": [],
     "env_variable": "SEGMIND_API_KEY",
     "openai_compatible": false,
-    "notes": "Free trial credits on signup, no credit card required (per Segmind's public docs).; Use your Segmind API key in the x-api-key header. OmniRoute targets https://api.segmind.com/v1/<model> and returns the generated image/video bytes directly.; Segmind exposes 200+ hosted image and video models (Flux, SDXL, SD3, Kandinsky, Wan, Hunyuan, LTX, Kling, ...) under a single POST /v1/<model> REST call per model. OmniRoute s…"
+    "notes": "Free trial credits on signup, no credit card required (per Segmind's public docs).; Use your Segmind API key in the x-api-key header.; Segmind exposes 200+ hosted image and video models (Flux, SDXL, SD3, Kandinsky, Wan, Hunyuan, LTX, Kling, ...) under a single POST /v1/<model> REST call per model."
   },
   {
     "id": 388,
@@ -6716,7 +6716,7 @@
     "popular_models": [],
     "env_variable": "JINA_READER_API_KEY",
     "openai_compatible": false,
-    "notes": "Bearer API key for r.jina.ai URL-to-markdown (/v1/web/fetch only). Does not serve /v1/embeddings or /v1/rerank. The same Jina token as Foundation API works; OmniRoute reuses a jina-ai dashboard key or JINA_AI_API_KEY when this card is empty.; Reader / r.jina.ai only — not embeddings or rerank. Free tier: 1M fetches/month."
+    "notes": "Bearer API key for r.jina.ai URL-to-markdown (/v1/web/fetch only). Does not serve /v1/embeddings or /v1/rerank. The same Jina token as Foundation API works; Reader / r.jina.ai only — not embeddings or rerank. Free tier: 1M fetches/month."
   },
   {
     "id": 392,
@@ -6731,7 +6731,7 @@
     "popular_models": [],
     "env_variable": "TINYFISH_API_KEY",
     "openai_compatible": false,
-    "notes": "X-API-Key from agent.tinyfish.ai/api-keys; Fetch does not use TinyFish credits. Submit up to 10 URLs per request (OmniRoute fetches one URL per call)."
+    "notes": "X-API-Key from agent.tinyfish.ai/api-keys; Fetch does not use TinyFish credits."
   },
   {
     "id": 393,
@@ -6746,7 +6746,7 @@
     ],
     "env_variable": "DEEPAI_API_KEY",
     "openai_compatible": false,
-    "notes": "Use your DeepAI API key. Get one at deepai.org — requires a Pro subscription ($9.99/mo).; DeepAI uses per-endpoint REST calls (e.g. /api/text2img) instead of OpenAI chat/completions. OmniRoute adapts OpenAI image generation requests to DeepAI's /api/{slug} endpoints."
+    "notes": "Use your DeepAI API key. Get one at deepai.org — requires a Pro subscription ($9.99/mo).; DeepAI uses per-endpoint REST calls (e.g. /api/text2img) instead of OpenAI chat/completions."
   },
   {
     "id": 394,
@@ -6761,7 +6761,7 @@
     "popular_models": [],
     "env_variable": "CURSOR_API_KEY",
     "openai_compatible": true,
-    "notes": "Paste a Cursor user API key (crsr_...) from cursor.com/dashboard/api. OmniRoute exchanges it for a session token on demand; no IDE or cursor-agent install is needed. Usage bills to the Cursor plan that owns the key.; Same agent protocol and model catalog as the Cursor IDE provider. The Cursor CLI can also be pointed at /api/cursor-cli on this instance and authenticated with an OmniRoute API key."
+    "notes": "Paste a Cursor user API key (crsr_...) from cursor.com/dashboard/api.; no IDE or cursor-agent install is needed. Usage bills to the Cursor plan that owns the key.; Same agent protocol and model catalog as the Cursor IDE provider."
   },
   {
     "name": "OmniRoute",

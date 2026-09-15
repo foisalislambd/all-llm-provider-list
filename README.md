@@ -2,7 +2,7 @@
 
 **397 providers** · 1,961 model IDs · API URLs, env vars, and model names in one place.
 
-Includes the [OmniRoute](https://github.com/diegosouzapw/OmniRoute) catalog plus extra listings. Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-09-15.
+Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-09-15.
 
 ## Quick start
 
@@ -31,7 +31,7 @@ python llm_lookup.py --category Gateway
 python llm_lookup.py --search-model kimi
 ```
 
-One key for many models: [OpenRouter](https://openrouter.ai), [OmniRoute](https://github.com/diegosouzapw/OmniRoute), [Portkey](https://portkey.ai).
+One key for many models: [OpenRouter](https://openrouter.ai), [Portkey](https://portkey.ai).
 
 ## Categories
 
@@ -523,7 +523,7 @@ Run models on your own machine.
 |------|------------|
 | Best reasoning | OpenAI, Anthropic, Gemini |
 | Low cost / open models | Groq, DeepInfra, Together, SiliconFlow |
-| One API, many models | OpenRouter, OmniRoute, Portkey |
+| One API, many models | OpenRouter, Portkey |
 | EU / GDPR | Mistral, Nebius, Scaleway, OVHcloud |
 | Code agents | Claude Code, Codex, Cursor, Moonshot Kimi |
 | Offline | Ollama, LM Studio, vLLM |
