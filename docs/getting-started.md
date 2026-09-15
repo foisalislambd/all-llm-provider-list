@@ -1,6 +1,6 @@
 # Getting Started
 
-This repo is a **reference directory** of 97+ LLM API providers with endpoints, models, and integration notes.
+This repo is a **reference directory** of 400+ LLM API providers with endpoints, models, and integration notes. Catalog includes OmniRoute's provider list plus extra listings.
 
 ## 1. Clone the repository
 
@@ -18,7 +18,8 @@ Open [`README.md`](../README.md) for the full human-readable tables:
 - Official frontier APIs (OpenAI, Anthropic, Gemini…)
 - Inference platforms (Groq, Together, Fireworks…)
 - Enterprise clouds (Azure, Bedrock, Vertex…)
-- Gateways (OpenRouter, Portkey…)
+- Gateways (OpenRouter, OmniRoute, Portkey…)
+- OAuth / IDE subscriptions (Claude Code, Codex, Cursor, Copilot)
 - Local runtimes (Ollama, LM Studio…)
 
 ## 3. Look up a provider from the terminal

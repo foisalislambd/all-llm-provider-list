@@ -33,7 +33,14 @@ Open `data/providers.json` and append a new entry:
 }
 ```
 
-**Category options:** `Frontier`, `IaaS`, `Sovereign / Cloud`, `Gateway`, `Aggregator`, `Embeddings`, `Specialized`, `Local`
+**Category options:** `Frontier`, `IaaS`, `Sovereign / Cloud`, `Gateway`, `Aggregator`, `Discount / Budget API`, `OAuth`, `Web Cookie`, `No-auth`, `Search`, `Audio`, `Image / Video`, `Cloud Agent`, `Embeddings`, `Specialized`, `Local`
+
+To bulk-import from [OmniRoute](https://github.com/diegosouzapw/OmniRoute):
+
+```bash
+python scripts/import_omniroute.py --omniroute /path/to/OmniRoute
+python scripts/sync_models.py
+```
 
 ## Step 2 — Add models to static_models.json
 

@@ -26,4 +26,7 @@ python llm_lookup.py --search-model llama-3.3
 
 # Refresh model catalogs
 python scripts/sync_models.py
+
+# Merge OmniRoute's provider catalog
+python scripts/import_omniroute.py --omniroute /path/to/OmniRoute
 ```

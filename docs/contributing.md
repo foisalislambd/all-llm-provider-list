@@ -7,8 +7,9 @@ Thank you for helping keep this provider list accurate and up to date.
 1. **Add a new provider** — see [Adding Providers](adding-providers.md)
 2. **Fix an endpoint or model name** — edit `data/providers.json` + README
 3. **Refresh model catalogs** — run `scripts/sync_models.py`, commit `data/models.json`
-4. **Improve docs** — edit files in `docs/`
-5. **Report issues** — open a GitHub issue with provider name and correct URL
+4. **Sync from OmniRoute** — run `scripts/import_omniroute.py` then `scripts/sync_models.py`
+5. **Improve docs** — edit files in `docs/`
+6. **Report issues** — open a GitHub issue with provider name and correct URL
 
 ## PR workflow
 

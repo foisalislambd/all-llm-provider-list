@@ -18,8 +18,8 @@ python scripts/sync_models.py
 Example output:
 
 ```
-Synced 97 providers, 945 total model IDs
-  Live catalogs: 3
+Synced 402 providers, 2768 total model IDs
+  Live catalogs: 4
   Written to: data/models.json
 ```
 

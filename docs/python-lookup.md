@@ -49,7 +49,7 @@ for hit in hits:
 ## Filter all providers
 
 ```python
-all_providers()                          # all 97
+all_providers()                          # all 400+
 all_providers(category="Gateway")        # gateways only
 all_providers(openai_compatible=True)    # OpenAI-compatible only
 ```
@@ -79,7 +79,7 @@ python example.py
 
 | File | Purpose |
 |------|---------|
-| `data/providers.json` | Provider metadata (97 entries) |
+| `data/providers.json` | Provider metadata (400+ entries) |
 | `data/models.json` | Model catalogs per provider |
 | `data/static_models.json` | Fallback static model lists |
 
