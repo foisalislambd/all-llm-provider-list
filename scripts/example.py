@@ -1,5 +1,10 @@
 """Quick examples for llm_lookup.py"""
 
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from llm_lookup import all_providers, get_models, lookup, search_models
 
 # --- Provider details ---

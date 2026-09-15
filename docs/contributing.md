@@ -1,52 +1,54 @@
 # Contributing
 
-Thank you for helping keep this provider list accurate and up to date.
+The source of truth is `data/providers.json`. `README.md` is generated from it.
 
-## Ways to contribute
+## Look up a provider
 
-1. **Add a new provider** — see [Adding Providers](adding-providers.md)
-2. **Fix an endpoint or model name** — edit `data/providers.json` + README
-3. **Refresh model catalogs** — run `scripts/sync_models.py`, commit `data/models.json`
-4. **Improve docs** — edit files in `docs/`
-5. **Report issues** — open a GitHub issue with provider name and correct URL
+```bash
+python llm_lookup.py groq
+python llm_lookup.py groq --models
+python llm_lookup.py --category Gateway
+python llm_lookup.py --search-model kimi
+```
 
-## PR workflow
+Lookup order: exact slug, then exact name, then alias, then partial match.
 
-1. Fork the repository
-2. Create a branch: `git checkout -b add-provider-xyz`
-3. Make your changes
-4. Test locally:
-   ```bash
-   python llm_lookup.py <slug> --models
-   python scripts/sync_models.py
-   ```
-5. Commit with a clear message:
-   ```
-   Add Provider XYZ with API endpoint and model list
-   ```
-6. Open a pull request describing what changed and link to official docs
+## Add or update a provider
 
-## What we need in every provider PR
+Edit `data/providers.json` (append a new object, do not reuse an existing `slug`, set `id` to one more than the current max):
 
-- Official website URL
-- Verified `api_base_url`
-- At least 1 confirmed model ID
-- Correct `category` and `openai_compatible` flag
-- README table row
+```json
+{
+  "id": 398,
+  "name": "New Provider",
+  "slug": "new-provider",
+  "aliases": ["np"],
+  "category": "IaaS",
+  "website": "https://example.com",
+  "api_base_url": "https://api.example.com/v1",
+  "popular_models": ["model-a", "model-b"],
+  "env_variable": "NEW_PROVIDER_API_KEY",
+  "openai_compatible": true,
+  "notes": "Short description"
+}
+```
 
-## What we don't accept
+Categories: `Frontier`, `IaaS`, `Sovereign / Cloud`, `Gateway`, `Aggregator`, `OAuth`, `Web Cookie`, `No-auth`, `Search`, `Audio`, `Image / Video`, `Cloud Agent`, `Embeddings`, `Specialized`, `Local`.
 
-- Providers without a public API
-- Scraped data without official source
-- API keys or secrets in any file
-- `.env` files (use `.gitignore`)
+Then add model IDs under that slug in `data/static_models.json`, regenerate the README, and refresh catalogs:
 
-## Code style
+```bash
+python scripts/generate_readme.py
+python scripts/sync_models.py
+python llm_lookup.py new-provider --models
+```
 
-- Python: standard library only for core scripts
-- JSON: 2-space indent, UTF-8
-- Docs: clear steps, copy-paste commands
+Do not edit README tables by hand.
 
-## Questions?
+## PR checklist
 
-Open an issue or start a discussion on GitHub.
+- Official website and a verified `api_base_url`
+- At least one real model ID
+- Correct `category` and `openai_compatible`
+- No API keys or `.env` files
+- `python llm_lookup.py <slug>` works

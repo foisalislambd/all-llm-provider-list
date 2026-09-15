@@ -1,46 +1,12 @@
-# All AI and LLM Providers list — API Endpoints, Models & Integration Guide
+# All LLM providers
 
-A curated, developer-friendly directory of **110+ global LLM providers** — official frontier APIs, inference platforms, sovereign clouds, gateways, aggregators, and local runtimes.
+**397 providers** · 1,961 model IDs · API URLs, env vars, and model names in one place.
 
-Use this repo as a single reference when you need:
+Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-09-15.
 
-- Official website & documentation links  
-- Standard API base URLs  
-- Popular model families per provider  
-- Environment variable names for quick setup  
-- Copy-paste integration patterns (OpenAI & Anthropic SDKs)
+## Quick start
 
-> **Note:** Model names and API URLs change frequently. Always verify against the provider's official docs before production use. Machine-readable data lives in [`data/`](data/) — see the [Documentation](docs/README.md) for guides All ai Providers list.
-
----
-
-## Table of Contents
-
-- [Quick Start](#quick-start)
-- [Complete Provider Index](#complete-provider-index)
-- [How Providers Are Organized](#how-providers-are-organized)
-- [Official Frontier Model Developers](#official-frontier-model-developers)
-- [High-Performance Inference Platforms (IaaS)](#high-performance-inference-platforms-iaas)
-- [Decentralized, Sovereign & Enterprise Clouds](#decentralized-sovereign--enterprise-clouds)
-- [Multi-Provider Gateways & Routers](#multi-provider-gateways--routers)
-- [Aggregators & API Marketplaces](#aggregators--api-marketplaces)
-- [Embeddings & Specialized APIs](#embeddings--specialized-apis)
-- [Local & Self-Hosted Runtimes](#local--self-hosted-runtimes)
-- [Environment Variables Cheat Sheet](#environment-variables-cheat-sheet)
-- [Integration Examples](#integration-examples)
-- [Choosing the Right Provider](#choosing-the-right-provider)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
-## Quick Start
-
-Most providers expose an **OpenAI-compatible** REST API. Switching providers usually means changing only two things:
-
-1. `base_url` — the API endpoint  
-2. `api_key` — your provider credential  
+Most APIs are OpenAI-compatible. You only change `base_url` and `api_key`:
 
 ```python
 import os
@@ -50,556 +16,529 @@ client = OpenAI(
     base_url="https://api.groq.com/openai/v1",
     api_key=os.environ["GROQ_API_KEY"],
 )
-
-response = client.chat.completions.create(
+print(client.chat.completions.create(
     model="llama-3.3-70b-versatile",
     messages=[{"role": "user", "content": "Hello!"}],
-)
-print(response.choices[0].message.content)
+).choices[0].message.content)
 ```
 
-**Want one API key for many models?** Start with a gateway like [OpenRouter](https://openrouter.ai), [Portkey](https://portkey.ai), or [Opper](https://opper.ai).
-
----
-
-## Complete Provider Index
-
-| # | Provider | Category | API Base URL |
-|---|----------|----------|--------------|
-| 1 | OpenAI | Frontier | `https://api.openai.com/v1` |
-| 2 | Anthropic | Frontier | `https://api.anthropic.com` |
-| 3 | Google AI Studio | Frontier | `https://generativelanguage.googleapis.com` |
-| 4 | DeepSeek | Frontier | `https://api.deepseek.com/v1` |
-| 5 | Mistral AI | Frontier | `https://api.mistral.ai/v1` |
-| 6 | xAI | Frontier | `https://api.x.ai/v1` |
-| 7 | Cohere | Frontier | `https://api.cohere.com/v2` |
-| 8 | AI21 Labs | Frontier | `https://api.ai21.com/studio/v1` |
-| 9 | Baidu Qianfan | Frontier | `https://api.baiduqianfan.ai/v1` |
-| 10 | StepFun | Frontier | `https://api.stepfun.com/v1` |
-| 11 | Z.ai (Zhipu AI) | Frontier | `https://open.bigmodel.cn/api/paas/v4/` |
-| 12 | Xiaomi | Frontier | Custom endpoint |
-| 13 | Reka AI | Frontier | `https://api.reka.ai/v1` |
-| 14 | Inflection | Frontier | Custom webhooks |
-| 15 | MiniMax | Frontier | `https://api.minimax.io/v1` |
-| 16 | Alibaba DashScope (Qwen) | Frontier | `https://dashscope-intl.aliyuncs.com/compatible-mode/v1` |
-| 17 | Upstage | Frontier | `https://api.upstage.ai/v1/solar` |
-| 18 | Perplexity | Frontier | `https://api.perplexity.ai` |
-| 19 | Voyage AI | Embeddings | `https://api.voyageai.com/v1` |
-| 20 | Groq | IaaS | `https://api.groq.com/openai/v1` |
-| 21 | Cerebras | IaaS | `https://api.cerebras.ai/v1` |
-| 22 | SambaNova | IaaS | `https://api.sambanova.ai/v1` |
-| 23 | Together AI | IaaS | `https://api.together.xyz/v1` |
-| 24 | Fireworks AI | IaaS | `https://api.fireworks.ai/inference/v1` |
-| 25 | DeepInfra | IaaS | `https://api.deepinfra.com/v1/openai` |
-| 26 | Nebius AI Studio | IaaS | `https://api.studio.nebius.ai/v1` |
-| 27 | SiliconFlow | IaaS | `https://api.siliconflow.cn/v1` |
-| 28 | Inception | IaaS | `https://api.inceptionlabs.ai/v1` |
-| 29 | Liquid AI | IaaS | Custom cluster endpoints |
-| 30 | Friendli | IaaS | `https://api.friendli.ai/serverless/v1` |
-| 31 | Inceptron | IaaS | Custom endpoint |
-| 32 | Infermatic | IaaS | `https://api.totalgpt.ai` |
-| 33 | Mancer | IaaS | `https://mancer.tech/oai/v1` |
-| 34 | Morph | IaaS | `https://api.morphllm.com/v1` |
-| 35 | AionLabs | IaaS | `https://api.aionlabs.ai/v1` |
-| 36 | HuggingFace Inference | IaaS | `https://router.huggingface.co/v1` |
-| 37 | NVIDIA NIM | IaaS | `https://integrate.api.nvidia.com/v1` |
-| 38 | Hyperbolic | IaaS | `https://api.hyperbolic.xyz/v1` |
-| 39 | Lepton AI | IaaS | `https://api.lepton.ai/v1` |
-| 40 | Kluster.ai | IaaS | `https://api.kluster.ai/v1` |
-| 41 | Anyscale Endpoints | IaaS | `https://api.endpoints.anyscale.com/v1` |
-| 42 | Replicate | IaaS | `https://api.replicate.com/v1` |
-| 43 | Inference.net | IaaS | `https://api.inference.net/v1` |
-| 44 | Arcee AI | IaaS | `https://conductor.arcee.ai/v1` |
-| 45 | Glhf.chat | IaaS | `https://glhf.chat/api/openai/v1` |
-| 46 | AkashML | Sovereign / Cloud | `https://api.akashml.com/v1` |
-| 47 | AtlasCloud | Sovereign / Cloud | `https://api.atlascloud.ai/v1` |
-| 48 | Chutes | Sovereign / Cloud | `https://llm.chutes.ai/v1` |
-| 49 | Cloudflare Workers AI | Sovereign / Cloud | `https://api.cloudflare.com/client/v4/accounts/{id}/ai/v1` |
-| 50 | DigitalOcean | Sovereign / Cloud | `https://inference.do-ai.run/v1/` |
-| 51 | GMICloud | Sovereign / Cloud | `https://api.gmi-serving.com/v1` |
-| 52 | io.net | Sovereign / Cloud | `https://api.intelligence.io.solutions/api/v1` |
-| 53 | NextBit | Sovereign / Cloud | `https://api.nextbit256.com/v1` |
-| 54 | Novita | Sovereign / Cloud | `https://api.novita.ai/openai/v1` |
-| 55 | Parasail | Sovereign / Cloud | `https://api.saas.parasail.io/v1` |
-| 56 | Phala | Sovereign / Cloud | `POST /v1/chat/completions` |
-| 57 | Poolside | Sovereign / Cloud | `https://divers.poolsi.de/openai/v1/` |
-| 58 | Venice | Sovereign / Cloud | `https://api.venice.ai/api/v1` |
-| 59 | Wafer | Sovereign / Cloud | `https://pass.wafer.ai/v1` |
-| 60 | Azure OpenAI | Sovereign / Cloud | `https://<resource>.openai.azure.com/openai/v1` |
-| 61 | Google Vertex AI | Sovereign / Cloud | Region-dependent |
-| 62 | Amazon Bedrock | Sovereign / Cloud | `https://bedrock-runtime.<region>.amazonaws.com` |
-| 63 | Baseten | Sovereign / Cloud | `https://model-{id}.api.baseten.co/v1` |
-| 64 | Clarifai | Sovereign / Cloud | Custom endpoints |
-| 65 | Scaleway | Sovereign / Cloud | `https://api.scaleway.ai/v1` |
-| 66 | OVHcloud AI Endpoints | Sovereign / Cloud | `https://oai.endpoints.kepler.ai.cloud.ovh.net/v1` |
-| 67 | GitHub Models | Sovereign / Cloud | `https://models.inference.ai.azure.com` |
-| 68 | Modal | Sovereign / Cloud | `https://<app>.modal.run/v1` |
-| 69 | OpenRouter | Gateway | `https://openrouter.ai/api/v1` |
-| 70 | Opper | Gateway | `https://api.opper.ai/v3/compat` |
-| 71 | Axiom | Gateway | `https://cloud.axiomstudio.ai/rest/v1/llm-gateway/v1/` |
-| 72 | Switchpoint | Gateway | `https://api.ppq.ai` |
-| 73 | Relace | Gateway | `https://api.relace.ai/v1` |
-| 74 | Moonshot AI | Gateway | `https://api.moonshot.ai/v1` |
-| 75 | OpenInference | Gateway | Tracing / observability |
-| 76 | Weights & Biases | Gateway | Evaluation registry |
-| 77 | Perceptron | Gateway | Custom gateway |
-| 78 | Portkey | Gateway | `https://api.portkey.ai/v1` |
-| 79 | LiteLLM | Gateway | `http://localhost:4000/v1` (self-hosted) |
-| 80 | Requesty | Gateway | `https://router.requesty.ai/v1` |
-| 81 | Unify.ai | Gateway | `https://api.unify.ai/v0` |
-| 82 | Helicone | Gateway | `https://ai-gateway.helicone.ai/v1` |
-| 83 | Vercel AI Gateway | Gateway | `https://ai-gateway.vercel.sh/v1` |
-| 84 | Cloudflare AI Gateway | Gateway | `https://gateway.ai.cloudflare.com/v1` |
-| 85 | Kong AI Gateway | Gateway | Self-hosted / enterprise |
-| 86 | AIMLAPI | Aggregator | `https://api.aimlapi.com/v1` |
-| 87 | Eden AI | Aggregator | `https://api.edenai.co/v2` |
-| 88 | LemonData | Aggregator | `https://api.lemondata.ai/v1` |
-| 89 | Coze (ByteDance) | Aggregator | `https://api.coze.com/v1` |
-| 90 | NLP Cloud | Specialized | `https://api.nlpcloud.io/v1` |
-| 91 | Puter.js | Specialized | `https://api.puter.com/ai/chat` |
-| 92 | Ollama | Local | `http://localhost:11434/v1` |
-| 93 | LM Studio | Local | `http://localhost:1234/v1` |
-| 94 | llama.cpp | Local | `http://localhost:8080/v1` |
-| 95 | Jan.ai | Local | `http://localhost:1337/v1` |
-| 96 | vLLM | Local | `http://localhost:8000/v1` |
-| 97 | LocalAI | Local | `http://localhost:8080/v1` |
-| 98 | 302.AI | Aggregator | `https://api.302.ai/v1` |
-| 99 | Atomic Chat | Local | `http://127.0.0.1:1337/v1` |
-| 100 | Azure Cognitive Services | Sovereign / Cloud | `https://<resource>.cognitiveservices.azure.com/openai/v1` |
-| 101 | Cortecs | Gateway | `https://api.cortecs.ai/v1` |
-| 102 | FrogBot | Aggregator | `https://app.frogbot.ai/api` |
-| 103 | GitLab Duo | Sovereign / Cloud | `https://gitlab.com/api/v4/ai` |
-| 104 | GitHub Copilot | Sovereign / Cloud | OAuth device flow (Copilot subscription) |
-| 105 | Ollama Cloud | IaaS | `https://ollama.com/api` |
-| 106 | OpenCode Zen | Gateway | `https://opencode.ai/zen/v1` |
-| 107 | OpenCode Go | Gateway | `https://opencode.ai/zen/go/v1` |
-| 108 | LLM Gateway | Gateway | `https://api.llmgateway.io/v1` |
-| 109 | SAP AI Core | Sovereign / Cloud | `https://api.ai.<region>.<landscape>.ml.hana.ondemand.com/v2` |
-| 110 | STACKIT AI Model Serving | Sovereign / Cloud | `https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1` |
-| 111 | Snowflake Cortex | Sovereign / Cloud | `https://<account>.snowflakecomputing.com/api/v2/cortex/v1` |
-| 112 | ZenMux | Gateway | `https://zenmux.ai/api/v1` |
-| 113 | Sakana AI (Fugu) | Gateway | `https://api.sakana.ai/v1` |
-| 114 | Prism API | Gateway | `https://sub2api.558686.xyz/v1` |
-| 115 | DiscountedTokens | Discount / Budget API | `https://discountedtokens.com/v1` |
-| 116 | XiuRouter | Gateway | `https://router-api.xiu.ai/v1` |
-| 117 | SAGG | Gateway | `https://api.privatedeskai.com/v1` |
-| 118 | AIWave | Gateway | `https://aiwave.live/v1` |
-| 118 | Bifrost | Gateway | `http://localhost:8080/v1` (self-hosted) |
-
----
-
-## How Providers Are Organized
-
-```
-┌─────────────────────────────────────────┐
-│     Your App (OpenAI / Anthropic SDK)   │
-└────────────────────┬────────────────────┘
-                     │
-┌────────────────────▼────────────────────┐
-│  Gateways (OpenRouter, Portkey, Opper)  │  ← optional routing layer
-└─────────┬───────────┬───────────┬───────┘
-          │           │           │
-   ┌──────▼───┐ ┌─────▼─────┐ ┌──▼──────────┐
-   │ Frontier │ │ IaaS /    │ │ Sovereign / │
-   │ APIs     │ │ Inference │ │ Private     │
-   │ OpenAI,  │ │ Groq, HF  │ │ Azure, AWS  │
-   │ Claude,  │ │ Together  │ │ Vertex, EU  │
-   │ Gemini   │ │ Fireworks │ │ clouds      │
-   └──────────┘ └───────────┘ └─────────────┘
-```
-
-| Category | Count | Best for | Trade-off |
-|----------|-------|----------|-----------|
-| **Frontier APIs** | 18 | Best reasoning, agents, multimodal | Higher cost, vendor lock-in |
-| **IaaS / Inference** | 27 | Speed, open-weight models, low cost | Model catalog varies by host |
-| **Sovereign / Enterprise** | 29 | GDPR, VPC, compliance | More setup & procurement |
-| **Gateways & Routers** | 26 | One key, failover, observability | Extra hop, gateway fees |
-| **Aggregators** | 6 | Multi-vendor under one bill | Less control over routing |
-| **Local / Self-hosted** | 7 | Privacy, unlimited, offline | You manage hardware |
-
----
-
-## Official Frontier Model Developers
-
-Companies that train and ship their own foundation models.
-
-| Provider | Website | API Base URL | Popular Models | Notes |
-|----------|---------|--------------|----------------|-------|
-| **Google AI Studio** | [aistudio.google.com](https://aistudio.google.com) | `https://generativelanguage.googleapis.com` | Gemini 3.5, 3.1, 2.5 | Up to 2M context; free tier on Flash variants |
-| **Anthropic** | [anthropic.com](https://www.anthropic.com) | `https://api.anthropic.com` | Claude Opus 4.8, Sonnet 4.6, Haiku 4.5 | Native Messages API (not OpenAI-compatible) |
-| **OpenAI** | [platform.openai.com](https://platform.openai.com) | `https://api.openai.com/v1` | GPT-5.5, GPT-5.4, GPT-4.1, GPT-4o, o3-mini | Industry-standard SDK ecosystem |
-| **DeepSeek** | [platform.deepseek.com](https://platform.deepseek.com) | `https://api.deepseek.com/v1` | DeepSeek-V4-Pro, V4-Flash, R1 | OpenAI + Anthropic format; context caching |
-| **Mistral AI** | [console.mistral.ai](https://console.mistral.ai) | `https://api.mistral.ai/v1` | Mistral Medium 3.5, Small 4, Ministral 3 | EU-hosted; generous experiment tier |
-| **xAI** | [x.ai](https://x.ai) | `https://api.x.ai/v1` | Grok-3, Grok-2 | Real-time streaming & agent workflows |
-| **Cohere** | [cohere.com](https://cohere.com) | `https://api.cohere.com/v2` | Command R+, Embed v4, Rerank 3.5 | Enterprise search & RAG |
-| **AI21 Labs** | [studio.ai21.com](https://studio.ai21.com) | `https://api.ai21.com/studio/v1` | Jamba 1.5 Large, Jamba 1.5 Mini | Long-context hybrid architecture |
-| **Baidu Qianfan** | [cloud.baidu.com](https://cloud.baidu.com/product/wenxinworkshop) | `https://api.baiduqianfan.ai/v1` | ERNIE 4.0 Turbo, Speed, Lite | Chinese-language optimized |
-| **StepFun** | [platform.stepfun.com](https://platform.stepfun.com) | `https://api.stepfun.com/v1` | Step 3.5 Flash, Step-series | Multilingual agent pipelines |
-| **Z.ai (Zhipu AI)** | [open.bigmodel.cn](https://open.bigmodel.cn) | `https://open.bigmodel.cn/api/paas/v4/` | GLM-5, GLM-4.7, GLM-4.7-Flash | Strong bilingual CN/EN performance |
-| **Xiaomi** | [xiaomi.com](https://xiaomi.com) | Custom endpoint | Mimo-v2-pro | On-device & edge deployments |
-| **Reka AI** | [reka.ai](https://reka.ai) | `https://api.reka.ai/v1` | Reka Core, Reka Flash | Video, audio & text multimodal |
-| **Inflection** | [inflection.ai](https://inflection.ai) | Custom webhooks | Pi-series | Conversational assistant focus |
-| **MiniMax** | [platform.minimax.io](https://platform.minimax.io) | `https://api.minimax.io/v1` | MiniMax-M3, M2.1, M2 | OpenAI + Anthropic compatible; agentic |
-| **Alibaba DashScope** | [alibabacloud.com](https://www.alibabacloud.com) | `https://dashscope-intl.aliyuncs.com/compatible-mode/v1` | Qwen3-Max, Qwen-Plus, Qwen-Flash | Alibaba Cloud Model Studio; Qwen family |
-| **Upstage** | [console.upstage.ai](https://console.upstage.ai) | `https://api.upstage.ai/v1/solar` | Solar Pro 3, Solar Mini | Korean AI lab; strong document AI |
-| **Perplexity** | [docs.perplexity.ai](https://docs.perplexity.ai) | `https://api.perplexity.ai` | Sonar, Sonar Pro, Sonar Reasoning | Search-grounded answers with citations |
-
----
-
-## High-Performance Inference Platforms (IaaS)
-
-Hosted open-weight models on optimized hardware — great for **low latency** and **low cost per token**.
-
-| Provider | Website | API Base URL | Popular Models | Notes |
-|----------|---------|--------------|----------------|-------|
-| **Groq** | [console.groq.com](https://console.groq.com) | `https://api.groq.com/openai/v1` | Llama 3.3 70B, Llama 3.1 8B, Gemma 2 9B | LPU hardware; extremely fast TTFT |
-| **Cerebras** | [cerebras.ai](https://cerebras.ai) | `https://api.cerebras.ai/v1` | Llama 3.3 70B, GPT-OSS 120B, Qwen 3 32B | Wafer-scale engine throughput |
-| **SambaNova** | [sambanova.ai](https://sambanova.ai) | `https://api.sambanova.ai/v1` | Llama 3.1 405B, Llama 3.3 70B, Qwen | RDU serving for large models |
-| **Together AI** | [together.ai](https://together.ai) | `https://api.together.xyz/v1` | Llama 3.3, DeepSeek-V4, Qwen, FLUX.1 | Large catalog + fine-tuning |
-| **Fireworks AI** | [fireworks.ai](https://fireworks.ai) | `https://api.fireworks.ai/inference/v1` | Qwen 3.6 Plus, Kimi K2.6, Llama 4 Maverick | Serverless low-latency serving |
-| **DeepInfra** | [deepinfra.com](https://deepinfra.com) | `https://api.deepinfra.com/v1/openai` | Llama 3.3, Qwen 3, DeepSeek-V4, Mistral | Aggressive open-model pricing |
-| **Nebius AI Studio** | [studio.nebius.ai](https://studio.nebius.ai) | `https://api.studio.nebius.ai/v1` | DeepSeek-R1-0528, Llama 3.3 70B | EU infrastructure; Token Factory |
-| **SiliconFlow** | [siliconflow.com](https://siliconflow.com) | `https://api.siliconflow.cn/v1` | DeepSeek-R1-0528, MiniMax-M2, Qwen3-VL | Excellent cost/performance (CN) |
-| **Inception** | [inceptionlabs.ai](https://inceptionlabs.ai) | `https://api.inceptionlabs.ai/v1` | Mercury-2, Mercury-Edit-2 | Diffusion language models (dLLMs) |
-| **Liquid AI** | [liquid.ai](https://liquid.ai) | Custom cluster endpoints | LFM2.5 Instruct, LFM2-24B | Hybrid efficient architectures |
-| **Friendli** | [friendli.ai](https://friendli.ai) | `https://api.friendli.ai/serverless/v1` | Llama 3.1 8B, DeepSeek-R1 | Custom checkpoints & private instances |
-| **Inceptron** | [inceptron.io](https://inceptron.io) | Custom endpoint | Open-weight LLMs | Self-configured model hosting |
-| **Infermatic** | [infermatic.ai](https://infermatic.ai) | `https://api.totalgpt.ai` | Rocinante, Midnight Miqu, Llama | Flat-rate community checkpoints |
-| **Mancer** | [mancer.tech](https://mancer.tech) | `https://mancer.tech/oai/v1` | Goliath 120B, MythoMax, LumiMaid | Creative / roleplay fine-tunes |
-| **Morph** | [morphllm.com](https://morphllm.com) | `https://api.morphllm.com/v1` | morph-qwen35-397b, morph-qwen36-27b | Fast code editing & routing |
-| **AionLabs** | [aionlabs.ai](https://aionlabs.ai) | `https://api.aionlabs.ai/v1` | Aion 2.0, Aion-RP | Creative multi-turn fine-tunes |
-| **HuggingFace Inference** | [huggingface.co](https://huggingface.co) | `https://router.huggingface.co/v1` | Llama 3.3 70B, Qwen 2.5 72B | Huge model catalog; free tier available |
-| **NVIDIA NIM** | [build.nvidia.com](https://build.nvidia.com) | `https://integrate.api.nvidia.com/v1` | Llama 3.3 70B, DeepSeek-R1 | NVIDIA inference microservices |
-| **Hyperbolic** | [hyperbolic.xyz](https://app.hyperbolic.xyz) | `https://api.hyperbolic.xyz/v1` | DeepSeek-V3, Llama 3.3 70B | Decentralized GPU compute |
-| **Lepton AI** | [lepton.ai](https://lepton.ai) | `https://api.lepton.ai/v1` | Llama 3.3 70B | Fast serverless inference |
-| **Kluster.ai** | [kluster.ai](https://kluster.ai) | `https://api.kluster.ai/v1` | Llama 3.1 405B, Qwen 2.5 72B | Batch inference specialist |
-| **Anyscale Endpoints** | [anyscale.com](https://app.endpoints.anyscale.com) | `https://api.endpoints.anyscale.com/v1` | Llama 3.3 70B, Mixtral 8x22B | Ray-based model serving |
-| **Replicate** | [replicate.com](https://replicate.com) | `https://api.replicate.com/v1` | Open models, FLUX, video | Pay-per-run; image/audio/video too |
-| **Inference.net** | [inference.net](https://inference.net) | `https://api.inference.net/v1` | DeepSeek-R1, Llama 3.1 70B | Decentralized inference network |
-| **Arcee AI** | [arcee.ai](https://arcee.ai) | `https://conductor.arcee.ai/v1` | Trinity-Large, Caller-Large | Enterprise fine-tuned models |
-| **Glhf.chat** | [glhf.chat](https://glhf.chat) | `https://glhf.chat/api/openai/v1` | Any HuggingFace model (`hf:` prefix) | vLLM-backed; run any HF model |
-| **Ollama Cloud** | [ollama.com](https://ollama.com) | `https://ollama.com/api` | gpt-oss:20b-cloud, gpt-oss:120b | Remote Ollama host; OpenCode-supported |
-
----
-
-## Decentralized, Sovereign & Enterprise Clouds
-
-Regional compliance, private networking, decentralized compute, and enterprise MLOps.
-
-| Provider | Website | API Base URL | Popular Models | Notes |
-|----------|---------|--------------|----------------|-------|
-| **AkashML** | [akash.network](https://akash.network) | `https://api.akashml.com/v1` | Llama 3, Qwen, DeepSeek | Decentralized GPU marketplace |
-| **AtlasCloud** | [atlascloud.ai](https://atlascloud.ai) | `https://api.atlascloud.ai/v1` | DeepSeek-V3, Seedance 2.0, Kling 3.0 | Language + image + video APIs |
-| **Chutes** | [chutes.ai](https://chutes.ai) | `https://llm.chutes.ai/v1` | Kimi, GLM, Qwen, MiniMax | Serverless custom model deploy |
-| **Cloudflare Workers AI** | [cloudflare.com](https://cloudflare.com) | `https://api.cloudflare.com/client/v4/accounts/{id}/ai/v1` | Llama 3.3, Gemma 4, Kimi K2.5, FLUX | Edge inference; neuron-second billing |
-| **Dasha Compute** | [getdasha.com/compute](https://www.getdasha.com/compute) | Open alpha | qwen3-8b, gemma3-12b, gemma3-27b | OpenAI-compatible API on a network of real Apple-silicon Macs; providers paid per job in USDC |
-| **DigitalOcean** | [digitalocean.com](https://digitalocean.com) | `https://inference.do-ai.run/v1/` | Llama 3 8B Instruct | Integrates with App Platform |
-| **GMICloud** | [gmicloud.ai](https://gmicloud.ai) | `https://api.gmi-serving.com/v1` | GLM-5.1-FP8, DeepSeek-V3.2 | Enterprise H100 GPU cloud |
-| **io.net** | [io.net](https://io.net) | `https://api.intelligence.io.solutions/api/v1` | GLM-4.5-Air, GPT-OSS 120B, Llama 3.3 | DePIN GPU clusters |
-| **NextBit** | [nextbit256.com](https://nextbit256.com) | `https://api.nextbit256.com/v1` | qwen:3.5-35b, qwen3:30b, qwen3:14b | EU data centers (Spain) |
-| **Novita** | [novita.ai](https://novita.ai) | `https://api.novita.ai/openai/v1` | Kimi K2.5, Llama, Qwen | Model APIs + agent sandboxes |
-| **Parasail** | [parasail.io](https://parasail.io) | `https://api.saas.parasail.io/v1` | DeepSeek-R1, QwenCoder 32B | Serverless + dedicated instances |
-| **Phala** | [phala.network](https://phala.network) | `POST /v1/chat/completions` | Qwen2.5-72B-Instruct | TEE confidential execution |
-| **Poolside** | [poolside.ai](https://poolside.ai) | `https://divers.poolsi.de/openai/v1/` | Laguna XS.2, Laguna M.1 | Code generation focus |
-| **Venice** | [venice.ai](https://venice.ai) | `https://api.venice.ai/api/v1` | llama-3.3-70b, fluently-xl | Privacy-first; web3 auth |
-| **Wafer** | [wafer.ai](https://wafer.ai) | `https://pass.wafer.ai/v1` | Qwen3.5-397B-A17B, GLM-5.1 | Fast serverless; Claude Code compatible |
-| **Azure OpenAI** | [azure.microsoft.com](https://azure.microsoft.com) | `https://<resource>.openai.azure.com/openai/v1` | OpenAI, Anthropic, Llama | Enterprise Microsoft integration |
-| **Google Vertex AI** | [cloud.google.com/vertex-ai](https://cloud.google.com/vertex-ai) | Region-dependent | Gemini, Claude, partners | VPC, IAM, enterprise procurement |
-| **Amazon Bedrock** | [aws.amazon.com/bedrock](https://aws.amazon.com/bedrock) | `https://bedrock-runtime.<region>.amazonaws.com` | Claude, Llama, Titan, Mistral | AWS-native; IAM & VPC integration |
-| **Baseten** | [baseten.co](https://baseten.co) | `https://model-{id}.api.baseten.co/v1` | Llama 3.3, DeepSeek-R1, custom | MLOps with Truss packaging |
-| **Clarifai** | [clarifai.com](https://clarifai.com) | Custom endpoints | Multimodal models | Data labeling & classification |
-| **Scaleway** | [scaleway.com](https://console.scaleway.com) | `https://api.scaleway.ai/v1` | Llama 3.3 70B, DeepSeek-R1 | European cloud; GDPR-compliant |
-| **OVHcloud AI** | [ovhcloud.com](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) | `https://oai.endpoints.kepler.ai.cloud.ovh.net/v1` | Llama 3.1 70B, Qwen 2.5 72B | EU-hosted open models |
-| **GitHub Models** | [github.com/marketplace/models](https://github.com/marketplace/models) | `https://models.inference.ai.azure.com` | GPT-4o, Llama 3.1 70B | Free tier with GitHub PAT |
-| **Modal** | [modal.com](https://modal.com) | `https://<app>.modal.run/v1` | Any (self-deployed via vLLM) | Serverless GPU; deploy your own models |
-| **Azure Cognitive Services** | [azure.microsoft.com](https://azure.microsoft.com/products/ai-services) | `https://<resource>.cognitiveservices.azure.com/openai/v1` | GPT-4o, GPT-4.1, o3-mini | Separate from Azure OpenAI; OpenCode-supported |
-| **GitLab Duo** | [about.gitlab.com](https://about.gitlab.com/gitlab-duo/) | `https://gitlab.com/api/v4/ai` | duo-chat-haiku/sonnet/opus-4-5 | OAuth or PAT; Premium/Ultimate |
-| **GitHub Copilot** | [github.com/features/copilot](https://github.com/features/copilot) | OAuth device flow | GPT-4o, Claude, o3-mini | Copilot subscription; OpenCode `/connect` |
-| **SAP AI Core** | [sap.com](https://www.sap.com/products/artificial-intelligence/ai-core.html) | `https://api.ai.<region>.ml.hana.ondemand.com/v2` | GPT-4o, Claude, Gemini, Llama | BTP service key JSON auth |
-| **STACKIT AI Model Serving** | [stackit.de](https://www.stackit.de/en/product/stackit-ai-model-serving) | `https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1` | Qwen3-VL 235B, Llama 3.3 70B | EU sovereign hosting |
-| **Snowflake Cortex** | [snowflake.com](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-llm-rest-api) | `https://<account>.snowflakecomputing.com/api/v2/cortex/v1` | Claude Sonnet/Haiku 4.x, GPT-5 | OAuth or PAT; in-perimeter inference |
-
----
-
-## Multi-Provider Gateways & Routers
-
-One API surface for many upstream providers — ideal for **failover**, **cost optimization**, and **reducing credential sprawl**.
-
-| Provider | Website | API Base URL | What you get | Notes |
-|----------|---------|--------------|--------------|-------|
-| **AIWave** | [aiwave.live](https://aiwave.live/) | `https://aiwave.live/v1` | Chinese AI providers through one OpenAI-compatible route | USD billing, dated pricing, and request-level usage records |
-| **OpenRouter** | [openrouter.ai](https://openrouter.ai) | `https://openrouter.ai/api/v1` | 300+ models from 60+ providers | Auto fallback & provider selection |
-| **Opper** | [opper.ai](https://opper.ai) | `https://api.opper.ai/v3/compat` | 300+ routed models | EU-hosted; PII shielding |
-| **Axiom** | [axiomstudio.ai](https://axiomstudio.ai) | `https://cloud.axiomstudio.ai/rest/v1/llm-gateway/v1/` | 18+ unified providers | Kubernetes-native enterprise routing |
-| **Switchpoint** | [switchpoint.ai](https://switchpoint.ai) | `https://api.ppq.ai` | Intelligent router | Request-aware provider selection |
-| **Relace** | [relace.ai](https://relace.ai) | `https://api.relace.ai/v1` | Apply 3, Search | Coding APIs; zero data retention default |
-| **Moonshot AI** | [api.moonshot.ai](https://api.moonshot.ai/v1) | `https://api.moonshot.ai/v1` | Kimi K2.7 Code, K2.6 | First-party Kimi gateway |
-| **Portkey** | [portkey.ai](https://portkey.ai) | `https://api.portkey.ai/v1` | 250+ models | Guardrails, caching, observability |
-| **LiteLLM** | [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm) | `http://localhost:4000/v1` | 100+ providers | Open-source; self-host or cloud |
-| **Bifrost** | [github.com/maximhq/bifrost](https://github.com/maximhq/bifrost) | `http://localhost:8080/v1` | 1000+ models | Open-source Go gateway; adaptive load balancing, guardrails, virtual keys |
-| **Requesty** | [requesty.ai](https://requesty.ai) | `https://router.requesty.ai/v1` | Multi-provider routing | Auto-failover between providers |
-| **Unify.ai** | [unify.ai](https://unify.ai) | `https://api.unify.ai/v0` | ML-based routing | Picks optimal provider per query |
-| **Helicone** | [helicone.ai](https://helicone.ai) | `https://ai-gateway.helicone.ai/v1` | 100+ models | Observability-first AI gateway |
-| **Vercel AI Gateway** | [vercel.com](https://vercel.com/docs/ai-gateway) | `https://ai-gateway.vercel.sh/v1` | All major providers | Bundled with Vercel platform |
-| **Cloudflare AI Gateway** | [cloudflare.com](https://developers.cloudflare.com/ai-gateway/) | `https://gateway.ai.cloudflare.com/v1` | Any upstream provider | Edge caching; sits in front of APIs |
-| **Kong AI Gateway** | [konghq.com](https://konghq.com/products/kong-ai-gateway) | Self-hosted | Enterprise routing | For existing Kong infrastructure |
-| **OpenInference** | [openinference.ai](https://openinference.ai) | Tracing / observability | LLM telemetry | Execution graph tracing |
-| **Weights & Biases** | [wandb.ai](https://wandb.ai) | Evaluation registry | Model benchmarking | Experiment tracking |
-| **Perceptron** | [perceptron.ai](https://perceptron.ai) | Custom gateway | Enterprise routes | Custom middleware routing |
-| **Cortecs** | [cortecs.ai](https://cortecs.ai) | `https://api.cortecs.ai/v1` | Kimi K2, GPT-5 Mini | EU GDPR-compliant LLM router |
-| **OpenCode Zen** | [opencode.ai/zen](https://opencode.ai/zen) | `https://opencode.ai/zen/v1` | GPT-5.5, Claude Sonnet 4.6, Qwen Coder | Curated models for coding agents |
-| **OpenCode Go** | [opencode.ai/docs/go](https://opencode.ai/docs/go/) | `https://opencode.ai/zen/go/v1` | Kimi K2.7, GLM-5.1, DeepSeek V4 | Low-cost open coding models |
-| **LLM Gateway** | [llmgateway.io](https://llmgateway.io) | `https://api.llmgateway.io/v1` | GPT-4o, Claude, Gemini, GLM | Unified routing; OpenCode-supported |
-| **ZenMux** | [zenmux.ai](https://zenmux.ai) | `https://zenmux.ai/api/v1` | 200+ routed models | Enterprise routing & failover |
-| **Sakana AI (Fugu)** | [console.sakana.ai](https://console.sakana.ai) | `https://api.sakana.ai/v1` | Fugu, Fugu Ultra | Trained orchestrator; routes frontier LLM pool |
-| **Prism API** | [prism-api-promo](https://go165.github.io/prism-api-promo/) | `https://sub2api.558686.xyz/v1` | GPT-5.5, GPT-5.4, Claude, Gemini | Independent OpenAI-compatible gateway; crypto-friendly recharge/vouchers; overseas users |
-| **XiuRouter** | [router.xiu.ai](https://router.xiu.ai/) | `https://router-api.xiu.ai/v1` | GPT-5.6 Sol, GPT-5.5, Claude Opus 5, GPT-5.4 | Usage-based gateway with OpenAI, Anthropic, and Gemini protocol support |
-| **SAGG** | [api.privatedeskai.com](https://api.privatedeskai.com) | `https://api.privatedeskai.com/v1` | deepseek-ai/DeepSeek-V4-Flash-0731 | Multi-provider failover gateway; flat-rate Super Deal tier also available |
-
----
-
-## Aggregators & API Marketplaces
-
-Single API key to access models from multiple upstream vendors.
-
-| Provider | Website | API Base URL | Popular Models | Notes |
-|----------|---------|--------------|----------------|-------|
-| **AIMLAPI** | [aimlapi.com](https://aimlapi.com) | `https://api.aimlapi.com/v1` | GPT-4o, Claude 3.5, Gemini | 300+ models; free tier available |
-| **Eden AI** | [edenai.co](https://edenai.co) | `https://api.edenai.co/v2` | OpenAI, Google, Anthropic routes | Multi-provider under one API |
-| **LemonData** | [lemondata.ai](https://lemondata.ai) | `https://api.lemondata.ai/v1` | GPT-4o, Claude 3.5, open models | 300+ models; $1 free credits |
-| **Coze (ByteDance)** | [coze.com](https://coze.com) | `https://api.coze.com/v1` | Via bots: GPT-4o, Gemini, Claude | Bot-builder platform with LLM backends |
-| **302.AI** | [302.ai](https://302.ai) | `https://api.302.ai/v1` | GLM-5, GPT-4o, Claude Sonnet | 100+ models; OpenCode-supported |
-| **FrogBot** | [frogbot.ai](https://frogbot.ai) | `https://app.frogbot.ai/api` | Claude, GPT-4o, Gemini | Unified AI subscription |
-
----
-
-## Embeddings & Specialized APIs
-
-Providers focused on specific tasks rather than general chat.
-
-| Provider | Website | API Base URL | Specialty | Notes |
-|----------|---------|--------------|-----------|-------|
-| **Voyage AI** | [voyageai.com](https://www.voyageai.com) | `https://api.voyageai.com/v1` | Embeddings & rerankers | Top-tier retrieval embeddings |
-| **Perplexity** | [docs.perplexity.ai](https://docs.perplexity.ai) | `https://api.perplexity.ai` | Search-grounded chat | Real-time web search in responses |
-| **NLP Cloud** | [nlpcloud.com](https://nlpcloud.com) | `https://api.nlpcloud.io/v1` | NER, summarization, chat | Custom API format; fine-tuned models |
-| **Puter.js** | [puter.com](https://puter.com) | `https://api.puter.com/ai/chat` | Free GPT/Claude/Gemini access | No API key needed; web/Node.js SDK |
-
----
-
-## Local & Self-Hosted Runtimes
-
-Run models on your own machine — **free, private, and unlimited**.
-
-| Provider | Website | API Base URL | Popular Models | Notes |
-|----------|---------|--------------|----------------|-------|
-| **Ollama** | [ollama.com](https://ollama.com) | `http://localhost:11434/v1` | Llama 3.3, Qwen 2.5, Gemma | Easiest local setup; 50+ models |
-| **LM Studio** | [lmstudio.ai](https://lmstudio.ai) | `http://localhost:1234/v1` | Any GGUF from HuggingFace | Best GUI; drag-and-drop models |
-| **llama.cpp** | [github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) | `http://localhost:8080/v1` | Any GGUF model | Foundation for most local tools |
-| **Jan.ai** | [jan.ai](https://jan.ai) | `http://localhost:1337/v1` | Supported local models | 100% offline desktop app |
-| **vLLM** | [github.com/vllm-project/vllm](https://github.com/vllm-project/vllm) | `http://localhost:8000/v1` | Any compatible checkpoint | Production-grade local serving |
-| **LocalAI** | [localai.io](https://localai.io) | `http://localhost:8080/v1` | OpenAI-compatible local stack | Drop-in OpenAI API replacement |
-| **Atomic Chat** | [atomicchat.ai](https://atomicchat.ai) | `http://127.0.0.1:1337/v1` | Qwen-Coder, DeepSeek-Coder | Desktop local server; OpenCode-supported |
-
----
-
-## Environment Variables Cheat Sheet
-
-Copy these into your `.env` file or secrets manager:
-
-| Provider | Env Variable | API Base URL |
-|----------|--------------|--------------|
-| Google AI Studio | `GEMINI_API_KEY` | `https://generativelanguage.googleapis.com` |
-| Anthropic | `ANTHROPIC_API_KEY` | `https://api.anthropic.com` |
-| OpenAI | `OPENAI_API_KEY` | `https://api.openai.com/v1` |
-| DeepSeek | `DEEPSEEK_API_KEY` | `https://api.deepseek.com/v1` |
-| Mistral AI | `MISTRAL_API_KEY` | `https://api.mistral.ai/v1` |
-| xAI | `XAI_API_KEY` | `https://api.x.ai/v1` |
-| Groq | `GROQ_API_KEY` | `https://api.groq.com/openai/v1` |
-| Together AI | `TOGETHER_API_KEY` | `https://api.together.xyz/v1` |
-| Fireworks AI | `FIREWORKS_API_KEY` | `https://api.fireworks.ai/inference/v1` |
-| Nebius Studio | `NEBIUS_API_KEY` | `https://api.tokenfactory.nebius.com/v1/` |
-| GMI Cloud | `GMI_API_KEY` | `https://api.gmi-serving.com/v1` |
-| Wafer | `WAFER_API_KEY` | `https://pass.wafer.ai/v1` |
-| OpenRouter | `OPENROUTER_API_KEY` | `https://openrouter.ai/api/v1` |
-| Portkey | `PORTKEY_API_KEY` | `https://api.portkey.ai/v1` |
-| Morph | `MORPH_API_KEY` | `https://api.morphllm.com/v1` |
-| MiniMax | `MINIMAX_API_KEY` | `https://api.minimax.io/v1` |
-| Alibaba DashScope | `DASHSCOPE_API_KEY` | `https://dashscope-intl.aliyuncs.com/compatible-mode/v1` |
-| HuggingFace | `HUGGINGFACE_API_KEY` | `https://router.huggingface.co/v1` |
-| NVIDIA NIM | `NVIDIA_API_KEY` | `https://integrate.api.nvidia.com/v1` |
-| Perplexity | `PERPLEXITY_API_KEY` | `https://api.perplexity.ai` |
-| Moonshot / Kimi | `MOONSHOT_API_KEY` | `https://api.moonshot.ai/v1` |
-| GitHub Models | `GITHUB_TOKEN` | `https://models.inference.ai.azure.com` |
-| OpenCode Zen / Go | `OPENCODE_API_KEY` | `https://opencode.ai/zen/v1` |
-| LLM Gateway | `LLM_GATEWAY_API_KEY` | `https://api.llmgateway.io/v1` |
-| ZenMux | `ZENMUX_API_KEY` | `https://zenmux.ai/api/v1` |
-| Sakana AI (Fugu) | `SAKANA_API_KEY` | `https://api.sakana.ai/v1` |
-| Prism API | `PRISM_API_KEY` | `https://sub2api.558686.xyz/v1` |
-| XiuRouter | `XIUROUTER_API_KEY` | `https://router-api.xiu.ai/v1` |
-| STACKIT | `STACKIT_API_KEY` | `https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1` |
-| Snowflake Cortex | `SNOWFLAKE_CORTEX_TOKEN` | `https://<account>.snowflakecomputing.com/api/v2/cortex/v1` |
-| 302.AI | `302AI_API_KEY` | `https://api.302.ai/v1` |
-| SAGG | `SAGG_API_KEY` | `https://api.privatedeskai.com/v1` |
-
----
-
-## Integration Examples
-
-### OpenAI SDK → Any OpenAI-Compatible Provider (Python)
-
-```python
-import os
-from openai import OpenAI
-
-client = OpenAI(
-    base_url="https://api.tokenfactory.nebius.com/v1/",
-    api_key=os.environ["NEBIUS_API_KEY"],
-)
-
-stream = client.chat.completions.create(
-    model="deepseek-ai/DeepSeek-R1-0528",
-    messages=[{"role": "user", "content": "Explain quantum computing in one paragraph."}],
-    temperature=0.1,
-    stream=True,
-)
-
-for chunk in stream:
-    if chunk.choices[0].delta.content:
-        print(chunk.choices[0].delta.content, end="", flush=True)
-```
-
-### Anthropic SDK → Compatible Gateway (Node.js)
-
-```javascript
-import Anthropic from "@anthropic-ai/sdk";
-
-const anthropic = new Anthropic({
-  baseURL: "https://pass.wafer.ai",
-  apiKey: process.env.WAFER_API_KEY,
-});
-
-const message = await anthropic.messages.create({
-  model: "Qwen3.5-397B-A17B",
-  max_tokens: 4096,
-  messages: [{ role: "user", content: "Write a hello world in Rust." }],
-});
-
-console.log(message.content[0].text);
-```
-
-### Alibaba Qwen via OpenAI SDK (Python)
-
-```python
-import os
-from openai import OpenAI
-
-client = OpenAI(
-    api_key=os.environ["DASHSCOPE_API_KEY"],
-    base_url="https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
-)
-
-response = client.chat.completions.create(
-    model="qwen3-max",
-    messages=[{"role": "user", "content": "Hello from Qwen!"}],
-)
-print(response.choices[0].message.content)
-```
-
-### OpenRouter — One Key, Many Models
+Look up any provider from this repo (no extra packages):
 
 ```bash
-curl https://openrouter.ai/api/v1/chat/completions \
-  -H "Authorization: Bearer $OPENROUTER_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "anthropic/claude-sonnet-4",
-    "messages": [{"role": "user", "content": "Hello!"}]
-  }'
+python llm_lookup.py groq
+python llm_lookup.py groq --models
+python llm_lookup.py --category Gateway
+python llm_lookup.py --search-model kimi
 ```
 
----
+One key for many models: [OpenRouter](https://openrouter.ai), [Portkey](https://portkey.ai).
 
-## Choosing the Right Provider
+## Categories
 
-| Your goal | Start here |
-|-----------|------------|
-| Best overall reasoning & tools | OpenAI, Anthropic, Google Gemini |
-| Lowest cost / open models | DeepInfra, Together, SiliconFlow, Groq |
-| EU data residency | Mistral, Nebius, NextBit, Scaleway, OVHcloud, Opper |
-| One API for everything | OpenRouter, Portkey, Opper, AIMLAPI |
-| Code generation | Poolside, Morph, Moonshot Kimi |
-| Privacy / no logging | Venice, Relace (ZDR), Phala (TEE), Local (Ollama) |
-| Enterprise & compliance | Azure OpenAI, Google Vertex AI, Amazon Bedrock |
-| Free tier / prototyping | Groq, Gemini, GitHub Models, HuggingFace, OpenRouter |
-| Chinese models | DeepSeek, Qwen (DashScope), Zhipu, MiniMax, StepFun |
-| Search-grounded answers | Perplexity Sonar |
-| Self-hosted / offline | Ollama, LM Studio, vLLM, LocalAI |
+| Category | Count |
+|----------|-------|
+| [Frontier labs](#frontier-labs) | 56 |
+| [Inference platforms](#inference-platforms) | 40 |
+| [Cloud and enterprise](#cloud-and-enterprise) | 36 |
+| [Gateways and routers](#gateways-and-routers) | 108 |
+| [Aggregators](#aggregators) | 14 |
+| [OAuth and IDE](#oauth-and-ide) | 22 |
+| [Public endpoints](#public-endpoints) | 10 |
+| [Search APIs](#search-apis) | 19 |
+| [Audio](#audio) | 12 |
+| [Image and video](#image-and-video) | 17 |
+| [Cloud agents](#cloud-agents) | 3 |
+| [Embeddings](#embeddings) | 4 |
+| [Specialized](#specialized) | 4 |
+| [Local and self-hosted](#local-and-self-hosted) | 18 |
+| Web cookie adapters (in data only) | 34 |
+| **Total** | **397** |
 
-### Production tips
+Unofficial **web-cookie / browser-session** adapters (34) stay in `data/providers.json` so they do not clutter this page. List them with `python llm_lookup.py --category "Web Cookie"`.
 
-1. **Use a gateway for HA** — Route across 2–3 providers so rate limits or outages don't take down your app.
-2. **Pin model versions** — Providers silently update models. Pin explicit model IDs and monitor output quality.
-3. **Enable context caching** — Gemini, DeepSeek, and Anthropic support caching that can cut costs significantly on repeated prompts.
-4. **Respect data sovereignty** — Route PII and regulated data only through EU or private VPC endpoints.
+## Frontier labs
 
----
+Companies that train their own foundation models.
 
-## Documentation
+| Provider | API Base URL | Models | Env |
+|----------|--------------|--------|-----|
+| [OpenAI](https://platform.openai.com) | `https://api.openai.com/v1` | GPT-5.5, GPT-5.4, GPT-4.1 | `OPENAI_API_KEY` |
+| [Anthropic](https://www.anthropic.com) | `https://api.anthropic.com` | Claude Opus 4.8, Claude Sonnet 4.6, Claude Haiku 4.5 | `ANTHROPIC_API_KEY` |
+| [Google AI Studio](https://aistudio.google.com) | `https://generativelanguage.googleapis.com` | Gemini 3.5, Gemini 3.1, Gemini 2.5 | `GEMINI_API_KEY` |
+| [DeepSeek](https://platform.deepseek.com) | `https://api.deepseek.com/v1` | DeepSeek-V4-Pro, DeepSeek-V4-Flash, DeepSeek-R1 | `DEEPSEEK_API_KEY` |
+| [Mistral AI](https://console.mistral.ai) | `https://api.mistral.ai/v1` | Mistral Medium 3.5, Mistral Small 4, Ministral 3 | `MISTRAL_API_KEY` |
+| [xAI](https://x.ai) | `https://api.x.ai/v1` | Grok-3, Grok-2 | `XAI_API_KEY` |
+| [Cohere](https://cohere.com) | `https://api.cohere.com/v2` | Command R+, Embed v4, Rerank 3.5 | `COHERE_API_KEY` |
+| [AI21 Labs](https://studio.ai21.com) | `https://api.ai21.com/studio/v1` | Jamba 1.5 Large, Jamba 1.5 Mini | `AI21_API_KEY` |
+| [Baidu Qianfan](https://cloud.baidu.com/product/wenxinworkshop) | `https://api.baiduqianfan.ai/v1` | ERNIE 4.0 Turbo, ERNIE Speed, ERNIE Lite | `QIANFAN_API_KEY` |
+| [StepFun](https://platform.stepfun.com) | `https://api.stepfun.com/v1` | Step 3.5 Flash, Step-series | `STEPFUN_API_KEY` |
+| [Z.ai (Zhipu AI)](https://open.bigmodel.cn) | `https://open.bigmodel.cn/api/paas/v4/` | GLM-5, GLM-4.7, GLM-4.7-Flash | `ZHIPU_API_KEY` |
+| [Xiaomi](https://xiaomi.com) | `https://api.xiaomimimo.com/v1` | Mimo-v2-pro | `XIAOMI_API_KEY` |
+| [Reka AI](https://reka.ai) | `https://api.reka.ai/v1` | Reka Core, Reka Flash | `REKA_API_KEY` |
+| [Inflection](https://inflection.ai) | Custom webhooks | Pi-series | — |
+| [MiniMax](https://platform.minimax.io) | `https://api.minimax.io/v1` | MiniMax-M3, MiniMax-M2.1, MiniMax-M2 | `MINIMAX_API_KEY` |
+| [Alibaba DashScope](https://www.alibabacloud.com) | `https://dashscope-intl.aliyuncs.com/compatible-mode/v1` | qwen3-max, Qwen-Plus, Qwen-Flash | `DASHSCOPE_API_KEY` |
+| [Upstage](https://console.upstage.ai) | `https://api.upstage.ai/v1/solar` | Solar Pro 3, Solar Mini | `UPSTAGE_API_KEY` |
+| [Perplexity](https://docs.perplexity.ai) | `https://api.perplexity.ai` | Sonar, Sonar Pro, Sonar Reasoning | `PERPLEXITY_API_KEY` |
+| [Pioneer AI](https://pioneer.ai) | `https://api.pioneer.ai/v1` | Qwen/Qwen3-32B, Qwen/Qwen3.6-27B, Qwen/Qwen3.5-9B | `PIONEER_API_KEY` |
+| [UC Direct (uncensored.com)](https://uncensored.com) | `https://api.uncensored.com/api/v1` | claude-opus-5, claude-opus-5-fast, claude-fable-5 | `UC_DIRECT_API_KEY` |
+| [Blackbox AI](https://blackbox.ai) | `https://api.blackbox.ai/v1` | claude-fable-5, claude-opus-4.8, claude-sonnet-5 | `BLACKBOX_API_KEY` |
+| [Perplexity Agent](https://www.perplexity.ai) | `https://api.perplexity.ai/v1` | openai/gpt-5.6-sol, perplexity/kimi-k3 | `PERPLEXITY_AGENT_API_KEY` |
+| [Meta Llama API](https://llama.developer.meta.com) | `https://api.llama.com/compat/v1` | — | `META_LLAMA_API_KEY` |
+| [Galadriel](https://galadriel.com) | `https://api.galadriel.ai/v1` | — | `GALADRIEL_API_KEY` |
+| [Codestral](https://mistral.ai) | `https://codestral.mistral.ai/v1` | — | `CODESTRAL_API_KEY` |
+| [Maritalk](https://www.maritaca.ai) | `https://chat.maritaca.ai/api` | — | `MARITALK_API_KEY` |
+| [Nous Research](https://portal.nousresearch.com/help) | `https://inference-api.nousresearch.com/v1` | Hermes-4-405B, Hermes-4-70B | `NOUS_RESEARCH_API_KEY` |
+| [Writer](https://dev.writer.com) | `https://api.writer.com/v1` | palmyra-x5, palmyra-x4 | `WRITER_API_KEY` |
+| [GLM Coding](https://z.ai/subscribe) | `https://api.z.ai/api/coding/paas/v4` | glm-5.3-flash, glm-5.3, glm-5.3-high | `GLM_API_KEY` |
+| [GLM Coding (China)](https://open.bigmodel.cn) | `https://open.bigmodel.cn/api/coding/paas/v4` | glm-5.3-flash, glm-5.3, glm-5.3-high | `GLM_CN_API_KEY` |
+| [Alibaba Token Plan](https://www.alibabacloud.com/help/en/model-studio/token-plan-overview) | `https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic/v1` | qwen3.8-max-preview, qwen3.7-max, qwen3.7-plus | `BAILIAN_CODING_PLAN_API_KEY` |
+| [Qwen Cloud](https://www.qwencloud.com) | `https://dashscope-intl.aliyuncs.com/compatible-mode/v1` | qwen3.8-max, qwen3.7-max-2026-06-08, qwen3.7-plus | `QWEN_CLOUD_API_KEY` |
+| [Qwen Cloud Token Plan](https://www.qwencloud.com/pricing/token-plan) | `https://token-plan.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1` | qwen3.8-max, qwen3.7-max, qwen3.7-plus | `QWEN_CLOUD_TOKEN_PLAN_API_KEY` |
+| [Kimi Code API Key](https://www.kimi.com/code) | `https://api.kimi.com/coding/v1` | — | `KIMI_CODING_API_KEY` |
+| [Minimax (China)](https://www.minimaxi.com) | `https://api.minimaxi.com/v1` | MiniMax-M3, MiniMax-M2.7, MiniMax-M2.7-highspeed | `MINIMAX_CN_API_KEY` |
+| [Alibaba (China)](https://dashscope.console.aliyun.com) | `https://dashscope.aliyuncs.com/compatible-mode/v1` | — | `ALIBABA_CN_API_KEY` |
+| [LongCat AI](https://longcat.chat/platform/docs) | `https://api.longcat.chat/openai/v1` | LongCat-2.0 | `LONGCAT_API_KEY` |
+| [Volcengine Ark Agent Plan](https://console.volcengine.com/ark/region:cn-beijing/subscription/agent-plan) | `https://ark.cn-beijing.volces.com/api/plan/v3` | doubao-seed-evolving, doubao-seed-2-1-turbo-260628, doubao-seed-2-0-lite-260215 | `VOLCENGINE_AGENT_PLAN_API_KEY` |
+| [Volcengine Ark Coding Plan](https://console.volcengine.com/ark/region:cn-beijing/subscription/coding-plan) | `https://ark.cn-beijing.volces.com/api/coding/v3` | doubao-seed-2-1-turbo, doubao-seed-2.0-lite, deepseek-v4-flash | `VOLCENGINE_CODING_PLAN_API_KEY` |
+| [GigaChat (Sber)](https://developers.sber.ru) | `https://gigachat.devices.sberbank.ru/api/v1` | — | `GIGACHAT_API_KEY` |
+| [Xiaomi MiMo Token Plan](https://mimo.mi.com) | `https://token-plan-sgp.xiaomimimo.com/v1` | mimo-v2.5-pro, mimo-v2.5 | `XIAOMI_MIMO_TOKEN_PLAN_API_KEY` |
+| [Tencent Hunyuan](https://hunyuan.tencent.com) | `https://api.hunyuan.cloud.tencent.com/v1` | hunyuan-turbos-latest, hunyuan-t1-latest, hunyuan-pro | `TENCENT_API_KEY` |
+| [iFlytek Spark](https://xinghuo.xfyun.cn) | `https://spark-api-open.xf-yun.com/v1` | 4.0Ultra, generalv3.5, max-32k | `IFLYTEK_API_KEY` |
+| [Baichuan](https://www.baichuan-ai.com) | `https://api.baichuan-ai.com/v1` | Baichuan4-Turbo, Baichuan4-Air, Baichuan4 | `BAICHUAN_API_KEY` |
+| [Yi (01.AI)](https://01.ai) | `https://api.lingyiwanwu.com/v1` | yi-large | `YI_API_KEY` |
+| [360 AI](https://ai.360.cn) | `https://api.360.cn/v1` | — | `AI360_API_KEY` |
+| [Doubao](https://doubao.com) | `https://ark.cn-beijing.volces.com/api/v3` | doubao-seed-2-0-pro-260215, doubao-seed-2-0-lite-260215, doubao-seed-2-0-mini-260215 | `DOUBAO_API_KEY` |
+| [SenseNova](https://platform.sensenova.cn) | `https://token.sensenova.cn/v1` | sensenova-6.7-flash-lite, deepseek-v4-flash, glm-5.2 | `SENSENOVA_API_KEY` |
+| [Huancheng Public API](https://api.hcnsec.cn) | `https://api.hcnsec.cn/v1` | — | `HCNSEC_API_KEY` |
+| [SEA-LION](https://sea-lion.ai) | `https://api.sea-lion.ai/v1` | aisingapore/Llama-SEA-LION-v3.5-70B-R, aisingapore/Llama-SEA-LION-v3-70B-IT, aisingapore/Gemma-SEA-LION-v4-27B-IT | `SEALION_API_KEY` |
+| [Naver CLOVA Studio](https://api.ncloud-docs.com/docs/en/ai-naver-clovastudio-summary) | `https://clovastudio.stream.ntruss.com/v3/chat-completions` | HCX-007, HCX-005, HCX-DASH-002 | `CLOVA_STUDIO_API_KEY` |
+| [InternLM (Intern-S1)](https://internlm.intern-ai.org.cn) | `https://chat.intern-ai.org.cn/api/v1` | intern-s1-pro, intern-s1, intern-s1-mini | `INTERNLM_API_KEY` |
+| [Ant Ling / Ring (inclusionAI)](https://developer.ant-ling.com/en/docs) | `https://api.ant-ling.com/v1` | Ling-2.6-1T, Ring-2.6-1T, Ling-2.6-flash | `ANT_LING_API_KEY` |
+| [Sarvam AI](https://docs.sarvam.ai) | `https://api.sarvam.ai/v1` | sarvam-105b, sarvam-30b | `SARVAM_API_KEY` |
+| [PLaMo](https://plamo.preferredai.jp/api) | `https://api.platform.preferredai.jp/v1` | plamo-3.0-prime | `PLAMO_API_KEY` |
+| [Typhoon](https://docs.opentyphoon.ai) | `https://api.opentyphoon.ai/v1` | typhoon-v2.5-30b-a3b-instruct | `TYPHOON_API_KEY` |
 
-Step-by-step guides in [`docs/`](docs/README.md):
+## Inference platforms
 
-| Guide | Description |
-|-------|-------------|
-| [Getting Started](docs/getting-started.md) | Clone, first lookup, pick a provider |
-| [Python Lookup](docs/python-lookup.md) | `llm_lookup.py` — search providers & models |
-| [Sync Models](docs/sync-models.md) | Refresh live model catalogs |
-| [Integration Guide](docs/integration-guide.md) | OpenAI / Anthropic SDK setup |
-| [Data Structure](docs/data-structure.md) | `providers.json`, `models.json` format |
-| [Adding Providers](docs/adding-providers.md) | Add or update a provider |
-| [Contributing](docs/contributing.md) | PR workflow & checklist |
+Hosted open-weight models — usually cheaper and faster.
 
----
+| Provider | API Base URL | Models | Env |
+|----------|--------------|--------|-----|
+| [Groq](https://console.groq.com) | `https://api.groq.com/openai/v1` | llama-3.3-70b-versatile, llama-3.1-8b-instant, Gemma 2 9B | `GROQ_API_KEY` |
+| [Cerebras](https://cerebras.ai) | `https://api.cerebras.ai/v1` | Llama 3.3 70B, GPT-OSS 120B, Qwen 3 32B | `CEREBRAS_API_KEY` |
+| [SambaNova](https://sambanova.ai) | `https://api.sambanova.ai/v1` | Llama 3.1 405B, Llama 3.3 70B, Qwen | `SAMBANOVA_API_KEY` |
+| [Together AI](https://together.ai) | `https://api.together.xyz/v1` | Llama 3.3, DeepSeek-V4, Qwen | `TOGETHER_API_KEY` |
+| [Fireworks AI](https://fireworks.ai) | `https://api.fireworks.ai/inference/v1` | Qwen 3.6 Plus, Kimi K2.6, Llama 4 Maverick | `FIREWORKS_API_KEY` |
+| [DeepInfra](https://deepinfra.com) | `https://api.deepinfra.com/v1/openai` | Llama 3.3, Qwen 3, DeepSeek-V4 | `DEEPINFRA_API_KEY` |
+| [Nebius AI Studio](https://studio.nebius.ai) | `https://api.studio.nebius.ai/v1` | DeepSeek-R1-0528, Llama 3.3 70B | `NEBIUS_API_KEY` |
+| [SiliconFlow](https://siliconflow.com) | `https://api.siliconflow.cn/v1` | DeepSeek-R1-0528, MiniMax-M2, Qwen3-VL | `SILICONFLOW_API_KEY` |
+| [Inception](https://inceptionlabs.ai) | `https://api.inceptionlabs.ai/v1` | Mercury-2, Mercury-Edit-2 | `INCEPTION_API_KEY` |
+| [Liquid AI](https://liquid.ai) | `https://inference.liquid.ai/v1` | LFM2.5 Instruct, LFM2-24B | `LIQUID_API_KEY` |
+| [Friendli](https://friendli.ai) | `https://api.friendli.ai/serverless/v1` | Llama 3.1 8B, DeepSeek-R1 | `FRIENDLI_API_KEY` |
+| [Inceptron](https://inceptron.io) | Custom endpoint | Open-weight LLMs | — |
+| [Infermatic](https://infermatic.ai) | `https://api.totalgpt.ai` | Rocinante, Midnight Miqu, Llama | `INFERMATIC_API_KEY` |
+| [Mancer](https://mancer.tech) | `https://mancer.tech/oai/v1` | Goliath 120B, MythoMax, LumiMaid | `MANCER_API_KEY` |
+| [Morph](https://morphllm.com) | `https://api.morphllm.com/v1` | morph-qwen35-397b, morph-qwen36-27b | `MORPH_API_KEY` |
+| [AionLabs](https://aionlabs.ai) | `https://api.aionlabs.ai/v1` | Aion 2.0, Aion-RP | `AION_API_KEY` |
+| [HuggingFace Inference](https://huggingface.co) | `https://router.huggingface.co/v1` | meta-llama/Llama-3.3-70B-Instruct, Qwen/Qwen2.5-72B-Instruct | `HUGGINGFACE_API_KEY` |
+| [NVIDIA NIM](https://build.nvidia.com) | `https://integrate.api.nvidia.com/v1` | meta/llama-3.3-70b-instruct, deepseek-ai/deepseek-r1 | `NVIDIA_API_KEY` |
+| [Hyperbolic](https://app.hyperbolic.xyz) | `https://api.hyperbolic.xyz/v1` | DeepSeek-V3, Llama 3.3 70B | `HYPERBOLIC_API_KEY` |
+| [Lepton AI](https://lepton.ai) | `https://api.lepton.ai/v1` | Llama 3.3 70B | `LEPTON_API_KEY` |
+| [Kluster.ai](https://kluster.ai) | `https://api.kluster.ai/v1` | Llama 3.1 405B, Qwen 2.5 72B | `KLUSTER_API_KEY` |
+| [Anyscale Endpoints](https://app.endpoints.anyscale.com) | `https://api.endpoints.anyscale.com/v1` | Llama 3.3 70B, Mixtral 8x22B | `ANYSCALE_API_KEY` |
+| [Replicate](https://replicate.com) | `https://api.replicate.com/v1` | Open models, FLUX, video models | `REPLICATE_API_TOKEN` |
+| [Inference.net](https://inference.net) | `https://api.inference.net/v1` | DeepSeek-R1, Llama 3.1 70B | `INFERENCE_NET_API_KEY` |
+| [Arcee AI](https://arcee.ai) | `https://conductor.arcee.ai/v1` | Trinity-Large, Caller-Large | `ARCEE_API_KEY` |
+| [Glhf.chat](https://glhf.chat) | `https://glhf.chat/api/openai/v1` | hf:meta-llama/Llama-3.3-70B-Instruct, hf:Qwen/Qwen2.5-72B-Instruct | `GLHF_API_KEY` |
+| [Ollama Cloud](https://ollama.com) | `https://ollama.com/api` | gpt-oss:20b-cloud, gpt-oss:120b | `OLLAMA_API_KEY` |
+| [OpenVecta](https://openvecta.com) | `https://api.openvecta.com/v1` | glm-4.7-flash, claude-sonnet-4.6, deepseek-v4-flash | `OPENVECTA_API_KEY` |
+| [Openference API](https://openference.com) | `https://api.openference.com/v1` | GLM-5.2 | `OPENFERENCE_API_KEY` |
+| [Nube.sh](https://nube.sh) | `https://ai.nube.sh/api/v1` | — | `NUBE_API_KEY` |
+| [Lambda AI](https://lambda.ai) | `https://api.lambda.ai/v1` | — | `LAMBDA_AI_API_KEY` |
+| [nScale](https://nscale.com) | `https://inference.api.nscale.com/v1` | — | `NSCALE_API_KEY` |
+| [PublicAI](https://publicai.co) | `https://api.publicai.co/v1` | — | `PUBLICAI_API_KEY` |
+| [Featherless AI](https://featherless.ai) | `https://api.featherless.ai/v1` | — | `FEATHERLESS_AI_API_KEY` |
+| [Predibase](https://predibase.com) | `https://serving.app.predibase.com/v1` | — | `PREDIBASE_API_KEY` |
+| [Bytez](https://bytez.com) | `https://api.bytez.com/models/v2/openai/v1` | — | `BYTEZ_API_KEY` |
+| [MonsterAPI](https://monsterapi.ai) | `https://api.monsterapi.ai/v1` | meta-llama/Meta-Llama-3.1-8B-Instruct, meta-llama/Llama-3.3-70B-Instruct | `MONSTERAPI_KEY` |
+| [ModelScope](https://modelscope.cn) | `https://api-inference.modelscope.cn/v1` | — | `MODELSCOPE_API_KEY` |
+| [BytePlus ModelArk](https://console.byteplus.com/ark) | `https://ark.ap-southeast.bytepluses.com/api/v3` | seed-2.0, kimi-k2-thinking, glm-4.7 | `BYTEPLUS_API_KEY` |
+| [Pollinations AI](https://pollinations.ai) | `https://gen.pollinations.ai/v1` | openai, openai-fast, openai-large | `POLLINATIONS_API_KEY` |
 
-## Repository Structure
+## Cloud and enterprise
 
-```
-all-llm-provider-list/
-├── README.md              ← Provider tables & quick reference
-├── llm_lookup.py          ← Python lookup script
-├── scripts/
-│   └── sync_models.py     ← Refresh model catalogs
-├── example.py             ← Usage examples
-├── data/
-│   ├── providers.json     ← 97 providers (source of truth)
-│   ├── models.json        ← Model catalogs per provider
-│   └── static_models.json ← Fallback model lists
-└── docs/                  ← Step-by-step guides
-    ├── README.md
-    ├── getting-started.md
-    ├── python-lookup.md
-    ├── sync-models.md
-    ├── integration-guide.md
-    ├── data-structure.md
-    ├── adding-providers.md
-    └── contributing.md
-```
+Azure, Bedrock, Vertex, and regional clouds.
 
----
+| Provider | API Base URL | Models | Env |
+|----------|--------------|--------|-----|
+| [AkashML](https://akash.network) | `https://api.akashml.com/v1` | Llama 3, Qwen, DeepSeek | `AKASHML_API_KEY` |
+| [AtlasCloud](https://atlascloud.ai) | `https://api.atlascloud.ai/v1` | DeepSeek-V3, Seedance 2.0, Kling 3.0 | `ATLASCLOUD_API_KEY` |
+| [Chutes](https://chutes.ai) | `https://llm.chutes.ai/v1` | Kimi, GLM, Qwen | `CHUTES_API_KEY` |
+| [Cloudflare Workers AI](https://cloudflare.com) | `https://api.cloudflare.com/client/v4/accounts/{id}/ai/v1` | @cf/meta/llama-3.3-70b-instruct-fp8-fast, Gemma 4, Kimi K2.5 | `CLOUDFLARE_API_TOKEN` |
+| [DigitalOcean](https://digitalocean.com) | `https://inference.do-ai.run/v1/` | Llama 3 8B Instruct | `DIGITALOCEAN_API_KEY` |
+| [GMICloud](https://gmicloud.ai) | `https://api.gmi-serving.com/v1` | GLM-5.1-FP8, DeepSeek-V3.2 | `GMI_API_KEY` |
+| [io.net](https://io.net) | `https://api.intelligence.io.solutions/api/v1` | GLM-4.5-Air, GPT-OSS 120B, Llama 3.3 | `IO_NET_API_KEY` |
+| [NextBit](https://nextbit256.com) | `https://api.nextbit256.com/v1` | qwen:3.5-35b, qwen3:30b, qwen3:14b | `NEXTBIT_API_KEY` |
+| [Novita](https://novita.ai) | `https://api.novita.ai/openai/v1` | Kimi K2.5, Llama, Qwen | `NOVITA_API_KEY` |
+| [Parasail](https://parasail.io) | `https://api.saas.parasail.io/v1` | DeepSeek-R1, QwenCoder 32B | `PARASAIL_API_KEY` |
+| [Phala](https://phala.network) | POST /v1/chat/completions | unsloth/Qwen2.5-72B-Instruct | `PHALA_API_KEY` |
+| [Poolside](https://poolside.ai) | `https://divers.poolsi.de/openai/v1/` | Laguna XS.2, Laguna M.1 | `POOLSIDE_API_KEY` |
+| [Venice](https://venice.ai) | `https://api.venice.ai/api/v1` | llama-3.3-70b, fluently-xl | `VENICE_API_KEY` |
+| [Wafer](https://wafer.ai) | `https://pass.wafer.ai/v1` | Qwen3.5-397B-A17B, GLM-5.1 | `WAFER_API_KEY` |
+| [Azure OpenAI](https://azure.microsoft.com) | `https://<resource>.openai.azure.com/openai/v1` | GPT-5, Claude, Llama | `AZURE_OPENAI_API_KEY` |
+| [Google Vertex AI](https://cloud.google.com/vertex-ai) | `https://us-central1-aiplatform.googleapis.com/v1/projects` | Gemini, Claude, partner models | `GOOGLE_APPLICATION_CREDENTIALS` |
+| [Amazon Bedrock](https://aws.amazon.com/bedrock) | `https://bedrock-runtime.<region>.amazonaws.com` | Claude, Llama, Titan | `AWS_ACCESS_KEY_ID` |
+| [Baseten](https://baseten.co) | `https://model-{id}.api.baseten.co/v1` | Llama 3.3, DeepSeek-R1 | `BASETEN_API_KEY` |
+| [Clarifai](https://clarifai.com) | Custom endpoints | Multimodal models | `CLARIFAI_API_KEY` |
+| [Scaleway](https://console.scaleway.com) | `https://api.scaleway.ai/v1` | Llama 3.3 70B, DeepSeek-R1 | `SCALEWAY_API_KEY` |
+| [OVHcloud AI](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) | `https://oai.endpoints.kepler.ai.cloud.ovh.net/v1` | Meta-Llama-3_1-70B-Instruct, Qwen2.5-72B-Instruct | `OVH_AI_API_KEY` |
+| [GitHub Models](https://github.com/marketplace/models) | `https://models.inference.ai.azure.com` | gpt-4o, Meta-Llama-3.1-70B-Instruct | `GITHUB_TOKEN` |
+| [Modal](https://modal.com) | `https://<app>.modal.run/v1` | google/gemini-2.0-flash | `MODAL_TOKEN_ID` |
+| [Azure Cognitive Services](https://azure.microsoft.com/products/ai-services) | `https://<resource>.cognitiveservices.azure.com/openai/v1` | gpt-4o, gpt-4.1, o3-mini | `AZURE_COGNITIVE_SERVICES_API_KEY` |
+| [GitLab Duo](https://about.gitlab.com/gitlab-duo/) | `https://gitlab.com/api/v4/ai` | duo-chat-haiku-4-5, duo-chat-sonnet-4-5, duo-chat-opus-4-5 | `GITLAB_TOKEN` |
+| [GitHub Copilot](https://github.com/features/copilot) | `https://api.githubcopilot.com` | gpt-4o, claude-sonnet-4, o3-mini | `GITHUB_TOKEN` |
+| [SAP AI Core](https://www.sap.com/products/artificial-intelligence/ai-core.html) | `https://api.ai.<region>.<landscape>.ml.hana.ondemand.com/v2` | gpt-4o, claude-sonnet-4, gemini-2.5-pro | `AICORE_SERVICE_KEY` |
+| [STACKIT AI Model Serving](https://www.stackit.de/en/product/stackit-ai-model-serving) | `https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1` | qwen3-vl-235b, llama-3.3-70b, mistral-nemo-instruct | `STACKIT_API_KEY` |
+| [Snowflake Cortex](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-llm-rest-api) | `https://<account>.snowflakecomputing.com/api/v2/cortex/v1` | claude-sonnet-4-6, claude-haiku-4-5, gpt-5 | `SNOWFLAKE_CORTEX_TOKEN` |
+| [IBM watsonx.ai Gateway](https://www.ibm.com/products/watsonx-ai) | `https://us-south.ml.cloud.ibm.com/ml/v1` | — | `WATSONX_API_KEY` |
+| [OCI Generative AI](https://www.oracle.com/artificial-intelligence/generative-ai) | `https://inference.generativeai.us-chicago-1.oci.oraclecloud.com` | — | `OCI_API_KEY` |
+| [Vertex AI Partners](https://cloud.google.com/vertex-ai) | `https://us-central1-aiplatform.googleapis.com/v1/projects` | DeepSeek-V4-Flash, DeepSeek-V4-Pro, Qwen3.6-35B-A3B | `VERTEX_PARTNER_API_KEY` |
+| [Heroku AI](https://www.heroku.com) | `https://us.inference.heroku.com/v1` | — | `HEROKU_API_KEY` |
+| [Databricks](https://www.databricks.com) | `https://adb-0000000000000000.0.azuredatabricks.net/serving-endpoints` | — | `DATABRICKS_API_KEY` |
+| [DataRobot](https://docs.datarobot.com) | `https://app.datarobot.com/api/v2` | — | `DATAROBOT_API_KEY` |
+| [Dasha Compute](https://www.getdasha.com/compute) | Open alpha | qwen3-8b, gemma3-12b, gemma3-27b | — |
+
+## Gateways and routers
+
+One key, many upstream providers.
+
+| Provider | API Base URL | Models | Env |
+|----------|--------------|--------|-----|
+| [OpenRouter](https://openrouter.ai) | `https://openrouter.ai/api/v1` | auto | `OPENROUTER_API_KEY` |
+| [Opper](https://opper.ai) | `https://api.opper.ai/v3/compat` | — | `OPPER_API_KEY` |
+| [Axiom](https://axiomstudio.ai) | `https://cloud.axiomstudio.ai/rest/v1/llm-gateway/v1/` | — | `AXIOM_API_KEY` |
+| [Switchpoint](https://switchpoint.ai) | `https://api.ppq.ai` | switchpoint/router | `SWITCHPOINT_API_KEY` |
+| [Relace](https://relace.ai) | `https://api.relace.ai/v1` | Relace Apply 3, Relace Search | `RELACE_API_KEY` |
+| [Moonshot AI](https://api.moonshot.ai/v1) | `https://api.moonshot.ai/v1` | kimi-k2.7-code, kimi-k2.6 | `MOONSHOT_API_KEY` |
+| [OpenInference](https://openinference.ai) | Tracing / observability | LLM telemetry | — |
+| [Weights & Biases](https://wandb.ai) | `https://api.inference.wandb.ai/v1` | Model benchmarking | `WANDB_API_KEY` |
+| [Perceptron](https://perceptron.ai) | Custom gateway | Enterprise routes | — |
+| [Portkey](https://portkey.ai) | `https://api.portkey.ai/v1` | — | `PORTKEY_API_KEY` |
+| [LiteLLM](https://github.com/BerriAI/litellm) | `http://localhost:4000/v1` | — | `LITELLM_MASTER_KEY` |
+| [Requesty](https://requesty.ai) | `https://router.requesty.ai/v1` | Multi-provider routing | `REQUESTY_API_KEY` |
+| [Unify.ai](https://unify.ai) | `https://api.unify.ai/v0` | ML-routed models | `UNIFY_API_KEY` |
+| [Helicone](https://helicone.ai) | `https://ai-gateway.helicone.ai/v1` | — | `HELICONE_API_KEY` |
+| [Vercel AI Gateway](https://vercel.com/docs/ai-gateway) | `https://ai-gateway.vercel.sh/v1` | — | `VERCEL_AI_GATEWAY_KEY` |
+| [Cloudflare AI Gateway](https://developers.cloudflare.com/ai-gateway/) | `https://gateway.ai.cloudflare.com/v1` | — | `CLOUDFLARE_API_TOKEN` |
+| [Kong AI Gateway](https://konghq.com/products/kong-ai-gateway) | Self-hosted / enterprise | Enterprise routing | — |
+| [Cortecs](https://cortecs.ai) | `https://api.cortecs.ai/v1` | kimi-k2-instruct, gpt-5-mini | `CORTECS_API_KEY` |
+| [OpenCode Zen](https://opencode.ai/zen) | `https://opencode.ai/zen/v1` | gpt-5.5, claude-sonnet-4-6, qwen3-coder-480b | `OPENCODE_API_KEY` |
+| [OpenCode Go](https://opencode.ai/docs/go/) | `https://opencode.ai/zen/go/v1` | kimi-k2.7, glm-5.1, deepseek-v4-pro | `OPENCODE_API_KEY` |
+| [LLM Gateway](https://llmgateway.io) | `https://api.llmgateway.io/v1` | gpt-4o, claude-3-5-sonnet, gemini-2.5-pro | `LLM_GATEWAY_API_KEY` |
+| [ZenMux](https://zenmux.ai) | `https://zenmux.ai/api/v1` | openai/gpt-5, anthropic/claude-sonnet-4, google/gemini-2.5-pro | `ZENMUX_API_KEY` |
+| [Sakana AI (Fugu)](https://console.sakana.ai) | `https://api.sakana.ai/v1` | fugu, fugu-ultra, fugu-ultra-20260615 | `SAKANA_API_KEY` |
+| [Prism API](https://go165.github.io/prism-api-promo/) | `https://sub2api.558686.xyz/v1` | gpt-5.5, gpt-5.4, claude-sonnet-4 | `PRISM_API_KEY` |
+| [DiscountedTokens](https://discountedtokens.com) | `https://discountedtokens.com/v1` | GPT-5.5, GPT-5.4, GPT-5.6 | `DISCOUNTEDTOKENS_API_KEY` |
+| [XiuRouter](https://router.xiu.ai/) | `https://router-api.xiu.ai/v1` | gpt-5.6-sol, gpt-5.5, claude-opus-5 | `XIUROUTER_API_KEY` |
+| [SAGG](https://api.privatedeskai.com) | `https://api.privatedeskai.com/v1` | deepseek-ai/DeepSeek-V4-Flash-0731 | `SAGG_API_KEY` |
+| [AIWave](https://aiwave.live/) | `https://aiwave.live/v1` | deepseek-v4-pro, deepseek-v4-flash, deepseek-v3.2 | `AIWAVE_API_KEY` |
+| [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) | `http://localhost:8317/v1` | — | `CLIPROXYAPI_KEY` |
+| [9router](https://www.npmjs.com/package/9router) | `http://localhost:20130/v1` | — | — |
+| [1min.AI](https://1min.ai) | `https://api.1min.ai/api/chat-with-ai` | gpt-4o-mini | `ONEMINAI_API_KEY` |
+| [Cheaper Inference](https://cheaperinference.com) | `https://api.cheaperinference.com/v1` | aion-labs.aion-2-0, claude-fable-5, claude-haiku-4.5 | `CHEAPERINFERENCE_API_KEY` |
+| [Freebuff](https://freebuff.com) | `https://www.codebuff.com/api/v1` | deepseek/deepseek-v4-flash, deepseek/deepseek-v4-pro, openai/gpt-5.6-luna | `FREEBUFF_API_KEY` |
+| [Charm Hyper](https://hyper.charm.land) | `https://hyper.charm.land/v1` | hyper/auto | `CHARM_HYPER_API_KEY` |
+| [AgentRouter](https://agentrouter.org) | `https://agentrouter.org/v1` | claude-opus-4-8, claude-opus-5, gpt-5.6-sol | `AGENTROUTER_API_KEY` |
+| [UnoRouter](https://unorouter.ai) | `https://api.unorouter.com/v1` | — | `UNOROUTER_API_KEY` |
+| [Command Code](https://commandcode.ai) | `https://api.commandcode.ai` | claude-opus-4-7, claude-opus-4-6, claude-sonnet-4-6 | `COMMAND_CODE_API_KEY` |
+| [Zylo API](https://zyloai.net) | `https://api.zyloai.net/v1` | — | `ZYLO_API_KEY` |
+| [FastRouter](https://fastrouter.ai) | `https://api.fastrouter.ai/api/v1` | — | `FASTROUTER_API_KEY` |
+| [LLM.Kiwi](https://llm.kiwi) | `https://api.llm.kiwi/v1` | auto, hrLLM | `LLM_KIWI_API_KEY` |
+| [LiteRouter](https://literouter.com) | `https://api.literouter.com/v1` | — | `LITEROUTER_API_KEY` |
+| [GreenPT](https://greenpt.com) | `https://api.greenpt.ai/v1` | — | `GREENPT_API_KEY` |
+| [EURouter](https://eurouter.ai) | `https://api.eurouter.ai/v1` | — | `EUROUTER_API_KEY` |
+| [MNN AI](https://mnnai.ru) | `https://api.mnnai.ru/v1` | — | `MNN_AI_API_KEY` |
+| [MegaNova AI](https://meganova.ai) | `https://api.meganova.ai/v1` | — | `MEGANOVA_AI_API_KEY` |
+| [Mixlayer](https://www.mixlayer.com) | `https://models.mixlayer.ai/v1` | qwen/qwen3.5-4b-free | `MIXLAYER_API_KEY` |
+| [Speka AI](https://speka.me) | `https://speka.me/v1` | — | `SPEKA_API_KEY` |
+| [TokenReply](https://www.tokenreply.com) | `https://api.tokenreply.com/v1` | — | `TOKENREPLY_API_KEY` |
+| [Yolo-Auto](https://yolo-auto.com) | `https://yolo-auto.com/v1` | qwen3.6-35b-a3b | `YOLO_AUTO_API_KEY` |
+| [DXNT / DX Token](https://www.dxnt.com) | `https://www.dxnt.com/v1` | — | `DXNT_API_KEY` |
+| [CloudCode.ONE](https://cloudcode.one) | `https://api.cloudcode.one/v1` | glm-4.7-flash, glm-4.6v-flash | `CLOUDCODE_ONE_API_KEY` |
+| [OfoxAI](https://ofox.ai) | `https://api.ofox.ai/v1` | — | `OFOXAI_API_KEY` |
+| [ZeroLimitAI](https://www.zerolimitai.com) | `https://www.zerolimitai.com/api/v1` | — | `ZEROLIMITAI_API_KEY` |
+| [Helyx AI](https://helyxai.space) | `https://helyxai.space/v1` | — | `HELYXAI_API_KEY` |
+| [Auriko](https://www.auriko.ai) | `https://api.auriko.ai/v1` | — | `AURIKO_API_KEY` |
+| [Poixe AI](https://poixe.com) | `https://api.poixe.com/v1` | — | `POIXE_AI_API_KEY` |
+| [Chat Oripe](https://api.oriper.com) | `https://api.oriper.com/v1` | — | `CHAT_ORIPE_API_KEY` |
+| [FreeInference](https://freeinference.org) | `https://freeinference.org/v1` | — | `FREEINFERENCE_API_KEY` |
+| [Free.ai](https://free.ai) | `https://api.free.ai/v1/chat` | — | `FREE_AI_API_KEY` |
+| [DGrid](https://dgrid.ai) | `https://api.dgrid.ai/v1` | dgridai/free | `DGRID_API_KEY` |
+| [Qiniu](https://www.qiniu.com) | `https://api.qnaigc.com/v1` | — | `QINIU_API_KEY` |
+| [OrcaRouter](https://www.orcarouter.ai) | `https://api.orcarouter.ai/v1` | orcarouter/auto, openai/gpt-5.5, google/gemini-3.6-flash | `ORCAROUTER_API_KEY` |
+| [Api.airforce](https://api.airforce) | `https://api.airforce/v1` | x-ai/grok-3, x-ai/grok-2-1212, anthropic/claude-3.7-sonnet | `AIRFORCE_API_KEY` |
+| [CrofAI](https://crof.ai) | `https://crof.ai/v1` | deepseek-v4-pro, deepseek-v4-flash, deepseek-v4-flash-0731 | `CROF_API_KEY` |
+| [BazaarLink](https://bazaarlink.ai) | `https://bazaarlink.ai/api/v1` | auto:free, claude-opus-4.7, claude-sonnet-4.6 | `BAZAARLINK_API_KEY` |
+| [Synthetic](https://synthetic.new) | `https://api.synthetic.new/openai/v1` | hf:openai/gpt-oss-120b, hf:zai-org/GLM-5.2, hf:moonshotai/Kimi-K2.7-Code | `SYNTHETIC_API_KEY` |
+| [Kilo Gateway](https://kilo.ai) | `https://api.kilo.ai/api/gateway` | kilo-auto/frontier, kilo-auto/balanced, kilo-auto/free | `KILO_GATEWAY_API_KEY` |
+| [Dahl](https://inference.dahl.global) | `https://inference.dahl.global/v1` | MiniMaxAI/MiniMax-M2.7, moonshotai/Kimi-K2.6 | `DAHL_API_KEY` |
+| [FreeTheAi](https://freetheai.xyz) | `https://api.freetheai.xyz/v1` | gpt-4o-mini, llama-3.3-70b-instruct, deepseek-chat | `FREETHEAI_API_KEY` |
+| [g4f.space — Groq](https://g4f.space) | `https://g4f.space/api/groq/v1` | llama-3.3-70b-versatile, llama-3.1-8b-instant | `G4F_GROQ_API_KEY` |
+| [g4f.space — Gemini](https://g4f.space) | `https://g4f.space/api/gemini/v1` | models/gemini-2.5-flash, models/gemini-2.5-pro | `G4F_GEMINI_API_KEY` |
+| [g4f.space — Pollinations](https://g4f.space) | `https://g4f.space/api/pollinations/v1` | openai, openai-fast | `G4F_POLLINATIONS_API_KEY` |
+| [g4f.space — Ollama](https://g4f.space) | `https://g4f.space/api/ollama/v1` | gemma3:4b | `G4F_OLLAMA_API_KEY` |
+| [g4f.space — NVIDIA](https://g4f.space) | `https://g4f.space/api/nvidia/v1` | nvidia/nemotron-3-nano-30b-a3b, z-ai/glm-5.2, minimaxai/minimax-m2.7 | `G4F_NVIDIA_API_KEY` |
+| [LLM7.io](https://llm7.io) | `https://api.llm7.io/v1` | gpt-4o-mini-2024-07-18, gpt-4.1-nano-2025-04-14, deepseek-r1-0528 | `LLM7_API_KEY` |
+| [LlamaGate](https://llamagate.ai) | `https://llamagate.ai/v1` | — | `LLAMAGATE_API_KEY` |
+| [Gitlawb Opengateway (MiMo)](https://opengateway.gitlawb.com) | `https://opengateway.gitlawb.com/v1/xiaomi-mimo` | mimo-v2.5-pro, mimo-v2.5, mimo-v2-pro | `GITLAWB_API_KEY` |
+| [Gitlawb Opengateway (GMI Cloud)](https://opengateway.gitlawb.com) | `https://opengateway.gitlawb.com/v1/gmi-cloud` | XiaomiMiMo/MiMo-V2.5-Pro, XiaomiMiMo/MiMo-V2.5, openai/gpt-5.5 | `GITLAWB_GMI_API_KEY` |
+| [NanoGPT](https://nano-gpt.com) | `https://nano-gpt.com/api/v1` | — | `NANOGPT_API_KEY` |
+| [LaoZhang AI](https://api.laozhang.ai) | `https://api.laozhang.ai/v1` | — | `LAOZHANG_API_KEY` |
+| [b.ai](https://b.ai) | `https://api.b.ai/v1` | — | `BAI_API_KEY` |
+| [FenayAI](https://fenayai.com) | `https://api.fenayai.com/v1` | — | `FENAYAI_API_KEY` |
+| [Empower](https://docs.empower.dev) | `https://api.empower.dev/v1` | — | `EMPOWER_API_KEY` |
+| [Factory](https://factory.ai) | `https://api.factory.ai/v1` | auto | `FACTORY_API_KEY` |
+| [BluesMinds](https://www.bluesminds.com) | `https://api.bluesminds.com/v1` | gpt-4o, gpt-4o-mini, gpt-4.1 | `BLUESMINDS_API_KEY` |
+| [FreeModel.dev](https://freemodel.dev) | `https://api.freemodel.dev/v1` | gpt-5.5, gpt-5.4, gpt-5.4-mini | `FREEMODEL_DEV_API_KEY` |
+| [FreeAIAPIKey](https://freeaiapikey.com) | `https://api.freeaiapikey.com/v1` | openai/gpt-4o, openai/gpt-5.4, openai/gpt-5.5 | `FREEAI_API_KEY` |
+| [OpenAdapter](https://openadapter.dev) | `https://api.openadapter.in/v1` | glm-4.7 | `OPENADAPTER_API_KEY` |
+| [DIT.ai](https://dit.ai) | `https://api.dit.ai/v1` | gpt-5.4, claude-sonnet-4-6 | `DIT_API_KEY` |
+| [TokenRouter](https://tokenrouter.com) | `https://api.tokenrouter.com/v1` | minimax-3, deepseek-v4-pro, deepseek-v4-flash | `TOKENROUTER_API_KEY` |
+| [Token Kiosk](https://agent-router.gaib.ai) | `https://agent-router.gaib.ai/v1` | claude-3-5-sonnet, deepseek-v3, deepseek-r1 | `TOKEN_KIOSK_API_KEY` |
+| [SumoPod](https://ai.sumopod.com) | `https://ai.sumopod.com/v1` | — | `SUMOPOD_API_KEY` |
+| [X5Lab](https://x5lab.dev) | `https://api.x5lab.dev/v1` | — | `X5LAB_API_KEY` |
+| [Chenzk API](https://chenzk.top) | `https://chenzk.top/v1` | — | `CHENZK_API_KEY` |
+| [Kenari](https://kenari.id) | `https://kenari.id/v1` | — | `KENARI_API_KEY` |
+| [NavyAI](https://api.navy) | `https://api.navy/v1` | llama-3.3-70b-instruct, gemma-4-31b-it, deepseek-v4-flash | `NAVY_API_KEY` |
+| [AINative Studio](https://ainative.studio) | `https://api.ainative.studio/api/v1` | qwen3-235b-cerebras, qwen3-32b, qwen3-14b | `AINATIVE_API_KEY` |
+| [Routeway](https://routeway.ai) | `https://api.routeway.ai/v1` | llama-3.3-70b-instruct:free, nemotron-3-nano-30b-a3b:free, nemotron-nano-9b-v2:free | `ROUTEWAY_API_KEY` |
+| [NaraRouter](https://bynara.id) | `https://router.bynara.id/v1` | agnes-2.0-flash, agnes-2.5-flash, laguna-s-2.1 | `NARA_API_KEY` |
+| [Regolo AI](https://regolo.ai) | `https://api.regolo.ai` | regolo-chat, regolo-fast | `REGOLO_API_KEY` |
+| [Void AI](https://voidai.app) | `https://api.voidai.app/v1` | — | `VOID_AI_API_KEY` |
+| [HelixMind](https://helixmind.online) | `https://helixmind.online/v1` | — | `HELIXMIND_API_KEY` |
+| [Logfare](https://logfare.ai) | `https://logfare.ai/v1` | — | `LOGFARE_API_KEY` |
+| [TabiToken](https://tabitoken.com) | `https://tabitoken.com/v1` | claude-opus-5, claude-opus-5-thinking, claude-opus-4-8 | `TABITOKEN_API_KEY` |
+| [SeekAi](https://seekai.cc) | `https://seekai.cc/v1` | — | `SEEKAI_API_KEY` |
+| [Cursor API](https://cursor.com/dashboard/api) | `https://api.cursor.com/v1` | — | `CURSOR_API_KEY` |
+| [OmniRoute](https://github.com/diegosouzapw/OmniRoute) | `http://localhost:3000/v1` | kimi-k2.7-code, claude-sonnet-4, gpt-5.5 | `OMNIROUTE_API_KEY` |
+| [Bifrost](https://github.com/maximhq/bifrost) | `http://localhost:8080/v1` | — | — |
+
+## Aggregators
+
+Multi-vendor catalogs under one bill.
+
+| Provider | API Base URL | Models | Env |
+|----------|--------------|--------|-----|
+| [AIMLAPI](https://aimlapi.com) | `https://api.aimlapi.com/v1` | gpt-4o, claude-3-5-sonnet, gemini | `AIMLAPI_KEY` |
+| [Eden AI](https://edenai.co) | `https://api.edenai.co/v2` | OpenAI, Google, Anthropic routes | `EDENAI_API_KEY` |
+| [LemonData](https://lemondata.ai) | `https://api.lemondata.ai/v1` | gpt-4o, claude-3.5, open models | `LEMONDATA_API_KEY` |
+| [Coze (ByteDance)](https://coze.com) | `https://api.coze.com/v1` | Via bots: GPT-4o, Gemini, Claude | `COZE_API_KEY` |
+| [302.AI](https://302.ai) | `https://api.302.ai/v1` | glm-5, gpt-4o, claude-sonnet-4 | `AI302_API_KEY` |
+| [FrogBot](https://frogbot.ai) | `https://app.frogbot.ai/api` | claude-sonnet-4, gpt-4o, gemini-2.5-pro | `FROGBOT_API_KEY` |
+| [AnyAPI AI](https://anyapi.ai) | `https://api.anyapi.ai/v1` | — | `ANYAPI_KEY` |
+| [Electron Hub](https://www.electronhub.ai) | `https://api.electronhub.ai/v1` | — | `ELECTRONHUB_API_KEY` |
+| [ChatAnywhere](https://chatanywhere.tech) | `https://api.chatanywhere.org/v1` | — | `CHATANYWHERE_API_KEY` |
+| [PiAPI](https://piapi.ai) | `https://api.piapi.ai` | — | `PIAPI_KEY` |
+| [GoAPI](https://api.getgoapi.com) | `https://api.getgoapi.com/v1` | — | `GETGOAPI_KEY` |
+| [TheB.AI](https://theb.ai) | `https://api.theb.ai/v1` | — | `THEBAI_API_KEY` |
+| [Poe](https://creator.poe.com/api-reference) | `https://api.poe.com` | gpt-5.2, claude-opus-4.8, gemini-3.0-pro | `POE_API_KEY` |
+| [Naga.ac](https://naga.ac) | `https://api.naga.ac/v1` | — | `NAGA_AC_API_KEY` |
+
+## OAuth and IDE
+
+Claude Code, Codex, Cursor, Copilot, and similar subscriptions.
+
+| Provider | API Base URL | Models | Env |
+|----------|--------------|--------|-----|
+| [GitHub Enterprise Copilot](https://docs.github.com/en/copilot) | GitHub Enterprise host (device-flow OAuth) | claude-fable-5, claude-opus-5, claude-opus-4.8-fast | — |
+| [xAI OAuth (Grok)](https://x.ai) | OAuth (provider-specific) | grok-4.5 | — |
+| [Openference](https://openference.com) | `https://api.openference.com/v1` | GLM-5.2 | — |
+| [Grok Build](https://x.ai) | `https://cli-chat-proxy.grok.com/v1` | grok-4.6, grok-4.5, grok-composer-2.5-fast | — |
+| [Qoder](https://qoder.com) | `https://api.qoder.com/v1` | qwen3.8-max-preview, qwen3.7-max, qwen3.7-plus | — |
+| [Antigravity CLI](https://antigravity.google) | OAuth (provider-specific) | — | — |
+| [Kiro AI](https://kiro.dev) | `https://codewhisperer.us-east-1.amazonaws.com/generateAssistantResponse` | claude-sonnet-5, claude-sonnet-4.5, claude-haiku-4.5 | — |
+| [Amazon Q](https://aws.amazon.com/q/developer) | OAuth (provider-specific) | — | — |
+| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | `https://api.anthropic.com/v1` | claude-fable-5-1, claude-fable-5, claude-opus-5 | — |
+| [Antigravity](https://antigravity.google) | OAuth (provider-specific) | — | — |
+| [OpenAI Codex](https://developers.openai.com/codex) | `https://chatgpt.com/backend-api/codex` | gpt-6-astra, gpt-6-astra-ultra, gpt-6-astra-max | — |
+| [Cursor IDE](https://cursor.com) | `https://api2.cursor.sh` | auto, auto-cost, auto-balance | — |
+| [Zed IDE](https://zed.dev) | OAuth (provider-specific) | — | — |
+| [Zed Hosted Models](https://zed.dev) | `https://cloud.zed.dev` | — | — |
+| [Trae](https://trae.ai) | `https://core-normal.trae.ai/api/remote/v1` | auto, work, gemini-3.1-pro | — |
+| [Kimi Code CLI](https://www.kimi.com/code) | OAuth (provider-specific) | — | — |
+| [Kilo Code](https://kilocode.ai) | `https://api.kilo.ai/api/openrouter` | openrouter/free, openai/gpt-5.6-sol, openai/gpt-5.6-terra | — |
+| [Cline](https://cline.bot) | `https://api.cline.bot/api/v1` | z-ai/glm-5.2, x-ai/grok-4.5, openai/gpt-5.6-sol | — |
+| [ClinePass](https://cline.bot/cline-pass) | `https://api.cline.bot/api/v1` | cline-pass/glm-5.2, cline-pass/minimax-m3, cline-pass/deepseek-v4-pro | — |
+| [Devin Desktop](https://devin.ai) | `https://server.codeium.com` | — | — |
+| [Devin CLI](https://cli.devin.ai) | OAuth (provider-specific) | — | — |
+| [CodeBuddy CN](https://copilot.tencent.com) | `https://copilot.tencent.com/v2` | glm-5.2, glm-5.1, glm-5.0 | — |
+
+## Public endpoints
+
+Endpoints that work without an API key (rate limits apply).
+
+| Provider | API Base URL | Models | Env |
+|----------|--------------|--------|-----|
+| [Devin CLI Agentic Bridge](https://docs.devin.ai/work-with-devin/devin-cli) | No-auth public endpoint | — | — |
+| [OpenCode Free](https://opencode.ai) | `https://opencode.ai/zen/v1` | big-pickle, muse-spark-1.2, muse-spark-1.2-contributor-free | — |
+| [DuckDuckGo AI Chat](https://duckduckgo.com/duckchat) | `https://duck.ai/duckchat/v1/chat` | gpt-5.4-mini, gpt-5.6-luna, claude-haiku-4-5 | — |
+| [Cloudflare AI Playground](https://playground.ai.cloudflare.com) | `https://playground.ai.cloudflare.com` | zai-org/glm-5.2, moonshotai/kimi-k2.7-code, moonshotai/kimi-k2.6 | — |
+| [Chipotle Pepper AI (Free)](https://amelia.chipotle.com) | `https://amelia.chipotle.com` | pepper-1 | — |
+| [Augment (Auggie CLI)](https://augmentcode.com) | No-auth public endpoint | sonnet4.6, fable-5, haiku4.5 | — |
+| [ZCode (GLM Coding Plan)](https://zcode.z.ai) | No-auth public endpoint | — | — |
+| [OpenAI Codex (App-Server)](https://developers.openai.com/codex/cli) | No-auth public endpoint | — | — |
+| [UncloseAI](https://uncloseai.com) | `https://hermes.ai.unturf.com/v1` | adamo1139/Hermes-3-Llama-3.1-8B-FP8-Dynamic, qwen3.6:27b, gemma4:31b | — |
+| [AI Horde](https://aihorde.net) | `https://oai.aihorde.net/v1` | aphrodite/TheDrummer/Cydonia-24B-v4.3, aphrodite/TheDrummer/Skyfall-31B-v4.2, google/gemma-4-31b | — |
+
+## Search APIs
+
+Web search, fetch, and crawl.
+
+| Provider | API Base URL | Models | Env |
+|----------|--------------|--------|-----|
+| [Perplexity Search](https://docs.perplexity.ai/guides/search-quickstart) | `https://api.perplexity.ai` | — | `PERPLEXITY_SEARCH_API_KEY` |
+| [Serper Search](https://serper.dev) | `https://google.serper.dev` | — | `SERPER_SEARCH_API_KEY` |
+| [Brave Search](https://brave.com/search/api) | `https://api.search.brave.com/res/v1` | — | `BRAVE_SEARCH_API_KEY` |
+| [Exa Search](https://exa.ai) | `https://api.exa.ai` | — | `EXA_SEARCH_API_KEY` |
+| [Tavily Search](https://tavily.com) | `https://api.tavily.com` | — | `TAVILY_SEARCH_API_KEY` |
+| [AnySearch](https://anysearch.com) | `https://api.anysearch.com` | — | `ANYSEARCH_SEARCH_API_KEY` |
+| [Firecrawl](https://firecrawl.dev) | `https://api.firecrawl.dev/v1` | — | `FIRECRAWL_API_KEY` |
+| [Google Programmable Search](https://developers.google.com/custom-search/v1/overview) | `https://www.googleapis.com/customsearch/v1` | — | `GOOGLE_PSE_SEARCH_API_KEY` |
+| [Nimble Search](https://docs.nimbleway.com/nimble-sdk/web-tools/search) | `https://api.webit.live` | — | `NIMBLE_SEARCH_API_KEY` |
+| [Linkup Search](https://docs.linkup.so) | `https://api.linkup.so` | — | `LINKUP_SEARCH_API_KEY` |
+| [SearchAPI](https://www.searchapi.io/docs/google) | `https://www.searchapi.io/api/v1/search` | — | `SEARCHAPI_KEY` |
+| [You.com Search](https://you.com/business/api) | `https://api.ydc-index.io` | — | `YOUCOM_SEARCH_API_KEY` |
+| [SearXNG Search](https://docs.searxng.org) | `http://localhost:8080` | — | `SEARXNG_SEARCH_API_KEY` |
+| [X Search (Grok)](https://docs.x.ai/developers/tools/x-search) | `https://api.x.ai/v1` | — | `X_SEARCH_API_KEY` |
+| [Xquik X Search](https://docs.xquik.com) | `https://api.xquik.com` | — | `XQUIK_SEARCH_API_KEY` |
+| [Ollama Search](https://ollama.com/settings/keys) | `https://ollama.com/api` | — | `OLLAMA_SEARCH_API_KEY` |
+| [Context7 (library docs)](https://context7.com) | `https://context7.com` | — | `CONTEXT7_API_KEY` |
+| [Jina Reader (r.jina.ai)](https://jina.ai/reader) | `https://r.jina.ai` | — | `JINA_READER_API_KEY` |
+| [TinyFish Fetch](https://docs.tinyfish.ai/fetch-api) | `https://api.tinyfish.ai` | — | `TINYFISH_API_KEY` |
+
+## Audio
+
+Speech-to-text and text-to-speech.
+
+| Provider | API Base URL | Models | Env |
+|----------|--------------|--------|-----|
+| [Deepgram](https://deepgram.com) | `https://api.deepgram.com/v1` | — | `DEEPGRAM_API_KEY` |
+| [AssemblyAI](https://assemblyai.com) | `https://api.assemblyai.com/v2` | — | `ASSEMBLYAI_API_KEY` |
+| [Soniox](https://soniox.com) | `https://api.soniox.com` | — | `SONIOX_API_KEY` |
+| [ElevenLabs](https://elevenlabs.io) | `https://api.elevenlabs.io/v1` | — | `ELEVENLABS_API_KEY` |
+| [Cartesia](https://cartesia.ai) | `https://api.cartesia.ai` | — | `CARTESIA_API_KEY` |
+| [Fish Audio](https://fish.audio) | `https://api.fish.audio` | — | `FISHAUDIO_API_KEY` |
+| [PlayHT](https://play.ht) | `https://api.play.ht/api/v2` | — | `PLAYHT_API_KEY` |
+| [Inworld](https://inworld.ai) | `https://api.inworld.ai` | — | `INWORLD_API_KEY` |
+| [AWS Polly](https://aws.amazon.com/polly) | `https://polly.us-east-1.amazonaws.com` | — | `AWS_POLLY_API_KEY` |
+| [Gladia](https://gladia.io) | `https://api.gladia.io/v2` | — | `GLADIA_API_KEY` |
+| [Rev AI](https://www.rev.ai) | `https://api.rev.ai` | — | `REV_AI_API_KEY` |
+| [Speechmatics](https://www.speechmatics.com) | `https://asr.api.speechmatics.com/v2` | — | `SPEECHMATICS_API_KEY` |
+
+## Image and video
+
+Image and video generation APIs.
+
+| Provider | API Base URL | Models | Env |
+|----------|--------------|--------|-----|
+| [Veo AI Free](https://veoaifree.com) | `https://veoaifree.com/wp-admin/admin-ajax.php` | veo, seedance | — |
+| [Agnes AI](https://agnes-ai.com) | `https://apihub.agnes-ai.com/v1` | agnes-2.0-flash, agnes-2.5-flash, agnes-3.0-flash | `AGNES_API_KEY` |
+| [Runway](https://docs.dev.runwayml.com) | `https://api.dev.runwayml.com/v1` | — | `RUNWAYML_API_KEY` |
+| [KIE.AI](https://kie.ai) | `https://api.kie.ai/v1` | claude-fable-5, claude-opus-5, claude-sonnet-5 | `KIE_API_KEY` |
+| [Haiper](https://haiper.ai) | `https://api.haiper.ai/v1` | gen2, gen2-image | `HAIPER_API_KEY` |
+| [Leonardo AI](https://leonardo.ai) | `https://cloud.leonardo.ai/api/rest/v1` | phoenix, sdxl | `LEONARDO_API_KEY` |
+| [Ideogram](https://ideogram.ai) | `https://api.ideogram.ai` | V_3, V_2A | `IDEOGRAM_API_KEY` |
+| [Magnific](https://www.magnific.com) | `https://api.magnific.com/v1/ai/mystic` | realism, fluid, zen | `MAGNIFIC_API_KEY` |
+| [Suno](https://suno.ai) | `https://studio-api.suno.ai/api/generate/v2` | chirp-fenix, chirp-crow, chirp-v4 | `SUNO_API_KEY` |
+| [Udio](https://udio.com) | `https://www.udio.com/api/generate-proxy` | udio-default | `UDIO_API_KEY` |
+| [Fal.ai](https://fal.ai) | `https://fal.run` | — | `FAL_AI_API_KEY` |
+| [Stability AI](https://stability.ai) | `https://api.stability.ai` | — | `STABILITY_AI_API_KEY` |
+| [Black Forest Labs](https://blackforestlabs.ai) | `https://api.bfl.ai` | — | `BLACK_FOREST_LABS_API_KEY` |
+| [Recraft](https://recraft.ai) | `https://external.api.recraft.ai/v1` | — | `RECRAFT_API_KEY` |
+| [Topaz](https://topazlabs.com) | `https://api.topazlabs.com` | — | `TOPAZ_API_KEY` |
+| [Segmind](https://segmind.com) | `https://api.segmind.com/v1` | — | `SEGMIND_API_KEY` |
+| [DeepAI](https://deepai.org) | `https://api.deepai.org` | text2img | `DEEPAI_API_KEY` |
+
+## Cloud agents
+
+Hosted coding agents (task-based, not a chat API).
+
+| Provider | API Base URL | Models | Env |
+|----------|--------------|--------|-----|
+| [Google Jules](https://jules.google) | `https://jules.google` | — | `JULES_API_KEY` |
+| [Devin](https://devin.ai) | `https://api.devin.ai` | — | `DEVIN_API_KEY` |
+| [Codex Cloud](https://openai.com/codex) | `https://chatgpt.com/backend-api/codex` | — | `CODEX_CLOUD_API_KEY` |
+
+## Embeddings
+
+Retrieval embeddings and rerankers.
+
+| Provider | API Base URL | Models | Env |
+|----------|--------------|--------|-----|
+| [Voyage AI](https://www.voyageai.com) | `https://api.voyageai.com/v1` | voyage-3, voyage-3-lite, rerank-2 | `VOYAGE_API_KEY` |
+| [Jina AI (Foundation API)](https://jina.ai) | `https://api.jina.ai/v1` | — | `JINA_AI_API_KEY` |
+| [Nomic](https://nomic.ai) | `https://api-atlas.nomic.ai/v1` | — | `NOMIC_API_KEY` |
+| [Mixedbread AI](https://www.mixedbread.com) | `https://api.mixedbread.com/v1` | — | `MIXEDBREAD_API_KEY` |
+
+## Specialized
+
+Task-specific APIs that do not fit the groups above.
+
+| Provider | API Base URL | Models | Env |
+|----------|--------------|--------|-----|
+| [NLP Cloud](https://nlpcloud.com) | `https://api.nlpcloud.io/v1` | finetuned-llama-3-70b, chatdolphin | `NLP_CLOUD_API_KEY` |
+| [Puter.js](https://puter.com) | `https://api.puter.com/ai/chat` | gpt-4o-mini, claude-3.5-sonnet, gemini | — |
+| [v0 (Vercel)](https://v0.dev) | `https://api.v0.dev/v1` | — | `V0_VERCEL_API_KEY` |
+| [Dify](https://dify.ai) | `https://api.dify.ai` | auto | `DIFY_API_KEY` |
+
+## Local and self-hosted
+
+Run models on your own machine.
+
+| Provider | API Base URL | Models | Env |
+|----------|--------------|--------|-----|
+| [Ollama](https://ollama.com) | `http://localhost:11434/v1` | llama3.3, qwen2.5, gemma | — |
+| [LM Studio](https://lmstudio.ai) | `http://localhost:1234/v1` | — | — |
+| [llama.cpp](https://github.com/ggml-org/llama.cpp) | `http://localhost:8080/v1` | — | — |
+| [Jan.ai](https://jan.ai) | `http://localhost:1337/v1` | — | — |
+| [vLLM](https://github.com/vllm-project/vllm) | `http://localhost:8000/v1` | — | — |
+| [LocalAI](https://localai.io) | `http://localhost:8080/v1` | OpenAI-compatible local stack | — |
+| [Atomic Chat](https://atomicchat.ai) | `http://127.0.0.1:1337/v1` | qwen-coder, deepseek-coder | — |
+| [MLX Gemma 26B](https://github.com/ml-explore/mlx) | `http://localhost:${MLX_GEMMA_PORT}/v1` | mlx-community/gemma-4-26B-A4B-it-qat-q4_0-mlx-aligned | — |
+| [MLX Qwen 3.8 27B](https://github.com/ml-explore/mlx) | `http://localhost:${MLX_QWEN_PORT}/v1` | maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw | — |
+| [Lemonade Server](https://lemonade-server.ai) | `http://localhost:13305/api/v1` | — | — |
+| [Llamafile](https://github.com/Mozilla-Ocho/llamafile) | `http://127.0.0.1:8080/v1` | — | — |
+| [NVIDIA Triton](https://developer.nvidia.com/triton-inference-server) | `http://localhost:8000/v1` | — | — |
+| [Docker Model Runner](https://docs.docker.com/ai/model-runner) | `http://localhost:12434/v1` | — | — |
+| [XInference](https://inference.readthedocs.io) | `http://localhost:9997/v1` | — | — |
+| [oobabooga](https://github.com/oobabooga/text-generation-webui) | `http://localhost:5000/v1` | — | — |
+| [SD WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | `http://localhost:7860` | — | — |
+| [ComfyUI](https://github.com/comfyanonymous/ComfyUI) | `http://localhost:8188` | — | — |
+| [Muse Code (Meta)](https://github.com/meta-llama/llama-stack) | `http://localhost:8321/v1` | llama-4-maverick, llama-4-scout, llama-3.3-70b | — |
+
+## Pick a provider
+
+| Goal | Start here |
+|------|------------|
+| Best reasoning | OpenAI, Anthropic, Gemini |
+| Low cost / open models | Groq, DeepInfra, Together, SiliconFlow |
+| One API, many models | OpenRouter, Portkey |
+| EU / GDPR | Mistral, Nebius, Scaleway, OVHcloud |
+| Code agents | Claude Code, Codex, Cursor, Moonshot Kimi |
+| Offline | Ollama, LM Studio, vLLM |
+
+Env var names are in the tables above and in `python llm_lookup.py <slug>`.
 
 ## Contributing
 
-Found a new provider, updated endpoint, or wrong model name? PRs welcome!
+PRs welcome for new endpoints or corrected model IDs. See [docs/contributing.md](docs/contributing.md).
 
-See [docs/contributing.md](docs/contributing.md) and [docs/adding-providers.md](docs/adding-providers.md) for the full workflow.
-
----
-
-## Disclaimer
-
-This list is maintained for **educational and integration reference** purposes. We are not affiliated with any listed provider. API endpoints, pricing, and model availability can change without notice. Always refer to official provider documentation for production deployments.
-
----
+```bash
+python llm_lookup.py <slug> --models
+python scripts/sync_models.py
+```
 
 ## License
 
-MIT — use freely, attribute when you share.
+MIT. Not affiliated with any listed provider.

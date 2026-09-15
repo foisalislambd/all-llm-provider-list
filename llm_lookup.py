@@ -9,7 +9,7 @@ Usage (Python):
     get_models("groq")                      # all supported model IDs
     lookup("groq", include_models=True)     # details + models together
     search_models("llama")                  # find model across providers
-    all_providers()                         # full list (117 providers)
+    all_providers()                         # full list (400+ providers)
 
 Usage (CLI):
     python llm_lookup.py groq
@@ -155,7 +155,8 @@ def _provider_search_keys(provider: dict[str, Any]) -> set[str]:
             keys.add(_normalize(val))
 
     for alias in provider.get("aliases") or []:
-        keys.add(_normalize(alias))
+        if isinstance(alias, str) and alias.lower() not in {"undefined", "null"}:
+            keys.add(_normalize(alias))
 
     # domain-only key e.g. api.groq.com from full URL
     url = provider.get("api_base_url", "")
@@ -205,9 +206,35 @@ def lookup(
 
     q = _normalize(str(query))
     providers = _load()
-    index = _get_index()
 
-    # exact index hit
+    slug_hits = [p for p in providers if p.get("slug") == q]
+    if len(slug_hits) == 1:
+        return slug_hits[0]
+    if slug_hits:
+        return slug_hits
+
+    name_hits = [p for p in providers if _normalize(str(p.get("name") or "")) == q]
+    if len(name_hits) == 1:
+        return name_hits[0]
+    if name_hits:
+        return name_hits
+
+    alias_hits = [
+        p
+        for p in providers
+        if q
+        in {
+            _normalize(a)
+            for a in (p.get("aliases") or [])
+            if isinstance(a, str) and a.lower() not in {"undefined", "null"}
+        }
+    ]
+    if len(alias_hits) == 1:
+        return alias_hits[0]
+    if alias_hits:
+        return alias_hits
+
+    index = _get_index()
     if q in index:
         matches = index[q]
         return matches[0] if len(matches) == 1 else matches
