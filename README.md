@@ -1,6 +1,6 @@
 # All LLM providers
 
-**442 providers** · 3,699 model IDs · API URLs, env vars, and model names in one place.
+**483 providers** · 4,390 model IDs · API URLs, env vars, and model names in one place.
 
 Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-09-25.
 
@@ -37,22 +37,22 @@ One key for many models: [OpenRouter](https://openrouter.ai), [Portkey](https://
 
 | Category | Count |
 |----------|-------|
-| [Frontier labs](#frontier-labs) | 71 |
-| [Inference platforms](#inference-platforms) | 53 |
-| [Cloud and enterprise](#cloud-and-enterprise) | 40 |
-| [Gateways and routers](#gateways-and-routers) | 117 |
-| [Aggregators](#aggregators) | 17 |
+| [Frontier labs](#frontier-labs) | 72 |
+| [Inference platforms](#inference-platforms) | 63 |
+| [Cloud and enterprise](#cloud-and-enterprise) | 43 |
+| [Gateways and routers](#gateways-and-routers) | 127 |
+| [Aggregators](#aggregators) | 18 |
 | [OAuth and IDE](#oauth-and-ide) | 22 |
 | [Public endpoints](#public-endpoints) | 10 |
 | [Search APIs](#search-apis) | 19 |
-| [Audio](#audio) | 12 |
-| [Image and video](#image-and-video) | 17 |
+| [Audio](#audio) | 15 |
+| [Image and video](#image-and-video) | 20 |
 | [Cloud agents](#cloud-agents) | 3 |
-| [Embeddings](#embeddings) | 4 |
+| [Embeddings](#embeddings) | 5 |
 | [Specialized](#specialized) | 5 |
-| [Local and self-hosted](#local-and-self-hosted) | 18 |
+| [Local and self-hosted](#local-and-self-hosted) | 27 |
 | Web cookie adapters (in data only) | 34 |
-| **Total** | **442** |
+| **Total** | **483** |
 
 Unofficial **web-cookie / browser-session** adapters (34) stay in `data/providers.json` so they do not clutter this page. List them with `python llm_lookup.py --category "Web Cookie"`.
 
@@ -133,6 +133,7 @@ Companies that train their own foundation models.
 | [MiniMax Token Plan (China)](https://platform.minimaxi.com/docs/token-plan/intro) | `https://api.minimax.cn/anthropic/v1` | MiniMax-M3, MiniMax-M2.1, MiniMax-M2.5 | `MINIMAX_CN_TOKEN_PLAN_API_KEY` |
 | [Tencent TokenHub](https://cloud.tencent.com/document/product/1823/130050) | `https://tokenhub.tencentmaas.com/v1` | hy3-preview, hy3, hy4-preview | `TENCENT_TOKENHUB_API_KEY` |
 | [Tencent Token Plan](https://cloud.tencent.com/document/product/1823/130060) | `https://api.lkeap.cloud.tencent.com/plan/v3` | hy3, hy4-preview | `TENCENT_TOKEN_PLAN_API_KEY` |
+| [Aleph Alpha](https://docs.aleph-alpha.com) | Custom Pharia deployment | luminous-supreme-control, luminous-extended-control, Pharia-1-LLM-7B-control-aligned | `ALEPH_ALPHA_API_KEY` |
 
 ## Inference platforms
 
@@ -193,6 +194,16 @@ Hosted open-weight models — usually cheaper and faster.
 | [AKI.IO](https://aki.io) | `https://aki.io/v1` | qwen3.8-27b, deepseek-v4-flash-0731-284b, qwen3.6-35b | `AKI_IO_API_KEY` |
 | [DInference](https://dinference.com) | `https://api.dinference.com/v1` | glm-5, minimax-m2.5, glm-4.7 | `DINFERENCE_API_KEY` |
 | [Ambient](https://ambient.xyz) | `https://api.ambient.xyz/v1` | z-ai/glm-5.2, qwen/qwen3.6-27b, qwen/qwen3.8-27b | `AMBIENT_API_KEY` |
+| [Gcore Everywhere Inference](https://docs.gcore.com/edge-ai/everywhere-inference/ai-models/query-deployed-model) | `https://model-<deployment>-<project>-<account>.ai.gcore.dev/v1` | meta-llama/Llama-3.2-1B-Instruct | `GCORE_API_KEY` |
+| [RunPod Serverless](https://docs.runpod.io/serverless/vllm/openai-compatibility) | `https://api.runpod.ai/v2/{endpoint_id}/openai/v1` | — | `RUNPOD_API_KEY` |
+| [Tinfoil](https://docs.tinfoil.sh) | `https://inference.tinfoil.sh/v1` | deepseek-v4-1-flash, glm-5-3, glm-5-3-flash | `TINFOIL_API_KEY` |
+| [Salad AI Gateway](https://docs.salad.com/ai-gateway/explanation/overview) | `https://ai.salad.cloud/v1` | qwen3.5-35b-a3b, qwen3.5-9b, qwen3.6-27b | `SALAD_API_KEY` |
+| [Infercom](https://api.infercom.ai) | `https://api.infercom.ai/v1` | DeepSeek-V3.1, DeepSeek-V3.2, Meta-Llama-3.3-70B-Instruct | `INFERCOM_API_KEY` |
+| [WAYSCloud](https://docs.wayscloud.services) | `https://api.wayscloud.services/v1` | — | `WAYSCLOUD_API_KEY` |
+| [Lyceum](https://docs.lyceum.technology/docs/inference/serverless) | `https://api.lyceum.technology/openai/v1` | z-ai/glm-5.2 | `LYCEUM_API_KEY` |
+| [InferX](https://www.inferx.net) | `https://model.inferx.net/v1` | gemma-4-31B-it-fp8, Qwen3.6-35B-A3B-fp8-no-thinking, Devstral-2-123B-Instruct-2512-int4-AutoRound | `INFERX_API_KEY` |
+| [IteraCompute](https://iteracompute.com/docs.html) | `https://api.iteracompute.com/v1` | deepseek/deepseek-v4-pro-0813, minimax/minimax-m3, z-ai/glm-5.3 | `ITERACOMPUTE_API_KEY` |
+| [CloudRift](https://www.cloudrift.ai) | `https://inference.cloudrift.ai/v1` | Qwen/Qwen3.8-27B-FP8 | `CLOUDRIFT_API_KEY` |
 
 ## Cloud and enterprise
 
@@ -240,6 +251,9 @@ Azure, Bedrock, Vertex, and regional clouds.
 | [evroc](https://docs.evroc.com/products/think/) | `https://models.think.evroc.com/v1` | google/gemma-4-26B-A4B-it, Qwen/Qwen3.8-27B, Qwen/Qwen3.6-35B-A3B | `EVROC_API_KEY` |
 | [CloudFerro Sherlock](https://docs.sherlock.cloudferro.com/) | `https://api-sherlock.cloudferro.com/openai/v1` | meta-llama/Llama-3.3-70B-Instruct, MiniMaxAI/MiniMax-M2.5, openai/gpt-oss-120b | `CLOUDFERRO_SHERLOCK_API_KEY` |
 | [SCNet Token Plan](https://www.scnet.cn/ac/openapi/doc/2.0/moduleapi/plans/token-plan.html) | `https://api.scnet.cn/api/llm/v1` | DeepSeek-V4-Flash-0731, Kimi-K2.6, MiniMax-M3 | `SCNET_API_KEY` |
+| [IONOS AI Model Hub](https://docs.ionos.com/cloud/ai/ai-model-hub/how-tos/tool-integration) | `https://openai.inference.de-txl.ionos.com/v1` | meta-llama/Meta-Llama-3.1-8B-Instruct, openGPT-X/Teuken-7B-instruct-commercial | `IONOS_API_TOKEN` |
+| [Infomaniak AI Services](https://www.infomaniak.com/en/hosting/ai-services/open-source-models) | `https://api.infomaniak.com/2/ai/{product_id}/openai/v1` | mini_lm_l12_v2, bge_multilingual_gemma2, swiss-ai/Apertus-v1.5-70B | `INFOMANIAK_API_KEY` |
+| [Yandex Cloud AI Studio](https://yandex.cloud/en/docs/ai-studio/) | `https://ai.api.cloud.yandex.net/v1` | gpt://<folder_ID>/yandexgpt/latest, gpt://<folder_ID>/yandexgpt-lite/latest, gpt://<folder_ID>/qwen3-235b-a22b-fp8/latest | `YANDEX_API_KEY` |
 
 ## Gateways and routers
 
@@ -364,6 +378,16 @@ One key, many upstream providers.
 | [ai&](https://docs.aiand.com/) | `https://api.aiand.com/v1` | zai-org/glm-5.3, qwen/qwen3.8-27b, moonshotai/kimi-k3 | `AIAND_API_KEY` |
 | [Inco](https://platform.inco.ai) | `https://api.inco.ai/v1` | kimi-k3:fast, glm-5.3:fast, glm-5.3-flash:fast | `INCO_API_KEY` |
 | [Pendra](https://pendra.ai) | `https://api.pendra.ai/api/v1` | llama3.3:70b, qwen3-coder:30b, gpt-oss:120b | `PENDRA_API_KEY` |
+| [TensorX](https://docs.tensorx.ai/) | `https://api.tensorx.ai/v1` | deepseek/deepseek-v4-flash-0731, deepseek/deepseek-v4.1-flash, deepseek/deepseek-v4-pro-0813 | `TENSORX_API_KEY` |
+| [Braintrust AI Gateway](https://www.braintrust.dev/docs/deploy/gateway) | `https://gateway.braintrust.dev/v1` | claude-haiku-4-5, claude-sonnet-4-5 | `BRAINTRUST_API_KEY` |
+| [Martian Gateway](https://withmartian.com) | `https://api.withmartian.com/v1` | aion-labs/aion-2.0, aion-labs/aion-3.0, aion-labs/aion-3.0-mini | `MARTIAN_API_KEY` |
+| [TrueFoundry AI Gateway](https://www.truefoundry.com/docs/ai-gateway/making-llm-requests-via-gateway) | `https://gateway.truefoundry.ai` | openai-main/gpt-4o-mini, anthropic-main/claude-4-sonnet | `TRUEFOUNDRY_API_KEY` |
+| [Orq.ai AI Gateway](https://docs.orq.ai/reference/models/list-router-models) | `https://api.orq.ai/v3/router` | openai/gpt-4o | `ORQ_API_KEY` |
+| [Neon AI Gateway](https://neon.com) | ${NEON_AI_GATEWAY_BASE_URL}/v1 | gpt-5-4-mini, claude-haiku-4-5, gpt-5-6-luna | `NEON_AI_GATEWAY_TOKEN` |
+| [CrossModel](https://www.crossmodel.ai/docs) | `https://api.crossmodel.ai/v1` | anthropic/claude-haiku-4-5, anthropic/claude-opus-5-5, anthropic/claude-fable-5-1 | `CROSSMODEL_API_KEY` |
+| [routing.run](https://docs.routing.run/api-reference/models) | `https://api.routing.run/v1` | gpt-5.6-sol, gpt-5.6-terra, gpt-5.6-luna | `ROUTING_RUN_API_KEY` |
+| [Apache APISIX](https://apisix.apache.org) | Self-hosted / enterprise | — | — |
+| [Envoy Agent Router](https://theagentrouter.ai) | Self-hosted / enterprise | — | — |
 
 ## Aggregators
 
@@ -388,6 +412,7 @@ Multi-vendor catalogs under one bill.
 | [Jiekou.AI](https://docs.jiekou.ai) | `https://api.jiekou.ai/openai` | grok-4-1-fast-reasoning, grok-4-1-fast-non-reasoning, gpt-5.2-codex | `JIEKOU_API_KEY` |
 | [AIHubMix](https://aihubmix.com) | `https://aihubmix.com/v1` | auto, claude-opus-5-5, gpt-6-luna | `AIHUBMIX_API_KEY` |
 | [EmpirioLabs AI](https://docs.empiriolabs.ai) | `https://api.empiriolabs.ai/v1` | glm-5-3, kling-3-0-turbo, glm-5-3-flash | `EMPIRIOLABS_API_KEY` |
+| [CometAPI](https://apidoc.cometapi.com/guides/change-base-url-to-cometapi) | `https://api.cometapi.com/v1` | auto, mimo-v2.6-pro-ultraspeed, gpt-6-sol | `COMETAPI_KEY` |
 
 ## OAuth and IDE
 
@@ -479,6 +504,9 @@ Speech-to-text and text-to-speech.
 | [Gladia](https://gladia.io) | `https://api.gladia.io/v2` | — | `GLADIA_API_KEY` |
 | [Rev AI](https://www.rev.ai) | `https://api.rev.ai` | — | `REV_AI_API_KEY` |
 | [Speechmatics](https://www.speechmatics.com) | `https://asr.api.speechmatics.com/v2` | — | `SPEECHMATICS_API_KEY` |
+| [Hume AI](https://dev.hume.ai/docs/text-to-speech-tts/overview) | `https://api.hume.ai` | octave | `HUME_API_KEY` |
+| [Rime](https://docs.rime.ai) | `https://users.rime.ai/v1` | arcana, mistv2 | `RIME_API_KEY` |
+| [Resemble AI](https://docs.resemble.ai/welcome) | `https://app.resemble.ai/api/v2` | — | `RESEMBLE_API_KEY` |
 
 ## Image and video
 
@@ -503,6 +531,9 @@ Image and video generation APIs.
 | [Topaz](https://topazlabs.com) | `https://api.topazlabs.com` | — | `TOPAZ_API_KEY` |
 | [Segmind](https://segmind.com) | `https://api.segmind.com/v1` | — | `SEGMIND_API_KEY` |
 | [DeepAI](https://deepai.org) | `https://api.deepai.org` | text2img | `DEEPAI_API_KEY` |
+| [Luma AI](https://docs.lumalabs.ai/docs/api) | `https://api.lumalabs.ai/dream-machine/v1` | ray-2, ray-flash-2 | `LUMA_API_KEY` |
+| [Bria AI](https://docs.bria.ai/image-generation) | `https://engine.prod.bria-api.com/v1` | fibo | `BRIA_API_KEY` |
+| [Runware](https://docs.runware.ai) | `https://api.runware.ai/v1` | runware:100@1 | `RUNWARE_API_KEY` |
 
 ## Cloud agents
 
@@ -524,6 +555,7 @@ Retrieval embeddings and rerankers.
 | [Jina AI (Foundation API)](https://jina.ai) | `https://api.jina.ai/v1` | — | `JINA_AI_API_KEY` |
 | [Nomic](https://nomic.ai) | `https://api-atlas.nomic.ai/v1` | — | `NOMIC_API_KEY` |
 | [Mixedbread AI](https://www.mixedbread.com) | `https://api.mixedbread.com/v1` | — | `MIXEDBREAD_API_KEY` |
+| [Pinecone Inference](https://docs.pinecone.io/guides/index-data/indexing-overview) | `https://api.pinecone.io` | pinecone-sparse-english-v0 | `PINECONE_API_KEY` |
 
 ## Specialized
 
@@ -561,6 +593,15 @@ Run models on your own machine.
 | [SD WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | `http://localhost:7860` | — | — |
 | [ComfyUI](https://github.com/comfyanonymous/ComfyUI) | `http://localhost:8188` | — | — |
 | [Muse Code (Meta)](https://github.com/meta-llama/llama-stack) | `http://localhost:8321/v1` | llama-4-maverick, llama-4-scout, llama-3.3-70b | — |
+| [SGLang](https://docs.sglang.io) | `http://localhost:30000/v1` | meta-llama/Meta-Llama-3-8B-Instruct | — |
+| [LMDeploy](https://lmdeploy.readthedocs.io/en/stable/llm/api_server.html) | `http://localhost:23333/v1` | internlm/internlm2_5-7b-chat | — |
+| [KoboldCpp](https://github.com/LostRuins/koboldcpp) | `http://localhost:5001/v1` | — | — |
+| [TabbyAPI](https://github.com/theroyallab/tabbyAPI) | `http://localhost:5000/v1` | — | — |
+| [Sonar Engine](https://sonar.dphn.ai) | `http://127.0.0.1:2242/v1` | — | — |
+| [GPT4All](https://github.com/nomic-ai/gpt4all/wiki/Local-API-Server) | `http://localhost:4891/v1` | Phi-3 Mini Instruct | — |
+| [OpenVINO Model Server](https://docs.openvino.ai) | `http://localhost:8000/v1` | — | — |
+| [MLX-LM](https://github.com/ml-explore/mlx-lm) | `http://localhost:8080/v1` | — | — |
+| [Privatemode AI](https://docs.privatemode.ai) | `http://localhost:8080/v1` | glm-flash-latest, glm-5.3-flash, kimi-k2.6 | `PRIVATEMODE_API_KEY` |
 
 ## Pick a provider
 

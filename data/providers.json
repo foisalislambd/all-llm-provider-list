@@ -7734,5 +7734,748 @@
     "env_variable": "PENDRA_API_KEY",
     "openai_compatible": true,
     "notes": "Pendra OpenAI-compatible router."
+  },
+  {
+    "id": 443,
+    "name": "Aleph Alpha",
+    "slug": "aleph-alpha",
+    "aliases": [
+      "pharia",
+      "luminous"
+    ],
+    "category": "Frontier",
+    "website": "https://docs.aleph-alpha.com",
+    "api_base_url": "Custom Pharia deployment",
+    "popular_models": [
+      "luminous-supreme-control",
+      "luminous-extended-control",
+      "Pharia-1-LLM-7B-control-aligned"
+    ],
+    "env_variable": "ALEPH_ALPHA_API_KEY",
+    "openai_compatible": true,
+    "notes": "Chat inference is on your own Pharia deployment, not one public base URL."
+  },
+  {
+    "id": 444,
+    "name": "IONOS AI Model Hub",
+    "slug": "ionos",
+    "aliases": [
+      "ionos-cloud"
+    ],
+    "category": "Sovereign / Cloud",
+    "website": "https://docs.ionos.com/cloud/ai/ai-model-hub/how-tos/tool-integration",
+    "api_base_url": "https://openai.inference.de-txl.ionos.com/v1",
+    "popular_models": [
+      "meta-llama/Meta-Llama-3.1-8B-Instruct",
+      "openGPT-X/Teuken-7B-instruct-commercial"
+    ],
+    "env_variable": "IONOS_API_TOKEN",
+    "openai_compatible": true,
+    "notes": "IONOS Cloud OpenAI-compatible Model Hub in Germany."
+  },
+  {
+    "id": 445,
+    "name": "Infomaniak AI Services",
+    "slug": "infomaniak",
+    "aliases": [
+      "infomaniak-ai"
+    ],
+    "category": "Sovereign / Cloud",
+    "website": "https://www.infomaniak.com/en/hosting/ai-services/open-source-models",
+    "api_base_url": "https://api.infomaniak.com/2/ai/{product_id}/openai/v1",
+    "popular_models": [
+      "mini_lm_l12_v2",
+      "bge_multilingual_gemma2",
+      "swiss-ai/Apertus-v1.5-70B",
+      "google/gemma-4-31B-it",
+      "Qwen/Qwen3.5-122B-A10B-FP8"
+    ],
+    "env_variable": "INFOMANIAK_API_KEY",
+    "openai_compatible": true,
+    "notes": "Swiss AI Services. Replace {product_id} with your AI product id."
+  },
+  {
+    "id": 446,
+    "name": "Yandex Cloud AI Studio",
+    "slug": "yandex",
+    "aliases": [
+      "yandexgpt",
+      "yandex-ai-studio"
+    ],
+    "category": "Sovereign / Cloud",
+    "website": "https://yandex.cloud/en/docs/ai-studio/",
+    "api_base_url": "https://ai.api.cloud.yandex.net/v1",
+    "popular_models": [
+      "gpt://<folder_ID>/yandexgpt/latest",
+      "gpt://<folder_ID>/yandexgpt-lite/latest",
+      "gpt://<folder_ID>/qwen3-235b-a22b-fp8/latest",
+      "gpt://<folder_ID>/gpt-oss-120b/latest"
+    ],
+    "env_variable": "YANDEX_API_KEY",
+    "openai_compatible": true,
+    "notes": "OpenAI-compatible. Model URIs look like gpt://<folder_ID>/yandexgpt/latest."
+  },
+  {
+    "id": 447,
+    "name": "Gcore Everywhere Inference",
+    "slug": "gcore",
+    "aliases": [
+      "gcore-ai"
+    ],
+    "category": "IaaS",
+    "website": "https://docs.gcore.com/edge-ai/everywhere-inference/ai-models/query-deployed-model",
+    "api_base_url": "https://model-<deployment>-<project>-<account>.ai.gcore.dev/v1",
+    "popular_models": [
+      "meta-llama/Llama-3.2-1B-Instruct"
+    ],
+    "env_variable": "GCORE_API_KEY",
+    "openai_compatible": true,
+    "notes": "Per-deployment OpenAI endpoint. When auth is on, send the key in X-API-Key."
+  },
+  {
+    "id": 448,
+    "name": "RunPod Serverless",
+    "slug": "runpod",
+    "aliases": [
+      "runpod-vllm"
+    ],
+    "category": "IaaS",
+    "website": "https://docs.runpod.io/serverless/vllm/openai-compatibility",
+    "api_base_url": "https://api.runpod.ai/v2/{endpoint_id}/openai/v1",
+    "popular_models": [],
+    "env_variable": "RUNPOD_API_KEY",
+    "openai_compatible": true,
+    "notes": "Replace {endpoint_id}. The model id is the name served by that vLLM worker."
+  },
+  {
+    "id": 449,
+    "name": "Tinfoil",
+    "slug": "tinfoil",
+    "aliases": [
+      "tinfoil-inference"
+    ],
+    "category": "IaaS",
+    "website": "https://docs.tinfoil.sh",
+    "api_base_url": "https://inference.tinfoil.sh/v1",
+    "popular_models": [
+      "deepseek-v4-1-flash",
+      "glm-5-3",
+      "glm-5-3-flash",
+      "kimi-k3",
+      "llama3-3-70b"
+    ],
+    "env_variable": "TINFOIL_API_KEY",
+    "openai_compatible": true,
+    "notes": "Confidential inference with an OpenAI-compatible chat API."
+  },
+  {
+    "id": 450,
+    "name": "Salad AI Gateway",
+    "slug": "salad",
+    "aliases": [
+      "salad-cloud"
+    ],
+    "category": "IaaS",
+    "website": "https://docs.salad.com/ai-gateway/explanation/overview",
+    "api_base_url": "https://ai.salad.cloud/v1",
+    "popular_models": [
+      "qwen3.5-35b-a3b",
+      "qwen3.5-9b",
+      "qwen3.6-27b",
+      "qwen3.6-35b-a3b"
+    ],
+    "env_variable": "SALAD_API_KEY",
+    "openai_compatible": true,
+    "notes": "Salad pay-per-token AI Gateway (beta)."
+  },
+  {
+    "id": 451,
+    "name": "Infercom",
+    "slug": "infercom",
+    "aliases": [
+      "infercom-ai"
+    ],
+    "category": "IaaS",
+    "website": "https://api.infercom.ai",
+    "api_base_url": "https://api.infercom.ai/v1",
+    "popular_models": [
+      "DeepSeek-V3.1",
+      "DeepSeek-V3.2",
+      "Meta-Llama-3.3-70B-Instruct",
+      "MiniMax-M2.7",
+      "gemma-4-31B-it"
+    ],
+    "env_variable": "INFERCOM_API_KEY",
+    "openai_compatible": true,
+    "notes": "Infercom hosted OpenAI-compatible inference."
+  },
+  {
+    "id": 452,
+    "name": "WAYSCloud",
+    "slug": "wayscloud",
+    "aliases": [
+      "wayscloud-services"
+    ],
+    "category": "IaaS",
+    "website": "https://docs.wayscloud.services",
+    "api_base_url": "https://api.wayscloud.services/v1",
+    "popular_models": [],
+    "env_variable": "WAYSCLOUD_API_KEY",
+    "openai_compatible": true,
+    "notes": "Nordic inference API. Auth uses X-API-Key; function calling is not implemented yet."
+  },
+  {
+    "id": 453,
+    "name": "TensorX",
+    "slug": "tensorx",
+    "aliases": [
+      "tensor-x"
+    ],
+    "category": "Gateway",
+    "website": "https://docs.tensorx.ai/",
+    "api_base_url": "https://api.tensorx.ai/v1",
+    "popular_models": [
+      "deepseek/deepseek-v4-flash-0731",
+      "deepseek/deepseek-v4.1-flash",
+      "deepseek/deepseek-v4-pro-0813",
+      "deepseek/deepseek-v4-pro",
+      "deepseek/deepseek-r1-0528"
+    ],
+    "env_variable": "TENSORX_API_KEY",
+    "openai_compatible": true,
+    "notes": "TensorX multi-model API."
+  },
+  {
+    "id": 454,
+    "name": "Lyceum",
+    "slug": "lyceum",
+    "aliases": [
+      "lyceum-technology"
+    ],
+    "category": "IaaS",
+    "website": "https://docs.lyceum.technology/docs/inference/serverless",
+    "api_base_url": "https://api.lyceum.technology/openai/v1",
+    "popular_models": [
+      "z-ai/glm-5.2"
+    ],
+    "env_variable": "LYCEUM_API_KEY",
+    "openai_compatible": true,
+    "notes": "Lyceum serverless OpenAI-compatible inference."
+  },
+  {
+    "id": 455,
+    "name": "InferX",
+    "slug": "inferx",
+    "aliases": [
+      "inferx-net"
+    ],
+    "category": "IaaS",
+    "website": "https://www.inferx.net",
+    "api_base_url": "https://model.inferx.net/v1",
+    "popular_models": [
+      "gemma-4-31B-it-fp8",
+      "Qwen3.6-35B-A3B-fp8-no-thinking",
+      "Devstral-2-123B-Instruct-2512-int4-AutoRound",
+      "Qwen3.6-27B-FP8",
+      "Qwen3-Coder-Next-FP8"
+    ],
+    "env_variable": "INFERX_API_KEY",
+    "openai_compatible": true,
+    "notes": "InferX serverless endpoints. Requests need a tenant-scoped API key."
+  },
+  {
+    "id": 456,
+    "name": "IteraCompute",
+    "slug": "iteracompute",
+    "aliases": [
+      "itera"
+    ],
+    "category": "IaaS",
+    "website": "https://iteracompute.com/docs.html",
+    "api_base_url": "https://api.iteracompute.com/v1",
+    "popular_models": [
+      "deepseek/deepseek-v4-pro-0813",
+      "minimax/minimax-m3",
+      "z-ai/glm-5.3",
+      "moonshotai/kimi-k3",
+      "qwen/qwen3.8-2.4t-a95b"
+    ],
+    "env_variable": "ITERACOMPUTE_API_KEY",
+    "openai_compatible": true,
+    "notes": "IteraCompute hosted models. Access depends on the API key or contract."
+  },
+  {
+    "id": 457,
+    "name": "CloudRift",
+    "slug": "cloudrift",
+    "aliases": [
+      "cloud-rift"
+    ],
+    "category": "IaaS",
+    "website": "https://www.cloudrift.ai",
+    "api_base_url": "https://inference.cloudrift.ai/v1",
+    "popular_models": [
+      "Qwen/Qwen3.8-27B-FP8"
+    ],
+    "env_variable": "CLOUDRIFT_API_KEY",
+    "openai_compatible": true,
+    "notes": "CloudRift OpenAI-compatible inference."
+  },
+  {
+    "id": 458,
+    "name": "Braintrust AI Gateway",
+    "slug": "braintrust",
+    "aliases": [
+      "braintrust-gateway"
+    ],
+    "category": "Gateway",
+    "website": "https://www.braintrust.dev/docs/deploy/gateway",
+    "api_base_url": "https://gateway.braintrust.dev/v1",
+    "popular_models": [
+      "claude-haiku-4-5",
+      "claude-sonnet-4-5"
+    ],
+    "env_variable": "BRAINTRUST_API_KEY",
+    "openai_compatible": true,
+    "notes": "Hosted Braintrust gateway for multi-provider models, caching, and logs."
+  },
+  {
+    "id": 459,
+    "name": "Martian Gateway",
+    "slug": "martian",
+    "aliases": [
+      "withmartian"
+    ],
+    "category": "Gateway",
+    "website": "https://withmartian.com",
+    "api_base_url": "https://api.withmartian.com/v1",
+    "popular_models": [
+      "aion-labs/aion-2.0",
+      "aion-labs/aion-3.0",
+      "aion-labs/aion-3.0-mini",
+      "aion-labs/aion-rp-llama-3.1-8b",
+      "amazon/nova-2-lite-v1"
+    ],
+    "env_variable": "MARTIAN_API_KEY",
+    "openai_compatible": true,
+    "notes": "Martian model router."
+  },
+  {
+    "id": 460,
+    "name": "TrueFoundry AI Gateway",
+    "slug": "truefoundry",
+    "aliases": [
+      "truefoundry-gateway"
+    ],
+    "category": "Gateway",
+    "website": "https://www.truefoundry.com/docs/ai-gateway/making-llm-requests-via-gateway",
+    "api_base_url": "https://gateway.truefoundry.ai",
+    "popular_models": [
+      "openai-main/gpt-4o-mini",
+      "anthropic-main/claude-4-sonnet"
+    ],
+    "env_variable": "TRUEFOUNDRY_API_KEY",
+    "openai_compatible": true,
+    "notes": "SaaS gateway. Base URL has no /v1 suffix; model ids are provider_account/model."
+  },
+  {
+    "id": 461,
+    "name": "CometAPI",
+    "slug": "cometapi",
+    "aliases": [
+      "comet-api"
+    ],
+    "category": "Aggregator",
+    "website": "https://apidoc.cometapi.com/guides/change-base-url-to-cometapi",
+    "api_base_url": "https://api.cometapi.com/v1",
+    "popular_models": [
+      "auto",
+      "mimo-v2.6-pro-ultraspeed",
+      "gpt-6-sol",
+      "gpt-6-luna",
+      "mimo-v2.6-flash"
+    ],
+    "env_variable": "COMETAPI_KEY",
+    "openai_compatible": true,
+    "notes": "CometAPI OpenAI-compatible aggregator."
+  },
+  {
+    "id": 462,
+    "name": "Orq.ai AI Gateway",
+    "slug": "orq",
+    "aliases": [
+      "orq-ai"
+    ],
+    "category": "Gateway",
+    "website": "https://docs.orq.ai/reference/models/list-router-models",
+    "api_base_url": "https://api.orq.ai/v3/router",
+    "popular_models": [
+      "openai/gpt-4o"
+    ],
+    "env_variable": "ORQ_API_KEY",
+    "openai_compatible": true,
+    "notes": "Orq router. https://my.orq.ai/v3/router accepts the same API."
+  },
+  {
+    "id": 463,
+    "name": "Neon AI Gateway",
+    "slug": "neon",
+    "aliases": [
+      "neon-ai"
+    ],
+    "category": "Gateway",
+    "website": "https://neon.com",
+    "api_base_url": "${NEON_AI_GATEWAY_BASE_URL}/v1",
+    "popular_models": [
+      "gpt-5-4-mini",
+      "claude-haiku-4-5",
+      "gpt-5-6-luna",
+      "glm-5-3-flash",
+      "gpt-5-6-terra"
+    ],
+    "env_variable": "NEON_AI_GATEWAY_TOKEN",
+    "openai_compatible": true,
+    "notes": "Per-branch gateway. Set NEON_AI_GATEWAY_BASE_URL to that branch host."
+  },
+  {
+    "id": 464,
+    "name": "CrossModel",
+    "slug": "crossmodel",
+    "aliases": [
+      "crossmodel-ai"
+    ],
+    "category": "Gateway",
+    "website": "https://www.crossmodel.ai/docs",
+    "api_base_url": "https://api.crossmodel.ai/v1",
+    "popular_models": [
+      "anthropic/claude-haiku-4-5",
+      "anthropic/claude-opus-5-5",
+      "anthropic/claude-fable-5-1",
+      "anthropic/claude-opus-5",
+      "anthropic/claude-fable-5"
+    ],
+    "env_variable": "CROSSMODEL_API_KEY",
+    "openai_compatible": true,
+    "notes": "CrossModel multi-provider router."
+  },
+  {
+    "id": 465,
+    "name": "routing.run",
+    "slug": "routing-run",
+    "aliases": [
+      "routingrun"
+    ],
+    "category": "Gateway",
+    "website": "https://docs.routing.run/api-reference/models",
+    "api_base_url": "https://api.routing.run/v1",
+    "popular_models": [
+      "gpt-5.6-sol",
+      "gpt-5.6-terra",
+      "gpt-5.6-luna",
+      "deepseek-v4-flash",
+      "deepseek-v4-pro"
+    ],
+    "env_variable": "ROUTING_RUN_API_KEY",
+    "openai_compatible": true,
+    "notes": "routing.run model router."
+  },
+  {
+    "id": 466,
+    "name": "Apache APISIX",
+    "slug": "apisix",
+    "aliases": [
+      "apisix-ai"
+    ],
+    "category": "Gateway",
+    "website": "https://apisix.apache.org",
+    "api_base_url": "Self-hosted / enterprise",
+    "popular_models": [],
+    "env_variable": null,
+    "openai_compatible": true,
+    "notes": "Self-hosted API gateway. The AI plugins can expose an OpenAI-compatible route."
+  },
+  {
+    "id": 467,
+    "name": "Envoy Agent Router",
+    "slug": "envoy-agent-router",
+    "aliases": [
+      "envoy-ai-gateway",
+      "theagentrouter"
+    ],
+    "category": "Gateway",
+    "website": "https://theagentrouter.ai",
+    "api_base_url": "Self-hosted / enterprise",
+    "popular_models": [],
+    "env_variable": null,
+    "openai_compatible": true,
+    "notes": "Envoy AI Gateway, now called Agent Router. Not the agentrouter.org service."
+  },
+  {
+    "id": 468,
+    "name": "Pinecone Inference",
+    "slug": "pinecone",
+    "aliases": [
+      "pinecone-inference"
+    ],
+    "category": "Embeddings",
+    "website": "https://docs.pinecone.io/guides/index-data/indexing-overview",
+    "api_base_url": "https://api.pinecone.io",
+    "popular_models": [
+      "pinecone-sparse-english-v0"
+    ],
+    "env_variable": "PINECONE_API_KEY",
+    "openai_compatible": false,
+    "notes": "Embedding and rerank API, not a chat completions endpoint."
+  },
+  {
+    "id": 469,
+    "name": "Hume AI",
+    "slug": "hume",
+    "aliases": [
+      "hume-octave"
+    ],
+    "category": "Audio",
+    "website": "https://dev.hume.ai/docs/text-to-speech-tts/overview",
+    "api_base_url": "https://api.hume.ai",
+    "popular_models": [
+      "octave"
+    ],
+    "env_variable": "HUME_API_KEY",
+    "openai_compatible": false,
+    "notes": "Speech and voice API, including Octave TTS."
+  },
+  {
+    "id": 470,
+    "name": "Rime",
+    "slug": "rime",
+    "aliases": [
+      "rime-tts"
+    ],
+    "category": "Audio",
+    "website": "https://docs.rime.ai",
+    "api_base_url": "https://users.rime.ai/v1",
+    "popular_models": [
+      "arcana",
+      "mistv2"
+    ],
+    "env_variable": "RIME_API_KEY",
+    "openai_compatible": false,
+    "notes": "Text-to-speech API."
+  },
+  {
+    "id": 471,
+    "name": "Luma AI",
+    "slug": "luma",
+    "aliases": [
+      "luma-dream-machine",
+      "lumalabs"
+    ],
+    "category": "Image / Video",
+    "website": "https://docs.lumalabs.ai/docs/api",
+    "api_base_url": "https://api.lumalabs.ai/dream-machine/v1",
+    "popular_models": [
+      "ray-2",
+      "ray-flash-2"
+    ],
+    "env_variable": "LUMA_API_KEY",
+    "openai_compatible": false,
+    "notes": "Dream Machine video generation API."
+  },
+  {
+    "id": 472,
+    "name": "Bria AI",
+    "slug": "bria",
+    "aliases": [
+      "bria-api"
+    ],
+    "category": "Image / Video",
+    "website": "https://docs.bria.ai/image-generation",
+    "api_base_url": "https://engine.prod.bria-api.com/v1",
+    "popular_models": [
+      "fibo"
+    ],
+    "env_variable": "BRIA_API_KEY",
+    "openai_compatible": false,
+    "notes": "Image generation and editing API."
+  },
+  {
+    "id": 473,
+    "name": "Runware",
+    "slug": "runware",
+    "aliases": [
+      "runware-ai"
+    ],
+    "category": "Image / Video",
+    "website": "https://docs.runware.ai",
+    "api_base_url": "https://api.runware.ai/v1",
+    "popular_models": [
+      "runware:100@1"
+    ],
+    "env_variable": "RUNWARE_API_KEY",
+    "openai_compatible": false,
+    "notes": "Multimodal task-array API, not OpenAI chat completions."
+  },
+  {
+    "id": 474,
+    "name": "SGLang",
+    "slug": "sglang",
+    "aliases": [
+      "sglang-server"
+    ],
+    "category": "Local",
+    "website": "https://docs.sglang.io",
+    "api_base_url": "http://localhost:30000/v1",
+    "popular_models": [
+      "meta-llama/Meta-Llama-3-8B-Instruct"
+    ],
+    "env_variable": null,
+    "openai_compatible": true,
+    "notes": "Local OpenAI-compatible server. Default port 30000. Model id is the served model."
+  },
+  {
+    "id": 475,
+    "name": "LMDeploy",
+    "slug": "lmdeploy",
+    "aliases": [
+      "lmdeploy-api-server"
+    ],
+    "category": "Local",
+    "website": "https://lmdeploy.readthedocs.io/en/stable/llm/api_server.html",
+    "api_base_url": "http://localhost:23333/v1",
+    "popular_models": [
+      "internlm/internlm2_5-7b-chat"
+    ],
+    "env_variable": null,
+    "openai_compatible": true,
+    "notes": "Local OpenAI-compatible api_server. Default port 23333."
+  },
+  {
+    "id": 476,
+    "name": "KoboldCpp",
+    "slug": "koboldcpp",
+    "aliases": [
+      "kobold-cpp"
+    ],
+    "category": "Local",
+    "website": "https://github.com/LostRuins/koboldcpp",
+    "api_base_url": "http://localhost:5001/v1",
+    "popular_models": [],
+    "env_variable": null,
+    "openai_compatible": true,
+    "notes": "Local GGUF server. OpenAI routes are under /v1. Default port 5001."
+  },
+  {
+    "id": 477,
+    "name": "TabbyAPI",
+    "slug": "tabbyapi",
+    "aliases": [
+      "tabby-api"
+    ],
+    "category": "Local",
+    "website": "https://github.com/theroyallab/tabbyAPI",
+    "api_base_url": "http://localhost:5000/v1",
+    "popular_models": [],
+    "env_variable": null,
+    "openai_compatible": true,
+    "notes": "Local exllama server. Default port 5000, the same port oobabooga uses."
+  },
+  {
+    "id": 478,
+    "name": "Sonar Engine",
+    "slug": "sonar-engine",
+    "aliases": [
+      "aphrodite",
+      "aphrodite-engine"
+    ],
+    "category": "Local",
+    "website": "https://sonar.dphn.ai",
+    "api_base_url": "http://127.0.0.1:2242/v1",
+    "popular_models": [],
+    "env_variable": null,
+    "openai_compatible": true,
+    "notes": "Local inference server, formerly Aphrodite Engine. OpenAI-compatible on port 2242."
+  },
+  {
+    "id": 479,
+    "name": "GPT4All",
+    "slug": "gpt4all",
+    "aliases": [
+      "gpt4all-server"
+    ],
+    "category": "Local",
+    "website": "https://github.com/nomic-ai/gpt4all/wiki/Local-API-Server",
+    "api_base_url": "http://localhost:4891/v1",
+    "popular_models": [
+      "Phi-3 Mini Instruct"
+    ],
+    "env_variable": null,
+    "openai_compatible": true,
+    "notes": "GPT4All desktop local server. Enable it in Settings. Default port 4891."
+  },
+  {
+    "id": 480,
+    "name": "OpenVINO Model Server",
+    "slug": "openvino",
+    "aliases": [
+      "ovms"
+    ],
+    "category": "Local",
+    "website": "https://docs.openvino.ai",
+    "api_base_url": "http://localhost:8000/v1",
+    "popular_models": [],
+    "env_variable": null,
+    "openai_compatible": true,
+    "notes": "Local OpenVINO Model Server OpenAI front end. Default REST port 8000, also used by vLLM. Model id is the name configured on the server."
+  },
+  {
+    "id": 481,
+    "name": "MLX-LM",
+    "slug": "mlx-lm",
+    "aliases": [
+      "mlx-lm-server"
+    ],
+    "category": "Local",
+    "website": "https://github.com/ml-explore/mlx-lm",
+    "api_base_url": "http://localhost:8080/v1",
+    "popular_models": [],
+    "env_variable": null,
+    "openai_compatible": true,
+    "notes": "Generic mlx_lm.server on port 8080. Separate from the MLX Gemma and MLX Qwen entries, which use their own ports."
+  },
+  {
+    "id": 482,
+    "name": "Privatemode AI",
+    "slug": "privatemode",
+    "aliases": [
+      "privatemode-proxy"
+    ],
+    "category": "Local",
+    "website": "https://docs.privatemode.ai",
+    "api_base_url": "http://localhost:8080/v1",
+    "popular_models": [
+      "glm-flash-latest",
+      "glm-5.3-flash",
+      "kimi-k2.6",
+      "deepseek-ocr-2",
+      "voxtral-mini-3b"
+    ],
+    "env_variable": "PRIVATEMODE_API_KEY",
+    "openai_compatible": true,
+    "notes": "Confidential inference. The OpenAI client talks to the local encryption proxy on port 8080, not the hosted URL directly."
+  },
+  {
+    "id": 483,
+    "name": "Resemble AI",
+    "slug": "resemble",
+    "aliases": [
+      "resemble-ai"
+    ],
+    "category": "Audio",
+    "website": "https://docs.resemble.ai/welcome",
+    "api_base_url": "https://app.resemble.ai/api/v2",
+    "popular_models": [],
+    "env_variable": "RESEMBLE_API_KEY",
+    "openai_compatible": false,
+    "notes": "Voice cloning and TTS. Voices are project-specific; this is not an OpenAI chat API."
   }
 ]

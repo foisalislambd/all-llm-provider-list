@@ -37,6 +37,14 @@ PUBLIC_MODEL_APIS: dict[str, str] = {
     "empiriolabs": "https://api.empiriolabs.ai/v1/models",
     "aiand": "https://api.aiand.com/v1/models",
     "ambient": "https://api.ambient.xyz/v1/models",
+    "tinfoil": "https://inference.tinfoil.sh/v1/models",
+    "iteracompute": "https://api.iteracompute.com/v1/models",
+    "routing-run": "https://api.routing.run/v1/models",
+    "salad": "https://ai.salad.cloud/v1/models",
+    "infercom": "https://api.infercom.ai/v1/models",
+    "cloudrift": "https://inference.cloudrift.ai/v1/models",
+    "martian": "https://api.withmartian.com/v1/models",
+    "cometapi": "https://api.cometapi.com/api/models",
     # Not /v1/models - SAGG's public model listing lives at /models (no
     # /v1/ prefix on this specific route), so the generic
     # _models_url_from_base() derivation from api_base_url below would
