@@ -6818,5 +6818,903 @@
     "openai_compatible": false,
     "notes": "OpenAI-compatible API on a network of Apple-silicon Macs; providers paid per job in USDC.",
     "id": 397
+  },
+  {
+    "id": 398,
+    "name": "Amazon Nova",
+    "slug": "amazon-nova",
+    "aliases": [
+      "nova-api"
+    ],
+    "category": "Frontier",
+    "website": "https://nova.amazon.com",
+    "api_base_url": "https://api.nova.amazon.com/v1",
+    "popular_models": [
+      "nova-2-pro-v1",
+      "nova-2-lite-v1"
+    ],
+    "env_variable": "NOVA_API_KEY",
+    "openai_compatible": true,
+    "notes": "Amazon's first-party Nova API, separate from Bedrock."
+  },
+  {
+    "id": 399,
+    "name": "Meta AI",
+    "slug": "meta-ai",
+    "aliases": [
+      "meta-model-api"
+    ],
+    "category": "Frontier",
+    "website": "https://dev.meta.ai",
+    "api_base_url": "https://api.meta.ai/v1",
+    "popular_models": [
+      "muse-spark-1.3",
+      "muse-spark-1.1",
+      "muse-spark-1.2",
+      "muse-spark-1.2-contributor",
+      "muse-spark-1.3-contributor"
+    ],
+    "env_variable": "META_MODEL_API_KEY",
+    "openai_compatible": true,
+    "notes": "Meta Muse Spark models on api.meta.ai (distinct from the Llama API)."
+  },
+  {
+    "id": 400,
+    "name": "Moonshot AI (China)",
+    "slug": "moonshot-cn",
+    "aliases": [
+      "moonshot-china",
+      "kimi-cn"
+    ],
+    "category": "Frontier",
+    "website": "https://platform.moonshot.cn",
+    "api_base_url": "https://api.moonshot.cn/v1",
+    "popular_models": [
+      "kimi-k2.7-code",
+      "kimi-k2.6",
+      "kimi-k2.7-code-highspeed",
+      "kimi-k3"
+    ],
+    "env_variable": "MOONSHOT_CN_API_KEY",
+    "openai_compatible": true,
+    "notes": "Kimi models on Moonshot's China endpoint."
+  },
+  {
+    "id": 401,
+    "name": "Thinking Machines",
+    "slug": "thinking-machines",
+    "aliases": [
+      "tinker"
+    ],
+    "category": "Frontier",
+    "website": "https://tinker-docs.thinkingmachines.ai/tinker/compatible-apis/anthropic/",
+    "api_base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/anthropic/api/v1",
+    "popular_models": [
+      "thinkingmachines/Inkling:peft:262144",
+      "thinkingmachines/Inkling"
+    ],
+    "env_variable": "TINKER_API_KEY",
+    "openai_compatible": false,
+    "notes": "Anthropic-compatible Tinker API for Thinking Machines models."
+  },
+  {
+    "id": 402,
+    "name": "Krutrim",
+    "slug": "krutrim",
+    "aliases": [
+      "ola-krutrim"
+    ],
+    "category": "Frontier",
+    "website": "https://cloud.olakrutrim.com",
+    "api_base_url": "https://cloud.olakrutrim.com/v1",
+    "popular_models": [
+      "krutrim-1",
+      "Meta-Llama-3-8B-Instruct"
+    ],
+    "env_variable": "KRUTRIM_API_KEY",
+    "openai_compatible": true,
+    "notes": "Ola Krutrim OpenAI-compatible inference API."
+  },
+  {
+    "id": 403,
+    "name": "Kimi For Coding",
+    "slug": "kimi-ai-coding",
+    "aliases": [
+      "kimi-ai"
+    ],
+    "category": "Frontier",
+    "website": "https://www.kimi.ai/code",
+    "api_base_url": "https://api.kimi.ai/coding/v1",
+    "popular_models": [
+      "kimi-for-coding-highspeed",
+      "kimi-for-coding",
+      "k3-256k",
+      "k3"
+    ],
+    "env_variable": "KIMI_AI_API_KEY",
+    "openai_compatible": true,
+    "notes": "Kimi coding plan on kimi.ai (distinct from api.kimi.com)."
+  },
+  {
+    "id": 404,
+    "name": "Alibaba Coding Plan",
+    "slug": "alibaba-coding-plan",
+    "aliases": [
+      "dashscope-coding-plan"
+    ],
+    "category": "Frontier",
+    "website": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+    "api_base_url": "https://coding-intl.dashscope.aliyuncs.com/v1",
+    "popular_models": [
+      "qwen3.7-max",
+      "qwen3-coder-next",
+      "qwen3.5-plus",
+      "glm-5",
+      "kimi-k2.5"
+    ],
+    "env_variable": "ALIBABA_CODING_PLAN_API_KEY",
+    "openai_compatible": true,
+    "notes": "International Alibaba Model Studio coding-plan endpoint."
+  },
+  {
+    "id": 405,
+    "name": "Alibaba Coding Plan (China)",
+    "slug": "alibaba-coding-plan-cn",
+    "aliases": [
+      "dashscope-coding-plan-cn"
+    ],
+    "category": "Frontier",
+    "website": "https://help.aliyun.com/zh/model-studio/coding-plan",
+    "api_base_url": "https://coding.dashscope.aliyuncs.com/v1",
+    "popular_models": [
+      "qwen3.7-max",
+      "qwen3-coder-next",
+      "qwen3.5-plus",
+      "glm-5",
+      "kimi-k2.5"
+    ],
+    "env_variable": "ALIBABA_CODING_PLAN_CN_API_KEY",
+    "openai_compatible": true,
+    "notes": "China Alibaba Model Studio coding-plan endpoint."
+  },
+  {
+    "id": 406,
+    "name": "Alibaba Token Plan (China)",
+    "slug": "alibaba-token-plan-cn",
+    "aliases": [
+      "bailian-token-plan-cn"
+    ],
+    "category": "Frontier",
+    "website": "https://www.alibabacloud.com/help/zh/model-studio/token-plan-overview",
+    "api_base_url": "https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+    "popular_models": [
+      "qwen3.8-max",
+      "qwen3.7-max",
+      "deepseek-v4-flash-0731",
+      "glm-5",
+      "kimi-k2.6"
+    ],
+    "env_variable": "ALIBABA_TOKEN_PLAN_CN_API_KEY",
+    "openai_compatible": true,
+    "notes": "China-region Alibaba token plan (Beijing MaaS)."
+  },
+  {
+    "id": 407,
+    "name": "StepFun Step Plan (China)",
+    "slug": "stepfun-step-plan",
+    "aliases": [
+      "step-plan-cn"
+    ],
+    "category": "Frontier",
+    "website": "https://platform.stepfun.com/docs/zh/step-plan/integrations/reasoning-api",
+    "api_base_url": "https://api.stepfun.com/step_plan/v1",
+    "popular_models": [
+      "step-5-preview",
+      "step-router-v1",
+      "step-3.5-flash-2603",
+      "step-3.5-flash",
+      "step-3.7-flash"
+    ],
+    "env_variable": "STEPFUN_STEP_PLAN_API_KEY",
+    "openai_compatible": true,
+    "notes": "StepFun Step Plan on the China platform."
+  },
+  {
+    "id": 408,
+    "name": "StepFun Step Plan (Global)",
+    "slug": "stepfun-step-plan-global",
+    "aliases": [
+      "step-plan"
+    ],
+    "category": "Frontier",
+    "website": "https://platform.stepfun.ai/docs/en/step-plan/integrations/reasoning-api",
+    "api_base_url": "https://api.stepfun.ai/step_plan/v1",
+    "popular_models": [
+      "step-5-preview",
+      "step-3.5-flash-2603",
+      "step-3.5-flash",
+      "step-3.7-flash"
+    ],
+    "env_variable": "STEPFUN_GLOBAL_STEP_PLAN_API_KEY",
+    "openai_compatible": true,
+    "notes": "StepFun Step Plan on the global platform."
+  },
+  {
+    "id": 409,
+    "name": "MiniMax Token Plan",
+    "slug": "minimax-token-plan",
+    "aliases": [
+      "minimax-anthropic"
+    ],
+    "category": "Frontier",
+    "website": "https://platform.minimax.io/docs/token-plan/intro",
+    "api_base_url": "https://api.minimax.io/anthropic/v1",
+    "popular_models": [
+      "MiniMax-M3",
+      "MiniMax-M2.1",
+      "MiniMax-M2.5",
+      "MiniMax-M2.7",
+      "MiniMax-M2.7-highspeed"
+    ],
+    "env_variable": "MINIMAX_TOKEN_PLAN_API_KEY",
+    "openai_compatible": false,
+    "notes": "Anthropic-compatible MiniMax token plan (minimax.io)."
+  },
+  {
+    "id": 410,
+    "name": "MiniMax Token Plan (China)",
+    "slug": "minimax-cn-token-plan",
+    "aliases": [
+      "minimax-cn-anthropic"
+    ],
+    "category": "Frontier",
+    "website": "https://platform.minimaxi.com/docs/token-plan/intro",
+    "api_base_url": "https://api.minimax.cn/anthropic/v1",
+    "popular_models": [
+      "MiniMax-M3",
+      "MiniMax-M2.1",
+      "MiniMax-M2.5",
+      "MiniMax-M2.7",
+      "MiniMax-M2.7-highspeed"
+    ],
+    "env_variable": "MINIMAX_CN_TOKEN_PLAN_API_KEY",
+    "openai_compatible": false,
+    "notes": "Anthropic-compatible MiniMax token plan on minimax.cn."
+  },
+  {
+    "id": 411,
+    "name": "Tencent TokenHub",
+    "slug": "tencent-tokenhub",
+    "aliases": [
+      "tokenhub"
+    ],
+    "category": "Frontier",
+    "website": "https://cloud.tencent.com/document/product/1823/130050",
+    "api_base_url": "https://tokenhub.tencentmaas.com/v1",
+    "popular_models": [
+      "hy3-preview",
+      "hy3",
+      "hy4-preview"
+    ],
+    "env_variable": "TENCENT_TOKENHUB_API_KEY",
+    "openai_compatible": true,
+    "notes": "Tencent MaaS TokenHub for Hunyuan models."
+  },
+  {
+    "id": 412,
+    "name": "Tencent Token Plan",
+    "slug": "tencent-token-plan",
+    "aliases": [
+      "lkeap-token-plan"
+    ],
+    "category": "Frontier",
+    "website": "https://cloud.tencent.com/document/product/1823/130060",
+    "api_base_url": "https://api.lkeap.cloud.tencent.com/plan/v3",
+    "popular_models": [
+      "hy3",
+      "hy4-preview"
+    ],
+    "env_variable": "TENCENT_TOKEN_PLAN_API_KEY",
+    "openai_compatible": true,
+    "notes": "Tencent Cloud token-plan endpoint (LKEAP)."
+  },
+  {
+    "id": 413,
+    "name": "Crusoe",
+    "slug": "crusoe",
+    "aliases": [
+      "crusoe-inference"
+    ],
+    "category": "IaaS",
+    "website": "https://docs.crusoecloud.com/managed-inference/overview",
+    "api_base_url": "https://api.inference.crusoecloud.com/v1",
+    "popular_models": [
+      "zai/GLM-5.1",
+      "zai/GLM-5.2",
+      "meta-llama/Llama-3.3-70B-Instruct",
+      "google/gemma-4-31b-it",
+      "Qwen/Qwen3-235B-A22B-Instruct-2507"
+    ],
+    "env_variable": "CRUSOE_API_KEY",
+    "openai_compatible": true,
+    "notes": "Crusoe managed inference for open-weight models."
+  },
+  {
+    "id": 414,
+    "name": "Vultr Inference",
+    "slug": "vultr",
+    "aliases": [
+      "vultr-inference"
+    ],
+    "category": "IaaS",
+    "website": "https://www.vultr.com",
+    "api_base_url": "https://api.vultrinference.com/v1",
+    "popular_models": [
+      "deepseek-v4-flash-0731",
+      "deepseek-v4.1-flash",
+      "glm-5.2",
+      "glm-5.3",
+      "glm-5.3-flash"
+    ],
+    "env_variable": "VULTR_API_KEY",
+    "openai_compatible": true,
+    "notes": "Vultr serverless inference, OpenAI-compatible."
+  },
+  {
+    "id": 415,
+    "name": "CoralBricks",
+    "slug": "coralbricks",
+    "aliases": [
+      "coral"
+    ],
+    "category": "IaaS",
+    "website": "https://www.coralbricks.ai",
+    "api_base_url": "https://inference.coralbricks.ai/v1",
+    "popular_models": [
+      "glm-5.3-fp4",
+      "glm-5.3-flash-fp4",
+      "gpt-oss-120b",
+      "deepseek-v4.1-flash-fast-fp4"
+    ],
+    "env_variable": "CORAL_API_KEY",
+    "openai_compatible": true,
+    "notes": "CoralBricks serverless inference."
+  },
+  {
+    "id": 416,
+    "name": "Jalapeno Cloud",
+    "slug": "jalapeno",
+    "aliases": [
+      "jalapeno-cloud"
+    ],
+    "category": "IaaS",
+    "website": "https://www.jalapeno-cloud.ai",
+    "api_base_url": "https://api.jalapeno-cloud.ai/v1",
+    "popular_models": [
+      "Qwen3-VL-235B-A22B-Instruct",
+      "MiniMax-M3",
+      "Qwen3-Next-80B-A3B-Instruct",
+      "GLM-5.1",
+      "Hy3"
+    ],
+    "env_variable": "JALAPENO_API_KEY",
+    "openai_compatible": true,
+    "notes": "Jalapeno Cloud hosted open-weight models."
+  },
+  {
+    "id": 417,
+    "name": "Berget.AI",
+    "slug": "berget",
+    "aliases": [
+      "berget-ai"
+    ],
+    "category": "IaaS",
+    "website": "https://berget.ai",
+    "api_base_url": "https://api.berget.ai/v1",
+    "popular_models": [
+      "Qwen/Qwen3.8-27B-FP8",
+      "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+      "zai-org/GLM-5.3-Flash",
+      "moonshotai/Kimi-K3",
+      "google/gemma-4-31B-it"
+    ],
+    "env_variable": "BERGET_API_KEY",
+    "openai_compatible": true,
+    "notes": "Swedish inference API for open-weight models."
+  },
+  {
+    "id": 418,
+    "name": "AMD Token Factory",
+    "slug": "amd-token-factory",
+    "aliases": [
+      "amd-radeon"
+    ],
+    "category": "IaaS",
+    "website": "https://developer.amd.com.cn/radeon/tokenfactory",
+    "api_base_url": "https://developer.amd.com.cn/radeon/api/v1",
+    "popular_models": [
+      "Qwen3.8-27B",
+      "DeepSeek-V4.1-Flash",
+      "DeepSeek-V4-Flash",
+      "Qwen3.8-Flash-Next",
+      "MiniCPM5-2B"
+    ],
+    "env_variable": "AMD_API_KEY",
+    "openai_compatible": true,
+    "notes": "AMD Radeon Token Factory OpenAI-compatible API."
+  },
+  {
+    "id": 419,
+    "name": "EBCloud",
+    "slug": "ebcloud",
+    "aliases": [
+      "eb-cloud"
+    ],
+    "category": "IaaS",
+    "website": "https://www.ebcloud.com",
+    "api_base_url": "https://maas-api.ebcloud.com/v1",
+    "popular_models": [
+      "Kimi-K2.6",
+      "GLM-5.1",
+      "DeepSeek-V4-Flash",
+      "DeepSeek-V4-Pro"
+    ],
+    "env_variable": "EBCLOUD_API_KEY",
+    "openai_compatible": true,
+    "notes": "EBCloud MaaS inference endpoint."
+  },
+  {
+    "id": 420,
+    "name": "D.Run",
+    "slug": "drun",
+    "aliases": [
+      "d-run"
+    ],
+    "category": "IaaS",
+    "website": "https://www.d.run",
+    "api_base_url": "https://chat.d.run/v1",
+    "popular_models": [
+      "public/deepseek-v3",
+      "public/minimax-m25",
+      "public/deepseek-r1"
+    ],
+    "env_variable": "DRUN_API_KEY",
+    "openai_compatible": true,
+    "notes": "D.Run public model inference (China)."
+  },
+  {
+    "id": 421,
+    "name": "Lilac",
+    "slug": "lilac",
+    "aliases": [
+      "getlilac"
+    ],
+    "category": "IaaS",
+    "website": "https://docs.getlilac.com/inference/models",
+    "api_base_url": "https://api.getlilac.com/v1",
+    "popular_models": [
+      "google/gemma-4-31b-it",
+      "minimaxai/minimax-m3",
+      "moonshotai/kimi-k2.6",
+      "zai-org/glm-5.2"
+    ],
+    "env_variable": "LILAC_API_KEY",
+    "openai_compatible": true,
+    "notes": "Lilac hosted open-weight inference."
+  },
+  {
+    "id": 422,
+    "name": "RunInfra",
+    "slug": "runinfra",
+    "aliases": [
+      "run-infra"
+    ],
+    "category": "IaaS",
+    "website": "https://runinfra.ai",
+    "api_base_url": "https://api.runinfra.ai/v1",
+    "popular_models": [
+      "Inferact/Qwen3.8-2.4T-A95B-NVFP4",
+      "Qwen/Qwen3.8-27B",
+      "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "zai-org/GLM-5.3-Flash"
+    ],
+    "env_variable": "RUNINFRA_GATEWAY_KEY",
+    "openai_compatible": true,
+    "notes": "RunInfra gateway for open-weight models."
+  },
+  {
+    "id": 423,
+    "name": "AKI.IO",
+    "slug": "aki",
+    "aliases": [
+      "aki-io"
+    ],
+    "category": "IaaS",
+    "website": "https://aki.io",
+    "api_base_url": "https://aki.io/v1",
+    "popular_models": [
+      "qwen3.8-27b",
+      "deepseek-v4-flash-0731-284b",
+      "qwen3.6-35b",
+      "glm5.3-754b",
+      "mistral4-119b"
+    ],
+    "env_variable": "AKI_IO_API_KEY",
+    "openai_compatible": true,
+    "notes": "AKI.IO OpenAI-compatible inference."
+  },
+  {
+    "id": 424,
+    "name": "DInference",
+    "slug": "dinference",
+    "aliases": [
+      "d-inference"
+    ],
+    "category": "IaaS",
+    "website": "https://dinference.com",
+    "api_base_url": "https://api.dinference.com/v1",
+    "popular_models": [
+      "glm-5",
+      "minimax-m2.5",
+      "glm-4.7",
+      "glm-5.2",
+      "glm-5.1"
+    ],
+    "env_variable": "DINFERENCE_API_KEY",
+    "openai_compatible": true,
+    "notes": "DInference hosted chat models."
+  },
+  {
+    "id": 425,
+    "name": "Hetzner",
+    "slug": "hetzner",
+    "aliases": [
+      "hetzner-inference"
+    ],
+    "category": "Sovereign / Cloud",
+    "website": "https://docs.hetzner.com/general/company-and-policy/experiments/inference/",
+    "api_base_url": "https://inference.hetzner.com/api/v1",
+    "popular_models": [
+      "Qwen3.8-27B",
+      "Qwen/Qwen3.6-35B-A3B-FP8"
+    ],
+    "env_variable": "HETZNER_API_KEY",
+    "openai_compatible": true,
+    "notes": "Hetzner experimental OpenAI-compatible inference API."
+  },
+  {
+    "id": 426,
+    "name": "evroc",
+    "slug": "evroc",
+    "aliases": [
+      "evroc-think"
+    ],
+    "category": "Sovereign / Cloud",
+    "website": "https://docs.evroc.com/products/think/",
+    "api_base_url": "https://models.think.evroc.com/v1",
+    "popular_models": [
+      "google/gemma-4-26B-A4B-it",
+      "Qwen/Qwen3.8-27B",
+      "Qwen/Qwen3.6-35B-A3B",
+      "mistralai/Mistral-Medium-3.5-128B",
+      "mistralai/Voxtral-Small-24B-2507"
+    ],
+    "env_variable": "EVROC_API_KEY",
+    "openai_compatible": true,
+    "notes": "evroc Think sovereign inference in the EU."
+  },
+  {
+    "id": 427,
+    "name": "CloudFerro Sherlock",
+    "slug": "cloudferro",
+    "aliases": [
+      "sherlock"
+    ],
+    "category": "Sovereign / Cloud",
+    "website": "https://docs.sherlock.cloudferro.com/",
+    "api_base_url": "https://api-sherlock.cloudferro.com/openai/v1",
+    "popular_models": [
+      "meta-llama/Llama-3.3-70B-Instruct",
+      "MiniMaxAI/MiniMax-M2.5",
+      "openai/gpt-oss-120b",
+      "speakleash/Bielik-11B-v2.6-Instruct",
+      "speakleash/Bielik-11B-v3.0-Instruct"
+    ],
+    "env_variable": "CLOUDFERRO_SHERLOCK_API_KEY",
+    "openai_compatible": true,
+    "notes": "CloudFerro Sherlock EU inference, including Bielik."
+  },
+  {
+    "id": 428,
+    "name": "SCNet Token Plan",
+    "slug": "scnet",
+    "aliases": [
+      "scnet-cn"
+    ],
+    "category": "Sovereign / Cloud",
+    "website": "https://www.scnet.cn/ac/openapi/doc/2.0/moduleapi/plans/token-plan.html",
+    "api_base_url": "https://api.scnet.cn/api/llm/v1",
+    "popular_models": [
+      "DeepSeek-V4-Flash-0731",
+      "Kimi-K2.6",
+      "MiniMax-M3",
+      "GLM-5.1",
+      "GLM-5.2"
+    ],
+    "env_variable": "SCNET_API_KEY",
+    "openai_compatible": true,
+    "notes": "China SCNet supercomputing token-plan LLM API."
+  },
+  {
+    "id": 429,
+    "name": "Abacus",
+    "slug": "abacus",
+    "aliases": [
+      "abacus-ai",
+      "routellm"
+    ],
+    "category": "Gateway",
+    "website": "https://abacus.ai",
+    "api_base_url": "https://routellm.abacus.ai/v1",
+    "popular_models": [
+      "route-llm-code",
+      "route-llm-code-low",
+      "route-llm",
+      "claude-sonnet-5",
+      "gpt-5.6-terra"
+    ],
+    "env_variable": "ABACUS_API_KEY",
+    "openai_compatible": true,
+    "notes": "Abacus RouteLLM multi-model router."
+  },
+  {
+    "id": 430,
+    "name": "Merge Gateway",
+    "slug": "merge-gateway",
+    "aliases": [
+      "merge-dev"
+    ],
+    "category": "Gateway",
+    "website": "https://docs.merge.dev/merge-gateway",
+    "api_base_url": "https://api-gateway.merge.dev/v1",
+    "popular_models": [
+      "openai/gpt-5.2",
+      "anthropic/claude-sonnet-5",
+      "google/gemini-3.6-flash"
+    ],
+    "env_variable": "MERGE_GATEWAY_API_KEY",
+    "openai_compatible": true,
+    "notes": "Merge.dev gateway: one key for OpenAI, Anthropic, Google, and Bedrock."
+  },
+  {
+    "id": 431,
+    "name": "NEAR AI Cloud",
+    "slug": "near-ai",
+    "aliases": [
+      "nearai"
+    ],
+    "category": "Gateway",
+    "website": "https://docs.near.ai/",
+    "api_base_url": "https://cloud-api.near.ai/v1",
+    "popular_models": [
+      "anthropic/claude-fable-5",
+      "anthropic/claude-fable-5-1",
+      "anthropic/claude-haiku-4-5",
+      "anthropic/claude-opus-4-6",
+      "anthropic/claude-opus-4-7"
+    ],
+    "env_variable": "NEARAI_API_KEY",
+    "openai_compatible": true,
+    "notes": "NEAR AI Cloud multi-provider inference API."
+  },
+  {
+    "id": 432,
+    "name": "SCX.ai",
+    "slug": "scx",
+    "aliases": [
+      "scx-ai"
+    ],
+    "category": "Gateway",
+    "website": "https://platform.scx.ai",
+    "api_base_url": "https://api.scx.ai/v1",
+    "popular_models": [
+      "GLM-5.2",
+      "Qwen3.8-Max",
+      "MiniMax-M2.7",
+      "gpt-oss-120b"
+    ],
+    "env_variable": "SCX_API_KEY",
+    "openai_compatible": true,
+    "notes": "SCX.ai OpenAI-compatible model API."
+  },
+  {
+    "id": 433,
+    "name": "iFlow",
+    "slug": "iflow",
+    "aliases": [
+      "iflow-cn"
+    ],
+    "category": "Gateway",
+    "website": "https://platform.iflow.cn",
+    "api_base_url": "https://apis.iflow.cn/v1",
+    "popular_models": [
+      "qwen3-vl-plus",
+      "glm-4.6",
+      "qwen3-32b",
+      "qwen3-max",
+      "deepseek-v3"
+    ],
+    "env_variable": "IFLOW_API_KEY",
+    "openai_compatible": true,
+    "notes": "iFlow multi-model API (Qwen, GLM, DeepSeek)."
+  },
+  {
+    "id": 434,
+    "name": "LLMTR",
+    "slug": "llmtr",
+    "aliases": [
+      "llmtr-com"
+    ],
+    "category": "Gateway",
+    "website": "https://llmtr.com",
+    "api_base_url": "https://llmtr.com/v1",
+    "popular_models": [
+      "llmtr/gemma-4",
+      "llmtr/qwen3-6-35b",
+      "llmtr/trendyol-asure-12b",
+      "llmtr/magibu-11b-v8",
+      "llmtr/muse-glimmer-30b-tr"
+    ],
+    "env_variable": "LLMTR_API_KEY",
+    "openai_compatible": true,
+    "notes": "Turkish and multilingual models plus routed open weights."
+  },
+  {
+    "id": 435,
+    "name": "Jiekou.AI",
+    "slug": "jiekou",
+    "aliases": [
+      "jiekou-ai"
+    ],
+    "category": "Aggregator",
+    "website": "https://docs.jiekou.ai",
+    "api_base_url": "https://api.jiekou.ai/openai",
+    "popular_models": [
+      "grok-4-1-fast-reasoning",
+      "grok-4-1-fast-non-reasoning",
+      "gpt-5.2-codex",
+      "gpt-5.1-codex",
+      "gemini-3-pro-preview"
+    ],
+    "env_variable": "JIEKOU_API_KEY",
+    "openai_compatible": true,
+    "notes": "Jiekou.AI multi-vendor model catalog."
+  },
+  {
+    "id": 436,
+    "name": "AIHubMix",
+    "slug": "aihubmix",
+    "aliases": [
+      "ai-hub-mix"
+    ],
+    "category": "Aggregator",
+    "website": "https://aihubmix.com",
+    "api_base_url": "https://aihubmix.com/v1",
+    "popular_models": [
+      "auto",
+      "claude-opus-5-5",
+      "gpt-6-luna",
+      "gpt-6-sol",
+      "grok-4.7"
+    ],
+    "env_variable": "AIHUBMIX_API_KEY",
+    "openai_compatible": true,
+    "notes": "AIHubMix OpenAI-compatible aggregator for text, image, and audio models."
+  },
+  {
+    "id": 437,
+    "name": "EmpirioLabs AI",
+    "slug": "empiriolabs",
+    "aliases": [
+      "empirio"
+    ],
+    "category": "Aggregator",
+    "website": "https://docs.empiriolabs.ai",
+    "api_base_url": "https://api.empiriolabs.ai/v1",
+    "popular_models": [
+      "glm-5-3",
+      "kling-3-0-turbo",
+      "glm-5-3-flash",
+      "glm-5-2",
+      "kimi-k3"
+    ],
+    "env_variable": "EMPIRIOLABS_API_KEY",
+    "openai_compatible": true,
+    "notes": "EmpirioLabs multi-model inference API."
+  },
+  {
+    "id": 438,
+    "name": "ai&",
+    "slug": "aiand",
+    "aliases": [
+      "aiand",
+      "motif"
+    ],
+    "category": "Gateway",
+    "website": "https://docs.aiand.com/",
+    "api_base_url": "https://api.aiand.com/v1",
+    "popular_models": [
+      "zai-org/glm-5.3",
+      "qwen/qwen3.8-27b",
+      "moonshotai/kimi-k3",
+      "zai-org/glm-5.2",
+      "google/gemma-4-31b-it"
+    ],
+    "env_variable": "AIAND_API_KEY",
+    "openai_compatible": true,
+    "notes": "ai& API, including Motif Technologies models."
+  },
+  {
+    "id": 439,
+    "name": "Ambient",
+    "slug": "ambient",
+    "aliases": [
+      "ambient-xyz"
+    ],
+    "category": "IaaS",
+    "website": "https://ambient.xyz",
+    "api_base_url": "https://api.ambient.xyz/v1",
+    "popular_models": [
+      "z-ai/glm-5.2",
+      "qwen/qwen3.6-27b",
+      "qwen/qwen3.8-27b",
+      "ambient/large"
+    ],
+    "env_variable": "AMBIENT_API_KEY",
+    "openai_compatible": true,
+    "notes": "Ambient.xyz hosted inference."
+  },
+  {
+    "id": 440,
+    "name": "Inco",
+    "slug": "inco",
+    "aliases": [
+      "inco-ai"
+    ],
+    "category": "Gateway",
+    "website": "https://platform.inco.ai",
+    "api_base_url": "https://api.inco.ai/v1",
+    "popular_models": [
+      "kimi-k3:fast",
+      "glm-5.3:fast",
+      "glm-5.3-flash:fast",
+      "minimax-m3",
+      "deepseek-v4.1-flash:fast"
+    ],
+    "env_variable": "INCO_API_KEY",
+    "openai_compatible": true,
+    "notes": "Inco routed inference for Kimi, GLM, MiniMax, and DeepSeek."
+  },
+  {
+    "id": 441,
+    "name": "Pendra",
+    "slug": "pendra",
+    "aliases": [
+      "pendra-ai"
+    ],
+    "category": "Gateway",
+    "website": "https://pendra.ai",
+    "api_base_url": "https://api.pendra.ai/api/v1",
+    "popular_models": [
+      "llama3.3:70b",
+      "qwen3-coder:30b",
+      "gpt-oss:120b",
+      "qwen3.6:27b",
+      "glm-4.7-flash"
+    ],
+    "env_variable": "PENDRA_API_KEY",
+    "openai_compatible": true,
+    "notes": "Pendra OpenAI-compatible router."
   }
 ]
