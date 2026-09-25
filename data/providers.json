@@ -6820,7 +6820,25 @@
     "id": 397
   },
   {
-    "id": 398,
+    "name": "Jev API Pro",
+    "slug": "jev-api-pro",
+    "aliases": [
+      "jevapi",
+      "jev-api"
+    ],
+    "category": "Specialized",
+    "website": "https://jevapi.pro",
+    "api_base_url": "https://jevapi.pro/api/v1",
+    "popular_models": [
+      "typesafe/jev-1.13"
+    ],
+    "env_variable": "JEV_API_PRO_API_KEY",
+    "openai_compatible": false,
+    "notes": "Independent REST API for TypeSafe's Jev decision model (via OpenRouter); POST /decisions returns a typed label, confidence, and needsReview flag. Custom API format; keys need a paid access period.",
+    "id": 398
+  },
+  {
+    "id": 399,
     "name": "Amazon Nova",
     "slug": "amazon-nova",
     "aliases": [
@@ -6838,7 +6856,7 @@
     "notes": "Amazon's first-party Nova API, separate from Bedrock."
   },
   {
-    "id": 399,
+    "id": 400,
     "name": "Meta AI",
     "slug": "meta-ai",
     "aliases": [
@@ -6859,7 +6877,7 @@
     "notes": "Meta Muse Spark models on api.meta.ai (distinct from the Llama API)."
   },
   {
-    "id": 400,
+    "id": 401,
     "name": "Moonshot AI (China)",
     "slug": "moonshot-cn",
     "aliases": [
@@ -6880,7 +6898,7 @@
     "notes": "Kimi models on Moonshot's China endpoint."
   },
   {
-    "id": 401,
+    "id": 402,
     "name": "Thinking Machines",
     "slug": "thinking-machines",
     "aliases": [
@@ -6898,7 +6916,7 @@
     "notes": "Anthropic-compatible Tinker API for Thinking Machines models."
   },
   {
-    "id": 402,
+    "id": 403,
     "name": "Krutrim",
     "slug": "krutrim",
     "aliases": [
@@ -6916,7 +6934,7 @@
     "notes": "Ola Krutrim OpenAI-compatible inference API."
   },
   {
-    "id": 403,
+    "id": 404,
     "name": "Kimi For Coding",
     "slug": "kimi-ai-coding",
     "aliases": [
@@ -6936,7 +6954,7 @@
     "notes": "Kimi coding plan on kimi.ai (distinct from api.kimi.com)."
   },
   {
-    "id": 404,
+    "id": 405,
     "name": "Alibaba Coding Plan",
     "slug": "alibaba-coding-plan",
     "aliases": [
@@ -6957,7 +6975,7 @@
     "notes": "International Alibaba Model Studio coding-plan endpoint."
   },
   {
-    "id": 405,
+    "id": 406,
     "name": "Alibaba Coding Plan (China)",
     "slug": "alibaba-coding-plan-cn",
     "aliases": [
@@ -6978,7 +6996,7 @@
     "notes": "China Alibaba Model Studio coding-plan endpoint."
   },
   {
-    "id": 406,
+    "id": 407,
     "name": "Alibaba Token Plan (China)",
     "slug": "alibaba-token-plan-cn",
     "aliases": [
@@ -6999,7 +7017,7 @@
     "notes": "China-region Alibaba token plan (Beijing MaaS)."
   },
   {
-    "id": 407,
+    "id": 408,
     "name": "StepFun Step Plan (China)",
     "slug": "stepfun-step-plan",
     "aliases": [
@@ -7020,7 +7038,7 @@
     "notes": "StepFun Step Plan on the China platform."
   },
   {
-    "id": 408,
+    "id": 409,
     "name": "StepFun Step Plan (Global)",
     "slug": "stepfun-step-plan-global",
     "aliases": [
@@ -7040,7 +7058,7 @@
     "notes": "StepFun Step Plan on the global platform."
   },
   {
-    "id": 409,
+    "id": 410,
     "name": "MiniMax Token Plan",
     "slug": "minimax-token-plan",
     "aliases": [
@@ -7061,7 +7079,7 @@
     "notes": "Anthropic-compatible MiniMax token plan (minimax.io)."
   },
   {
-    "id": 410,
+    "id": 411,
     "name": "MiniMax Token Plan (China)",
     "slug": "minimax-cn-token-plan",
     "aliases": [
@@ -7082,7 +7100,7 @@
     "notes": "Anthropic-compatible MiniMax token plan on minimax.cn."
   },
   {
-    "id": 411,
+    "id": 412,
     "name": "Tencent TokenHub",
     "slug": "tencent-tokenhub",
     "aliases": [
@@ -7101,7 +7119,7 @@
     "notes": "Tencent MaaS TokenHub for Hunyuan models."
   },
   {
-    "id": 412,
+    "id": 413,
     "name": "Tencent Token Plan",
     "slug": "tencent-token-plan",
     "aliases": [
@@ -7119,7 +7137,7 @@
     "notes": "Tencent Cloud token-plan endpoint (LKEAP)."
   },
   {
-    "id": 413,
+    "id": 414,
     "name": "Crusoe",
     "slug": "crusoe",
     "aliases": [
@@ -7140,7 +7158,7 @@
     "notes": "Crusoe managed inference for open-weight models."
   },
   {
-    "id": 414,
+    "id": 415,
     "name": "Vultr Inference",
     "slug": "vultr",
     "aliases": [
@@ -7161,7 +7179,7 @@
     "notes": "Vultr serverless inference, OpenAI-compatible."
   },
   {
-    "id": 415,
+    "id": 416,
     "name": "CoralBricks",
     "slug": "coralbricks",
     "aliases": [
@@ -7181,7 +7199,7 @@
     "notes": "CoralBricks serverless inference."
   },
   {
-    "id": 416,
+    "id": 417,
     "name": "Jalapeno Cloud",
     "slug": "jalapeno",
     "aliases": [
@@ -7202,7 +7220,7 @@
     "notes": "Jalapeno Cloud hosted open-weight models."
   },
   {
-    "id": 417,
+    "id": 418,
     "name": "Berget.AI",
     "slug": "berget",
     "aliases": [
@@ -7223,7 +7241,7 @@
     "notes": "Swedish inference API for open-weight models."
   },
   {
-    "id": 418,
+    "id": 419,
     "name": "AMD Token Factory",
     "slug": "amd-token-factory",
     "aliases": [
@@ -7244,7 +7262,7 @@
     "notes": "AMD Radeon Token Factory OpenAI-compatible API."
   },
   {
-    "id": 419,
+    "id": 420,
     "name": "EBCloud",
     "slug": "ebcloud",
     "aliases": [
@@ -7264,7 +7282,7 @@
     "notes": "EBCloud MaaS inference endpoint."
   },
   {
-    "id": 420,
+    "id": 421,
     "name": "D.Run",
     "slug": "drun",
     "aliases": [
@@ -7283,7 +7301,7 @@
     "notes": "D.Run public model inference (China)."
   },
   {
-    "id": 421,
+    "id": 422,
     "name": "Lilac",
     "slug": "lilac",
     "aliases": [
@@ -7303,7 +7321,7 @@
     "notes": "Lilac hosted open-weight inference."
   },
   {
-    "id": 422,
+    "id": 423,
     "name": "RunInfra",
     "slug": "runinfra",
     "aliases": [
@@ -7324,7 +7342,7 @@
     "notes": "RunInfra gateway for open-weight models."
   },
   {
-    "id": 423,
+    "id": 424,
     "name": "AKI.IO",
     "slug": "aki",
     "aliases": [
@@ -7345,7 +7363,7 @@
     "notes": "AKI.IO OpenAI-compatible inference."
   },
   {
-    "id": 424,
+    "id": 425,
     "name": "DInference",
     "slug": "dinference",
     "aliases": [
@@ -7366,7 +7384,7 @@
     "notes": "DInference hosted chat models."
   },
   {
-    "id": 425,
+    "id": 426,
     "name": "Hetzner",
     "slug": "hetzner",
     "aliases": [
@@ -7384,7 +7402,7 @@
     "notes": "Hetzner experimental OpenAI-compatible inference API."
   },
   {
-    "id": 426,
+    "id": 427,
     "name": "evroc",
     "slug": "evroc",
     "aliases": [
@@ -7405,7 +7423,7 @@
     "notes": "evroc Think sovereign inference in the EU."
   },
   {
-    "id": 427,
+    "id": 428,
     "name": "CloudFerro Sherlock",
     "slug": "cloudferro",
     "aliases": [
@@ -7426,7 +7444,7 @@
     "notes": "CloudFerro Sherlock EU inference, including Bielik."
   },
   {
-    "id": 428,
+    "id": 429,
     "name": "SCNet Token Plan",
     "slug": "scnet",
     "aliases": [
@@ -7447,7 +7465,7 @@
     "notes": "China SCNet supercomputing token-plan LLM API."
   },
   {
-    "id": 429,
+    "id": 430,
     "name": "Abacus",
     "slug": "abacus",
     "aliases": [
@@ -7469,7 +7487,7 @@
     "notes": "Abacus RouteLLM multi-model router."
   },
   {
-    "id": 430,
+    "id": 431,
     "name": "Merge Gateway",
     "slug": "merge-gateway",
     "aliases": [
@@ -7488,7 +7506,7 @@
     "notes": "Merge.dev gateway: one key for OpenAI, Anthropic, Google, and Bedrock."
   },
   {
-    "id": 431,
+    "id": 432,
     "name": "NEAR AI Cloud",
     "slug": "near-ai",
     "aliases": [
@@ -7509,7 +7527,7 @@
     "notes": "NEAR AI Cloud multi-provider inference API."
   },
   {
-    "id": 432,
+    "id": 433,
     "name": "SCX.ai",
     "slug": "scx",
     "aliases": [
@@ -7529,7 +7547,7 @@
     "notes": "SCX.ai OpenAI-compatible model API."
   },
   {
-    "id": 433,
+    "id": 434,
     "name": "iFlow",
     "slug": "iflow",
     "aliases": [
@@ -7550,7 +7568,7 @@
     "notes": "iFlow multi-model API (Qwen, GLM, DeepSeek)."
   },
   {
-    "id": 434,
+    "id": 435,
     "name": "LLMTR",
     "slug": "llmtr",
     "aliases": [
@@ -7571,7 +7589,7 @@
     "notes": "Turkish and multilingual models plus routed open weights."
   },
   {
-    "id": 435,
+    "id": 436,
     "name": "Jiekou.AI",
     "slug": "jiekou",
     "aliases": [
@@ -7592,7 +7610,7 @@
     "notes": "Jiekou.AI multi-vendor model catalog."
   },
   {
-    "id": 436,
+    "id": 437,
     "name": "AIHubMix",
     "slug": "aihubmix",
     "aliases": [
@@ -7613,7 +7631,7 @@
     "notes": "AIHubMix OpenAI-compatible aggregator for text, image, and audio models."
   },
   {
-    "id": 437,
+    "id": 438,
     "name": "EmpirioLabs AI",
     "slug": "empiriolabs",
     "aliases": [
@@ -7634,7 +7652,7 @@
     "notes": "EmpirioLabs multi-model inference API."
   },
   {
-    "id": 438,
+    "id": 439,
     "name": "ai&",
     "slug": "aiand",
     "aliases": [
@@ -7656,7 +7674,7 @@
     "notes": "ai& API, including Motif Technologies models."
   },
   {
-    "id": 439,
+    "id": 440,
     "name": "Ambient",
     "slug": "ambient",
     "aliases": [
@@ -7676,7 +7694,7 @@
     "notes": "Ambient.xyz hosted inference."
   },
   {
-    "id": 440,
+    "id": 441,
     "name": "Inco",
     "slug": "inco",
     "aliases": [
@@ -7697,7 +7715,7 @@
     "notes": "Inco routed inference for Kimi, GLM, MiniMax, and DeepSeek."
   },
   {
-    "id": 441,
+    "id": 442,
     "name": "Pendra",
     "slug": "pendra",
     "aliases": [

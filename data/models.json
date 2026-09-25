@@ -1,7 +1,7 @@
 {
   "updated_at": "2026-09-25T17:07:30.075932+00:00",
-  "total_providers": 441,
-  "total_models": 4470,
+  "total_providers": 442,
+  "total_models": 4471,
   "providers": {
     "openai": {
       "provider_id": 1,
@@ -7346,8 +7346,21 @@
         "gemma3-27b"
       ]
     },
-    "amazon-nova": {
+    "jev-api-pro": {
       "provider_id": 398,
+      "provider_name": "Jev API Pro",
+      "category": "Specialized",
+      "api_base_url": "https://jevapi.pro/api/v1",
+      "models_endpoint": "https://jevapi.pro/api/v1/models",
+      "count": 1,
+      "source": "static",
+      "updated_at": "2026-09-25T17:07:30.075932+00:00",
+      "models": [
+        "typesafe/jev-1.13"
+      ]
+    },
+    "amazon-nova": {
+      "provider_id": 399,
       "provider_name": "Amazon Nova",
       "category": "Frontier",
       "api_base_url": "https://api.nova.amazon.com/v1",
@@ -7361,7 +7374,7 @@
       ]
     },
     "meta-ai": {
-      "provider_id": 399,
+      "provider_id": 400,
       "provider_name": "Meta AI",
       "category": "Frontier",
       "api_base_url": "https://api.meta.ai/v1",
@@ -7378,7 +7391,7 @@
       ]
     },
     "moonshot-cn": {
-      "provider_id": 400,
+      "provider_id": 401,
       "provider_name": "Moonshot AI (China)",
       "category": "Frontier",
       "api_base_url": "https://api.moonshot.cn/v1",
@@ -7394,7 +7407,7 @@
       ]
     },
     "thinking-machines": {
-      "provider_id": 401,
+      "provider_id": 402,
       "provider_name": "Thinking Machines",
       "category": "Frontier",
       "api_base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/anthropic/api/v1",
@@ -7408,7 +7421,7 @@
       ]
     },
     "krutrim": {
-      "provider_id": 402,
+      "provider_id": 403,
       "provider_name": "Krutrim",
       "category": "Frontier",
       "api_base_url": "https://cloud.olakrutrim.com/v1",
@@ -7422,7 +7435,7 @@
       ]
     },
     "kimi-ai-coding": {
-      "provider_id": 403,
+      "provider_id": 404,
       "provider_name": "Kimi For Coding",
       "category": "Frontier",
       "api_base_url": "https://api.kimi.ai/coding/v1",
@@ -7438,7 +7451,7 @@
       ]
     },
     "alibaba-coding-plan": {
-      "provider_id": 404,
+      "provider_id": 405,
       "provider_name": "Alibaba Coding Plan",
       "category": "Frontier",
       "api_base_url": "https://coding-intl.dashscope.aliyuncs.com/v1",
@@ -7462,7 +7475,7 @@
       ]
     },
     "alibaba-coding-plan-cn": {
-      "provider_id": 405,
+      "provider_id": 406,
       "provider_name": "Alibaba Coding Plan (China)",
       "category": "Frontier",
       "api_base_url": "https://coding.dashscope.aliyuncs.com/v1",
@@ -7486,7 +7499,7 @@
       ]
     },
     "alibaba-token-plan-cn": {
-      "provider_id": 406,
+      "provider_id": 407,
       "provider_name": "Alibaba Token Plan (China)",
       "category": "Frontier",
       "api_base_url": "https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
@@ -7526,7 +7539,7 @@
       ]
     },
     "stepfun-step-plan": {
-      "provider_id": 407,
+      "provider_id": 408,
       "provider_name": "StepFun Step Plan (China)",
       "category": "Frontier",
       "api_base_url": "https://api.stepfun.com/step_plan/v1",
@@ -7543,7 +7556,7 @@
       ]
     },
     "stepfun-step-plan-global": {
-      "provider_id": 408,
+      "provider_id": 409,
       "provider_name": "StepFun Step Plan (Global)",
       "category": "Frontier",
       "api_base_url": "https://api.stepfun.ai/step_plan/v1",
@@ -7559,7 +7572,7 @@
       ]
     },
     "minimax-token-plan": {
-      "provider_id": 409,
+      "provider_id": 410,
       "provider_name": "MiniMax Token Plan",
       "category": "Frontier",
       "api_base_url": "https://api.minimax.io/anthropic/v1",
@@ -7578,7 +7591,7 @@
       ]
     },
     "minimax-cn-token-plan": {
-      "provider_id": 410,
+      "provider_id": 411,
       "provider_name": "MiniMax Token Plan (China)",
       "category": "Frontier",
       "api_base_url": "https://api.minimax.cn/anthropic/v1",
@@ -7597,7 +7610,7 @@
       ]
     },
     "tencent-tokenhub": {
-      "provider_id": 411,
+      "provider_id": 412,
       "provider_name": "Tencent TokenHub",
       "category": "Frontier",
       "api_base_url": "https://tokenhub.tencentmaas.com/v1",
@@ -7612,7 +7625,7 @@
       ]
     },
     "tencent-token-plan": {
-      "provider_id": 412,
+      "provider_id": 413,
       "provider_name": "Tencent Token Plan",
       "category": "Frontier",
       "api_base_url": "https://api.lkeap.cloud.tencent.com/plan/v3",
@@ -7626,7 +7639,7 @@
       ]
     },
     "crusoe": {
-      "provider_id": 413,
+      "provider_id": 414,
       "provider_name": "Crusoe",
       "category": "IaaS",
       "api_base_url": "https://api.inference.crusoecloud.com/v1",
@@ -7649,7 +7662,7 @@
       ]
     },
     "vultr": {
-      "provider_id": 414,
+      "provider_id": 415,
       "provider_name": "Vultr Inference",
       "category": "IaaS",
       "api_base_url": "https://api.vultrinference.com/v1",
@@ -7680,7 +7693,7 @@
       ]
     },
     "coralbricks": {
-      "provider_id": 415,
+      "provider_id": 416,
       "provider_name": "CoralBricks",
       "category": "IaaS",
       "api_base_url": "https://inference.coralbricks.ai/v1",
@@ -7696,7 +7709,7 @@
       ]
     },
     "jalapeno": {
-      "provider_id": 416,
+      "provider_id": 417,
       "provider_name": "Jalapeno Cloud",
       "category": "IaaS",
       "api_base_url": "https://api.jalapeno-cloud.ai/v1",
@@ -7725,7 +7738,7 @@
       ]
     },
     "berget": {
-      "provider_id": 417,
+      "provider_id": 418,
       "provider_name": "Berget.AI",
       "category": "IaaS",
       "api_base_url": "https://api.berget.ai/v1",
@@ -7751,7 +7764,7 @@
       ]
     },
     "amd-token-factory": {
-      "provider_id": 418,
+      "provider_id": 419,
       "provider_name": "AMD Token Factory",
       "category": "IaaS",
       "api_base_url": "https://developer.amd.com.cn/radeon/api/v1",
@@ -7769,7 +7782,7 @@
       ]
     },
     "ebcloud": {
-      "provider_id": 419,
+      "provider_id": 420,
       "provider_name": "EBCloud",
       "category": "IaaS",
       "api_base_url": "https://maas-api.ebcloud.com/v1",
@@ -7785,7 +7798,7 @@
       ]
     },
     "drun": {
-      "provider_id": 420,
+      "provider_id": 421,
       "provider_name": "D.Run",
       "category": "IaaS",
       "api_base_url": "https://chat.d.run/v1",
@@ -7800,7 +7813,7 @@
       ]
     },
     "lilac": {
-      "provider_id": 421,
+      "provider_id": 422,
       "provider_name": "Lilac",
       "category": "IaaS",
       "api_base_url": "https://api.getlilac.com/v1",
@@ -7816,7 +7829,7 @@
       ]
     },
     "runinfra": {
-      "provider_id": 422,
+      "provider_id": 423,
       "provider_name": "RunInfra",
       "category": "IaaS",
       "api_base_url": "https://api.runinfra.ai/v1",
@@ -7835,7 +7848,7 @@
       ]
     },
     "aki": {
-      "provider_id": 423,
+      "provider_id": 424,
       "provider_name": "AKI.IO",
       "category": "IaaS",
       "api_base_url": "https://aki.io/v1",
@@ -7854,7 +7867,7 @@
       ]
     },
     "dinference": {
-      "provider_id": 424,
+      "provider_id": 425,
       "provider_name": "DInference",
       "category": "IaaS",
       "api_base_url": "https://api.dinference.com/v1",
@@ -7872,7 +7885,7 @@
       ]
     },
     "hetzner": {
-      "provider_id": 425,
+      "provider_id": 426,
       "provider_name": "Hetzner",
       "category": "Sovereign / Cloud",
       "api_base_url": "https://inference.hetzner.com/api/v1",
@@ -7886,7 +7899,7 @@
       ]
     },
     "evroc": {
-      "provider_id": 426,
+      "provider_id": 427,
       "provider_name": "evroc",
       "category": "Sovereign / Cloud",
       "api_base_url": "https://models.think.evroc.com/v1",
@@ -7914,7 +7927,7 @@
       ]
     },
     "cloudferro": {
-      "provider_id": 427,
+      "provider_id": 428,
       "provider_name": "CloudFerro Sherlock",
       "category": "Sovereign / Cloud",
       "api_base_url": "https://api-sherlock.cloudferro.com/openai/v1",
@@ -7931,7 +7944,7 @@
       ]
     },
     "scnet": {
-      "provider_id": 428,
+      "provider_id": 429,
       "provider_name": "SCNet Token Plan",
       "category": "Sovereign / Cloud",
       "api_base_url": "https://api.scnet.cn/api/llm/v1",
@@ -7962,7 +7975,7 @@
       ]
     },
     "abacus": {
-      "provider_id": 429,
+      "provider_id": 430,
       "provider_name": "Abacus",
       "category": "Gateway",
       "api_base_url": "https://routellm.abacus.ai/v1",
@@ -8154,7 +8167,7 @@
       ]
     },
     "merge-gateway": {
-      "provider_id": 430,
+      "provider_id": 431,
       "provider_name": "Merge Gateway",
       "category": "Gateway",
       "api_base_url": "https://api-gateway.merge.dev/v1",
@@ -8357,7 +8370,7 @@
       ]
     },
     "near-ai": {
-      "provider_id": 431,
+      "provider_id": 432,
       "provider_name": "NEAR AI Cloud",
       "category": "Gateway",
       "api_base_url": "https://cloud-api.near.ai/v1",
@@ -8424,7 +8437,7 @@
       ]
     },
     "scx": {
-      "provider_id": 432,
+      "provider_id": 433,
       "provider_name": "SCX.ai",
       "category": "Gateway",
       "api_base_url": "https://api.scx.ai/v1",
@@ -8440,7 +8453,7 @@
       ]
     },
     "iflow": {
-      "provider_id": 433,
+      "provider_id": 434,
       "provider_name": "iFlow",
       "category": "Gateway",
       "api_base_url": "https://apis.iflow.cn/v1",
@@ -8466,7 +8479,7 @@
       ]
     },
     "llmtr": {
-      "provider_id": 434,
+      "provider_id": 435,
       "provider_name": "LLMTR",
       "category": "Gateway",
       "api_base_url": "https://llmtr.com/v1",
@@ -8808,7 +8821,7 @@
       ]
     },
     "jiekou": {
-      "provider_id": 435,
+      "provider_id": 436,
       "provider_name": "Jiekou.AI",
       "category": "Aggregator",
       "api_base_url": "https://api.jiekou.ai/openai",
@@ -8881,7 +8894,7 @@
       ]
     },
     "aihubmix": {
-      "provider_id": 436,
+      "provider_id": 437,
       "provider_name": "AIHubMix",
       "category": "Aggregator",
       "api_base_url": "https://aihubmix.com/v1",
@@ -9309,7 +9322,7 @@
       ]
     },
     "empiriolabs": {
-      "provider_id": 437,
+      "provider_id": 438,
       "provider_name": "EmpirioLabs AI",
       "category": "Aggregator",
       "api_base_url": "https://api.empiriolabs.ai/v1",
@@ -9536,7 +9549,7 @@
       ]
     },
     "aiand": {
-      "provider_id": 438,
+      "provider_id": 439,
       "provider_name": "ai&",
       "category": "Gateway",
       "api_base_url": "https://api.aiand.com/v1",
@@ -9559,7 +9572,7 @@
       ]
     },
     "ambient": {
-      "provider_id": 439,
+      "provider_id": 440,
       "provider_name": "Ambient",
       "category": "IaaS",
       "api_base_url": "https://api.ambient.xyz/v1",
@@ -9575,7 +9588,7 @@
       ]
     },
     "inco": {
-      "provider_id": 440,
+      "provider_id": 441,
       "provider_name": "Inco",
       "category": "Gateway",
       "api_base_url": "https://api.inco.ai/v1",
@@ -9594,7 +9607,7 @@
       ]
     },
     "pendra": {
-      "provider_id": 441,
+      "provider_id": 442,
       "provider_name": "Pendra",
       "category": "Gateway",
       "api_base_url": "https://api.pendra.ai/api/v1",

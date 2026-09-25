@@ -4260,6 +4260,9 @@
       "qwen3.6:27b",
       "glm-4.7-flash",
       "deepseek-v4-flash"
+    ],
+    "jev-api-pro": [
+      "typesafe/jev-1.13"
     ]
   }
 }
