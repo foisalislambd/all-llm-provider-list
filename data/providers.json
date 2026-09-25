@@ -6818,5 +6818,23 @@
     "openai_compatible": false,
     "notes": "OpenAI-compatible API on a network of Apple-silicon Macs; providers paid per job in USDC.",
     "id": 397
+  },
+  {
+    "name": "Jev API Pro",
+    "slug": "jev-api-pro",
+    "aliases": [
+      "jevapi",
+      "jev-api"
+    ],
+    "category": "Specialized",
+    "website": "https://jevapi.pro",
+    "api_base_url": "https://jevapi.pro/api/v1",
+    "popular_models": [
+      "typesafe/jev-1.13"
+    ],
+    "env_variable": "JEV_API_PRO_API_KEY",
+    "openai_compatible": false,
+    "notes": "Independent REST API for TypeSafe's Jev decision model (via OpenRouter); POST /decisions returns a typed label, confidence, and needsReview flag. Custom API format; keys need a paid access period.",
+    "id": 398
   }
 ]

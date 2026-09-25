@@ -1,8 +1,8 @@
 # All LLM providers
 
-**397 providers** · 1,961 model IDs · API URLs, env vars, and model names in one place.
+**398 providers** · 1,962 model IDs · API URLs, env vars, and model names in one place.
 
-Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-09-15.
+Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-09-25.
 
 ## Quick start
 
@@ -49,10 +49,10 @@ One key for many models: [OpenRouter](https://openrouter.ai), [Portkey](https://
 | [Image and video](#image-and-video) | 17 |
 | [Cloud agents](#cloud-agents) | 3 |
 | [Embeddings](#embeddings) | 4 |
-| [Specialized](#specialized) | 4 |
+| [Specialized](#specialized) | 5 |
 | [Local and self-hosted](#local-and-self-hosted) | 18 |
 | Web cookie adapters (in data only) | 34 |
-| **Total** | **397** |
+| **Total** | **398** |
 
 Unofficial **web-cookie / browser-session** adapters (34) stay in `data/providers.json` so they do not clutter this page. List them with `python llm_lookup.py --category "Web Cookie"`.
 
@@ -491,6 +491,7 @@ Task-specific APIs that do not fit the groups above.
 | [Puter.js](https://puter.com) | `https://api.puter.com/ai/chat` | gpt-4o-mini, claude-3.5-sonnet, gemini | — |
 | [v0 (Vercel)](https://v0.dev) | `https://api.v0.dev/v1` | — | `V0_VERCEL_API_KEY` |
 | [Dify](https://dify.ai) | `https://api.dify.ai` | auto | `DIFY_API_KEY` |
+| [Jev API Pro](https://jevapi.pro) | `https://jevapi.pro/api/v1` | typesafe/jev-1.13 | `JEV_API_PRO_API_KEY` |
 
 ## Local and self-hosted
 
