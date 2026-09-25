@@ -27,6 +27,16 @@ PUBLIC_MODEL_APIS: dict[str, str] = {
     "openrouter": "https://openrouter.ai/api/v1/models",
     "deepinfra": "https://api.deepinfra.com/v1/openai/models",
     "huggingface": "https://router.huggingface.co/v1/models",
+    "vultr": "https://api.vultrinference.com/v1/models",
+    "berget": "https://api.berget.ai/v1/models",
+    "lilac": "https://api.getlilac.com/v1/models",
+    "abacus": "https://routellm.abacus.ai/v1/models",
+    "near-ai": "https://cloud-api.near.ai/v1/models",
+    "llmtr": "https://llmtr.com/v1/models",
+    "aihubmix": "https://aihubmix.com/v1/models",
+    "empiriolabs": "https://api.empiriolabs.ai/v1/models",
+    "aiand": "https://api.aiand.com/v1/models",
+    "ambient": "https://api.ambient.xyz/v1/models",
     # Not /v1/models - SAGG's public model listing lives at /models (no
     # /v1/ prefix on this specific route), so the generic
     # _models_url_from_base() derivation from api_base_url below would

@@ -1,6 +1,6 @@
 # All LLM providers
 
-**398 providers** · 1,962 model IDs · API URLs, env vars, and model names in one place.
+**442 providers** · 3,699 model IDs · API URLs, env vars, and model names in one place.
 
 Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-09-25.
 
@@ -37,11 +37,11 @@ One key for many models: [OpenRouter](https://openrouter.ai), [Portkey](https://
 
 | Category | Count |
 |----------|-------|
-| [Frontier labs](#frontier-labs) | 56 |
-| [Inference platforms](#inference-platforms) | 40 |
-| [Cloud and enterprise](#cloud-and-enterprise) | 36 |
-| [Gateways and routers](#gateways-and-routers) | 108 |
-| [Aggregators](#aggregators) | 14 |
+| [Frontier labs](#frontier-labs) | 71 |
+| [Inference platforms](#inference-platforms) | 53 |
+| [Cloud and enterprise](#cloud-and-enterprise) | 40 |
+| [Gateways and routers](#gateways-and-routers) | 117 |
+| [Aggregators](#aggregators) | 17 |
 | [OAuth and IDE](#oauth-and-ide) | 22 |
 | [Public endpoints](#public-endpoints) | 10 |
 | [Search APIs](#search-apis) | 19 |
@@ -52,7 +52,7 @@ One key for many models: [OpenRouter](https://openrouter.ai), [Portkey](https://
 | [Specialized](#specialized) | 5 |
 | [Local and self-hosted](#local-and-self-hosted) | 18 |
 | Web cookie adapters (in data only) | 34 |
-| **Total** | **398** |
+| **Total** | **442** |
 
 Unofficial **web-cookie / browser-session** adapters (34) stay in `data/providers.json` so they do not clutter this page. List them with `python llm_lookup.py --category "Web Cookie"`.
 
@@ -118,6 +118,21 @@ Companies that train their own foundation models.
 | [Sarvam AI](https://docs.sarvam.ai) | `https://api.sarvam.ai/v1` | sarvam-105b, sarvam-30b | `SARVAM_API_KEY` |
 | [PLaMo](https://plamo.preferredai.jp/api) | `https://api.platform.preferredai.jp/v1` | plamo-3.0-prime | `PLAMO_API_KEY` |
 | [Typhoon](https://docs.opentyphoon.ai) | `https://api.opentyphoon.ai/v1` | typhoon-v2.5-30b-a3b-instruct | `TYPHOON_API_KEY` |
+| [Amazon Nova](https://nova.amazon.com) | `https://api.nova.amazon.com/v1` | nova-2-pro-v1, nova-2-lite-v1 | `NOVA_API_KEY` |
+| [Meta AI](https://dev.meta.ai) | `https://api.meta.ai/v1` | muse-spark-1.3, muse-spark-1.1, muse-spark-1.2 | `META_MODEL_API_KEY` |
+| [Moonshot AI (China)](https://platform.moonshot.cn) | `https://api.moonshot.cn/v1` | kimi-k2.7-code, kimi-k2.6, kimi-k2.7-code-highspeed | `MOONSHOT_CN_API_KEY` |
+| [Thinking Machines](https://tinker-docs.thinkingmachines.ai/tinker/compatible-apis/anthropic/) | `https://tinker.thinkingmachines.dev/services/tinker-prod/anthropic/api/v1` | thinkingmachines/Inkling:peft:262144, thinkingmachines/Inkling | `TINKER_API_KEY` |
+| [Krutrim](https://cloud.olakrutrim.com) | `https://cloud.olakrutrim.com/v1` | krutrim-1, Meta-Llama-3-8B-Instruct | `KRUTRIM_API_KEY` |
+| [Kimi For Coding](https://www.kimi.ai/code) | `https://api.kimi.ai/coding/v1` | kimi-for-coding-highspeed, kimi-for-coding, k3-256k | `KIMI_AI_API_KEY` |
+| [Alibaba Coding Plan](https://www.alibabacloud.com/help/en/model-studio/coding-plan) | `https://coding-intl.dashscope.aliyuncs.com/v1` | qwen3.7-max, qwen3-coder-next, qwen3.5-plus | `ALIBABA_CODING_PLAN_API_KEY` |
+| [Alibaba Coding Plan (China)](https://help.aliyun.com/zh/model-studio/coding-plan) | `https://coding.dashscope.aliyuncs.com/v1` | qwen3.7-max, qwen3-coder-next, qwen3.5-plus | `ALIBABA_CODING_PLAN_CN_API_KEY` |
+| [Alibaba Token Plan (China)](https://www.alibabacloud.com/help/zh/model-studio/token-plan-overview) | `https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1` | qwen3.8-max, qwen3.7-max, deepseek-v4-flash-0731 | `ALIBABA_TOKEN_PLAN_CN_API_KEY` |
+| [StepFun Step Plan (China)](https://platform.stepfun.com/docs/zh/step-plan/integrations/reasoning-api) | `https://api.stepfun.com/step_plan/v1` | step-5-preview, step-router-v1, step-3.5-flash-2603 | `STEPFUN_STEP_PLAN_API_KEY` |
+| [StepFun Step Plan (Global)](https://platform.stepfun.ai/docs/en/step-plan/integrations/reasoning-api) | `https://api.stepfun.ai/step_plan/v1` | step-5-preview, step-3.5-flash-2603, step-3.5-flash | `STEPFUN_GLOBAL_STEP_PLAN_API_KEY` |
+| [MiniMax Token Plan](https://platform.minimax.io/docs/token-plan/intro) | `https://api.minimax.io/anthropic/v1` | MiniMax-M3, MiniMax-M2.1, MiniMax-M2.5 | `MINIMAX_TOKEN_PLAN_API_KEY` |
+| [MiniMax Token Plan (China)](https://platform.minimaxi.com/docs/token-plan/intro) | `https://api.minimax.cn/anthropic/v1` | MiniMax-M3, MiniMax-M2.1, MiniMax-M2.5 | `MINIMAX_CN_TOKEN_PLAN_API_KEY` |
+| [Tencent TokenHub](https://cloud.tencent.com/document/product/1823/130050) | `https://tokenhub.tencentmaas.com/v1` | hy3-preview, hy3, hy4-preview | `TENCENT_TOKENHUB_API_KEY` |
+| [Tencent Token Plan](https://cloud.tencent.com/document/product/1823/130060) | `https://api.lkeap.cloud.tencent.com/plan/v3` | hy3, hy4-preview | `TENCENT_TOKEN_PLAN_API_KEY` |
 
 ## Inference platforms
 
@@ -165,6 +180,19 @@ Hosted open-weight models — usually cheaper and faster.
 | [ModelScope](https://modelscope.cn) | `https://api-inference.modelscope.cn/v1` | — | `MODELSCOPE_API_KEY` |
 | [BytePlus ModelArk](https://console.byteplus.com/ark) | `https://ark.ap-southeast.bytepluses.com/api/v3` | seed-2.0, kimi-k2-thinking, glm-4.7 | `BYTEPLUS_API_KEY` |
 | [Pollinations AI](https://pollinations.ai) | `https://gen.pollinations.ai/v1` | openai, openai-fast, openai-large | `POLLINATIONS_API_KEY` |
+| [Crusoe](https://docs.crusoecloud.com/managed-inference/overview) | `https://api.inference.crusoecloud.com/v1` | zai/GLM-5.1, zai/GLM-5.2, meta-llama/Llama-3.3-70B-Instruct | `CRUSOE_API_KEY` |
+| [Vultr Inference](https://www.vultr.com) | `https://api.vultrinference.com/v1` | deepseek-v4-flash-0731, deepseek-v4.1-flash, glm-5.2 | `VULTR_API_KEY` |
+| [CoralBricks](https://www.coralbricks.ai) | `https://inference.coralbricks.ai/v1` | glm-5.3-fp4, glm-5.3-flash-fp4, gpt-oss-120b | `CORAL_API_KEY` |
+| [Jalapeno Cloud](https://www.jalapeno-cloud.ai) | `https://api.jalapeno-cloud.ai/v1` | Qwen3-VL-235B-A22B-Instruct, MiniMax-M3, Qwen3-Next-80B-A3B-Instruct | `JALAPENO_API_KEY` |
+| [Berget.AI](https://berget.ai) | `https://api.berget.ai/v1` | Qwen/Qwen3.8-27B-FP8, mistralai/Mistral-Small-3.2-24B-Instruct-2506, zai-org/GLM-5.3-Flash | `BERGET_API_KEY` |
+| [AMD Token Factory](https://developer.amd.com.cn/radeon/tokenfactory) | `https://developer.amd.com.cn/radeon/api/v1` | Qwen3.8-27B, DeepSeek-V4.1-Flash, DeepSeek-V4-Flash | `AMD_API_KEY` |
+| [EBCloud](https://www.ebcloud.com) | `https://maas-api.ebcloud.com/v1` | Kimi-K2.6, GLM-5.1, DeepSeek-V4-Flash | `EBCLOUD_API_KEY` |
+| [D.Run](https://www.d.run) | `https://chat.d.run/v1` | public/deepseek-v3, public/minimax-m25, public/deepseek-r1 | `DRUN_API_KEY` |
+| [Lilac](https://docs.getlilac.com/inference/models) | `https://api.getlilac.com/v1` | google/gemma-4-31b-it, minimaxai/minimax-m3, moonshotai/kimi-k2.6 | `LILAC_API_KEY` |
+| [RunInfra](https://runinfra.ai) | `https://api.runinfra.ai/v1` | Inferact/Qwen3.8-2.4T-A95B-NVFP4, Qwen/Qwen3.8-27B, deepseek-ai/DeepSeek-V4-Flash-0731 | `RUNINFRA_GATEWAY_KEY` |
+| [AKI.IO](https://aki.io) | `https://aki.io/v1` | qwen3.8-27b, deepseek-v4-flash-0731-284b, qwen3.6-35b | `AKI_IO_API_KEY` |
+| [DInference](https://dinference.com) | `https://api.dinference.com/v1` | glm-5, minimax-m2.5, glm-4.7 | `DINFERENCE_API_KEY` |
+| [Ambient](https://ambient.xyz) | `https://api.ambient.xyz/v1` | z-ai/glm-5.2, qwen/qwen3.6-27b, qwen/qwen3.8-27b | `AMBIENT_API_KEY` |
 
 ## Cloud and enterprise
 
@@ -208,6 +236,10 @@ Azure, Bedrock, Vertex, and regional clouds.
 | [Databricks](https://www.databricks.com) | `https://adb-0000000000000000.0.azuredatabricks.net/serving-endpoints` | — | `DATABRICKS_API_KEY` |
 | [DataRobot](https://docs.datarobot.com) | `https://app.datarobot.com/api/v2` | — | `DATAROBOT_API_KEY` |
 | [Dasha Compute](https://www.getdasha.com/compute) | Open alpha | qwen3-8b, gemma3-12b, gemma3-27b | — |
+| [Hetzner](https://docs.hetzner.com/general/company-and-policy/experiments/inference/) | `https://inference.hetzner.com/api/v1` | Qwen3.8-27B, Qwen/Qwen3.6-35B-A3B-FP8 | `HETZNER_API_KEY` |
+| [evroc](https://docs.evroc.com/products/think/) | `https://models.think.evroc.com/v1` | google/gemma-4-26B-A4B-it, Qwen/Qwen3.8-27B, Qwen/Qwen3.6-35B-A3B | `EVROC_API_KEY` |
+| [CloudFerro Sherlock](https://docs.sherlock.cloudferro.com/) | `https://api-sherlock.cloudferro.com/openai/v1` | meta-llama/Llama-3.3-70B-Instruct, MiniMaxAI/MiniMax-M2.5, openai/gpt-oss-120b | `CLOUDFERRO_SHERLOCK_API_KEY` |
+| [SCNet Token Plan](https://www.scnet.cn/ac/openapi/doc/2.0/moduleapi/plans/token-plan.html) | `https://api.scnet.cn/api/llm/v1` | DeepSeek-V4-Flash-0731, Kimi-K2.6, MiniMax-M3 | `SCNET_API_KEY` |
 
 ## Gateways and routers
 
@@ -323,6 +355,15 @@ One key, many upstream providers.
 | [Cursor API](https://cursor.com/dashboard/api) | `https://api.cursor.com/v1` | — | `CURSOR_API_KEY` |
 | [OmniRoute](https://github.com/diegosouzapw/OmniRoute) | `http://localhost:3000/v1` | kimi-k2.7-code, claude-sonnet-4, gpt-5.5 | `OMNIROUTE_API_KEY` |
 | [Bifrost](https://github.com/maximhq/bifrost) | `http://localhost:8080/v1` | — | — |
+| [Abacus](https://abacus.ai) | `https://routellm.abacus.ai/v1` | route-llm-code, route-llm-code-low, route-llm | `ABACUS_API_KEY` |
+| [Merge Gateway](https://docs.merge.dev/merge-gateway) | `https://api-gateway.merge.dev/v1` | openai/gpt-5.2, anthropic/claude-sonnet-5, google/gemini-3.6-flash | `MERGE_GATEWAY_API_KEY` |
+| [NEAR AI Cloud](https://docs.near.ai/) | `https://cloud-api.near.ai/v1` | anthropic/claude-fable-5, anthropic/claude-fable-5-1, anthropic/claude-haiku-4-5 | `NEARAI_API_KEY` |
+| [SCX.ai](https://platform.scx.ai) | `https://api.scx.ai/v1` | GLM-5.2, Qwen3.8-Max, MiniMax-M2.7 | `SCX_API_KEY` |
+| [iFlow](https://platform.iflow.cn) | `https://apis.iflow.cn/v1` | qwen3-vl-plus, glm-4.6, qwen3-32b | `IFLOW_API_KEY` |
+| [LLMTR](https://llmtr.com) | `https://llmtr.com/v1` | llmtr/gemma-4, llmtr/qwen3-6-35b, llmtr/trendyol-asure-12b | `LLMTR_API_KEY` |
+| [ai&](https://docs.aiand.com/) | `https://api.aiand.com/v1` | zai-org/glm-5.3, qwen/qwen3.8-27b, moonshotai/kimi-k3 | `AIAND_API_KEY` |
+| [Inco](https://platform.inco.ai) | `https://api.inco.ai/v1` | kimi-k3:fast, glm-5.3:fast, glm-5.3-flash:fast | `INCO_API_KEY` |
+| [Pendra](https://pendra.ai) | `https://api.pendra.ai/api/v1` | llama3.3:70b, qwen3-coder:30b, gpt-oss:120b | `PENDRA_API_KEY` |
 
 ## Aggregators
 
@@ -344,6 +385,9 @@ Multi-vendor catalogs under one bill.
 | [TheB.AI](https://theb.ai) | `https://api.theb.ai/v1` | — | `THEBAI_API_KEY` |
 | [Poe](https://creator.poe.com/api-reference) | `https://api.poe.com` | gpt-5.2, claude-opus-4.8, gemini-3.0-pro | `POE_API_KEY` |
 | [Naga.ac](https://naga.ac) | `https://api.naga.ac/v1` | — | `NAGA_AC_API_KEY` |
+| [Jiekou.AI](https://docs.jiekou.ai) | `https://api.jiekou.ai/openai` | grok-4-1-fast-reasoning, grok-4-1-fast-non-reasoning, gpt-5.2-codex | `JIEKOU_API_KEY` |
+| [AIHubMix](https://aihubmix.com) | `https://aihubmix.com/v1` | auto, claude-opus-5-5, gpt-6-luna | `AIHUBMIX_API_KEY` |
+| [EmpirioLabs AI](https://docs.empiriolabs.ai) | `https://api.empiriolabs.ai/v1` | glm-5-3, kling-3-0-turbo, glm-5-3-flash | `EMPIRIOLABS_API_KEY` |
 
 ## OAuth and IDE
 
