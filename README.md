@@ -1,8 +1,8 @@
 # All LLM providers
 
-**483 providers** · 4,390 model IDs · API URLs, env vars, and model names in one place.
+**484 providers** · 4,452 model IDs · API URLs, env vars, and model names in one place.
 
-Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-10-02.
+Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-10-07.
 
 ## Quick start
 
@@ -85,7 +85,7 @@ print(client.chat.completions.create(
 | [Frontier labs](#frontier-labs) | 72 |
 | [Inference platforms](#inference-platforms) | 63 |
 | [Cloud and enterprise](#cloud-and-enterprise) | 43 |
-| [Gateways and routers](#gateways-and-routers) | 127 |
+| [Gateways and routers](#gateways-and-routers) | 128 |
 | [Aggregators](#aggregators) | 18 |
 | [OAuth and IDE](#oauth-and-ide) | 22 |
 | [Public endpoints](#public-endpoints) | 10 |
@@ -97,7 +97,7 @@ print(client.chat.completions.create(
 | [Specialized](#specialized) | 5 |
 | [Local and self-hosted](#local-and-self-hosted) | 27 |
 | Web cookie adapters (in data only) | 34 |
-| **Total** | **483** |
+| **Total** | **484** |
 
 Unofficial **web-cookie / browser-session** adapters (34) stay in `data/providers.json` so they do not clutter this page. List them with `python llm_lookup.py --category "Web Cookie"`.
 
@@ -433,6 +433,7 @@ One key, many upstream providers.
 | [routing.run](https://docs.routing.run/api-reference/models) | `https://api.routing.run/v1` | gpt-5.6-sol, gpt-5.6-terra, gpt-5.6-luna | `ROUTING_RUN_API_KEY` |
 | [Apache APISIX](https://apisix.apache.org) | Self-hosted / enterprise | — | — |
 | [Envoy Agent Router](https://theagentrouter.ai) | Self-hosted / enterprise | — | — |
+| [XHuoAPI](https://xhuoapi.ai) | `https://api.xhuoapi.ai/v1` | deepseek-v4-pro, qwen3.8-max, glm-5.3 | `XHUOAPI_API_KEY` |
 
 ## Aggregators
 

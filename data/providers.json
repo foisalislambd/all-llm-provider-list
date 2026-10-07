@@ -8477,5 +8477,27 @@
     "env_variable": "RESEMBLE_API_KEY",
     "openai_compatible": false,
     "notes": "Voice cloning and TTS. Voices are project-specific; this is not an OpenAI chat API."
+  },
+  {
+    "id": 484,
+    "name": "XHuoAPI",
+    "slug": "xhuoapi",
+    "aliases": [
+      "xhuo",
+      "xhuo-api"
+    ],
+    "category": "Gateway",
+    "website": "https://xhuoapi.ai",
+    "api_base_url": "https://api.xhuoapi.ai/v1",
+    "popular_models": [
+      "deepseek-v4-pro",
+      "qwen3.8-max",
+      "glm-5.3",
+      "kimi-k3",
+      "claude-sonnet-5"
+    ],
+    "env_variable": "XHUOAPI_API_KEY",
+    "openai_compatible": true,
+    "notes": "Chinese (DeepSeek, Qwen, GLM, Kimi, Doubao) and global models behind one key. Claude models also accept the Anthropic /v1/messages format. Email-only sign-up."
   }
 ]
