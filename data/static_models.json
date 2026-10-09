@@ -5080,6 +5080,9 @@
       "qwen3.7-plus",
       "qwen3.8-max",
       "text-embedding-3-small"
+    ],
+    "webwright": [
+      "wren-r1"
     ]
   }
 }
