@@ -8517,5 +8517,26 @@
     "env_variable": "WEBWRIGHT_API_KEY",
     "openai_compatible": true,
     "notes": "Wren R1 chat, transcription and web search behind one OpenAI-compatible base URL."
+  },
+  {
+    "id": 486,
+    "name": "LinkAGI",
+    "slug": "linkagi",
+    "aliases": [
+      "linktoagi",
+      "link-agi"
+    ],
+    "category": "Gateway",
+    "website": "https://api.linktoagi.com",
+    "api_base_url": "https://api.linktoagi.com/v1",
+    "popular_models": [
+      "gpt-6.1-sol",
+      "claude-sonnet-4-6",
+      "gemini-3.1-pro",
+      "glm-5.3-flash"
+    ],
+    "env_variable": "LINKAGI_API_KEY",
+    "openai_compatible": true,
+    "notes": "AI API gateway with CNY usage billing, public model pricing and per-key usage logs. Docs: https://docs.linktoagi.com/. Model IDs are selected from its public catalog; model and account-group access may vary."
   }
 ]

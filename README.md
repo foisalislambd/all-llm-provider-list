@@ -1,6 +1,6 @@
 # All LLM providers
 
-**485 providers** · 4,453 model IDs · API URLs, env vars, and model names in one place.
+**486 providers** · 4,457 model IDs · API URLs, env vars, and model names in one place.
 
 Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-10-09.
 
@@ -85,7 +85,7 @@ print(client.chat.completions.create(
 | [Frontier labs](#frontier-labs) | 73 |
 | [Inference platforms](#inference-platforms) | 63 |
 | [Cloud and enterprise](#cloud-and-enterprise) | 43 |
-| [Gateways and routers](#gateways-and-routers) | 128 |
+| [Gateways and routers](#gateways-and-routers) | 129 |
 | [Aggregators](#aggregators) | 18 |
 | [OAuth and IDE](#oauth-and-ide) | 22 |
 | [Public endpoints](#public-endpoints) | 10 |
@@ -97,7 +97,7 @@ print(client.chat.completions.create(
 | [Specialized](#specialized) | 5 |
 | [Local and self-hosted](#local-and-self-hosted) | 27 |
 | Web cookie adapters (in data only) | 34 |
-| **Total** | **485** |
+| **Total** | **486** |
 
 Unofficial **web-cookie / browser-session** adapters (34) stay in `data/providers.json` so they do not clutter this page. List them with `python llm_lookup.py --category "Web Cookie"`.
 
@@ -435,6 +435,7 @@ One key, many upstream providers.
 | [Apache APISIX](https://apisix.apache.org) | Self-hosted / enterprise | — | — |
 | [Envoy Agent Router](https://theagentrouter.ai) | Self-hosted / enterprise | — | — |
 | [XHuoAPI](https://xhuoapi.ai) | `https://api.xhuoapi.ai/v1` | deepseek-v4-pro, qwen3.8-max, glm-5.3 | `XHUOAPI_API_KEY` |
+| [LinkAGI](https://api.linktoagi.com) | `https://api.linktoagi.com/v1` | gpt-6.1-sol, claude-sonnet-4-6, gemini-3.1-pro | `LINKAGI_API_KEY` |
 
 ## Aggregators
 

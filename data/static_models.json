@@ -5083,6 +5083,12 @@
     ],
     "webwright": [
       "wren-r1"
+    ],
+    "linkagi": [
+      "gpt-6.1-sol",
+      "claude-sonnet-4-6",
+      "gemini-3.1-pro",
+      "glm-5.3-flash"
     ]
   }
 }

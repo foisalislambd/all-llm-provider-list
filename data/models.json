@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-09T08:55:10.953691+00:00",
-  "total_providers": 485,
-  "total_models": 5479,
+  "updated_at": "2026-10-09T09:25:14.245824+00:00",
+  "total_providers": 486,
+  "total_models": 5483,
   "providers": {
     "openai": {
       "provider_id": 1,
@@ -11136,6 +11136,22 @@
       "updated_at": "2026-10-09T08:55:10.953691+00:00",
       "models": [
         "wren-r1"
+      ]
+    },
+    "linkagi": {
+      "provider_id": 486,
+      "provider_name": "LinkAGI",
+      "category": "Gateway",
+      "api_base_url": "https://api.linktoagi.com/v1",
+      "models_endpoint": "https://api.linktoagi.com/v1/models",
+      "count": 4,
+      "source": "static",
+      "updated_at": "2026-10-09T09:25:14.245824+00:00",
+      "models": [
+        "gpt-6.1-sol",
+        "claude-sonnet-4-6",
+        "gemini-3.1-pro",
+        "glm-5.3-flash"
       ]
     }
   }
