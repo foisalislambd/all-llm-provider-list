@@ -35,24 +35,24 @@ Hosted gateways that bill many models on one key: [OpenRouter](https://openroute
 
 ## Use these providers with one key
 
-[AIRoute](https://github.com/foisalislambd/airoute) ([`@foisalislambd/airoute`](https://github.com/foisalislambd/airoute)) runs on your computer. You save each provider's API key in its local panel, turn models on, and create one router key. Cursor, Claude Code, Codex, Continue, Cline, and any other coding agent that accepts a custom OpenAI base URL then talk to that single address. Provider keys stay in AIRoute. The agent only sees the router key.
+[WowRouter](https://github.com/foisalislambd/wowrouter) ([`wowrouter`](https://www.npmjs.com/package/wowrouter), [`@foisalislambd/wowrouter`](https://github.com/foisalislambd/wowrouter)) runs on your computer. You save each provider's API key in its local panel, turn models on, and create one router key. Cursor, Claude Code, Codex, Continue, Cline, and any other coding agent that accepts a custom OpenAI base URL then talk to that single address. Provider keys stay in WowRouter. The agent only sees the router key.
 
-The router listens on this machine only, at `http://127.0.0.1:8787`. It does not sell model access. A call goes through after you have saved that provider's key and switched the model on. A public model id is `provider/model`, such as `openai/gpt-4o-mini`. AIRoute rewrites that to the id the provider expects.
+The router listens on this machine only, at `http://127.0.0.1:8787`. It does not sell model access. A call goes through after you have saved that provider's key and switched the model on. A public model id is `provider/model`, such as `openai/gpt-4o-mini`. WowRouter rewrites that to the id the provider expects.
 
 Node.js 20 or newer:
 
 ```bash
-npm install -g airoute
-airoute
+npm install -g wowrouter
+wowrouter
 ```
 
-The same release is published as `@foisalislambd/airoute` on GitHub Packages. Desktop builds are on the [GitHub releases](https://github.com/foisalislambd/airoute/releases). Docker uses the same panel and API, still bound to this computer:
+`npm install -g airoute` and the `airoute` command are the same program. The same release is also published as `@foisalislambd/wowrouter` and `@foisalislambd/airoute` on GitHub Packages. Desktop builds are on the [GitHub releases](https://github.com/foisalislambd/wowrouter/releases). Docker uses the same panel and API, still bound to this computer:
 
 ```bash
-docker run -d --name airoute \
+docker run -d --name wowrouter \
   -p 127.0.0.1:8787:8787 \
-  -v airoute-data:/data \
-  foisalislambd/airoute:latest
+  -v wowrouter:/data \
+  foisalislambd/wowrouter:latest
 ```
 
 Then:
@@ -68,7 +68,7 @@ from openai import OpenAI
 
 client = OpenAI(
     base_url="http://127.0.0.1:8787/v1",
-    api_key=os.environ["AIROUTE_API_KEY"],
+    api_key=os.environ["WOWROUTER_API_KEY"],
 )
 print(client.chat.completions.create(
     model="openai/gpt-4o-mini",
@@ -76,7 +76,7 @@ print(client.chat.completions.create(
 ).choices[0].message.content)
 ```
 
-`AIROUTE_API_KEY` is the router key from the panel, not a provider key. If the first chat model fails, a chain created on the **Fallback** page is called as `fallback/your-name`. Guides for the panel, Cursor, and the API are in the [AIRoute docs](https://github.com/foisalislambd/airoute/tree/main/docs).
+`WOWROUTER_API_KEY` is the router key from the panel, not a provider key. If the first chat model fails, a chain created on the **Fallback** page is called as `fallback/your-name`. Guides for the panel, Cursor, and the API are in the [WowRouter docs](https://github.com/foisalislambd/wowrouter/tree/main/docs).
 
 ## Categories
 
@@ -656,7 +656,7 @@ Run models on your own machine.
 |------|------------|
 | Best reasoning | OpenAI, Anthropic, Gemini |
 | Low cost / open models | Groq, DeepInfra, Together, SiliconFlow |
-| One API, many models | AIRoute (local, your own keys), OpenRouter, Portkey |
+| One API, many models | WowRouter (local, your own keys), OpenRouter, Portkey |
 | EU / GDPR | Mistral, Nebius, Scaleway, OVHcloud |
 | Code agents | Claude Code, Codex, Cursor, Moonshot Kimi |
 | Offline | Ollama, LM Studio, vLLM |
