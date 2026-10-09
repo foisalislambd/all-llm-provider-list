@@ -8499,5 +8499,23 @@
     "env_variable": "XHUOAPI_API_KEY",
     "openai_compatible": true,
     "notes": "Chinese (DeepSeek, Qwen, GLM, Kimi, Doubao) and global models behind one key. Claude models also accept the Anthropic /v1/messages format. Email-only sign-up."
+  },
+  {
+    "id": 485,
+    "name": "WebWright",
+    "slug": "webwright",
+    "aliases": [
+      "wren",
+      "wren-r1"
+    ],
+    "category": "Frontier",
+    "website": "https://webwright.ai",
+    "api_base_url": "https://webwright.ai/v1",
+    "popular_models": [
+      "Wren R1"
+    ],
+    "env_variable": "WEBWRIGHT_API_KEY",
+    "openai_compatible": true,
+    "notes": "Wren R1 chat, transcription and web search behind one OpenAI-compatible base URL."
   }
 ]

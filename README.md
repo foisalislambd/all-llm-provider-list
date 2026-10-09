@@ -1,8 +1,8 @@
 # All LLM providers
 
-**484 providers** · 4,452 model IDs · API URLs, env vars, and model names in one place.
+**485 providers** · 4,453 model IDs · API URLs, env vars, and model names in one place.
 
-Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-10-07.
+Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-10-09.
 
 ## Quick start
 
@@ -82,7 +82,7 @@ print(client.chat.completions.create(
 
 | Category | Count |
 |----------|-------|
-| [Frontier labs](#frontier-labs) | 72 |
+| [Frontier labs](#frontier-labs) | 73 |
 | [Inference platforms](#inference-platforms) | 63 |
 | [Cloud and enterprise](#cloud-and-enterprise) | 43 |
 | [Gateways and routers](#gateways-and-routers) | 128 |
@@ -97,7 +97,7 @@ print(client.chat.completions.create(
 | [Specialized](#specialized) | 5 |
 | [Local and self-hosted](#local-and-self-hosted) | 27 |
 | Web cookie adapters (in data only) | 34 |
-| **Total** | **484** |
+| **Total** | **485** |
 
 Unofficial **web-cookie / browser-session** adapters (34) stay in `data/providers.json` so they do not clutter this page. List them with `python llm_lookup.py --category "Web Cookie"`.
 
@@ -179,6 +179,7 @@ Companies that train their own foundation models.
 | [Tencent TokenHub](https://cloud.tencent.com/document/product/1823/130050) | `https://tokenhub.tencentmaas.com/v1` | hy3-preview, hy3, hy4-preview | `TENCENT_TOKENHUB_API_KEY` |
 | [Tencent Token Plan](https://cloud.tencent.com/document/product/1823/130060) | `https://api.lkeap.cloud.tencent.com/plan/v3` | hy3, hy4-preview | `TENCENT_TOKEN_PLAN_API_KEY` |
 | [Aleph Alpha](https://docs.aleph-alpha.com) | Custom Pharia deployment | luminous-supreme-control, luminous-extended-control, Pharia-1-LLM-7B-control-aligned | `ALEPH_ALPHA_API_KEY` |
+| [WebWright](https://webwright.ai) | `https://webwright.ai/v1` | Wren R1 | `WEBWRIGHT_API_KEY` |
 
 ## Inference platforms
 
