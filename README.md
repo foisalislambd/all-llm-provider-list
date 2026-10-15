@@ -1,8 +1,8 @@
 # All LLM providers
 
-**487 providers** · 4,459 model IDs · API URLs, env vars, and model names in one place.
+**489 providers** · 4,468 model IDs · API URLs, env vars, and model names in one place.
 
-Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-10-11.
+Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-10-15.
 
 ## Quick start
 
@@ -85,7 +85,7 @@ print(client.chat.completions.create(
 | [Frontier labs](#frontier-labs) | 73 |
 | [Inference platforms](#inference-platforms) | 63 |
 | [Cloud and enterprise](#cloud-and-enterprise) | 43 |
-| [Gateways and routers](#gateways-and-routers) | 129 |
+| [Gateways and routers](#gateways-and-routers) | 130 |
 | [Aggregators](#aggregators) | 19 |
 | [OAuth and IDE](#oauth-and-ide) | 22 |
 | [Public endpoints](#public-endpoints) | 10 |
@@ -94,10 +94,10 @@ print(client.chat.completions.create(
 | [Image and video](#image-and-video) | 20 |
 | [Cloud agents](#cloud-agents) | 3 |
 | [Embeddings](#embeddings) | 5 |
-| [Specialized](#specialized) | 5 |
+| [Specialized](#specialized) | 6 |
 | [Local and self-hosted](#local-and-self-hosted) | 27 |
 | Web cookie adapters (in data only) | 34 |
-| **Total** | **487** |
+| **Total** | **489** |
 
 Unofficial **web-cookie / browser-session** adapters (34) stay in `data/providers.json` so they do not clutter this page. List them with `python llm_lookup.py --category "Web Cookie"`.
 
@@ -436,6 +436,7 @@ One key, many upstream providers.
 | [Envoy Agent Router](https://theagentrouter.ai) | Self-hosted / enterprise | — | — |
 | [XHuoAPI](https://xhuoapi.ai) | `https://api.xhuoapi.ai/v1` | deepseek-v4-pro, qwen3.8-max, glm-5.3 | `XHUOAPI_API_KEY` |
 | [LinkAGI](https://api.linktoagi.com) | `https://api.linktoagi.com/v1` | gpt-6.1-sol, claude-sonnet-4-6, gemini-3.1-pro | `LINKAGI_API_KEY` |
+| [BetterToken](https://bettertoken.ai) | `https://bettertoken.ai/v1` | claude-sonnet-4, gpt-5, deepseek-chat | `BETTERTOKEN_API_KEY` |
 
 ## Aggregators
 
@@ -617,6 +618,7 @@ Task-specific APIs that do not fit the groups above.
 | [v0 (Vercel)](https://v0.dev) | `https://api.v0.dev/v1` | — | `V0_VERCEL_API_KEY` |
 | [Dify](https://dify.ai) | `https://api.dify.ai` | auto | `DIFY_API_KEY` |
 | [Jev API Pro](https://jevapi.pro) | `https://jevapi.pro/api/v1` | typesafe/jev-1.13 | `JEV_API_PRO_API_KEY` |
+| [Jev Agent](https://jev-agent.com/api-access) | `https://jev-agent.com/api/v1` | jev-latest, jev-1.13.0, jev-preview | `JEV_AGENT_KEY` |
 
 ## Local and self-hosted
 

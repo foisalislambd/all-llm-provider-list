@@ -5093,6 +5093,14 @@
     "modelrush": [
       "modelrush/deepseek-v4.1-flash",
       "modelrush/glm-5.3"
+    ],
+    "bettertoken": [
+      "claude-sonnet-4",
+      "gpt-5",
+      "deepseek-chat",
+      "kimi-k2",
+      "glm-4.5",
+      "qwen-max"
     ]
   }
 }
