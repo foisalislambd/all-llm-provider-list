@@ -8556,5 +8556,25 @@
     "env_variable": "MODELRUSH_API_KEY",
     "openai_compatible": true,
     "notes": "Paid, proprietary multi-model API with prepaid credits. OpenAI-compatible chat; images, video, and audio use separate documented endpoints. Model prices vary by capability. Docs: https://modelrush.ai/docs. Spicy image/video models require adult-access confirmation."
+  },
+  {
+    "id": 488,
+    "name": "Jev Agent",
+    "slug": "jev-agent",
+    "aliases": [
+      "jagent",
+      "jev-agent.com"
+    ],
+    "category": "Specialized",
+    "website": "https://jev-agent.com/api-access",
+    "api_base_url": "https://jev-agent.com/api/v1",
+    "popular_models": [
+      "jev-latest",
+      "jev-1.13.0",
+      "jev-preview"
+    ],
+    "env_variable": "JEV_AGENT_KEY",
+    "openai_compatible": false,
+    "notes": "Independent Jev AI model API (unofficial relay for TypeSafe Jev / System One). Free jv_live_ key: 5 credits/month (1 credit = 1k input tokens). POST /systemone, /classify, /decisions. Not affiliated with TypeSafe AI."
   }
 ]
