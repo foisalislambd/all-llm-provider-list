@@ -8576,5 +8576,28 @@
     "env_variable": "JEV_AGENT_KEY",
     "openai_compatible": false,
     "notes": "Independent Jev AI model API (unofficial relay for TypeSafe Jev / System One). Free jv_live_ key: 5 credits/month (1 credit = 1k input tokens). POST /systemone, /classify, /decisions. Not affiliated with TypeSafe AI."
+  },
+  {
+    "id": 489,
+    "name": "BetterToken",
+    "slug": "bettertoken",
+    "aliases": [
+      "better-token",
+      "bt"
+    ],
+    "category": "Gateway",
+    "website": "https://bettertoken.ai",
+    "api_base_url": "https://bettertoken.ai/v1",
+    "popular_models": [
+      "claude-sonnet-4",
+      "gpt-5",
+      "deepseek-chat",
+      "kimi-k2",
+      "glm-4.5",
+      "qwen-max"
+    ],
+    "env_variable": "BETTERTOKEN_API_KEY",
+    "openai_compatible": true,
+    "notes": "OpenAI- and Anthropic-compatible multi-model LLM gateway; pay-as-you-go; docs https://docs.bettertoken.ai"
   }
 ]
