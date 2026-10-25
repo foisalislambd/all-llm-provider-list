@@ -8599,5 +8599,32 @@
     "env_variable": "BETTERTOKEN_API_KEY",
     "openai_compatible": true,
     "notes": "OpenAI- and Anthropic-compatible multi-model LLM gateway; pay-as-you-go; docs https://docs.bettertoken.ai"
+  },
+  {
+    "id": 490,
+    "name": "CloudGPU",
+    "slug": "cloudgpu",
+    "aliases": [
+      "cloudgpu-api",
+      "cloudgpu-model-api"
+    ],
+    "category": "Gateway",
+    "website": "https://cloudgpu.app/api?utm_source=all-llm-provider-list&utm_medium=directory&utm_campaign=202611_api_dir",
+    "api_base_url": "https://cloudgpu.app/v1",
+    "popular_models": [
+      "deepseek-v4.1-flash",
+      "deepseek-v4-flash",
+      "deepseek-v4-pro",
+      "kimi-k3",
+      "kimi-k2.6",
+      "kimi-k2.5",
+      "glm-5.3-flash",
+      "glm-5.2",
+      "glm-5.1",
+      "minimax-m3"
+    ],
+    "env_variable": "CGW_API_KEY",
+    "openai_compatible": true,
+    "notes": "OpenAI-compatible model API gateway (POST /v1/chat/completions); pay-as-you-go prepaid USD balance; per-1M-token prices at https://cloudgpu.app/api; docs https://cloudgpu.app/api/docs"
   }
 ]

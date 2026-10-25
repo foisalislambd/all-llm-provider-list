@@ -5101,6 +5101,18 @@
       "kimi-k2",
       "glm-4.5",
       "qwen-max"
+    ],
+    "cloudgpu": [
+      "deepseek-v4.1-flash",
+      "deepseek-v4-flash",
+      "deepseek-v4-pro",
+      "kimi-k3",
+      "kimi-k2.6",
+      "kimi-k2.5",
+      "glm-5.3-flash",
+      "glm-5.2",
+      "glm-5.1",
+      "minimax-m3"
     ]
   }
 }
