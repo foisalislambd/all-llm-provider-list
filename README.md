@@ -1,8 +1,8 @@
 # All LLM providers
 
-**489 providers** · 4,468 model IDs · API URLs, env vars, and model names in one place.
+**490 providers** · 4,478 model IDs · API URLs, env vars, and model names in one place.
 
-Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-10-15.
+Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-10-25.
 
 ## Quick start
 
@@ -85,7 +85,7 @@ print(client.chat.completions.create(
 | [Frontier labs](#frontier-labs) | 73 |
 | [Inference platforms](#inference-platforms) | 63 |
 | [Cloud and enterprise](#cloud-and-enterprise) | 43 |
-| [Gateways and routers](#gateways-and-routers) | 130 |
+| [Gateways and routers](#gateways-and-routers) | 131 |
 | [Aggregators](#aggregators) | 19 |
 | [OAuth and IDE](#oauth-and-ide) | 22 |
 | [Public endpoints](#public-endpoints) | 10 |
@@ -97,7 +97,7 @@ print(client.chat.completions.create(
 | [Specialized](#specialized) | 6 |
 | [Local and self-hosted](#local-and-self-hosted) | 27 |
 | Web cookie adapters (in data only) | 34 |
-| **Total** | **489** |
+| **Total** | **490** |
 
 Unofficial **web-cookie / browser-session** adapters (34) stay in `data/providers.json` so they do not clutter this page. List them with `python llm_lookup.py --category "Web Cookie"`.
 
@@ -437,6 +437,7 @@ One key, many upstream providers.
 | [XHuoAPI](https://xhuoapi.ai) | `https://api.xhuoapi.ai/v1` | deepseek-v4-pro, qwen3.8-max, glm-5.3 | `XHUOAPI_API_KEY` |
 | [LinkAGI](https://api.linktoagi.com) | `https://api.linktoagi.com/v1` | gpt-6.1-sol, claude-sonnet-4-6, gemini-3.1-pro | `LINKAGI_API_KEY` |
 | [BetterToken](https://bettertoken.ai) | `https://bettertoken.ai/v1` | claude-sonnet-4, gpt-5, deepseek-chat | `BETTERTOKEN_API_KEY` |
+| [CloudGPU](https://cloudgpu.app/api?utm_source=all-llm-provider-list&utm_medium=directory&utm_campaign=202611_api_dir) | `https://cloudgpu.app/v1` | deepseek-v4.1-flash, deepseek-v4-flash, deepseek-v4-pro | `CGW_API_KEY` |
 
 ## Aggregators
 
