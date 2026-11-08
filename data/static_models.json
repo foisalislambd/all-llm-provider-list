@@ -5113,6 +5113,13 @@
       "glm-5.2",
       "glm-5.1",
       "minimax-m3"
+    ],
+    "aapi": [
+      "claude-opus-4-8",
+      "claude-haiku-5-5",
+      "deepseek-v4-pro",
+      "glm-5.3",
+      "qwen3.8-max"
     ]
   }
 }
