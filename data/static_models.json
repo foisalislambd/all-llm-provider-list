@@ -5120,6 +5120,14 @@
       "deepseek-v4-pro",
       "glm-5.3",
       "qwen3.8-max"
+    ],
+    "imagera": [
+      "anthropic/claude-opus-5.5",
+      "google/gemini-3.8-flash",
+      "x-ai/grok-4.7",
+      "deepseek/deepseek-v4.1-flash",
+      "moonshotai/kimi-k3.1-pro",
+      "z-ai/glm-5.3"
     ]
   }
 }
