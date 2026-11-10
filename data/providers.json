@@ -8647,5 +8647,27 @@
     "env_variable": "AAPI_API_KEY",
     "openai_compatible": true,
     "notes": "OpenAI-compatible multi-model gateway; official list prices at https://aapi.ai/pricing"
+  },
+  {
+    "id": 492,
+    "name": "Imagera LLM API",
+    "slug": "imagera",
+    "aliases": [
+      "imagera-llm-api"
+    ],
+    "category": "Gateway",
+    "website": "https://imagera.ai/llm-api",
+    "api_base_url": "https://api.imagera.ai/llm/v1",
+    "popular_models": [
+      "anthropic/claude-opus-5.5",
+      "google/gemini-3.8-flash",
+      "x-ai/grok-4.7",
+      "deepseek/deepseek-v4.1-flash",
+      "moonshotai/kimi-k3.1-pro",
+      "z-ai/glm-5.3"
+    ],
+    "env_variable": "IMAGERA_API_KEY",
+    "openai_compatible": true,
+    "notes": "OpenAI-compatible endpoint for 320+ language models from 48 labs on one key (POST /chat/completions, streaming); billed per token; public model list with per-token prices at https://api.imagera.ai/llm/v1/models (no key needed)"
   }
 ]
