@@ -5120,9 +5120,6 @@
       "deepseek-v4-pro",
       "glm-5.3",
       "qwen3.8-max"
-    ],
-        "twinkle-model": [
-                "gpt-6.1-sol"
-        ]
+    ]
   }
 }
