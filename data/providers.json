@@ -8647,5 +8647,16 @@
     "env_variable": "AAPI_API_KEY",
     "openai_compatible": true,
     "notes": "OpenAI-compatible multi-model gateway; official list prices at https://aapi.ai/pricing"
+  },
+  {
+    "id": 492,
+    "name": "Twinkle Model",
+    "slug": "twinkle-model",
+    "category": "Gateway",
+    "website": "https://big-model.smart-agi.com",
+    "api_base_url": "https://big-model.smart-agi.com/v1",
+    "env_variable": "TWINKLE_MODEL_API_KEY",
+    "openai_compatible": true,
+    "notes": "Public pricing: https://big-model.smart-agi.com/model-plaza"
   }
 ]
