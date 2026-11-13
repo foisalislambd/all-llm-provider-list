@@ -8652,17 +8652,11 @@
     "id": 492,
     "name": "Twinkle Model",
     "slug": "twinkle-model",
-    "aliases": [
-      "twinkle"
-    ],
     "category": "Gateway",
     "website": "https://big-model.smart-agi.com",
     "api_base_url": "https://big-model.smart-agi.com/v1",
-    "popular_models": [
-      "gpt-6.1-sol"
-    ],
     "env_variable": "TWINKLE_MODEL_API_KEY",
     "openai_compatible": true,
-    "notes": "Hosted OpenAI-compatible relay; public pricing at https://big-model.smart-agi.com/model-plaza; operator-submitted (I run this service); model fidelity, billing, and privacy are not independently verified."
+    "notes": "Public pricing: https://big-model.smart-agi.com/model-plaza"
   }
 ]
