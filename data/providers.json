@@ -8647,5 +8647,26 @@
     "env_variable": "AAPI_API_KEY",
     "openai_compatible": true,
     "notes": "OpenAI-compatible multi-model gateway; official list prices at https://aapi.ai/pricing"
+  },
+  {
+    "id": 492,
+    "name": "Powerspring",
+    "slug": "powerspring",
+    "aliases": [],
+    "category": "IaaS",
+    "website": "https://powerspring.eu",
+    "api_base_url": "https://api.powerspring.eu/v1",
+    "popular_models": [
+      "deepseek-v4.1-flash",
+      "glm-5.3-flash",
+      "gpt-oss-120b",
+      "gpt-oss-20b",
+      "qwen3.8-27b",
+      "gemma-4-31b",
+      "gemma-4-26b-a4b"
+    ],
+    "env_variable": "POWERSPRING_API_KEY",
+    "openai_compatible": true,
+    "notes": "Open-weight AI models via one OpenAI-compatible API, on EU infrastructure owned by EU companies. Paid, prepaid credits in euros. Docs: https://powerspring.eu/docs"
   }
 ]

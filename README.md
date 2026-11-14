@@ -1,8 +1,8 @@
 # All LLM providers
 
-**490 providers** · 4,478 model IDs · API URLs, env vars, and model names in one place.
+**492 providers** · 4,490 model IDs · API URLs, env vars, and model names in one place.
 
-Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-10-25.
+Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-11-14.
 
 ## Quick start
 
@@ -83,9 +83,9 @@ print(client.chat.completions.create(
 | Category | Count |
 |----------|-------|
 | [Frontier labs](#frontier-labs) | 73 |
-| [Inference platforms](#inference-platforms) | 63 |
+| [Inference platforms](#inference-platforms) | 64 |
 | [Cloud and enterprise](#cloud-and-enterprise) | 43 |
-| [Gateways and routers](#gateways-and-routers) | 131 |
+| [Gateways and routers](#gateways-and-routers) | 132 |
 | [Aggregators](#aggregators) | 19 |
 | [OAuth and IDE](#oauth-and-ide) | 22 |
 | [Public endpoints](#public-endpoints) | 10 |
@@ -97,7 +97,7 @@ print(client.chat.completions.create(
 | [Specialized](#specialized) | 6 |
 | [Local and self-hosted](#local-and-self-hosted) | 27 |
 | Web cookie adapters (in data only) | 34 |
-| **Total** | **490** |
+| **Total** | **492** |
 
 Unofficial **web-cookie / browser-session** adapters (34) stay in `data/providers.json` so they do not clutter this page. List them with `python llm_lookup.py --category "Web Cookie"`.
 
@@ -250,6 +250,7 @@ Hosted open-weight models — usually cheaper and faster.
 | [InferX](https://www.inferx.net) | `https://model.inferx.net/v1` | gemma-4-31B-it-fp8, Qwen3.6-35B-A3B-fp8-no-thinking, Devstral-2-123B-Instruct-2512-int4-AutoRound | `INFERX_API_KEY` |
 | [IteraCompute](https://iteracompute.com/docs.html) | `https://api.iteracompute.com/v1` | deepseek/deepseek-v4-pro-0813, minimax/minimax-m3, z-ai/glm-5.3 | `ITERACOMPUTE_API_KEY` |
 | [CloudRift](https://www.cloudrift.ai) | `https://inference.cloudrift.ai/v1` | Qwen/Qwen3.8-27B-FP8 | `CLOUDRIFT_API_KEY` |
+| [Powerspring](https://powerspring.eu) | `https://api.powerspring.eu/v1` | deepseek-v4.1-flash, glm-5.3-flash, gpt-oss-120b | `POWERSPRING_API_KEY` |
 
 ## Cloud and enterprise
 
@@ -438,6 +439,7 @@ One key, many upstream providers.
 | [LinkAGI](https://api.linktoagi.com) | `https://api.linktoagi.com/v1` | gpt-6.1-sol, claude-sonnet-4-6, gemini-3.1-pro | `LINKAGI_API_KEY` |
 | [BetterToken](https://bettertoken.ai) | `https://bettertoken.ai/v1` | claude-sonnet-4, gpt-5, deepseek-chat | `BETTERTOKEN_API_KEY` |
 | [CloudGPU](https://cloudgpu.app/api?utm_source=all-llm-provider-list&utm_medium=directory&utm_campaign=202611_api_dir) | `https://cloudgpu.app/v1` | deepseek-v4.1-flash, deepseek-v4-flash, deepseek-v4-pro | `CGW_API_KEY` |
+| [AAPI](https://aapi.ai) | `https://aapi.ai/v1` | claude-opus-4-8, claude-haiku-5-5, deepseek-v4-pro | `AAPI_API_KEY` |
 
 ## Aggregators
 
