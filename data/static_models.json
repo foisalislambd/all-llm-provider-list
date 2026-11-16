@@ -5129,6 +5129,9 @@
       "qwen3.8-27b",
       "gemma-4-31b",
       "gemma-4-26b-a4b"
+    ],
+    "smartoken": [
+      "deepseek-v4.1-flash"
     ]
   }
 }
