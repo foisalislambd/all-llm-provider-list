@@ -1,7 +1,7 @@
 {
   "updated_at": "2026-10-09T09:25:14.245824+00:00",
-  "total_providers": 486,
-  "total_models": 5483,
+  "total_providers": 487,
+  "total_models": 5484,
   "providers": {
     "openai": {
       "provider_id": 1,
@@ -11152,6 +11152,19 @@
         "claude-sonnet-4-6",
         "gemini-3.1-pro",
         "glm-5.3-flash"
+      ]
+    },
+    "smartoken": {
+      "provider_id": 494,
+      "provider_name": "SmarToken",
+      "category": "Gateway",
+      "api_base_url": "https://thesmartoken.com/v1",
+      "models_endpoint": "https://thesmartoken.com/v1/models",
+      "count": 1,
+      "source": "static",
+      "updated_at": "2026-11-16T15:00:42.827878+00:00",
+      "models": [
+        "deepseek-v4.1-flash"
       ]
     }
   }

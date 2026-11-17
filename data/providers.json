@@ -8679,5 +8679,20 @@
     "env_variable": "POWERSPRING_API_KEY",
     "openai_compatible": true,
     "notes": "Open-weight AI models via one OpenAI-compatible API, on EU infrastructure owned by EU companies. Paid, prepaid credits in euros. Docs: https://powerspring.eu/docs"
+  },
+  {
+    "id": 494,
+    "name": "SmarToken",
+    "slug": "smartoken",
+    "aliases": [],
+    "category": "Gateway",
+    "website": "https://thesmartoken.com/docs",
+    "api_base_url": "https://thesmartoken.com/v1",
+    "popular_models": [
+      "deepseek-v4.1-flash"
+    ],
+    "env_variable": "SMTOKEN_API_KEY",
+    "openai_compatible": true,
+    "notes": "Independent text Chat Completions gateway; no tool calling, structured output, or multimodal input. Prepaid USD; model availability and pricing can change."
   }
 ]

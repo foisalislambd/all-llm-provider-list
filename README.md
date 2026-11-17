@@ -1,8 +1,8 @@
 # All LLM providers
 
-**493 providers** · 4,490 model IDs · API URLs, env vars, and model names in one place.
+**494 providers** · 4,491 model IDs · API URLs, env vars, and model names in one place.
 
-Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-11-15.
+Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-11-16.
 
 ## Quick start
 
@@ -85,7 +85,7 @@ print(client.chat.completions.create(
 | [Frontier labs](#frontier-labs) | 73 |
 | [Inference platforms](#inference-platforms) | 64 |
 | [Cloud and enterprise](#cloud-and-enterprise) | 43 |
-| [Gateways and routers](#gateways-and-routers) | 133 |
+| [Gateways and routers](#gateways-and-routers) | 134 |
 | [Aggregators](#aggregators) | 19 |
 | [OAuth and IDE](#oauth-and-ide) | 22 |
 | [Public endpoints](#public-endpoints) | 10 |
@@ -97,7 +97,7 @@ print(client.chat.completions.create(
 | [Specialized](#specialized) | 6 |
 | [Local and self-hosted](#local-and-self-hosted) | 27 |
 | Web cookie adapters (in data only) | 34 |
-| **Total** | **493** |
+| **Total** | **494** |
 
 Unofficial **web-cookie / browser-session** adapters (34) stay in `data/providers.json` so they do not clutter this page. List them with `python llm_lookup.py --category "Web Cookie"`.
 
@@ -441,6 +441,7 @@ One key, many upstream providers.
 | [CloudGPU](https://cloudgpu.app/api?utm_source=all-llm-provider-list&utm_medium=directory&utm_campaign=202611_api_dir) | `https://cloudgpu.app/v1` | deepseek-v4.1-flash, deepseek-v4-flash, deepseek-v4-pro | `CGW_API_KEY` |
 | [AAPI](https://aapi.ai) | `https://aapi.ai/v1` | claude-opus-4-8, claude-haiku-5-5, deepseek-v4-pro | `AAPI_API_KEY` |
 | [Twinkle Model](https://big-model.smart-agi.com) | `https://big-model.smart-agi.com/v1` | — | `TWINKLE_MODEL_API_KEY` |
+| [SmarToken](https://thesmartoken.com/docs) | `https://thesmartoken.com/v1` | deepseek-v4.1-flash | `SMTOKEN_API_KEY` |
 
 ## Aggregators
 
