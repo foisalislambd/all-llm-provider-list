@@ -5132,6 +5132,13 @@
     ],
     "smartoken": [
       "deepseek-v4.1-flash"
+    ],
+    "aicodewith": [
+      "claude-sonnet-5-5",
+      "claude-haiku-5-5",
+      "claude-opus-4-8",
+      "gpt-6.1-sol",
+      "kimi-k2.7-code"
     ]
   }
 }

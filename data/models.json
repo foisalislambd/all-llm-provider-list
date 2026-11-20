@@ -1,7 +1,7 @@
 {
   "updated_at": "2026-10-09T09:25:14.245824+00:00",
-  "total_providers": 487,
-  "total_models": 5484,
+  "total_providers": 488,
+  "total_models": 5489,
   "providers": {
     "openai": {
       "provider_id": 1,
@@ -11165,6 +11165,23 @@
       "updated_at": "2026-11-16T15:00:42.827878+00:00",
       "models": [
         "deepseek-v4.1-flash"
+      ]
+    },
+    "aicodewith": {
+      "provider_id": 495,
+      "provider_name": "AI Code With",
+      "category": "Gateway",
+      "api_base_url": "https://api.aicodewith.ai/v1",
+      "models_endpoint": "https://api.aicodewith.ai/v1/models",
+      "count": 5,
+      "source": "static",
+      "updated_at": "2026-11-20T03:24:30.473778+00:00",
+      "models": [
+        "claude-sonnet-5-5",
+        "claude-haiku-5-5",
+        "claude-opus-4-8",
+        "gpt-6.1-sol",
+        "kimi-k2.7-code"
       ]
     }
   }

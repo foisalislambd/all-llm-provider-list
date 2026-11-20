@@ -8694,5 +8694,27 @@
     "env_variable": "SMTOKEN_API_KEY",
     "openai_compatible": true,
     "notes": "Independent text Chat Completions gateway; no tool calling, structured output, or multimodal input. Prepaid USD; model availability and pricing can change."
+  },
+  {
+    "id": 495,
+    "name": "AI Code With",
+    "slug": "aicodewith",
+    "aliases": [
+      "ai-code-with",
+      "acw"
+    ],
+    "category": "Gateway",
+    "website": "https://aicodewith.ai/en",
+    "api_base_url": "https://api.aicodewith.ai/v1",
+    "popular_models": [
+      "claude-sonnet-5-5",
+      "claude-haiku-5-5",
+      "claude-opus-4-8",
+      "gpt-6.1-sol",
+      "kimi-k2.7-code"
+    ],
+    "env_variable": "AICODEWITH_API_KEY",
+    "openai_compatible": true,
+    "notes": "Hosted prepaid unified API for coding agents. OpenAI-compatible base URL includes /v1; Anthropic Messages is https://api.aicodewith.ai (no /v1); Gemini is https://api.aicodewith.ai/gemini_cli. Credits valid one year from purchase. Docs: https://docs.aicodewith.ai/en/docs/quickstart Pricing: https://aicodewith.ai/en/pricing"
   }
 ]
