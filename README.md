@@ -1,8 +1,8 @@
 # All LLM providers
 
-**496 providers** · 4,527 model IDs · API URLs, env vars, and model names in one place.
+**497 providers** · 4,619 model IDs · API URLs, env vars, and model names in one place.
 
-Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-11-22.
+Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-11-23.
 
 ## Quick start
 
@@ -83,7 +83,7 @@ print(client.chat.completions.create(
 | Category | Count |
 |----------|-------|
 | [Frontier labs](#frontier-labs) | 73 |
-| [Inference platforms](#inference-platforms) | 64 |
+| [Inference platforms](#inference-platforms) | 65 |
 | [Cloud and enterprise](#cloud-and-enterprise) | 43 |
 | [Gateways and routers](#gateways-and-routers) | 136 |
 | [Aggregators](#aggregators) | 19 |
@@ -97,7 +97,7 @@ print(client.chat.completions.create(
 | [Specialized](#specialized) | 6 |
 | [Local and self-hosted](#local-and-self-hosted) | 27 |
 | Web cookie adapters (in data only) | 34 |
-| **Total** | **496** |
+| **Total** | **497** |
 
 Unofficial **web-cookie / browser-session** adapters (34) stay in `data/providers.json` so they do not clutter this page. List them with `python llm_lookup.py --category "Web Cookie"`.
 
@@ -251,6 +251,7 @@ Hosted open-weight models — usually cheaper and faster.
 | [IteraCompute](https://iteracompute.com/docs.html) | `https://api.iteracompute.com/v1` | deepseek/deepseek-v4-pro-0813, minimax/minimax-m3, z-ai/glm-5.3 | `ITERACOMPUTE_API_KEY` |
 | [CloudRift](https://www.cloudrift.ai) | `https://inference.cloudrift.ai/v1` | Qwen/Qwen3.8-27B-FP8 | `CLOUDRIFT_API_KEY` |
 | [Powerspring](https://powerspring.eu) | `https://api.powerspring.eu/v1` | deepseek-v4.1-flash, glm-5.3-flash, gpt-oss-120b | `POWERSPRING_API_KEY` |
+| [Morse](https://trymorse.ai/inference) | `https://inference.trymorse.ai/v1` | deepseek-ai/deepseek-v4.1-flash-1017-abliterated, moonshotai/kimi-k3.1-pro, z-ai/glm-5.3 | `MORSE_API_KEY` |
 
 ## Cloud and enterprise
 
