@@ -1,8 +1,8 @@
 # All LLM providers
 
-**496 providers** · 4,527 model IDs · API URLs, env vars, and model names in one place.
+**498 providers** · 4,531 model IDs · API URLs, env vars, and model names in one place.
 
-Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-11-22.
+Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-11-23.
 
 ## Quick start
 
@@ -86,7 +86,7 @@ print(client.chat.completions.create(
 | [Inference platforms](#inference-platforms) | 64 |
 | [Cloud and enterprise](#cloud-and-enterprise) | 43 |
 | [Gateways and routers](#gateways-and-routers) | 136 |
-| [Aggregators](#aggregators) | 19 |
+| [Aggregators](#aggregators) | 21 |
 | [OAuth and IDE](#oauth-and-ide) | 22 |
 | [Public endpoints](#public-endpoints) | 10 |
 | [Search APIs](#search-apis) | 19 |
@@ -97,7 +97,7 @@ print(client.chat.completions.create(
 | [Specialized](#specialized) | 6 |
 | [Local and self-hosted](#local-and-self-hosted) | 27 |
 | Web cookie adapters (in data only) | 34 |
-| **Total** | **496** |
+| **Total** | **498** |
 
 Unofficial **web-cookie / browser-session** adapters (34) stay in `data/providers.json` so they do not clutter this page. List them with `python llm_lookup.py --category "Web Cookie"`.
 
@@ -470,6 +470,8 @@ Multi-vendor catalogs under one bill.
 | [EmpirioLabs AI](https://docs.empiriolabs.ai) | `https://api.empiriolabs.ai/v1` | glm-5-3, kling-3-0-turbo, glm-5-3-flash | `EMPIRIOLABS_API_KEY` |
 | [CometAPI](https://apidoc.cometapi.com/guides/change-base-url-to-cometapi) | `https://api.cometapi.com/v1` | auto, mimo-v2.6-pro-ultraspeed, gpt-6-sol | `COMETAPI_KEY` |
 | [ModelRush](https://modelrush.ai) | `https://api.modelrush.ai/v1` | modelrush/deepseek-v4.1-flash, modelrush/glm-5.3 | `MODELRUSH_API_KEY` |
+| [Computorail](https://computorail.com) | `https://api.computorail.net/v1` | gpt-5.5, claude-sonnet-4-6 | `COMPUTORAIL_API_KEY` |
+| [Suanliqiao](https://suanliqiao.cn) | `https://suanliqiao.cn/v1` | kimi-k3, glm-5.3 | `SUANLIQIAO_API_KEY` |
 
 ## OAuth and IDE
 

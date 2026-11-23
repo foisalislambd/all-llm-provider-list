@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-09T09:25:14.245824+00:00",
-  "total_providers": 489,
-  "total_models": 5520,
+  "updated_at": "2026-11-23T17:34:36.239068+00:00",
+  "total_providers": 491,
+  "total_models": 5524,
   "providers": {
     "openai": {
       "provider_id": 1,
@@ -11225,6 +11225,34 @@
         "gpt-image-2.5-sunburst",
         "gpt-image-2.6-flare",
         "gpt-image-2.6-sunburst"
+      ]
+    },
+    "computorail": {
+      "provider_id": 497,
+      "provider_name": "Computorail",
+      "category": "Aggregator",
+      "api_base_url": "https://api.computorail.net/v1",
+      "models_endpoint": "https://api.computorail.net/v1/models",
+      "count": 2,
+      "source": "static",
+      "updated_at": "2026-11-23T17:34:36.239068+00:00",
+      "models": [
+        "gpt-5.5",
+        "claude-sonnet-4-6"
+      ]
+    },
+    "suanliqiao": {
+      "provider_id": 498,
+      "provider_name": "Suanliqiao",
+      "category": "Aggregator",
+      "api_base_url": "https://suanliqiao.cn/v1",
+      "models_endpoint": "https://suanliqiao.cn/v1/models",
+      "count": 2,
+      "source": "static",
+      "updated_at": "2026-11-23T17:34:36.239068+00:00",
+      "models": [
+        "kimi-k3",
+        "glm-5.3"
       ]
     }
   }
