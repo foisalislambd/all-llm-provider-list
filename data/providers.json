@@ -8716,5 +8716,26 @@
     "env_variable": "AICODEWITH_API_KEY",
     "openai_compatible": true,
     "notes": "Hosted prepaid unified API for coding agents. OpenAI-compatible base URL includes /v1; Anthropic Messages is https://api.aicodewith.ai (no /v1); Gemini is https://api.aicodewith.ai/gemini_cli. Credits valid one year from purchase. Docs: https://docs.aicodewith.ai/en/docs/quickstart Pricing: https://aicodewith.ai/en/pricing"
+  },
+  {
+    "id": 496,
+    "name": "Kantro",
+    "slug": "kantro",
+    "aliases": [
+      "sub-bridge"
+    ],
+    "category": "Gateway",
+    "website": "https://kantro.dev",
+    "api_base_url": "https://kantro.dev/v1",
+    "popular_models": [
+      "claude-opus-5-5",
+      "claude-sonnet-5-5",
+      "claude-haiku-5-5",
+      "gpt-6.1-sol",
+      "gpt-6-astra"
+    ],
+    "env_variable": "KANTRO_API_KEY",
+    "openai_compatible": true,
+    "notes": "Hosted API gateway exposing native OpenAI Chat Completions (/v1/chat/completions), OpenAI Responses (/v1/responses), and Anthropic Messages (/v1/messages) behind one key with per-key spend limits, model allowlists, and prepaid token billing. Docs: https://kantro.dev/docs Pricing: https://kantro.dev/pricing"
   }
 ]
