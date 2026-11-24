@@ -5172,6 +5172,14 @@
       "gpt-image-2.5-sunburst",
       "gpt-image-2.6-flare",
       "gpt-image-2.6-sunburst"
+    ],
+    "computorail": [
+      "gpt-5.5",
+      "claude-sonnet-4-6"
+    ],
+    "suanliqiao": [
+      "kimi-k3",
+      "glm-5.3"
     ]
   }
 }
