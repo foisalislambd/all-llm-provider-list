@@ -8812,5 +8812,24 @@
     "env_variable": "QCODE_API_KEY",
     "openai_compatible": true,
     "notes": "Multi-model API service for coding tools; one key serves OpenAI Chat Completions / Responses at https://api.qcode.cc/openai/v1 and Anthropic Messages at https://api.qcode.cc/api (no /v1). Claude models use the Anthropic endpoint only, GPT models the OpenAI endpoint only. Regional hosts asia.qcode.cc and us.qcode.cc. Docs: https://docs.qcode.cc/docs/getting-started/endpoints-and-api-paths Pricing: https://qcode.cc/pricing"
+  },
+  {
+    "id": 501,
+    "name": "Plugsky",
+    "slug": "plugsky",
+    "aliases": [
+      "plugsky api"
+    ],
+    "category": "Gateway",
+    "website": "https://plugsky.com",
+    "api_base_url": "https://api.plugsky.com/v1",
+    "popular_models": [
+      "plugsky-pro",
+      "plugsky-max",
+      "plugsky-coder"
+    ],
+    "env_variable": "PLUGSKY_API_KEY",
+    "openai_compatible": true,
+    "notes": "OpenAI-compatible multi-model API with 39 public model IDs. Flat monthly plans; Builder and Scale have no monthly token cap, no per-token overage and no pay-as-you-go meter. Free plan is an evaluation tier: 100 requests/day, 50K tokens/day, no card. Docs: https://plugsky.com/docs Pricing: https://plugsky.com/pricing"
   }
 ]
