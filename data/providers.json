@@ -8771,5 +8771,27 @@
     "env_variable": "SUANLIQIAO_API_KEY",
     "openai_compatible": true,
     "notes": "API aggregator focused on Chinese models. Uses a separate site, account and API key from Computorail. Model availability and supported features vary by route. Docs: https://docs.suanliqiao.cn/zh/docs/api Pricing: https://suanliqiao.cn/pricing"
+  },
+  {
+    "id": 499,
+    "name": "Morse",
+    "slug": "morse",
+    "aliases": [
+      "morse-inference",
+      "trymorse"
+    ],
+    "category": "IaaS",
+    "website": "https://trymorse.ai/inference",
+    "api_base_url": "https://inference.trymorse.ai/v1",
+    "popular_models": [
+      "deepseek-ai/deepseek-v4.1-flash-1017-abliterated",
+      "moonshotai/kimi-k3.1-pro",
+      "z-ai/glm-5.3",
+      "deepseek/deepseek-v4.1-flash",
+      "qwen/qwen3.8-27b"
+    ],
+    "env_variable": "MORSE_API_KEY",
+    "openai_compatible": true,
+    "notes": "Private inference API with zero data retention on every tier: prompts and replies are never stored. OpenAI-compatible Chat Completions, plus Anthropic Messages and Responses formats. Includes uncensored models such as deepseek-ai/deepseek-v4.1-flash-1017-abliterated (alias deepseek-v4.1-flash-uncensored, 1M context). Open-source enclave: https://github.com/trymorse/morse-enclave. Pay as you go from $5. Docs: https://trymorse.ai/inference/docs Models: https://trymorse.ai/inference/models"
   }
 ]
