@@ -8771,5 +8771,24 @@
     "env_variable": "SUANLIQIAO_API_KEY",
     "openai_compatible": true,
     "notes": "API aggregator focused on Chinese models. Uses a separate site, account and API key from Computorail. Model availability and supported features vary by route. Docs: https://docs.suanliqiao.cn/zh/docs/api Pricing: https://suanliqiao.cn/pricing"
+  },
+  {
+    "id": 499,
+    "name": "Plugsky",
+    "slug": "plugsky",
+    "aliases": [
+      "plugsky api"
+    ],
+    "category": "Gateway",
+    "website": "https://plugsky.com",
+    "api_base_url": "https://api.plugsky.com/v1",
+    "popular_models": [
+      "plugsky-pro",
+      "plugsky-max",
+      "plugsky-coder"
+    ],
+    "env_variable": "PLUGSKY_API_KEY",
+    "openai_compatible": true,
+    "notes": "OpenAI-compatible multi-model API with 39 public model IDs. Flat monthly plans; Builder and Scale have no monthly token cap, no per-token overage and no pay-as-you-go meter. Free plan is an evaluation tier: 100 requests/day, 50K tokens/day, no card. Docs: https://plugsky.com/docs Pricing: https://plugsky.com/pricing"
   }
 ]
