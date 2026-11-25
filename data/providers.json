@@ -8771,5 +8771,24 @@
     "env_variable": "SUANLIQIAO_API_KEY",
     "openai_compatible": true,
     "notes": "API aggregator focused on Chinese models. Uses a separate site, account and API key from Computorail. Model availability and supported features vary by route. Docs: https://docs.suanliqiao.cn/zh/docs/api Pricing: https://suanliqiao.cn/pricing"
+  },
+  {
+    "id": 499,
+    "name": "QCode.cc",
+    "slug": "qcode",
+    "aliases": [
+      "QCode"
+    ],
+    "category": "Aggregator",
+    "website": "https://qcode.cc",
+    "api_base_url": "https://api.qcode.cc/openai/v1",
+    "popular_models": [
+      "gpt-6.2-sol",
+      "glm-5.3",
+      "kimi-k3"
+    ],
+    "env_variable": "QCODE_API_KEY",
+    "openai_compatible": true,
+    "notes": "Multi-model API service for coding tools; one key serves OpenAI Chat Completions / Responses at https://api.qcode.cc/openai/v1 and Anthropic Messages at https://api.qcode.cc/api (no /v1). Claude models use the Anthropic endpoint only, GPT models the OpenAI endpoint only. Regional hosts asia.qcode.cc and us.qcode.cc. Docs: https://docs.qcode.cc/docs/getting-started/endpoints-and-api-paths Pricing: https://qcode.cc/pricing"
   }
 ]

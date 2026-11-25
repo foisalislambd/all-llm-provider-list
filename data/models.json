@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-23T17:34:36.239068+00:00",
-  "total_providers": 491,
-  "total_models": 5524,
+  "updated_at": "2026-11-25T08:17:15.300004+00:00",
+  "total_providers": 492,
+  "total_models": 5527,
   "providers": {
     "openai": {
       "provider_id": 1,
@@ -11253,6 +11253,21 @@
       "models": [
         "kimi-k3",
         "glm-5.3"
+      ]
+    },
+    "qcode": {
+      "provider_id": 499,
+      "provider_name": "QCode.cc",
+      "category": "Aggregator",
+      "api_base_url": "https://api.qcode.cc/openai/v1",
+      "models_endpoint": "https://api.qcode.cc/openai/v1/models",
+      "count": 3,
+      "source": "static",
+      "updated_at": "2026-11-25T08:17:15.300004+00:00",
+      "models": [
+        "gpt-6.2-sol",
+        "glm-5.3",
+        "kimi-k3"
       ]
     }
   }
