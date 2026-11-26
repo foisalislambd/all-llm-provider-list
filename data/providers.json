@@ -8831,5 +8831,28 @@
     "env_variable": "PLUGSKY_API_KEY",
     "openai_compatible": true,
     "notes": "OpenAI-compatible multi-model API with 39 public model IDs. Flat monthly plans; Builder and Scale have no monthly token cap, no per-token overage and no pay-as-you-go meter. Free plan is an evaluation tier: 100 requests/day, 50K tokens/day, no card. Docs: https://plugsky.com/docs Pricing: https://plugsky.com/pricing"
+  },
+  {
+    "id": 502,
+    "name": "OpenUncensored",
+    "slug": "openuncensored",
+    "aliases": [
+      "open-uncensored",
+      "ou"
+    ],
+    "category": "Gateway",
+    "website": "https://openuncensored.com",
+    "api_base_url": "https://api.openuncensored.com/v1",
+    "popular_models": [
+      "deepseek-v4.1-flash-1017-uncensored",
+      "glm-5.3-flash-uncensored",
+      "kimi-k3.1-pro-uncensored",
+      "qwen3.8-27b-uncensored",
+      "gemma-4-uncensored",
+      "inkling-2-small-uncensored"
+    ],
+    "env_variable": "OPENUNCENSORED_API_KEY",
+    "openai_compatible": true,
+    "notes": "Uncensored and abliterated open-weight models (text, image, video) on one OpenAI and Anthropic compatible key, routed across hosts by measured refusals, reliability and speed. Prepaid credits from $5, no account."
   }
 ]
