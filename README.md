@@ -1,8 +1,8 @@
 # All LLM providers
 
-**501 providers** · 4,665 model IDs · API URLs, env vars, and model names in one place.
+**502 providers** · 4,723 model IDs · API URLs, env vars, and model names in one place.
 
-Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-11-25.
+Always confirm endpoints against official docs. To add or correct a provider, see [docs/contributing.md](docs/contributing.md). Updated 2026-11-26.
 
 ## Quick start
 
@@ -85,7 +85,7 @@ print(client.chat.completions.create(
 | [Frontier labs](#frontier-labs) | 73 |
 | [Inference platforms](#inference-platforms) | 65 |
 | [Cloud and enterprise](#cloud-and-enterprise) | 43 |
-| [Gateways and routers](#gateways-and-routers) | 137 |
+| [Gateways and routers](#gateways-and-routers) | 138 |
 | [Aggregators](#aggregators) | 22 |
 | [OAuth and IDE](#oauth-and-ide) | 22 |
 | [Public endpoints](#public-endpoints) | 10 |
@@ -97,7 +97,7 @@ print(client.chat.completions.create(
 | [Specialized](#specialized) | 6 |
 | [Local and self-hosted](#local-and-self-hosted) | 27 |
 | Web cookie adapters (in data only) | 34 |
-| **Total** | **501** |
+| **Total** | **502** |
 
 Unofficial **web-cookie / browser-session** adapters (34) stay in `data/providers.json` so they do not clutter this page. List them with `python llm_lookup.py --category "Web Cookie"`.
 
@@ -446,6 +446,7 @@ One key, many upstream providers.
 | [AI Code With](https://aicodewith.ai/en) | `https://api.aicodewith.ai/v1` | claude-sonnet-5-5, claude-haiku-5-5, claude-opus-4-8 | `AICODEWITH_API_KEY` |
 | [Kantro](https://kantro.dev) | `https://kantro.dev/v1` | claude-opus-5-5, claude-sonnet-5-5, claude-haiku-5-5 | `KANTRO_API_KEY` |
 | [Plugsky](https://plugsky.com) | `https://api.plugsky.com/v1` | plugsky-pro, plugsky-max, plugsky-coder | `PLUGSKY_API_KEY` |
+| [OpenUncensored](https://openuncensored.com) | `https://api.openuncensored.com/v1` | deepseek-v4.1-flash-1017-uncensored, glm-5.3-flash-uncensored, kimi-k3.1-pro-uncensored | `OPENUNCENSORED_API_KEY` |
 
 ## Aggregators
 
